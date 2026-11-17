@@ -113,6 +113,19 @@ class SessionRuntime:
         self._stack.close()
         self._pw = None
 
+    def discard(self, site_id: str) -> bool:
+        """Drop one site's session so it is re-created on next use.
+
+        Used when a browser window was closed mid-crawl: the context (and its
+        work page) is gone, so it must be rebuilt from the persistent profile.
+        Returns True when a session was actually discarded.
+        """
+        session = self.sessions.pop(site_id, None)
+        if session is None:
+            return False
+        self._close_session(session)
+        return True
+
     def keep_alive_until_dismissed(self):
         """Show the browser and wait for the user before tearing down.
 

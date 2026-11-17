@@ -1,29 +1,13 @@
 {
   "site_id": "batdongsan-com-vn",
   "phase": "detail-pagination",
-  "url": "https://batdongsan.com.vn/",
-  "started_at": "2026-11-17T04:02:26.270695+00:00",
-  "status": "passed",
-  "observations": {
-    "candidate_links": []
-  },
-  "requests": [
-    {
-      "url": "https://batdongsan.com.vn/",
-      "method": "GET",
-      "type": "document"
-    },
-    {
-      "url": "https://batdongsan.com.vn/",
-      "method": "GET",
-      "type": "document"
-    },
-    {
-      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbd707597d7d2e/hF4OQp1UF0pVkVc4Yb8vvzgn5_mQB25zcFcRm2B7I2Y-1794888147-1.2.1.1-2MykE8qF5mfwOVX3lFAy..ilowwjxJjEQhFYFNKpwt5KIWmNId.nCf9dJxffAW06",
-      "method": "POST",
-      "type": "xhr"
-    }
+  "url": "https://batdongsan.com.vn/cho-thue-kho-nha-xuong-dat",
+  "started_at": "2026-11-17T15:17:29.784661+00:00",
+  "status": "failed",
+  "observations": [],
+  "requests": [],
+  "errors": [
+    "BrowserContext.new_page: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\Admin\\AppData\\Local\\ms-playwright\\chromium-1255\\chrome-win64\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --no-sandbox --user-data-dir=E:\\tool-nha-dat\\Temp\\bds-profile --remote-debugging-pipe about:blank\n<launched> pid=1456"
   ],
-  "errors": [],
-  "finished_at": "2026-11-17T04:02:30.119484+00:00"
+  "finished_at": "2026-11-17T15:17:29.794214+00:00"
 }

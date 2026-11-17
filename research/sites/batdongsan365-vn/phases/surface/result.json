@@ -2,7 +2,7 @@
   "site_id": "batdongsan365-vn",
   "phase": "surface",
   "url": "https://batdongsan365.vn/",
-  "started_at": "2026-11-17T04:02:34.564810+00:00",
+  "started_at": "2026-11-17T15:08:27.104119+00:00",
   "status": "passed",
   "observations": {
     "title": "Bất động sản 365",
@@ -24,5 +24,5 @@
     }
   ],
   "errors": [],
-  "finished_at": "2026-11-17T04:02:40.238992+00:00"
+  "finished_at": "2026-11-17T15:08:33.950885+00:00"
 }

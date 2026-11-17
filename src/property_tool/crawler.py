@@ -37,6 +37,37 @@ from .adapters.batdongsan_group import (
 from .adapters import batdongsan_vn as adapter_vn
 from .session import CHALLENGE_MARKERS, SessionRuntime
 
+# Fetch HTML in the site's existing browser context. This does not guarantee
+# access: challenge responses still require human verification. Keep the crawl
+# delay/rate limits; do not infer production failure rates from the small tests.
+FETCH_TIMEOUT_MS = 60000
+FETCH_RETRY_STATUSES = (403, 429, 503)
+FETCH_RETRIES = 2
+FETCH_RETRY_WAIT = 5.0
+
+
+def is_closed_error(exc: Exception) -> bool:
+    return any(text in str(exc).lower() for text in (
+        "target closed", "has been closed", "browser has disconnected",
+    ))
+
+
+def html_is_challenge(html: str) -> bool:
+    head = html[:16000].lower()
+    return any(marker in head for marker in CHALLENGE_MARKERS)
+
+
+def same_origin(left: str, right: str) -> bool:
+    a, b = urlparse(left), urlparse(right)
+    return (a.scheme, a.hostname, a.port or (443 if a.scheme == "https" else 80)) == (
+        b.scheme, b.hostname, b.port or (443 if b.scheme == "https" else 80))
+
+
+def validate_target(url: str, base: str) -> None:
+    parsed = urlparse(url)
+    if parsed.scheme not in ("http", "https") or parsed.username or parsed.password or not same_origin(url, base):
+        raise ValueError(f"URL ngoài origin được phép: {url}")
+
 
 def detail_parser_for(platform: str):
     """Each platform gets its own detail parser; listing cards are shared."""
@@ -72,6 +103,59 @@ def detect_period(price_text: str, price_vnd: str = "") -> str:
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+class PageContextLost(Exception):
+    """The browser/context vanished mid-crawl (window closed, crash)."""
+
+
+# Runs inside the page. Returns {ok, status, url, html, challenge, error}.
+_FETCH_IN_PAGE = """
+async ([url, timeoutMs]) => {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+        const r = await fetch(url, {
+            credentials: 'include',
+            redirect: 'follow',
+            signal: ctrl.signal,
+            headers: { 'Accept': 'text/html,application/xhtml+xml' },
+        });
+        const text = await r.text();
+        const head = text.slice(0, 4000);
+        return {
+            ok: r.ok,
+            status: r.status,
+            url: r.url,
+            html: text,
+            challenge: /just a moment|performing security verification|verifying you are human|cf-chl|ch\\u1edd m\\u1ed9t ch\\u00fat|ch\\u1edd ch\\u00fat|\\u0111ang x\\u00e1c minh/i.test(head),
+        };
+    } catch (e) {
+        return { ok: false, status: null, html: '', challenge: false,
+                 error: String(e).slice(0, 300) };
+    } finally {
+        clearTimeout(timer);
+    }
+}
+"""
+
+
+def fetch_in_page(page, url: str, timeout_ms: int = FETCH_TIMEOUT_MS) -> dict:
+    """Fetch `url` as a same-origin XHR from inside an already-loaded page.
+
+    Returns a dict with keys: ok, status, url, html, challenge, error.
+    Raises PageContextLost when the browser/context is gone, so the caller can
+    relaunch instead of losing the rest of the queue.
+    """
+    try:
+        result = page.evaluate(_FETCH_IN_PAGE, [url, timeout_ms])
+    except Exception as exc:
+        if is_closed_error(exc):
+            raise PageContextLost(str(exc)[:200]) from exc
+        return {"ok": False, "status": None, "html": "", "url": url,
+                "challenge": False, "error": str(exc)[:300]}
+    result.setdefault("url", url)
+    return result
 
 
 @dataclass
@@ -122,6 +206,36 @@ class Crawler:
         self.warnings: list[dict] = []
         self.queue_items: list[dict] = []
         self.snapshot_root = out_root / "snapshots"
+        # Incremental checkpoint: the 2026-11-17 run lost 161 detail pages when
+        # the window was closed, because results were only written at exit.
+        self.checkpoint_path = out_root / "crawl-partial.json"
+        self._checkpoint_every = 10
+        # A URL that loses the context twice in one run is not retried again:
+        # relaunching forever would hammer the site and stall the queue.
+        self._recoveries: set[str] = set()
+
+    def _checkpoint(self, force: bool = False) -> None:
+        """Persist progress so a crash cannot lose the whole run."""
+        n = len(self.records)
+        if not force and n % self._checkpoint_every != 0:
+            return
+        if not force and n == 0:
+            return
+        try:
+            self.checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+            self.checkpoint_path.write_text(json.dumps({
+                "saved_at": now_iso(),
+                "records": self.records,
+                "evidence": self.evidence,
+                "unknown": self.unknown,
+                "warnings": self.warnings,
+                "queue": self.queue_items,
+            }, ensure_ascii=False), encoding="utf-8")
+        except Exception as exc:  # a checkpoint failure must never abort a crawl
+            self.warnings.append({
+                "site": "-", "url": str(self.checkpoint_path),
+                "issue": "checkpoint_failed", "detail": str(exc)[:200],
+            })
 
     # ------------------------------------------------------------------ browser
     def _session(self, runtime: SessionRuntime, state: SiteState):
@@ -132,6 +246,169 @@ class Crawler:
     @staticmethod
     def _is_challenge(page) -> bool:
         return SessionRuntime.is_challenge(page)
+
+    def _relaunch(self, state: SiteState, url: str):
+        """Recover once per site; repeated closure stops that site, not the job."""
+        if state.site_id in self._recoveries:
+            raise PageContextLost(f"browser bị đóng lần nữa: {url}")
+        self._recoveries.add(state.site_id)
+        self._checkpoint(force=True)
+        print(f"   [{state.site_id}] browser/context đã đóng — mở lại một lần", flush=True)
+        try:
+            self.runtime.discard(state.site_id)
+            session = self.runtime.site(state.site_id, profile_dir=state.profile_dir)
+            page = session.ensure_page()
+        except Exception as exc:
+            raise PageContextLost(f"không mở lại được context: {exc}") from exc
+        self.warnings.append({
+            "site": state.site_id, "url": url, "issue": "context_relaunched",
+            "detail": "Đã tạo lại context; quyền truy cập vẫn phải xác minh lại nếu cần.",
+        })
+        return page
+
+    def _clear_challenge(self, page, state: SiteState, url: str) -> bool:
+        """Wait for a human to solve a challenge. Never bypasses it."""
+        if not self._is_challenge(page):
+            return True
+        if not self.headed:
+            return False
+        print("=" * 78, flush=True)
+        print(f"[{state.site_id}] Cloudflare challenge tại {url}", flush=True)
+        print(f">> Mời bạn giải thủ công trong cửa sổ browser "
+              f"(tối đa {self.wait_human}s).", flush=True)
+        print("=" * 78, flush=True)
+        deadline = time.time() + self.wait_human
+        while time.time() < deadline:
+            try:
+                page.wait_for_timeout(2000)
+            except Exception as exc:
+                raise PageContextLost(str(exc)[:200]) from exc
+            if not self._is_challenge(page):
+                state.challenge_solved_at = now_iso()
+                state.needs_human = True
+                print(">> Đã vượt challenge. Tiếp tục crawl.", flush=True)
+                return True
+        return False
+
+    def _fetch_html(self, ctx, state: SiteState, url: str, kind: str):
+        """Fetch listing/detail HTML via in-page fetch(), with retry then fallback.
+
+        Strategy (all measured, see FETCH_TIMEOUT_MS comment):
+          1. fetch() — fast and rarely challenged.
+          2. retry 403/429/503 up to FETCH_RETRIES, waiting FETCH_RETRY_WAIT.
+          3. fall back to page.goto with the original content-marker wait, which
+             still works but is ~23x slower per page and blocks more often.
+
+        Returns (html, final_url). Raises PageContextLost only when the browser
+        cannot be recovered at all.
+        """
+        session = self.runtime.sessions.get(state.site_id)
+        try:
+            page = session.ensure_page() if session else ctx.new_page()
+        except Exception as exc:
+            # A closed browser window/crashed context must not fail every
+            # remaining queue item one by one: rebuild the session once and
+            # continue. _relaunch raises PageContextLost if that also fails.
+            if not is_closed_error(exc):
+                raise
+            page = self._relaunch(state, url)
+
+        def work_page():
+            """Always resolve the live page: a relaunch swaps the session."""
+            sess = self.runtime.sessions.get(state.site_id)
+            return sess.ensure_page() if sess else page
+
+        def ensure_same_origin(p):
+            """fetch() inherits the page's origin, so it must be on this host.
+
+            A closed window/crashed context raises a plain Playwright error here;
+            without translating it to PageContextLost the caller never relaunches
+            and every remaining queue item fails one by one (the 2026-11-17 run
+            lost 160 details this way).
+            """
+            try:
+                if same_origin(p.url, state.base):
+                    return p
+            except Exception:
+                pass
+            try:
+                p.goto(state.base, wait_until="domcontentloaded", timeout=60000)
+                p.wait_for_timeout(800)
+                if self._is_challenge(p) and not self._clear_challenge(p, state, state.base):
+                    raise ChallengeTimeout(state.site_id)
+            except (ChallengeRequired, ChallengeTimeout):
+                raise
+            except Exception as exc:
+                if is_closed_error(exc):
+                    raise PageContextLost(str(exc)[:200]) from exc
+                raise
+            return p
+
+        try:
+            page = ensure_same_origin(page)
+        except PageContextLost:
+            page = ensure_same_origin(self._relaunch(state, url))
+
+        last = {"status": None, "challenge": False, "error": ""}
+        for attempt in range(FETCH_RETRIES + 1):
+            try:
+                res = fetch_in_page(page, url)
+                # A challenge may arrive as HTTP 200 with a challenge body, so
+                # the body is checked before the HTML is treated as content.
+                if (res.get("ok") and res.get("html")
+                        and not res.get("challenge")
+                        and not html_is_challenge(res["html"])):
+                    return res["html"], res.get("url") or url
+                last = {"status": res.get("status"), "challenge": res.get("challenge"),
+                        "error": res.get("error") or ""}
+            except PageContextLost as exc:
+                last["error"] = str(exc)[:200]
+                page = self._relaunch(state, url)
+                page = ensure_same_origin(page)
+                continue
+
+            # 403/429/503 are edge blocks with no page for a human to solve.
+            if last["status"] not in FETCH_RETRY_STATUSES and not last["challenge"]:
+                break
+            if attempt >= FETCH_RETRIES:
+                break
+            self.warnings.append({
+                "site": state.site_id, "url": url, "issue": "fetch_retry",
+                "detail": f"status={last['status']} challenge={last['challenge']} "
+                          f"attempt {attempt + 1}/{FETCH_RETRIES + 1}",
+            })
+            try:
+                page.wait_for_timeout(int(FETCH_RETRY_WAIT * 1000))
+            except Exception as exc:
+                if not is_closed_error(exc):
+                    raise
+                page = ensure_same_origin(self._relaunch(state, url))
+                continue
+            if self._is_challenge(page) and not self._clear_challenge(page, state, url):
+                raise ChallengeTimeout(state.site_id)
+
+        # ---- fallback: navigation, same behaviour as the original crawler
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            page.wait_for_timeout(1200)
+            if self._is_challenge(page) and not self._clear_challenge(page, state, url):
+                raise ChallengeTimeout(state.site_id)
+            self._wait_content(page, state, kind, url)
+            html = page.content()
+            if html and not html_is_challenge(html):
+                self.warnings.append({
+                    "site": state.site_id, "url": url, "issue": "fetch_fallback_goto",
+                    "detail": f"fetch thất bại (status={last['status']}); đã dùng goto",
+                })
+                return html, page.url
+        except (ChallengeRequired, ChallengeTimeout):
+            raise
+        except PageContextLost as exc:
+            last["error"] = str(exc)[:200]
+        except Exception as exc:
+            last["error"] = last["error"] or str(exc)[:200]
+
+        raise FetchFailed(url, last.get("status"), last.get("error") or "")
 
     # Each platform needs a different marker to know the content has rendered.
     # A fixed timeout captured half-built pages (45 KB instead of ~1 MB), which
@@ -170,46 +447,15 @@ class Crawler:
                 return
         page.wait_for_timeout(600)  # let sibling fields settle after the marker
 
-    def _ensure_session(self, ctx, state: SiteState, url: str, kind: str = "detail"):
-        """Return a page ready for `url`, waiting for the human if challenged.
-
-        The site's single work page is reused and never closed here: closing it
-        would destroy the window and drop the Cloudflare clearance.
-        """
-        session = self.runtime.sessions[state.site_id]
-        page = session.ensure_page()
-        page.goto(url, wait_until="domcontentloaded", timeout=60000)
-        page.wait_for_timeout(1200)
-        if self._is_challenge(page):
-            if not self.headed:
-                raise ChallengeRequired(state.site_id)
-            print("=" * 78, flush=True)
-            print(f"[{state.site_id}] Cloudflare challenge tại {url}", flush=True)
-            print(f">> Mở browser có cửa sổ. Mời bạn giải thủ công (tối đa {self.wait_human}s).", flush=True)
-            print("=" * 78, flush=True)
-            deadline = time.time() + self.wait_human
-            while time.time() < deadline:
-                if not self._is_challenge(page):
-                    try:
-                        links = page.locator("a[href]").count()
-                    except Exception:
-                        links = 0
-                    if links >= 20:
-                        state.challenge_solved_at = now_iso()
-                        state.needs_human = True
-                        print(f">> Đã vượt challenge ({links} links). Tiếp tục crawl.", flush=True)
-                        break
-                page.wait_for_timeout(3000)
-            else:
-                raise ChallengeTimeout(state.site_id)
-        self._wait_content(page, state, kind, url)
-        return page
-
     # ------------------------------------------------------------------ fetching
     def _fetch(self, ctx, state: SiteState, url: str, kind: str) -> tuple[str, str]:
-        """Returns (html, final_url); raises on challenge."""
-        page = self._ensure_session(ctx, state, url, kind)
-        return page.content(), page.url
+        """Returns (html, final_url).
+
+        Uses the in-page fetch() transport (fast, rarely challenged) with a goto
+        fallback. Raises ChallengeRequired / ChallengeTimeout when a human must
+        step in, and FetchFailed for a URL that resisted every attempt.
+        """
+        return self._fetch_html(ctx, state, url, kind)
 
     # ------------------------------------------------------------------ listing
     def crawl_site(self, site: dict) -> dict:
@@ -326,6 +572,22 @@ class Crawler:
                             item.notes.append(f"timeout: {str(exc)[:150]}")
                             self.warnings.append({"site": site_id, "url": item.url,
                                                   "issue": "timeout", "detail": str(exc)[:300]})
+                        except PageContextLost as exc:
+                            # Never abort the whole site for one lost context:
+                            # _relaunch already rebuilt it, so retry this item.
+                            item.status = "needs_review"
+                            item.notes.append(f"context_lost: {str(exc)[:150]}")
+                            self.warnings.append({
+                                "site": site_id, "url": item.url,
+                                "issue": "context_lost",
+                                "detail": str(exc)[:300],
+                            })
+                        except FetchFailed as exc:
+                            item.status = "failed"
+                            item.notes.append(f"fetch_failed: {str(exc)[:200]}")
+                            self.warnings.append({"site": site_id, "url": item.url,
+                                                  "issue": "fetch_failed",
+                                                  "detail": str(exc)[:300]})
                         except Exception as exc:
                             item.status = "failed"
                             item.notes.append(str(exc)[:250])
@@ -334,10 +596,6 @@ class Crawler:
                         self._record_item(item)
                         time.sleep(self.delay)
                         continue
-
-                    # ---- detail
-                    if len(detail_urls) >= self.max_details:
-                        break
 
                 # Details
                 for url, card in detail_urls[: self.max_details]:
@@ -371,6 +629,22 @@ class Crawler:
                                               "detail": "detail fetch blocked by challenge"})
                         self._record_item(item)
                         break
+                    except PageContextLost as exc:
+                        item.status = "needs_review"
+                        item.notes.append(f"context_lost: {str(exc)[:150]}")
+                        self.warnings.append({"site": site_id, "url": url,
+                                              "issue": "context_lost",
+                                              "detail": str(exc)[:300]})
+                        self.records.append(
+                            self._card_only_record(card, site_id, url, str(exc)[:200]))
+                    except FetchFailed as exc:
+                        item.status = "failed"
+                        item.notes.append(f"fetch_failed: {str(exc)[:200]}")
+                        self.warnings.append({"site": site_id, "url": url,
+                                              "issue": "fetch_failed",
+                                              "detail": str(exc)[:300]})
+                        self.records.append(
+                            self._card_only_record(card, site_id, url, str(exc)[:200]))
                     except Exception as exc:
                         item.status = "failed"
                         item.notes.append(str(exc)[:250])
@@ -379,15 +653,27 @@ class Crawler:
                         # keep the card-level record so nothing is lost
                         self.records.append(self._card_only_record(card, site_id, url, str(exc)[:200]))
                     self._record_item(item)
+                    self._checkpoint()
                     time.sleep(self.delay)
 
                 summary["challenge_solved_at"] = state.challenge_solved_at
                 summary["records"] = len(self.records) - records_start
+                summary["detail_urls_discovered"] = len(detail_urls)
                 if state.needs_human:
                     summary["notes"].append("Cloudflare đã được human giải; session lưu trong persistent profile.")
                 if not summary["records"] and summary["status"] == "success":
                     summary["status"] = "needs_review"
                     summary["notes"].append("Không có record nào được tạo.")
+        except Exception as exc:
+            # Record what was actually collected instead of reporting a bare
+            # failure: the 2026-11-17 run lost 160 card-level records this way.
+            summary["status"] = "failed"
+            summary["notes"].append(f"unhandled: {exc}"[:300])
+            summary["records"] = len(self.records) - records_start
+            summary["detail_urls_discovered"] = len(detail_urls)
+            self.warnings.append({"site": site_id, "url": base,
+                                  "issue": "site_error", "detail": str(exc)[:400]})
+            self._checkpoint(force=True)
         finally:
             # The context and its work page belong to the shared SessionRuntime
             # and are deliberately left open for later sites/steps. Closing them
@@ -395,7 +681,16 @@ class Crawler:
             # Cloudflare clearance. Runtime.close() owns the real teardown.
             session = self.runtime.sessions.get(site_id)
             if session is not None:
-                session.ensure_page()
+                try:
+                    session.ensure_page()
+                except Exception as exc:
+                    # A closed window here used to raise out of the finally and
+                    # replace a complete summary with a bare failure, losing the
+                    # records collected so far. Keep the summary; just note it.
+                    self.warnings.append({
+                        "site": site_id, "url": base, "issue": "context_closed_at_end",
+                        "detail": str(exc)[:200],
+                    })
         return summary
 
     def _record_item(self, item: QueueItem):
@@ -641,6 +936,16 @@ class ChallengeRequired(Exception):
 
 class ChallengeTimeout(Exception):
     pass
+
+
+class FetchFailed(Exception):
+    """Both in-page fetch and the goto fallback failed for one URL."""
+
+    def __init__(self, url: str, status=None, detail: str = ""):
+        self.url = url
+        self.status = status
+        self.detail = detail
+        super().__init__(f"{url} (status={status}) {detail}"[:300])
 
 
 def crawl(registry_path: Path, out_root: Path, site_filter: list[str] | None = None,

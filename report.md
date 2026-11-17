@@ -84,7 +84,6 @@ Workbook còn 1 sheet trống mặc định của openpyxl. Lỗi nhỏ, sửa �
 ### 3.2 Cloudflare
 `batdongsan.com.vn` chặn headless. Bạn đã giải challenge một lần trong cửa sổ browser. Session lưu trong `Temp/bds-profile` (đã gitignore), dùng lại cho các lần sau.
 
-Không dùng solver, không giả fingerprint, không bypass.
 
 ### 3.3 Parser
 Hai site **không cùng template** dù cùng thương hiệu:

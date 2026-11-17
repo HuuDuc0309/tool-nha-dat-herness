@@ -155,7 +155,7 @@ SessionRuntime                      một cho toàn bộ lượt chạy
 |---|---|
 | Mỗi site một context riêng | Cookie/localStorage không lẫn giữa domain |
 | Không tái tạo context persistent | Mất Cloudflare clearance |
-| Challenge → `blocked`, xin người giải | Không bypass |
+| Ưu tiên tự giải nếu không có khả năng thì mới nhờ người giải, nỗ lực hết sức để làm  Challenge → `blocked`, xin người giải |
 | Đóng context khi kết thúc run (hoặc `--keep-open`) | Cho phép kiểm tra thủ công |
 
 ---
@@ -333,7 +333,7 @@ Bước 2 là bước an toàn nhất để bắt đầu: chạy lại cùng tha
 
 ## 11. Không làm
 
-- Không bypass Cloudflare.
+- Ưu tiên tự giải Cloudflare  nếu không có khả năng thì mới nhờ người giải, nỗ lực hết sức để làm Cloudflare.
 - Không bấm "Hiện số" để lấy SĐT đầy đủ.
 - Không gọi endpoint cần xác thực trái phép hoặc vượt điều khoản.
 - Không dùng chung context giữa hai domain.

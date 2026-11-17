@@ -1,18 +1,16 @@
 {
   "site_id": "batdongsan-com-vn",
   "status": "candidate",
-  "last_discovery": "2026-11-17T04:13:02.562356+00:00",
-  "challenge_solved_at": "2026-11-17T04:12:39.831314+00:00",
+  "last_discovery": "2026-11-17T15:14:54.900536+00:00",
   "completeness": {
     "homepage": true,
-    "internal_routes": true,
+    "internal_routes": false,
     "search_route": true,
     "listing_collection": true,
     "listing_detail": false,
     "pagination": true,
-    "filter_interaction": false,
+    "filter_interaction": true,
     "network_catalog": true,
-    "replay_ready": true,
-    "human_challenge_solved": true
+    "replay_ready": true
   }
 }

@@ -3,6 +3,11 @@
 Each phase is a step in the same context, not a separate browser: cookies and
 any solved Cloudflare challenge stay valid across phases. run_phase() keeps its
 ``(site, url, phase, out)`` argument tuple so existing callers keep working.
+
+Transport rule: navigate with goto() only for pages that must be interacted
+with (forms, filters, clicks, screenshots). Every additional read-only request
+goes through fetch() in the already-loaded page, which keeps the document
+navigation count — and therefore the Cloudflare challenge rate — low.
 """
 from __future__ import annotations
 
@@ -11,6 +16,8 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
+
+from .crawler import fetch_in_page
 
 PHASES = ["surface", "search-filter", "network", "detail-pagination"]
 
@@ -45,8 +52,22 @@ def run_phase(args, runtime=None, profile_dir=None, wait_human=0):
                 result["requests"].append({"url": r.url, "method": r.method,
                                            "type": r.resource_type})
 
+        def probe(url_to_read: str, label: str) -> None:
+            """Read-only request via fetch() so it needs no page navigation."""
+            res = fetch_in_page(page, url_to_read)
+            result.setdefault("fetched_probes", []).append({
+                "label": label,
+                "url": url_to_read,
+                "status": res.get("status"),
+                "bytes": len(res.get("html") or ""),
+                "challenge": res.get("challenge"),
+                "error": res.get("error") or "",
+            })
+
         page.on("request", req)
         try:
+            # The only navigation per phase: this page is what gets interacted
+            # with (fill/click/screenshot), so it must be a real document.
             page.goto(url, wait_until="domcontentloaded", timeout=45000)
             page.wait_for_timeout(2500)
             if rt.is_challenge(page):
@@ -89,11 +110,18 @@ def run_phase(args, runtime=None, profile_dir=None, wait_human=0):
                     "content_sample": page.locator("body").inner_text()[:5000]}
             elif phase == "detail-pagination":
                 links = page.locator("a[href]").evaluate_all("els=>els.map(e=>e.href)")
-                result["observations"] = {
-                    "candidate_links": [x for x in links
-                                        if any(k in x.lower() for k in
-                                               ("detail", "chi-tiet", "property",
-                                                "bat-dong-san", "nha-dat"))][:100]}
+                candidates = [x for x in links
+                              if any(k in x.lower() for k in
+                                     ("detail", "chi-tiet", "property",
+                                      "bat-dong-san", "nha-dat"))][:100]
+                result["observations"] = {"candidate_links": candidates}
+                # Sample two candidates by fetch() instead of navigating to
+                # each: cheaper and far less likely to trigger a challenge.
+                for sample in candidates[:2]:
+                    try:
+                        probe(sample, "detail_candidate")
+                    except Exception as exc:
+                        result["errors"].append(f"probe {sample}: {exc}"[:200])
 
             page.screenshot(path=str(dest / "screenshot.png"))
             result["status"] = "passed"

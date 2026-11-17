@@ -2,7 +2,7 @@
   "site_id": "batdongsan365-vn",
   "phase": "detail-pagination",
   "url": "https://batdongsan365.vn/",
-  "started_at": "2026-11-17T04:02:34.577383+00:00",
+  "started_at": "2026-11-17T15:08:43.836475+00:00",
   "status": "passed",
   "observations": {
     "candidate_links": [
@@ -19,8 +19,13 @@
       "url": "https://batdongsan365.vn/",
       "method": "GET",
       "type": "document"
+    },
+    {
+      "url": "https://batdongsan365.vn/cdn-cgi/rum?",
+      "method": "POST",
+      "type": "xhr"
     }
   ],
   "errors": [],
-  "finished_at": "2026-11-17T04:02:40.581522+00:00"
+  "finished_at": "2026-11-17T15:08:47.282009+00:00"
 }

@@ -1,29 +1,13 @@
 {
   "site_id": "batdongsan-com-vn",
   "phase": "network",
-  "url": "https://batdongsan.com.vn/",
-  "started_at": "2026-11-17T04:02:26.261696+00:00",
-  "status": "passed",
-  "observations": {
-    "content_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5bbd7073a36d4b4\nPerformance and Security by Cloudflare\nPrivacy"
-  },
-  "requests": [
-    {
-      "url": "https://batdongsan.com.vn/",
-      "method": "GET",
-      "type": "document"
-    },
-    {
-      "url": "https://batdongsan.com.vn/",
-      "method": "GET",
-      "type": "document"
-    },
-    {
-      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbd7073a36d4b4/P6xcWDUKA3eJMYvYetRXW9w_cXf4XbKXsqfzVlbadM0-1794888147-1.2.1.1-0Cqvlm9kwUXQKRQXLqeV5O0_dR4bDccxMafZWBBvSWWQGdPbOVSW4yCYU4NoIE.C",
-      "method": "POST",
-      "type": "xhr"
-    }
+  "url": "https://batdongsan.com.vn/cho-thue-kho-nha-xuong-dat",
+  "started_at": "2026-11-17T15:17:29.768947+00:00",
+  "status": "failed",
+  "observations": [],
+  "requests": [],
+  "errors": [
+    "BrowserContext.new_page: Protocol error (Target.createTarget): Failed to open a new tab"
   ],
-  "errors": [],
-  "finished_at": "2026-11-17T04:02:30.844205+00:00"
+  "finished_at": "2026-11-17T15:17:29.783661+00:00"
 }

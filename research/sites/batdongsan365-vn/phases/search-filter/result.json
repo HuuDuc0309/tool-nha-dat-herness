@@ -2,7 +2,7 @@
   "site_id": "batdongsan365-vn",
   "phase": "search-filter",
   "url": "https://batdongsan365.vn/",
-  "started_at": "2026-11-17T04:02:34.566371+00:00",
+  "started_at": "2026-11-17T15:08:33.953764+00:00",
   "status": "passed",
   "observations": [
     {
@@ -89,8 +89,13 @@
       "url": "https://batdongsan365.vn/api/address-search/?q=nh%C3%A0%20x%C6%B0%E1%BB%9Fng",
       "method": "GET",
       "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan365.vn/cdn-cgi/rum?",
+      "method": "POST",
+      "type": "xhr"
     }
   ],
   "errors": [],
-  "finished_at": "2026-11-17T04:02:42.334978+00:00"
+  "finished_at": "2026-11-17T15:08:40.212256+00:00"
 }

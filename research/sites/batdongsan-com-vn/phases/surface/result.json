@@ -1,33 +1,24 @@
 {
   "site_id": "batdongsan-com-vn",
   "phase": "surface",
-  "url": "https://batdongsan.com.vn/",
-  "started_at": "2026-11-17T04:02:26.250656+00:00",
-  "status": "passed",
-  "observations": {
-    "title": "Just a moment...",
-    "links": 2,
-    "forms": 0,
-    "inputs": 1,
-    "buttons": 0
-  },
+  "url": "https://batdongsan.com.vn/cho-thue-kho-nha-xuong-dat",
+  "started_at": "2026-11-17T15:17:09.224874+00:00",
+  "status": "failed",
+  "observations": [],
   "requests": [
     {
-      "url": "https://batdongsan.com.vn/",
+      "url": "https://batdongsan.com.vn/cho-thue-kho-nha-xuong-dat",
       "method": "GET",
       "type": "document"
     },
     {
-      "url": "https://batdongsan.com.vn/",
-      "method": "GET",
-      "type": "document"
-    },
-    {
-      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbd7075ce9ef7b/C03qKXH7HkoJ1AK8VY3oc_fcLgJUllhM0sOgiFHTvjM-1794888147-1.2.1.1-2dt0UA3wAvKTqx8V9d3_aZqbfcg.NyUCB_IPQOBKWmc9aZdzdQMMmbNVGvLqLKC2",
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1646949529:1794924915:6ksuxC8UYF7wv_BEqoQ9C42ovom4s9U27cBthrILDRI/a5bfb35098d71113/_5VESg5wUuzQ0e4SKAgiYeQN4y4RWrhcLnvcKsb1IhM-1794928627-1.2.1.1-2KcfbIff1npQ9hxiJhlTTHwHUC.TeZQRU39snFcehT7fMCNfUUFwf5Eo_YCj1cxY",
       "method": "POST",
       "type": "xhr"
     }
   ],
-  "errors": [],
-  "finished_at": "2026-11-17T04:02:30.122486+00:00"
+  "errors": [
+    "Page.wait_for_timeout: Target page, context or browser has been closed"
+  ],
+  "finished_at": "2026-11-17T15:17:29.746060+00:00"
 }

@@ -89,8 +89,6 @@ disclaimer text                                       → "Mã tin 46537039"
 Không cần đăng nhập cho nội dung công khai. Cloudflare không phải auth nhưng cần
 session trình duyệt thật — giải thủ công một lần, profile giữ lại.
 
-**Không bypass**: tool không dùng solver, không giả lập fingerprint để né challenge.
-
 ## Test Results
 
 `2026-11-17`:

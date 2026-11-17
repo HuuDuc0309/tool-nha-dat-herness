@@ -3,6 +3,12 @@
 One browser session per site for the whole exploration: the same context (and
 its cookies/Cloudflare clearance) is reused for every page instead of launching
 a browser per URL. The work page is never closed — see session.py for why.
+
+Transport rule: the entry page is loaded with goto() because it is the page
+that gets interacted with (search box, filters, clicks) and screenshotted.
+Every additional URL is read with fetch() in that same page, so the number of
+document navigations — the main trigger for Cloudflare's managed challenge —
+stays at one per exploration instead of one per page.
 """
 from __future__ import annotations
 
@@ -10,13 +16,36 @@ import argparse
 import json
 import re
 from datetime import datetime, timezone
+from html import unescape
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
+
+from .crawler import fetch_in_page
 
 TRACK_TYPES = {"document", "xhr", "fetch"}
 KEYWORDS = {"search", "tim-kiem", "listing", "property", "real-estate",
             "bat-dong-san", "nha-dat", "kho", "xuong", "filter", "loc", "page",
             "detail", "chi-tiet"}
+
+_LINK_RE = re.compile(r'<a\b[^>]*\bhref="([^"]+)"[^>]*>(.*?)</a>', re.S | re.I)
+_SCRIPT_RE = re.compile(r"<(script|style)\b.*?</\1>", re.S | re.I)
+_TAG_RE = re.compile(r"<[^>]+>")
+
+
+def links_from_html(html: str, base: str, limit: int = 200) -> list[dict]:
+    """Anchor list from raw HTML: absolute href plus visible text."""
+    out = []
+    for href, inner in _LINK_RE.findall(html):
+        text = re.sub(r"\s+", " ", unescape(_TAG_RE.sub(" ", inner))).strip()
+        out.append({"href": urljoin(base, href), "text": text})
+        if len(out) >= limit:
+            break
+    return out
+
+
+def text_from_html(html: str, limit: int = 12000) -> str:
+    cleaned = _SCRIPT_RE.sub(" ", html)
+    return re.sub(r"\s+", " ", unescape(_TAG_RE.sub(" ", cleaned))).strip()[:limit]
 
 
 def now():
@@ -86,13 +115,18 @@ def explore(start: str, root: Path, max_pages=20, max_clicks=30, headless=True,
         page.on("request", req)
         page.on("response", res)
         try:
+            first = True
             while queued and len(visited) < max_pages:
                 url = queued.pop(0)
                 if url in visited or not same_site(url, start):
                     continue
                 visited.add(url)
                 before = len(requests)
-                try:
+
+                if first:
+                    # Only the entry page is navigated: it is what gets the
+                    # search box, filters, clicks and screenshots.
+                    first = False
                     page.goto(url, wait_until="domcontentloaded", timeout=45000)
                     page.wait_for_timeout(2500)
                     if not _clear_challenge(runtime, page, not headless,
@@ -111,54 +145,79 @@ def explore(start: str, root: Path, max_pages=20, max_clicks=30, headless=True,
                     buttons = page.locator("button,[role=button]").evaluate_all(
                         "els=>els.map(e=>(e.innerText||e.getAttribute('aria-label')||'')"
                         ".trim()).filter(Boolean).slice(0,80)")
-                    pages.append({"input_url": url, "final_url": final, "title": title,
-                                  "links": links[:200], "forms": forms, "buttons": buttons,
-                                  "request_start": before, "request_end": len(requests),
-                                  "text_sample": text})
-                    (out / "discovery" / f"{len(pages):03d}_{safe_name(final)}.html").write_text(
-                        html, encoding="utf-8")
+                else:
+                    # Every later URL is read without leaving the cleared page.
+                    probe = fetch_in_page(page, url)
+                    if probe.get("challenge") or not probe.get("html"):
+                        errors.append({
+                            "page": url,
+                            "action": "fetch",
+                            "error": probe.get("error") or "challenge/empty response",
+                            "status": probe.get("status"),
+                        })
+                        continue
+                    final, title = probe.get("url") or url, ""
+                    html = probe["html"]
+                    text = text_from_html(html)
+                    links = links_from_html(html, final)
+                    forms, buttons = [], []
+
+                pages.append({"input_url": url, "final_url": final, "title": title,
+                              "links": links[:200], "forms": forms, "buttons": buttons,
+                              "request_start": before, "request_end": len(requests),
+                              "text_sample": text})
+                (out / "discovery" / f"{len(pages):03d}_{safe_name(final)}.html").write_text(
+                    html, encoding="utf-8")
+                if url == start:
                     page.screenshot(
                         path=str(out / "discovery" / "screenshots" / f"{len(pages):03d}.png"),
                         full_page=False)
-                    for item in links:
-                        href = item.get("href", "")
-                        if (same_site(href, start)
-                                and (relevant(href) or len(queued) < max_pages * 2)
-                                and href not in visited and href not in queued):
-                            queued.append(href)
-                    # Explore visible search controls; navigation is re-read from
-                    # the same page, so the next queued URL starts from the home
-                    # state instead of a filtered one.
-                    for i in range(min(page.locator("input").count(), 8)):
-                        el = page.locator("input").nth(i)
-                        typ = el.get_attribute("type") or "text"
-                        name = el.get_attribute("name") or ""
-                        if typ in {"text", "search"}:
-                            try:
-                                el.fill("nhà xưởng")
-                                el.press("Enter")
-                                page.wait_for_timeout(1800)
-                                interactions.append({"page": final, "action": "fill_search",
-                                                     "field": name, "value": "nhà xưởng",
-                                                     "result_url": page.url})
-                            except Exception as e:
-                                errors.append({"page": final, "action": "fill_search",
-                                               "error": str(e)})
-                    for i in range(min(page.locator("button").count(), max_clicks)):
-                        button = page.locator("button").nth(i)
-                        label = (button.inner_text() or "").strip().lower()
-                        if any(k in label for k in
-                               ("tìm", "search", "lọc", "filter", "xem thêm", "next", "tiếp")):
-                            try:
-                                button.click(timeout=1500)
-                                page.wait_for_timeout(1200)
-                                interactions.append({"page": final, "action": "click",
-                                                     "label": label, "result_url": page.url})
-                            except Exception as e:
-                                errors.append({"page": final, "action": "click",
-                                               "label": label, "error": str(e)})
-                except Exception as e:
-                    errors.append({"page": url, "action": "navigate", "error": str(e)})
+
+                for item in links:
+                    href = item.get("href", "")
+                    if (same_site(href, start)
+                            and (relevant(href) or len(queued) < max_pages * 2)
+                            and href not in visited and href not in queued):
+                        queued.append(href)
+
+                # Interactive exploration only makes sense on a real document;
+                # fetched pages have no live DOM to click.
+                if url != start:
+                    continue
+
+                # Explore visible search controls; navigation is re-read from
+                # the same page, so the next queued URL starts from the home
+                # state instead of a filtered one.
+                for i in range(min(page.locator("input").count(), 8)):
+                    el = page.locator("input").nth(i)
+                    typ = el.get_attribute("type") or "text"
+                    name = el.get_attribute("name") or ""
+                    if typ in {"text", "search"}:
+                        try:
+                            el.fill("nhà xưởng")
+                            el.press("Enter")
+                            page.wait_for_timeout(1800)
+                            interactions.append({"page": final, "action": "fill_search",
+                                                 "field": name, "value": "nhà xưởng",
+                                                 "result_url": page.url})
+                        except Exception as e:
+                            errors.append({"page": final, "action": "fill_search",
+                                           "error": str(e)})
+                for i in range(min(page.locator("button").count(), max_clicks)):
+                    button = page.locator("button").nth(i)
+                    label = (button.inner_text() or "").strip().lower()
+                    if any(k in label for k in
+                           ("tìm", "search", "lọc", "filter", "xem thêm", "next", "tiếp")):
+                        try:
+                            button.click(timeout=1500)
+                            page.wait_for_timeout(1200)
+                            interactions.append({"page": final, "action": "click",
+                                                 "label": label, "result_url": page.url})
+                        except Exception as e:
+                            errors.append({"page": final, "action": "click",
+                                           "label": label, "error": str(e)})
+        except Exception as e:
+            errors.append({"page": start, "action": "explore", "error": str(e)})
         finally:
             page.remove_listener("request", req)
             page.remove_listener("response", res)
