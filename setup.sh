@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Vietnamese labels/output must not crash on a non-UTF-8 console.
+export PYTHONUTF8=1
+export PYTHONIOENCODING=utf-8
+
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$PROJECT_ROOT"
 

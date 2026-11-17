@@ -1,0 +1,35 @@
+{
+  "sites": [
+    {
+      "site_id": "batdongsan365-vn",
+      "base": "https://batdongsan365.vn",
+      "platform": "batdongsan_group",
+      "persistent_profile": false,
+      "cloudflare": false,
+      "detail_path_re": "^/(?:cho-thue|ban)-[a-z0-9-]+-[a-z0-9]*(?:-bs\\d+)?/?$",
+      "categories": [
+        {"key": "cho-thue-kho-nha-xuong", "label": "Cho thuê kho, nhà xưởng", "path": "/cho-thue-kho-nha-xuong/"},
+        {"key": "cho-thue-van-phong", "label": "Cho thuê văn phòng", "path": "/cho-thue-van-phong/"},
+        {"key": "cho-thue-cua-hang-ki-ot", "label": "Cho thuê cửa hàng, ki ốt", "path": "/cho-thue-cua-hang-ki-ot/"},
+        {"key": "cho-thue-nha-mat-pho", "label": "Cho thuê nhà mặt phố", "path": "/cho-thue-nha-mat-pho/"},
+        {"key": "cho-thue-loai-bat-dong-san-khac", "label": "Cho thuê loại BĐS khác", "path": "/cho-thue-loai-bat-dong-san-khac/"}
+      ]
+    },
+    {
+      "site_id": "batdongsan-com-vn",
+      "base": "https://batdongsan.com.vn",
+      "platform": "batdongsan_vn",
+      "persistent_profile": true,
+      "cloudflare": true,
+      "profile_dir": "Temp/bds-profile",
+      "detail_path_re": "^/(?:cho-thue|ban)-[a-z0-9-]+-pr\\d+/?$",
+      "categories": [
+        {"key": "cho-thue-kho-nha-xuong-dat", "label": "Cho thuê kho, nhà xưởng, đất", "path": "/cho-thue-kho-nha-xuong-dat"},
+        {"key": "cho-thue-van-phong", "label": "Cho thuê văn phòng", "path": "/cho-thue-van-phong"},
+        {"key": "cho-thue-sang-nhuong-cua-hang-ki-ot", "label": "Cho thuê, sang nhượng cửa hàng, ki ốt", "path": "/cho-thue-sang-nhuong-cua-hang-ki-ot"},
+        {"key": "cho-thue-nha-mat-pho", "label": "Cho thuê nhà mặt phố", "path": "/cho-thue-nha-mat-pho"},
+        {"key": "cho-thue-loai-bat-dong-san-khac", "label": "Cho thuê loại BĐS khác", "path": "/cho-thue-loai-bat-dong-san-khac"}
+      ]
+    }
+  ]
+}

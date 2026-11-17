@@ -2,7 +2,7 @@
   "site_id": "batdongsan365-vn",
   "phase": "search-filter",
   "url": "https://batdongsan365.vn/",
-  "started_at": "2026-11-14T14:43:15.931360+00:00",
+  "started_at": "2026-11-17T04:02:34.566371+00:00",
   "status": "passed",
   "observations": [
     {
@@ -92,5 +92,5 @@
     }
   ],
   "errors": [],
-  "finished_at": "2026-11-14T14:43:28.741951+00:00"
+  "finished_at": "2026-11-17T04:02:42.334978+00:00"
 }

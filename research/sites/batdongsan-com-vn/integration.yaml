@@ -1,0 +1,116 @@
+name: batdongsan-com-vn
+domain: batdongsan.com.vn
+platform: batdongsan_vn
+version: "1.0.0"
+status: tested
+lifecycle_note: >
+  This is the primary data source (15,990 rental listings in Hà Nội and 32,682 in
+  TP.HCM on 2026-11-17). Tested live on 2026-11-17. Not promoted to `active`
+  pending user approval and a regression run.
+
+access:
+  browser: true
+  headless_ok: false          # Cloudflare challenges a fresh headless context
+  cloudflare: true
+  persistent_profile: "Temp/bds-profile"   # gitignored; cleaned by removing the folder
+  human_action_required: "Solve the Cloudflare check once in the headed browser"
+  rate_limit_seconds: 1.5
+  requires_login: false
+
+flakes:
+  challenge: "Cloudflare 'Just a moment...' / 'Performing security verification'. Never bypassed programmatically — the human solves it, the session is reused from the persistent profile."
+  captcha: false
+  login_wall: false
+
+routes:
+  listing:
+    pattern: "/{category}"
+    pagination: "/{category}?page={n}"
+    cards_per_page: 20
+    card_selector: "div.js__card-full-web"
+    card_attrs: {prid: listing id, uid: user id, vtp: vip type}
+    card_classes:
+      title: re__card-title
+      href: a.js__product-link-for-product-id
+      price: re__card-config-price
+      price_per_m2: re__card-config-price_per_m2
+      area: re__card-config-area
+      location: re__card-location
+      description: re__card-description
+  detail:
+    pattern: "/{category}-{slug}-pr{id}"
+    code_regex: "pr(\\d+)"
+    markers:
+      container: "div.re__pr-info"
+      title: "h1.re__pr-title"
+      address: "span.re__address-line-1"
+      address_alt: "span.re__address-line-2"   # post-merger name, e.g. '(Xã …, Hồ Chí Minh mới)'
+      short_info: "div.re__pr-short-info-item > span.title + span.value"
+      specs: "div.re__pr-specs-content-item > …-title + …-value"
+      description: "div.re__detail-content"
+      code_in_disclaimer: "Mã tin (\\d{4,})"
+
+categories:
+  cho-thue-kho-nha-xuong-dat:                /cho-thue-kho-nha-xuong-dat
+  cho-thue-van-phong:                        /cho-thue-van-phong
+  cho-thue-sang-nhuong-cua-hang-ki-ot:       /cho-thue-sang-nhuong-cua-hang-ki-ot
+  cho-thue-nha-mat-pho:                      /cho-thue-nha-mat-pho
+  cho-thue-loai-bat-dong-san-khac:           /cho-thue-loai-bat-dong-san-khac
+
+field_mapping:
+  title:            "detail.h1.re__pr-title"
+  source_url:       "detail.url"
+  address:          "detail.span.re__address-line-1 (address-line-2 kept as address_alt, never merged)"
+  province:         "split(address, ',')[-1]"
+  district:         "split(address, ',')[-2]"
+  ward:             "split(address, ',')[0] when it starts with Xã/Phường/Thị trấn"
+  rent_amount:      "normalise_vnd(Khoảng giá) — ONLY when the price is a total"
+  rent_amount_text: "Khoảng giá (raw)"
+  price_per_m2_vnd: "when 'Khoảng giá' contains '/m²' the value IS the per-m² price"
+  usable_area_m2:   "parse_area_m2(Diện tích)"
+  contact:          "masked broker number from the description ('0937 992 ***'); contact_masked='yes'"
+  listing_code:     "Mã tin"
+  posted_at:        "Ngày đăng"
+  expires_at:       "Ngày hết hạn"
+  post_type:        "Loại tin"
+  legal:            "Pháp lý (only present on some listings)"
+
+normalisation:
+  price_basis:
+    per_m2: "'/m²' in the price -> rent_amount empty, price_per_m2_vnd filled, warning added"
+    negotiable: "'Thỏa thuận' -> rent_amount empty, warning added"
+    total: "otherwise -> rent_amount = normalised VND"
+  address_duplicates: >
+    address-line-2 repeats the post-2025-merge name ('(Xã Phước Hòa, Hồ Chí Minh mới)').
+    It is stored separately so the pre-merge address stays readable, and province
+    parsing only ever uses address-line-1.
+  phone: >
+    The site masks broker numbers as '0937 992 ***' and reveals the full number only
+    through an interactive 'Hiện số' action. This tool never performs that reveal:
+    the masked value is stored as-is with contact_masked='yes' and a warning.
+
+evidence:
+  snapshots: "research/jobs/<job>/snapshots/batdongsan-com-vn/"
+  keep_raw_html: true
+
+known_limitations:
+  - "Cloudflare means an unattended run cannot start; a human must solve the challenge once per profile lifetime."
+  - "Broker phone numbers are masked; the real number needs an interactive reveal that the tool deliberately does not perform."
+  - "Rent for land/warehouse lots is quoted per m², so there is no total monthly rent to extract."
+  - "Deposit and frontage are not published on this template."
+  - "The generic discovery heuristic reports listing_detail=false because detail URLs end in -pr<id> rather than containing 'chi-tiet'/'/p/'. Verified manually against real detail pages."
+  - "Listing pages are ~1.3 MB of HTML each (map payload + 20 cards), so snapshots add up; they are kept for audit only."
+
+special_notes:
+  - "Shares the listing-card markup with batdongsan365.vn but the detail template is different (re__pr-* vs h1.h2/b2); two adapters live in src/property_tool/adapters/."
+  - "prid in the card attributes is the canonical listing id and is more reliable than parsing the URL."
+  - "Cloudflare session is stored in Temp/bds-profile (gitignored). Delete that folder to reset."
+
+fallback:
+  - "If challenge solving stops working, delete Temp/bds-profile and re-run with --headed."
+  - "If the detail template changes, capture a snapshot and update adapters/batdongsan_vn.py."
+
+version_history:
+  - version: "1.0.0"
+    date: "2026-11-17"
+    change: "Initial integration for the re__pr-* detail template; persistent profile for Cloudflare."

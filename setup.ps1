@@ -2,6 +2,11 @@ $ErrorActionPreference = 'Stop'
 $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $ProjectRoot
 
+# Vietnamese labels/output must not crash on a non-UTF-8 console.
+$env:PYTHONUTF8 = '1'
+$env:PYTHONIOENCODING = 'utf-8'
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
 Write-Host '== Tool nha dat: bootstrap ==' -ForegroundColor Cyan
 
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {

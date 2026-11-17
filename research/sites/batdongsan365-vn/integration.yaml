@@ -1,0 +1,112 @@
+name: batdongsan365-vn
+domain: batdongsan365.vn
+platform: batdongsan_group
+version: "1.0.0"
+status: tested            # candidate -> tested -> pending_approval -> active
+lifecycle_note: >
+  Tested against live snapshots on 2026-11-17. Not promoted to `active`:
+  promotion requires user approval plus a regression run on both old and new
+  snapshots.
+
+access:
+  browser: true           # pages are server-rendered but JS-heavy; headless chromium works
+  headless_ok: true
+  cloudflare: false
+  persistent_profile: null
+  user_agent: null        # default chromium UA worked
+  rate_limit_seconds: 1.5
+  requires_login: false
+
+flakes:
+  challenge: null
+  captcha: false
+  login_wall: false
+
+routes:
+  listing:
+    pattern: "/{category}/"
+    pagination: "/{category}/?page={n}"     # n starts at 1; page=1 duplicates the base page
+    cards_per_page: 20
+    card_selector: div.js__card-full-web
+    card_classes:
+      title: re__card-title
+      href: a.js__product-link-for-product-id
+      price: re__card-config-price
+      price_per_m2: re__card-config-price_per_m2
+      area: re__card-config-area
+      location: re__card-location
+      description: re__card-description
+  detail:
+    pattern: "/{category}-{slug}[-bs{code}]/"
+    code_regex: "bs(\\d+)"
+    markers:
+      title: "h1.h2"
+      address: "p.b2"
+      attribute_rows: "div.d-flex.align-items-center.justify-content-between.border-bottom.border-top.py-4"
+      posting_meta: "h4:has-text('Thông tin tin đăng') + div.space-y-1 > p.text-gray.fw-light"
+      description: "h4:has-text('Thông tin mô tả')"
+  search:
+    address_api: "/api/address-search/?q={query}"   # suggest only; not used for crawling
+
+categories:
+  cho-thue-kho-nha-xuong:            /cho-thue-kho-nha-xuong/
+  cho-thue-van-phong:                /cho-thue-van-phong/
+  cho-thue-cua-hang-ki-ot:           /cho-thue-cua-hang-ki-ot/
+  cho-thue-nha-mat-pho:              /cho-thue-nha-mat-pho/
+  cho-thue-loai-bat-dong-san-khac:   /cho-thue-loai-bat-dong-san-khac/
+
+field_mapping:
+  title:            "detail.h1 | card.re__card-title"
+  source_url:       "detail.url"
+  address:          "detail.p.b2 | card.re__card-location"
+  province:         "split(address, ',')[-1]"
+  district:         "split(address, ',')[-2]"
+  ward:             "split(address, ',')[0] when it starts with Xã/Phường/Thị trấn"
+  rent_amount:      "normalise_vnd(detail.Mức giá) — ONLY when the price is a total, never per m²"
+  rent_amount_text: "detail.Mức giá (raw)"
+  usable_area_m2:   "parse_area_m2(detail.Diện tích)"
+  contact:          "first phone inside the description text; sidebar shows it masked as ******9528"
+  listing_code:     "detail.Mã tin"
+  posted_at:        "detail.Ngày đăng (DD/MM/YYYY)"
+  expires_at:       "detail.Ngày hết hạn"
+  post_type:        "detail.Loại tin"
+  legal:            "detail.Pháp lý"
+
+normalisation:
+  price_basis:
+    per_m2: "card price == card price_per_m2 -> rent_amount stays empty, warning added"
+    total: "otherwise -> rent_amount = normalised VND"
+  number_separators: >
+    Vietnamese uses '.' as thousands and ',' as decimal, but both appear
+    inconsistently ('11.000m²', '9000,0 m2'). parse_area_m2() decides by the
+    length of the trailing group: exactly 3 digits after a separator is a
+    thousands group, 1-2 digits is a decimal fraction.
+  areas_from_text:
+    factory_area_m2: 'diện tích (nhà )?xưởng <number> m'
+    land_area_m2: 'diện tích (khuôn viên|đất|tổng|mặt bằng) <number> m'
+
+evidence:
+  snapshots: "research/jobs/<job>/snapshots/batdongsan365-vn/"
+  keep_raw_html: true
+  keep_screenshots: false     # listing/detail pages are long; HTML snapshot is enough
+
+known_limitations:
+  - "No JSON-LD is emitted; every field comes from HTML markup, so a redesign breaks the parser."
+  - "Sidebar phone numbers are masked ('******9528'). The full number appears only inside the free-text description when the poster wrote it there."
+  - "Rent for land/warehouse lots is quoted per m², so there is no total monthly rent to extract."
+  - "Deposit (đặt cọc) and frontage (mặt tiền) are not published on this site at all."
+  - "The generic discovery heuristic reports listing_detail=false: it looks for 'chi-tiet' or '/p/' in URLs, but detail URLs here are '/{category}-{slug}-bs{code}/'. Verified manually by fetching real detail pages."
+  - "34 discovery 'errors' are Playwright click timeouts on hidden tab buttons ('Tìm mua'/'Tìm thuê'); they do not affect extraction."
+
+special_notes:
+  - "Same platform as batdongsan.com.vn but an older template; the shared adapter src/property_tool/adapters/batdongsan_group.py covers the listing cards and the 365 detail layout."
+  - "Inventory in the cho-thue categories is small (kho/xuong had 3 listings on 2026-11-17), so most value comes from the larger batdongsan.com.vn inventory."
+
+fallback:
+  - "If card markup changes, re-run /discover-site then update re__card-* selectors in adapters/batdongsan_group.py."
+  - "If the site starts challenging, set cloudflare: true and add a profile_dir like batdongsan-com-vn."
+
+version_history:
+  - version: "1.0.0"
+    date: "2026-11-17"
+    change: "Initial integration: listing + detail parsing, evidence snapshots, per-m² price handling."

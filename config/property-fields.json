@@ -46,6 +46,21 @@
       "type": "text"
     },
     {
+      "key": "rent_amount_text",
+      "label": "Giá thuê (nguyên văn)",
+      "type": "text"
+    },
+    {
+      "key": "price_per_m2_vnd",
+      "label": "Giá theo m² (VND/m²/tháng)",
+      "type": "number"
+    },
+    {
+      "key": "price_per_m2_text",
+      "label": "Giá theo m² (nguyên văn)",
+      "type": "text"
+    },
+    {
       "key": "deposit",
       "label": "Tiền đặt cọc",
       "type": "text"
@@ -89,6 +104,90 @@
       "key": "warnings",
       "label": "Cảnh báo",
       "type": "text"
+    },
+    {
+      "key": "listing_code",
+      "label": "Mã tin",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "posted_at",
+      "label": "Ngày đăng",
+      "type": "date",
+      "group": "supplement"
+    },
+    {
+      "key": "expires_at",
+      "label": "Ngày hết hạn",
+      "type": "date",
+      "group": "supplement"
+    },
+    {
+      "key": "post_type",
+      "label": "Loại tin",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "legal",
+      "label": "Pháp lý",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "direction",
+      "label": "Hướng",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "property_type",
+      "label": "Loại hình",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "project",
+      "label": "Dự án",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "address_alt",
+      "label": "Địa chỉ thay thế (sau sáp nhập)",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "contact_masked",
+      "label": "Số liên hệ bị ẩn",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "area_conflict",
+      "label": "Mâu thuẫn diện tích",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "description",
+      "label": "Mô tả",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "snapshot",
+      "label": "Snapshot HTML",
+      "type": "text",
+      "group": "supplement"
+    },
+    {
+      "key": "collected_at",
+      "label": "Thời điểm thu thập",
+      "type": "text",
+      "group": "supplement"
     }
   ]
 }

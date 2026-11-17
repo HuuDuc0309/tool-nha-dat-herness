@@ -2,7 +2,7 @@
   "site_id": "batdongsan-com-vn",
   "phase": "search-filter",
   "url": "https://batdongsan.com.vn/",
-  "started_at": "2026-11-14T14:47:11.868905+00:00",
+  "started_at": "2026-11-17T04:02:26.255161+00:00",
   "status": "passed",
   "observations": [
     {
@@ -21,11 +21,11 @@
       "type": "document"
     },
     {
-      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf550b90a6d9/2EyCKg0bFK1muyH8ocV6c3T6Y8IStbxlHx42uWVdioI-1794667630-1.2.1.1-yUX114CqIliysTqePAznbxb9E6BKp4rH7kRho_yyFoQBsRVDeT._hstrLDR2V1Na",
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbd7073deadda1/gUbkACSEVPKOVmEALNJUg7BnfctymFORYyY8_CAHnMM-1794888147-1.2.1.1-YD.txXg6bp8KLvgquXnNsRP06dqH0GMslto48B0rZ40C_2W0_DkNbuEcK0CchZfc",
       "method": "POST",
       "type": "xhr"
     }
   ],
   "errors": [],
-  "finished_at": "2026-11-14T14:47:15.488648+00:00"
+  "finished_at": "2026-11-17T04:02:30.249808+00:00"
 }

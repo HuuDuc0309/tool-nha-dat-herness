@@ -1,12 +1,862 @@
 {
   "site_id": "batdongsan-com-vn",
   "start_url": "https://batdongsan.com.vn/",
-  "discovered_at": "2026-11-14T14:47:19.277649+00:00",
-  "pages_explored": 1,
+  "discovered_at": "2026-11-17T04:13:02.558352+00:00",
+  "challenge_solved_at": "2026-11-17T04:12:39.831314+00:00",
+  "pages_explored": 8,
   "pages": [
     {
       "input_url": "https://batdongsan.com.vn/",
       "final_url": "https://batdongsan.com.vn/",
+      "title": "Nền tảng bất động sản uy tín - Mua bán, cho thuê nhà đất toàn quốc | Batdongsan.com.vn",
+      "links": [
+        {
+          "href": "javascript:void(0);",
+          "text": "Tải ứng\n                                    dụng"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.onelink.me/8kLq/general_bds_website",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.onelink.me/8kLq/general_bds_website",
+          "text": ""
+        },
+        {
+          "href": "javascript:void(0)",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.com.vn/",
+          "text": ""
+        },
+        {
+          "href": "javascript:void(0)",
+          "text": "1"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "Tải ứng dụng"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.onelink.me/8kLq/header_qr_code",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.onelink.me/8kLq/header_qr_code",
+          "text": ""
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "Đăng nhập"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "Đăng ký"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nguoi-ban/dang-tin",
+          "text": "Đăng tin"
+        },
+        {
+          "href": "https://batdongsan.com.vn/",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.onelink.me/8kLq/hd6jp67d",
+          "text": "Mở App"
+        },
+        {
+          "href": "https://batdongsan.com.vn/tin-da-luu",
+          "text": "Tin đăng đã lưu"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-ban",
+          "text": "Nhà đất bán"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-can-ho-chung-cu",
+          "text": "Bán căn hộ chung cư"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-can-ho-chung-cu-mini",
+          "text": "Bán chung cư mini, căn hộ dịch vụ"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-rieng",
+          "text": "Bán nhà riêng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke",
+          "text": "Bán nhà biệt thự, liền kề"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-mat-pho",
+          "text": "Bán nhà mặt phố"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-shophouse-nha-pho-thuong-mai",
+          "text": "Bán shophouse, nhà phố thương mại"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-dat-nen-du-an",
+          "text": "Bán đất nền dự án"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-dat",
+          "text": "Bán đất"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-trang-trai-khu-nghi-duong",
+          "text": "Bán trang trại, khu nghỉ dưỡng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-condotel",
+          "text": "Bán condotel"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-kho-nha-xuong",
+          "text": "Bán kho, nhà xưởng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-loai-bat-dong-san-khac",
+          "text": "Bán loại bất động sản khác"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-cho-thue",
+          "text": "Nhà đất cho thuê"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-can-ho-chung-cu",
+          "text": "Cho thuê căn hộ chung cư"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-mini",
+          "text": "Cho thuê chung cư mini, căn hộ dịch vụ"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-nha-rieng",
+          "text": "Cho thuê nhà riêng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-nha-biet-thu-lien-ke",
+          "text": "Cho thuê nhà biệt thự, liền kề"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-nha-mat-pho",
+          "text": "Cho thuê nhà mặt phố"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-shophouse-nha-pho-thuong-mai",
+          "text": "Cho thuê shophouse, nhà phố thương\n                        mại"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-nha-tro-phong-tro",
+          "text": "Cho thuê nhà trọ, phòng trọ"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-van-phong",
+          "text": "Cho thuê văn phòng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-sang-nhuong-cua-hang-ki-ot",
+          "text": "Cho thuê, sang nhượng cửa hàng, ki\n                        ốt"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-kho-nha-xuong-dat",
+          "text": "Cho thuê kho, nhà xưởng, đất"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-loai-bat-dong-san-khac",
+          "text": "Cho thuê loại bất động sản khác"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-bat-dong-san",
+          "text": "Dự án"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-can-ho-chung-cu",
+          "text": "Căn hộ chung cư"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-cao-oc-van-phong",
+          "text": "Cao ốc văn phòng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-trung-tam-thuong-mai",
+          "text": "Trung tâm thương mại"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-khu-do-thi-moi",
+          "text": "Khu đô thị mới"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-khu-phuc-hop",
+          "text": "Khu phức hợp"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-nha-o-xa-hoi",
+          "text": "Nhà ở xã hội"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-khu-nghi-duong-sinh-thai",
+          "text": "Khu nghỉ dưỡng, Sinh thái"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-khu-cong-nghiep",
+          "text": "Khu công nghiệp"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-biet-thu-lien-ke",
+          "text": "Biệt thự, liền kề"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-shophouse",
+          "text": "Shophouse"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-nha-mat-pho",
+          "text": "Nhà mặt phố"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-khac",
+          "text": "Dự án khác"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc",
+          "text": "Tin tức"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki",
+          "text": "Wiki BĐS"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki/mua-bds",
+          "text": "Mua BĐS"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki/ban-bds",
+          "text": "Bán BĐS"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki/thue-bds",
+          "text": "Thuê BĐS"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki/tai-chinh",
+          "text": "Tài chính\n                        BĐS"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki/quy-hoach-phap-ly",
+          "text": "Quy\n                        hoạch - Pháp lý"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki/noi-ngoai-that",
+          "text": "Nội - Ngoại\n                        thất"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki/phong-tuc",
+          "text": "Phong tục"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia",
+          "text": "Phân tích đánh giá"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia/bieu-do-gia",
+          "text": "Biểu đồ giá"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia/video-danh-gia",
+          "text": "Video đánh giá"
+        },
+        {
+          "href": "https://research.batdongsan.com.vn/",
+          "text": "Báo cáo thị trường"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia/goc-nhin-chuyen-gia",
+          "text": "Góc nhìn chuyên gia"
+        },
+        {
+          "href": "https://batdongsan.com.vn/interaktivestory",
+          "text": "Interkative Story"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "Danh bạ"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-moi-gioi",
+          "text": "Nhà môi giới"
+        },
+        {
+          "href": "https://batdongsan.com.vn/doanh-nghiep",
+          "text": "Doanh nghiệp"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nguoi-ban/quan-ly-tin-rao-ban-cho-thue",
+          "text": "Chuyển sang đăng tin"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nguoi-ban/trang-chu",
+          "text": "Tổng quan"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nguoi-ban/quan-ly-tin-rao-ban-cho-thue",
+          "text": "Quản lý tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nguoi-ban/quan-ly-khach-hang",
+          "text": "Quản lý khách hàng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nguoi-ban/trang-ca-nhan?tab=professional-agent",
+          "text": "Môi giới chuyên nghiệp"
+        },
+        {
+          "href": "https://batdongsan.com.vn/sellernet/goi-hoi-vien/dang-ky",
+          "text": "Gói hội viên\n                    \n                        Tiết kiệm đến -39%"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nguoi-ban/nap-tien",
+          "text": "Nạp tiền"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nguoi-ban/trang-ca-nhan",
+          "text": "Cài đặt tài khoản"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nguoi-ban/trang-ca-nhan?tab=account-settings",
+          "text": "Đổi mật khẩu"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia",
+          "text": "Phân tích đánh giá"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia/bieu-do-gia",
+          "text": "Biểu đồ giá"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia/video-danh-gia",
+          "text": "Video đánh giá"
+        },
+        {
+          "href": "https://research.batdongsan.com.vn/",
+          "text": "Báo cáo thị trường"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia/goc-nhin-chuyen-gia",
+          "text": "Góc nhìn chuyên gia"
+        },
+        {
+          "href": "https://batdongsan.com.vn/interaktivestory",
+          "text": "Interkative Story"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "Danh bạ"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-moi-gioi",
+          "text": "Nhà môi giới"
+        },
+        {
+          "href": "https://batdongsan.com.vn/doanh-nghiep",
+          "text": "Doanh nghiệp"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc",
+          "text": "Xem thêm"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/m-riverside-danang--dau-an-song-khac-biet-tai-loi-trung-tam-ben-song-han-858278",
+          "text": "M Riverside Danang : Dấu Ấn Sống Khác Biệt Tại Lõi Trung Tâm Bên Sông Hàn"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/nha-o-xa-hoi-phuoc-an-gateway-%E2%80%93-co-hoi-an-cu-cho-gia-dinh-tre-tai-nhon-trach-tp.-dong-nai.-858271",
+          "text": "����C\b\u0006\u0006\u0007\u0006\u0005\b\u0007\u0007\u0007\t\t\b\n\f\u0014\n\f\u000b\u000b\f\u0019\u0012\u0013\u000f\u0014\u001d\u001a\u001f\u001e\u001d\u001a\u001c\u001c $.' \",#\u001c\u001c(7),01444\u001f'9=82<.342��C\u0001\t\t\t\f\u000b\f\u0018\n\n\u00182!\u001c!22222222222222222222222222222222222222222222222222��\u0011\b\u0001V\u0002b\u0003\u0001\"\u0002\u0011\u0001\u0003\u0011\u0001��\u001c\u0001\u0005\u0001\u0001\u0001\u0001\u0002\u0004\u0005\u0006\u0007\u0003\b��J\u0010\u0001\u0003\u0003\u0003\u0002\u0004\u0004\u0003\u0005\u0005\u0006\u0004\u0006\u0001\u0005\u0001\u0002\u0003\u0004\u0005\u0011\u0006\u0012!1A\u0013\"Qa\u0007\u0014q�2��\u0015#B��$3Rb�\u0016r����\u0017���%&CSc�s4t�����\u0019\u0001\u0003\u0001\u0001\u0001\u0001\u0002\u0003\u0004\u0005��2\u0011\u0002\u0002\u0002\u0002\u0001\u0002\u0005\u0002\u0005\u0004\u0003\u0001\u0001\u0002\u0011\u0003!\u00121A\"Q\u0004\u00132a�q�\u0014#B��\u00053��C�����\f\u0003\u0001\u0002\u0011\u0003\u0011?�\\�E\u0015�\u0002SM:�\u00046��(\u0001E;\u0014�K@��K�m(�!��\t�4��f�����4Й�K�R��4�\u0012\u001b�'4�:S���J(\u0001½\u0012\u0006k�S��\u0004z�wj`&����Rw��\u0006�\tL4�i\u0014���\u0012iM4�\u0010�ri3�\n!�BaFi\u0005\u0006���T��@��g�5�G4��HM\b\u0018�2h�4�\u0003M4��ILL(\u0019����\u0014��S�K)\u001e�\u001f_JyNFkƽ�H\u0015\f�\t�9�%$\u0003�{r�H\u0011�B`��J�(�5I����ĊT�\u0006�\u000ei؇b�\n�\n�P���\u0014R\u0001)(4��4��\u0018�\u0014\u0013T\u0002\u0011IKJ\u0005\u0002\u001b�\\S��\u001d�X�Lf�Fi3LAM��F(\u0010����\u0002�(\u001a\u000e������\u0016�Ҋ\\z�\u0003p(���\n=襢���R�J\u0004%\u0014RP\u0002�Pi��@\u000e\u0002�\u0014�u\"�SH�JB(\u001d\u001eF�y\u0014�S$a\u001c�H�z�F8��G�\u0014��SL)���<�4�4�Q�v*\u0014S��\u0002�\u0005M�Tө\u0005:�Ĥ�)��@Xn斛AU\u0002�\"�iJ�0�i��M)���K\u0014\u001aEQ�)��XR�K��\u0002R\u001aZi�!3I�3IL�\n(\u0014��&)h�� \u0014u�\u000e)��)\n\u001e���I8�4\u001cu�⥚��\n�F\u0005x'��\u0007$T2�\u001d֘E?�4�(\u0019�S@M8�MɦH��&y��4�\u0002��i3L\u0007\u001am\u0019���!�sJ(�4ݹ���N��u)\"��N�S\u0013cy�KKK�,@\u0005\u0018��Fh\u0018RPh�\u0004�.\u000eiBsN�aHbv�4�����\u0014���P#�\u0014Rъ��\u0011IO\"�\u0014X�n)\b��S���S�qE+\n\nQK�(4\f��ҊE\f)���z␊\u0005G�)\b�B)���b��E&)�7\u0002�m--\u0016\u0002\u0004���@�w����i�4�hB\f�\t�4��74R\u001aJ�\u0016�K�Jbbc�N��P3@�LR\u0011O��\"������i\u0014���R\u001e)Ԕ\n����\u0014�b����Rъ\u0002�Rюii\n!k�\u00075�J8��L��^��^ �\u000e*\u001a-3�q�39�\u001aZJJSHh@\u0014�v��\u0003<�P8����+���7��8��ڠ��)V\u000fB:�wZ�S.��\u0002���J���ާ��v��?�t��C����\u0014���' �޵N�dIS�����g�\u0004.sI�i(�\u0002�R��-\u0002)h�\u0014�&(��\t'��\u0006�\u0013O\b��\u001d)X�e\u0018�b��\u0005\n��N\n]��A\u001cR�\f�IE{b�S�,�4S�\u0014�L\u0004��ILAA���\u00134���b\u0014\u001ap4�Pi\n1٤&�4����f�h4�\u0005�HisHi�%\u0019��\\њJ(\u0001sFi);�\u0003��\u0013�\u0014��\u001aJ\n-1\f#4�+��M1\f��;m.\u0005\u0016\u00036❎)OZJ;b�E!�\u0006�CJh�K\u001bIN�\u0014�6�\nZP(\u0001(�4�Q�C\u001bJ\u0005.)�P1��\u0002��4��w���jE8$��A\u00156P��&ii��NIv4��\t��4\u0013IX�5ti\u001c^��H\u0006N)�\u0011�&�r��5IDe(B��U$�Ui��d�Č�1\u0018x��ہ�\"��2\u0004�c\u0012�*h�\tآ\t\u001c��)F<�N�1��:֯�-i�����*�Ej_�Z-S\\�\u0018qG�+�'���}��MMTŨQ���\u0018Ns\\�(\nBV��s��^�+�G<�w!Ғ��CQ�͋t��jm?�Y?�$QZ��f(�E\u0014P\u0002�J\u00074�R\u001d\n�8\u0003K��P\n!�@�i�\na4f��\u0013M4f�4��H\u00014�(\u0004��\\f�җ4�t7\u0014S�E+\n\u001dIE\u0014\u0014%\u0018���\n�\"��1@Q�1^���E�\f��⛊v*\u0012�\\Q�JJv)(\u0001))Ԇ������\n�\u0014�b�\u001bE;\u0014m�aCi)�h�\u0016\u0003:QJi(��4S\u0010܌�z��\u0014�&i;ӱI�J\b❴�ԻGz\u0002�:)�f�\u0014\n��\u0014���\t�1K�(\n\u0013\u0014b�\u0014��\u0002b�\n9�N\u0002��\u0004�K�P)qHi\b\u00058\nJ7Vr��e�-��E�10`H����[.\u0014��\u0001��ɪ�B�r�{\b��F�y�z5Xג\\+�k�4Ɉ�q�\u000e���#��L�'�\u00177Q�����\n�Hq\u0019�@\u0002j���J�m+n!3]Ot���������4�X��7�J��W��\u0011���.c���1�n+~u\u0007D^��zq��Ͷ�8�\u0002\u0001�\u0001�_�yk�\u0014X�RP��-�%#�ץDah\u001c��\u000e.�n}͘��n��u([�~� \u001cr����z�=�Ou\u0018�N���w1��Ms�7k�9wD��a�>��w��1�����m\u000fFu���hRH�\"�)G�I�Ţ�k�\u0001\u0010!�mld���IH���\nu�<��Xb\"BB]\t;�\u00061����!ǆ�\u001ba����$`s�=jՐ�\u0005 \f}hY9i\u0004�H�j$�\u0016표�{���Z-ߙ�Y!>��Iq�y\\�)'\b>�O\u001fC]���W6�7\u0007�q-��[ \n�Z)����Ц�Jn���\nI\u001e(����k�&E�K��\u0005$�:ҸR{\u0011];N_\u0011z�\u0014�&Kx\u000e���c\\Rͨ>n�s��9-Hp��\u001e���kS\nK���r�$8���\u0010�\u000f�Z�$)A���i@�[.\u0011�[���$�I�\nM�SdP�b�3IHb�f�\u0006��M0\u0010�JpI4�����I���^\u001d87�}\u0019���\t�\nJu\u0014�QN���\u0014Q@\u0005\u0019�\u0014\u0011@��RR�@���H\u0005��Hi�CHiM%\u0002\u001bE\u0014S\u0010R撊)\b���\u001b�LS��\u000eh���9�\u0004�O\t�R��嶓\u0015�M#4XQ�i��\b��TK<�%8�m1\tE\u0014P ��)�t�4RP *4�ҚLS\u0018�QE\u0002\n1E- ���\n\\\n\u0006%S�J\u0007\u0014�(h\u0014�K�Qҕ�J3H\u00159)�p+�y$�\u001b�\t+\u001bJ\u0001=*\u0005��\nֲ��Z�ۼ2�J�G�\u0007A�犰���p����#�Z�����P�e�J�����ba\u000e�e!���\u0007$��\u0001ɬū^������#�4�wIq�2p�������ދ\u0005�\u0010���T\t\u001c�\u0006x�\u001f����nE�\u0017<'J@JFr9�^�p|��&��6ߦ\\�먲Z��\u0012{\u000f!����!�\u0005�UD��\u0013\u0018�S�R���v���wt�\u001b�\u0007�V?��5n��X7)�GfBRv���;�]��!D��+jʄ[���=�#h� o���U��\\��_�Cn�\u0002Е�PP\n\u0019����5q�y��d5���� �;IǱ������Q�ϭ��!�ˈ�BNs����j�ܣ�\u0019*�0�b;���m���\u001b\u000e,'r��\f�>¦�Y�\t�����R��Mr�=��Q\u0005\u0012�\u0012L��uEN�\u0018Nr��\u0006s�\u0015�n\n��t��2�����rRi�\u001c{\t;z9��K��\u0018�;��};�0��\n��\u001e���M�Ɵ�\u001aPRP\u0007~��=��V\u001e�h�\u001c�qN�\n�mY�\u0001\t\u0003��~���\u0006��\u0001�\u001b\u001bP�@\u001fz\u0013��\t]l�����\n\u0018ܖ����B\t\u0015δM�7ke�k���U%eH�y\u0007\u0004�l��WwR�wD�䥗\u0001\u001f�\u001a� 4�ZMd��n�4�pJ\u000f��{��~�Й�h�߬Sl\u0017�NܐR\u001e��\u001c\u001d\u0016�����l��l-��\\nr-�q)���'��P���4��5lkΖ�,4�V�#I)σ�\u0010?�'���fv\u0017��35���%��� \u0013�a@�O\u00151�my5����\u001d\u0002�uv�?yʣ,��Q�+�4�$4�ZX[k\u0001IP�EqK\u0015ݫ�'\u0017�L��@>�\n\u001eƶ�Z��/\b2���gȣ�\n?�֏}\u00185L���(E?�\\�X�@�S�\u0002�4��-%\u0014P1(�.)h\u0001(���\fR\u001a3Fh��(\u0001A�4���!(��`/8���(��)\b�\u0004�\u0014c\u0014\u001an)1N��BQKKL\u0004�%;\u0014�\fA֞)��)\u0002\u001c)i��*�\u0007\u0012\n4�)���Y��Ǖ\nnE7�&i�-�k���w�5B\u0012���LP!(�\u0014b�\u0012�R)1@\u0005\u0014b��\n�\u0018�QE��1KK@\t�\\QE\u0002�t���\nM&iqF9�\b�i\u000e@�|�-�o)ƛ@p���iNN9��x�Z}�r.\u000f�d��H)\f�!(H�u'��eu�'Z�\u001b�?x��\u0003��XW\u0004})��q��\u0019l \u0011�\u0003�s:R:U�)�1%J�Jm��!��%KVp0I�w5��4��R�\u0017�@��b�\\�P�/t�\bkv6��2��\u001c��J�<����P�\u0012�p�\u0012R#���Rw@צʍMn�N[\u000f�\u0003e�\u0012�x�ڎz�j�ѨlOLU���E�\u0001\u0001�4�$��5U�+Rb�A+J҇T6�\u000e\u0006k1����F�\u0013�8��\u0015(�#�zt=*\u001c[��Ů\u0006�\u001d�Ө\u001b�5���\u000emP�+򞆸Öi�+�Qa��d�e\u001b״�O]�<�+�xawf�\u0001!+�=��Y}?�\u001d�]b�$�\nu��%����\u000e���O(�[+~\n_ër�z2$w6n%K�\t d�\u0019=j��lf�\u0005�\u001f?�K�p�\u0019݌�^��S\u001a��\f�Ȏ\u0006Nq^wˏ��\tym8��[Cm�%G8�\u0007J�;����[#��Ć��L�m9\u001c`\u000f�\u001c\n�q��,�\u0003i�7\u0010R\bWГZ&�̟�;���x��\u0004�~�\u0003�J?�=\u000f�i��B��Ȭ̈́�)')P�\u000fC�Et�\u0015�7X�l\t\n�8�_q�D��\"�\u0014��f�b�M&��!�f�Fh\u000b\u00174f�K@Xf�(�-\u0014Q@\u000f��)b��v)(\u0001))��`\u0014f�Jvh�i���\u0004�(�.i(\u0001(��u4�Z(\u0001��I�(����i�M\t�4��LS\u0010�RS��1\n�\u0018��\u0018�\u0004��\u0014��\u0003h�b�\u0014���:��\tF)h�\u0006�u&(�P���E\u0016\u0003h�b�P1(��\u0018�T\u0014R�Z\u0006x�$�\u0012��!\u0001ŕ��\u0010U�eK\t\u0019>��\u001b\f��%������)i�`\fc�Ǔ��T��eK�%����Z^A��V�\u001c{�^v�LCqkB|�\u001ee\u0013���k�U��Wħ�2����e�T��\u000f\u0010�\u0002FI���V�ڗ\u0011\t!���s��x�u�\u000b���m6���H\u001fRk�\u000b�̊��x-�N\u0014����MJ�\u0003Z3��O7~*\u001d���m��\u0010��n�j�`�Z��&\u0004\u0013����[q��/�O\u001f��ߊ�n1\"�M�ลip�\u0013�i\u0003={V3�<\u000b��B/.����\u001dO����H#�$��k\u0019����X�᳢@��2�6���\u0017���\u0007i�\\�Pk\nQ&i�����E\tD\\�p\u001e�9Q��.\u0013\u000b�5 ��Z�d\u0006�<��#�9�Z�CL1ki��%��\t)V���|��}EO���]K��W�.�iA�%\u0004s\\�G[%�jӭ8���ח\u0016�G\u0018��\u0001Y���jꗂR����\f���v\u001a�\u001a����B�8ؚ��JR8�\u0002\u0014\u0012H��WZ��Qϭ�)\u0016}I�添|_\u0015Н�\u0002C���,E�ꛛ7(e�o\f�ʤ��դ��5\u0011\tO\t\u0019���p�(;��TȖ��\f2H�z�\u000f�_��dAm�\u0019SKVrڔ\t\u001c��\n�T֊{��[w \u000f)i��5�tXΞ����\u0005�D9��@w���>�>����/Lw;R\u0010���\u0014����&��o��l\u0010J\\����U� \u0013�q��\u0015Ԍ�F;M�ɖ�E�㞕�V��.�֠�(-\u000e�Ò\"���\u00060�z�\u001f�s�Պm����62�\u0012b��J�\u0012W�A��}*�M].�uɏ\u0003r�W��%x\t\u0005\t�\u001f�Q\t4ݚ�qMy*�����.�\u0016�$���d�p\u001e@#\u001f~���ۢ�F��=��_S\u001dHCn\u001c\t\t��W��w��-��O��S4�(L�\f��\u0015�\u0002�\u0014�\u0015'��zV\u000e�6]��j�\u0019jjCV�\u001c\u001e�\u0014d\u0011�֚J���`n�-8�S��\u0012�����6�ڐ��{�1��Z��uKE&^םp�c�}�\u0016*�Cl�Cӈ���/-��\u001bJ�� ���}�\u0018W�{�\f���\u001c$�M���^B�v�\u0019̏nR3��=��K��\u001f�O�R�F��#=v��N�E\n���1@P����\u0018�1(��\u0014QE\u0006�\u0016�J)\f����\u0004%\u0014���\u0004���J(��\n(��\u0013\u0014��Q@\n��b�\u0014�J(��\n(��\u0001�\u0019���\nJZ(\u00011F)h$\u0001�p=M;\u0010��\u0015\u000f�79��-\u0014���EUļ�]��l\bڸ{IV\u0010P\u0007�ޤʟ\u0016\u0012\n�>�c\u001c\u0013��N:�V�Ի-��u���\u001f���!��\u0010\u0007�Ҳy\u001bL�0VlϽy�֜��l����\t8\u001c\u0003��G\u001dy��\u001b�\u001a�8�\u0006KEN\f�B���~�����L��s�+v\u0007��\u001f����\u000b9��E�\u001a�%��B\u0010�\b<�\u0004���-ʷ&dwP�%��Rz(O\u001fB+�I�˖�h\n��À%C\u0004�Mq�\u001ct�\u0014���\u0012����I\u001eDg�⺓wH�\u001b/c=p�-\u000be��\f�\u0004�#�ڴ�5�Ō\t�7%=3�\u0015�q�V]�d=9��Gw�(���B�\u000e�Cc�~MA������\"\u00150�߾l�ڜ��G�M�a��r:�\u001deh�BV꣯������_��o�\u001ci�8��HP\"�$K�\t��\u000f\u0004�\u0019ڱ���b�ҭ�r3�3�\u0005\u0002�`(Zz}\u0010�vYRڈ�y��H)N\u001bIQ$�\u0007\u0003�׶�@#�W!�뛼۬{b���G��P7\u001c(\u001f�[\u0017��1!ʒ��P�@u-\u0002�\f�t\u001e���DZ�Mf�ۊnOSX\u0003�\u0012E�ҙVKj\u001dqr\fp�\u000b)�\u0019݁��⚩��ڮ\u0004W.jlG�9\"Lv\u000e\u0010�����~��9J�~M�\u0005M�\u0006�騭VX�1:cm�W፹Q*�\u000e\u0006y�+���`�~�irI��!�\u001d^\u001e�\u0014S�z��k*΋���\u0011�@���3\u001d{.��+���\n�[�\u0010�6;Sw{�fU\u00019Q\n\u0001*V���\n��T�UV����̽ic�79q\u001a[K~Cm�QF2\u000f�*$\u001b\u0013���b,W\u001c\\��QO$\u0010\u001cI#��\u0006�\u0017\nC����ޔ�rU�RJXu��mB���@:Ut�ay�j����BTwR�W7x�d�'q\u001cz��v���n���S�/J�S\t\u000e���\u0006e4��M��i�)[�\t\u00039�R;ԋ[��y��t��r�\n�+>��u�5\u0016\u0011�p���\u001cw|��;�8���\u0014�\u0013��c��\b\f%�\u0016C�(�*;���\u0015�J��ze-�7\"�-��qICM\u00140�+\u0007'��u�\u0005�\n�\t\bi�\n��S�n>���ID�]Nw,$\u0013�AR�R�`m$�O�BkF\u000f�\\)s�\n���}e�F� �����5��,�}��\u0016\u000b\u000e���*\u0004��G��\"����kM���D~Au*\tK \u001cc����u'T�L\u0001n\u0011���\n�U�𓏧�Y�O�#X��j�\nռ�����\n�\u001aKO���\u0016\\\u0003\u00042\u0002��\\�ɩ\u0011aM��\u001b)�^��{��Q�=\nr��v-�XB��c7$:ꔔ�#h�8\u001fγprEڋ;���E�Y�:\n���Z�\n�\t���^��/C������HCAN�R��\u00023�ּ4m��V��\u001d�-H)�\tV:���\u0001R���6^1��z�����)K)J��$�G�\u0007��T\u001f\n*!��%+JJ\u0013�^�\u000fҞ�\u000b��@N\u00028R��h<~u^L�\u0014SҕZ�\u001c\u0002Dw\b8��5���=����[[�>�\u000f\u0018���\f�L���\u0014ͲZ�ae�\u001d¤�����k�Yܵ�G��Ó�R��3�6���U���D����\u0016��&�i��!�d�S< ��\u001d�_j[]�L��Q�>�Y\tQZ\u001a{��q\u001d��?:v��F���<1qb\u0003Ȉ��� �P\u001b;���׌--&\u0013I��ِ��L:҃�iO\u0018�I_-\u0006��Y�\"�&L��*$�^\u001f�3�+���\u000e\bɪ=D�����*T�v�A�\u0016�\b\u0019\u001b�\u001e��\u0018�ώ�S�\u001f\u0004��pBs�O\u0019毧�\u000b�\tv�{�51�a����\u0002�Y*'��Lt��E��v�\u0019�\u001b�\u0017]Y�%IQTĶ\u0018��r*���3pC���͵\n�n�HS�p\u0016NH��ڪ,\u0017&����dZLg�0\u0014�IPJ���g�\u0014�2�j\u0006u4y�rC\u001e;Ih\u0004�2�F1Z�����A:WH�\u0014웊��LS��0��?\u000e\u0006{z�ZױƤ�\u000e�fm�LAZ�\u0010\u0012����֫����3oS3b���p.�H!\u0019F�\u0001�SVJӶHz�����|b\u0014��4�7g'�\u0013��\n�v位#ǋ�̽�\\�96\u0011\"L�Fw�V����-�02y��\n��\u001fQ�t�e��\nR��ҥ\u0014��\u0002����C:�E��\u0007`�\f���ӺBw�ԝ�\u0003늹�n/2,v�m,B�&���\\\b��AN�\u000eՍ%o�I6�^���U�`݈e�����J��ʈہ����e�Z����*i.%�U�a\n\n\u0019�H�\n��;p��l��n2\u0012ׄ㮥��K�A\u001d@��l\u000br�u\u0011!��e�\nXJI�\u0016\u000f�\u0006�ԫ\u0012�\u001d_�6q|�L�Q�BgN�z!&\u0001Ca�����\u0002qߜ�����./tw\u001aBx��\u0001Y�\f�y��a�ƕ��Rv<Ȏ\u0014�\f�)RI�U:\u000be\u000b^\\**%G\t��Z�+Ԭ��諹-�M��)l4�\u001b 7��Ty;�\\�Cm�JZYZr|�[���z��f�=�\u001bB�ZR2R\u000e\u001d�c+\tl\u0003��P�����r�)Q;~]�㝦�|!e\t�\bt�������nW�]U�ֻR\\m\u0016�Yz��v��\u001b.���8\u0015Qg�Vk��v�S�-���\\��P0����:�Q�b�\u000b\\o��#�J��SY�N�f�w�u2�rC\n�)@H\b�\f\u001fz�\u0012EŽ@�\u0012㍊J��}\u0007���o.F���Y��u��\u0016���J\u0012P�y9)\u001d�_*������ځ\u001e\u000bl�\u0012�\n��`:Qq��X�,���n\u0003���@\u0007$�F���j�Q���qj%��{�\u0015��\u0002��=�\u0005\b.(Ml�\u0018��^�V�>\u0007;�dh��%I\nŏ)������Ġ�\u000f;�z\u0010zU����$���!��\u0003�\u00015E\n��>�a\n��V\u001cw*H\tJzGoZ�Nh�\u0002CI�崴���)A*\t=�\u0006��$���N��kz�\u001d\toi�\u000e\u0002���Z�cA�{m�����g\u0015�G���\u000b\u0016x����)����d��)pm�=�\u001dEf~jE����0J\\eO:��RHw���mso��f�vi*y�����,�\u0011�]����Dd���i���}\u001bs�X`]'�C�b7)d\u001e��H$\u001f��Z{Ś��\u0012$k�\u0007Dk�iA,�mC�����Y\u001fCKu���k��fCu�8��y��N\b\u001d�:�*��)��7\u001b\u0014�o)�f���y\u001d�5u]\u0019�d�C\u0012m��D�cɊܭ��2\u0015�1�}+wh�̫��R\u001dR$4�.\u0012G\u000e\u0015��q�+�\b���v(p5+f\u001c�M:���ZFݤ��s����LX\u000b���S\nZ\\BDv���V�\u001e\u0004�n��\u000b�ʓ��u������T�����?�\u001fʖ��f�4RP �\u0014QL\u0002�(�AFqE8`�@Ģ��)X�a���d�5m����QK�\u0005}p:g�YV:&��dtH��y��\u0012D'\u0014JW��\nQ'�\t\u0003\u001c\u000e;V��\u0015�\u0014P�\u0013�*�G�YA��S\u001dE\u0014b�AE\u0014P\u0002QKIL\u0002�\u0014�P\u0002QKE\u0002\u0013\u0014QE\u0014��ԭ+\u0019J���9�\u0005暷\u0012�d�8�����p;�$��Q�-�!n;\u0016/���\u0014��>�J�y)�4�,�.��\u0018�+����P�y��ͷ�\u0016X\u001b׷;sǿ\u0015��'Q��q1V�ZS��Q��\u0011��\n����O�_}ۄ�\u001d���Ą���\u0013$���;V.R�ٺ�R���Aq�)MDd0���\u001cn[��v\b�y\u0015op�ɟm���\u0014�y,��_9)I'�|�#w���j�\u0001���mY\u001b�^[�\u0004v=\u0007z����5�ׅ\u0013!ךnARrv�J��Ҫ>E/\u0006J~��EdK�ܛ��m8\u0016�\u0015�B�I9��=�Z���ܿ;f�@q\u000e��\u0015�(�8H ��{V:��w���I��c��ŒBJ��\nǁ����ۧM�����Ѽ����\f�@�}x��m�Q�J�n�\u0019-p��\u0003oC���[�Pi���R\n�����W���\u0013\u001e^V�\u0012$�p-\\�HiY�\u0007�\u0014j\u001df��Ņ\u0005\u000e�1P�qô\u0010�B\u0002}z���}C&�%�^��dˆ\u0003 m\b> �8�>��(�Օ\u00057�-\u001a�z얗\u001en\u0013��(�\u0015��\u001cVN{\u000e\u0007��Qu:�J�\u0006���\u0002������\u001d)bq�oL1Tψ��%;B�P���\u000b����$����q8\n�����U��م%=l�m�\u0003mQVv0RI䜄�HKinD�\u0007*p���T��Q�뮽n�[.4��)�\u0007\t�?z�i���\u001d(\u0001JW\n���<�\u0019��3[[\u000f6�Fu#)��A�+�A��ւ�\u0011��8':Oq�\u001b��r;��\u0001�>Q�����\\Bڵ��y\tM-a>��\u000bn �dxJ\u001cv5\u001a�:6��;k�\u001e��Tς\u0010�\u0014\u0014\u0001��P�T\u0016;K�5퐵\u001b\u0011̧\tq�)8,��G�_�r�l�ܖ���i���6�B1���\t?�=*�ۣ-l��ʸ�KBٸϐ�\t�xE�հ�h�\u0018�\u0014�:R�w\u0015�m�\\�\u0015�$>��1�ʍ[�Ս�h\u000e�\u0004v����B�P����9�s�T%j�G+XA�?%-7�Jy\tNy�\u0002y\u0015��y\"�˄��8��qf\\!A\nZ�N�\u0010�O�~+Ko��4�������2�Y^v���I�Ns��+��D��eR$ș#�Z�p���\u0018�]+I�n\u000e�k\b0V�6T�[a��qG��:�m�^�OUo�/ej;LK��<[2�L�\tm��\u000bh'�J�\u001e�Uc���&�su�#�,:\u001a��J�e@d��ʭƔ��W\u0002��\u0012�V����D�:~T������)3.^#)Xq╁����9\u001c����+t���j�5=+���l�\u0017��I��孖Է\b��\u001cv\u001e��t>�mC�#���\u0003������~\u0002��t\\��rO�\nI\u0007'��>6w+*I���mz��ޙ\u0002[�\u0015-��Sh\n�\u0004�@�Y'\u001d:U�d)�BV���1��By����87\u0005�#nN8�\u00151���\u0001#�UF�1?���\u0015\u0010\u001c�\u0019%)8e�FpBI����؆���M�LS\u000bˤ�<�Oq�#�l�%�%��S)*R\u0012��\u0002�r\u0015���Pl��Y�6�b�\nm�쎇B�@���R:�Y\"�Q�b�2f?���]����\u001e�e���\u0016ˣ��fc:��Dg*'\u0018\u001fz�ü�\"��e6�O\u0014�ȱ�Sޱ�\u001f��*�\u0016,��c#s�8��Թ�/Ij\u0017��l�õGl�m\u0001\u0007��ia\u000e4\u0001\t$(\u0011����\u001e��Ƚi��K��\u001dZ�6!Y\u0018\u0007�j���1\u0019�\u001c���6V\u0012\t��g�ռ[p���S�ͧ������,��H\u0001!'$�j��g\u0013����s�u\u0001\u0001n��R��G\u001dI�ˠͦ`�a��M\u0018֘O���ż)\n���\u001eT��(��@����\u001a���sk�\u0007>U�\u0004s�Egc����\u0016�'��L\n\u0007(H�}�+Go+T$\u0017\u0010\u0010�U��n�'�,kc��Cu�Z~k�t�mQq$q������mAE�\t���\u001b狈;�`��p~����<���I�M���{\n�ƝRB�f;��\u0014�*�O�(\u001c�k��\u001e\u001a�C\\��}�D)�\u0016S\u000f\u001c�2�\u0012�৿ڪ��-+[�n�C�\\d�㔝��S �k���z�#Fy�2�r��\u0018)�z��\"���艀7\u0016㖝q֎\u0003�����֦���k\\\u001b��r\u000b�c'�2��\u0006\u000f����__t��_Ňr�HDI�iim�\n�<\t\u001c\u000f𜏥A���\u001asM�Ā�\u0016�-���$nI\u001fN�\ne�,��˕�LI\nm�l���Q��:\u0011�]Q��$j{L�\\\u0018Q䶶]i�i(Wl����\u001d�uf����\u0019�\u0003�&4e4�99S\u000e\u0012O���u\u0011��;Ŋ\f\nZ�y�ۡ�����\u0013����\u0004�js0\u0011\u000bUYK\u000e���2�j#��2�r~�\u0014G�9})\u001dU��Q���T�Dt��G�R JLR�P ��-\u0014�J(��\u0005\u0014Q@\u000e�\u0014�(\u0003ٷP�w!AC�\u0014��\u000bN��e3$7%K)O�ҝ\n\n�c�����R,���#�����sj9\u0013��Y)+�趢���\u0005\u0014QL\u0002���JZJ(��@\u0019=+�O�yy��cI�ּ��G\u0003�T�\u001dA\u000e\u0006\u0010�o\u0011�m\f�����M��r�HR�G�#!Ď\u0006�F�r��=+)e�#X�u��i~g�h[�Jr\u0001 }���m>�r��Ɉ���\u000b�(�\u0010BFTJ�DLd,��;�u�\u00123�+G��O�T��%6�*d��=��\u0001�_n��+M�)k�>���ٕ�\"c�2��2\\YP ��\u001cg�#���O�\u000e�s~;\u001e#�[��?)X\u0003ʜU\u0017òӖ���$!����I���}\t�\f�\u000b�q�9\u00128񙂕\u0005+ͼ�\nq���O���P�cj[�\u00040�iN$�\u0015�!)�\t\u0019�3��\u0011�n��)�Ϟe�D\\*,$���9�Q�j�v�j+�j\n���,\u0012\u0016�\n\b\u0018NG�3�Z����iK�O�%��\u001f��\u0005\u001b��\u00139��7\u0015�z���%�Z�y�[v�\f�G�\u000bW��弁�G\u0003�j\u0013!1m�~yJS�،�d��;��Y�/m��\u0016�b\u0011�\u001f\u0015�T���q؎\u00075�~'�F�^_����q��\u000fo�i\u0007ل�h�z�X�ҕǊ\u001b��\u0001�$�\u0002��H\u0004\u0013��\u001e�:�\u0005�5��\u001dq�`��(��R8��K��G�\\��\u0006��M,a#xڒ��p:�\"�I3o뵷oK0�5+�\u000b�\u001c$\u0011��e\u0015�v��OҸƴ%�K��\\\u0011t�N�YLd3�a'����?@:W��Ea�>�4�}�\u0015��b3ˊ�NO\u001dNx�������ɡ\u000f<\n��(ʹ����{\u0003�h'�Y�\u0012�2���H���U������\u0014��(IG���F5=��.dV�f\u0018ma-���C�\u001e���ݚoFB}Q<\u0004*k�k>`0��Z�s��-s\u0012�\t\tTg\u0002���$l<�&���;��G2P�\u00115�x���\b✞����kg�\u000e[l�j\u0006d�݋��b�iJFÃ�G\\u��\bgM�Ñaݜe��\"C}\n�s��í{�9*�h����U)��F�_\bR�A�\u001e�&�5��0�>�����\u0014���\u0005�Pv����B���q3j�Ӝ���.�<)JVX�\u0006xH�\u001eƩ��+�;弽o��>M-)A��\u0011�㊮�e�\f��\\���\u0001��\u001e\u0011��ެ��W�l�tX�7�e�i'͜�*ɤ��v�.t�oٚ���n�JrC�^W�G��\u0007�+of��5g���L\u001f\u0018�U��#)@\u0004�\u0012z�}�Y=+s������|���\u0012�xC�A\n(�ݏN*E�O����S�Z���[8#9'\u001bN{֍+F6��\u0005��b�p�z}�S��-�'v?\u000eM\b��Ѫ�-�2$ܟI-8��\u0012���\t�ޫ4n��.\u0013��mt���z|F��!#͕u�պ4M��qvS�ی��]���\nC�|ӭ�����T�`s�8ɩ�6���B7�ۜT7\u001a��\u000bp�b�\tV:T�H-\u0003��94�\\؟�s�����E\u001b�NƝ^\u0012��p3�>�S�N�\u0019n��Td*:�H\u0007\u0003*Z:�s�A���X��{q��!\nˉ$���\fW���#L�\u0013\b�/%�\u0014\u0014�N3�R���TJQS5�/�H�?j%D\f�/\u0007���i����g+BTDwϛ�|��]\u0016<��n�Ko���|\u0003�6��S�WL[J\\\u0013-�8��)\n\u0004�Q���Y\u0014Qj\u000eZ6�q��\u0011���V� �\u0019)-\u0012\u0001�\u0007\u0007ڷojm=�]�h��i�6�#�M�\\(����K\u0013B���\u0017+T�>�q��\u001c8Z\u0012�������W&�'7�/b�H��+9\u0017��\\8�;�|�X�\u0013���n*����:�\u0010n\u0016Y��}�T�L+��O�=���Vr-�U��~D��e�d!����9��*\u0005�|�m���'�*U���\u001c �g���j�DZl��l��\u0016��MaM8��O�U�O ��Z�\u001c�\nM�EmĔ�\u001a:#��\u001dj��R?Z�gX�,P��h��G��w�΄%)��'\u0004��f-����*ܕ\u0018�knU��%�B9�©G��+�Ӛ�e���3�S�\u001b��\u001f��KA��R�P\u0001E\u0014P\u0002b�\u0014Q@\u0005\u0018��LQN�\u0014\u0001�5n�a�\u001b\n�\\Q5\u0012f\u0016��;R���BH\u0019<�v�ֲ���c�55�6�-�\bq��\u001c�``\u000e�{v�\u0019�穀#X\u0016���V\u0015!\tm��nR�J�ry rj���r�E�\u0010CN���K`�\u0017��p ���i�\n\u001d��)ɰ[��Jo)\n��ێ�C�R�\f\u0017'�\b\u0013\u0012�pB����>��J�]K�'�R�QLAE\u0007�Q_f��\u0005���[�\u0014��p3�+�\n+/k�C�\u000bEy\u0003�k�����ڢ$��\u0004#�R�\u0001\u0018�U�[̻��f��lẍ́#\u001b�I\u0003<��M9��c��g#SD\u0017\u0006�#�y�\u0010\u0017��BJ����Y��K䛌�5�C��R�O��\u001d���=\n�\u0017�W\u0016\u0013,���Kp\n��G�(�\u0001\u0019�\u000e�����������\u001eb� \u0014�\u0003�z��\\����I:��?B}�ȑ�\u0012\u0010�#*B�Q*{�%\\�\b�_|R�\u001a����ĄEo�G���`��@��ϭK����>\"���Ê\u000bw\u0001\u001b��Y��\u0004HQ�H[�\u00119�<��9^�?����wȘ�K4P�BTv0�:]_'�ޜ�0~՟�2���/-H�w��BpF�dd\fւ\u001a�*(m��\u001dV���$��\u0004�U�������۠�\u0018x��J�v�1�ҷ��1�\"�7}��I[��K\bR\u0011��\t/�g�\u0019�$�Oǹ]�\u0015����J�\u0011Z�\f{~���p��c%o��S(!)F\u0002U��p;q���&Hb�x\\FP$3\u0005\u000bB���G�#�\u0005L�]�wk^��2@\\��-$�K\n�#\tϧ�yH��m�y��݆Gˀ�Q���n*���N��w�����Lss� \u0005xiH��v� ��x?�\"B����\u000e\u0013b2[q![�\u000f�TN\u0007n:�Sѽ�\u0012��.#��>S\u0006��\u0018%��\u0001\u001e\u001eB��\f�:ւ�\u0019�m�aI}�W��\u0010\u0001$}+>ī\u001c5�\t2%-\u001c�m���G��?Z�O�!��\u0016�\u0003�y�-%;���O��Z�Ʉ��\u0018�z\u0016Dǒ�1�c����YQI�\u0007\u001d�j�+vX�g[�=/܊\u0016|\u0014�p6��:t\u001dk\nx�t�\u0015GH�;Ǝ�ڬ�d�՜;t��_\u0015�^\b��b����b\u0002\u0016�ʡ�\u0003��on�|��W��駒D��j�\u0015\u0001-�iN��c=H�V\u0017[%�t�\\n70�DT4Z\nH�B³ר\u0003�{\\n�j3��ʟX}��R�Z��\u001fN���}��X�SU\u001b)lVƮs��BV�n���8�R0\u001c��8�}D�\\��h��s�*)>Td\u000e+�\u0016���I�\n̦�KڒT�%g\n$�v�O�4���V�O�τ��J\u001d���y�*��ѝ˚��\u0011�\u0016��)m�\tW$\u001c'��R[O�&Z��\u0016���\u00129��8}�?g\u0012R�:�Z�\u0019�\u000f\u0003�v�r�Q)I�\u0013�y\u0012�i�ə�ϴ�w��U���\u0007?���v�\u0002�D\u001c nL纒�y[���q�\u001cZ�8\u0018l-1�RH\u0018 �\u001c\u001a䶩3_���8��qs�J�������(�[4�ލ/�\u0018�Z^�3�y�\u0011��n��qR�\u0007>�Wdf`�\u001cb�%�|V��P �#�g�R\n]�\nA:�g�:�h��=\u0010-�䶕��9���\u001d�R�伫N�Q@u��>L\u0014�*�\u001e�\u0001�ʽOf��\tQE;VjK_�ķ\u001b�\u0012JKo��n�3�ϭA�j\u000b{�������ˎ\u0014۱Ԧ���Rq�Ҭ.\u0017}/p.9p�r��w)It\u0010�q؊�xcO\\\u0015l\fߋ\u0006;\u0019m\u0012#�2TO9\u001fJ�9V�\t(rҢf��ڮ\u001a�̦�̈�$8[J�\u0014��\tY\u0004�\u000fJ��5\f�,�U� 1\t�V�F�\u0012��<�9�Gz�i���^YW\u0016�\u000eCm>�\u0010�\n�\u000e\u0012z��U�]�\u0015�r�����-���\u0010�8�zd����k&�aKd+u���m�\u0013�'X���˩m��m�2\u0006쟽Wo����!.l�\u0019a���Å���\u0007\u0015k��c�~f�`u�\u0016i\u0018R��!\u001f��ע5�����\u001a�Ei�KuД� \f�9沟\u001eH�_\thãN�\\��\u0016�|�^.�i-6����򮕧���:~�ܘ�m������w\u0013Ͻe���C�\u0013�u���(\u0014���H�c$`֎\u0014����`[�Ym|�\"�\u0007S���\u0010)4\n�U�N�\u0006j\u0012�\taIRR��\u001d�W_��g5\u001f��5���\u001eݢ\u00137�Ji��P��\u0013��Oj�;\u0014+���C��\fHK�8��d��99�ں�\u0001���e*\u001f�Mf�\u001ae�]�%�JqǘB�PR\u0002N�׽C�b���>����\u001e�c��V�7�/\u0019'�2z�o�Y\u0010\u000ba%I��\u0007Eu88�kk�@m'�H�\u0001^�\u0014\u0014�9�+x���{\u00184�쭎̄�ujr:C�%E)���Bq�=*�{e�|���m-#�Q���<\u001e�)�+�Y)���<}\n]��a�#F�]����@>)FӴ\u0003�����zR�H\t�9�J$�=�P��T%#�h�t\u000b\u0004�B��+Ƅ��V\u0012s�\b�k,2nF�cH����������M��MX�J6�Q%J\u0005^n�\u001c\fs����\u0017DHL�d�*d��'�o5��h�զ7���Q�|�\u0010����Z��`�Wzk»j�$�ৃ��kQ�n\u0017w�Z#3-\u00022\u0003\u0019K��\u0002����Wם\u0003o��sr�xBe�\u000e���@�\u001ey\u001c����J�hՌ�*\n�r�`\u001eo̓�zTF>�k9.)y.l�\u0010!�\bS\"�\"\u0005Gm��x��v�\u000f�ӿ|W��E[�:�L�\\����S\nF���+=���͢:F���\u0005�86���'\u0015\u0003PM�g�X���EA���\t\u0007ɓ�#��ZSH�Sd�[a�g�Ende!H2q<�\u0005��z�Zk#��ְ��V\u0019r$0�g�c���T����뉖�,#vC3c�\u000e\u0007v\n�\tJB�Rz��c\",��tP�-\u00044���K~\u0013�R\u0007l\u0005R_S\u001b�R:k|4��Q����\u001c�����f\u0014QI@\u000b�)(�\u0005����\u0001E%\u0014���\u0014S\u0019ˬ���\u0002�\u0016�dJcH�\u000ba��B�rB��$~>G���S�4���I������\u0016�\u001d�(�Y\u0004N{����ZXA>�\u0019hcl\u001723�\u001c�3�\u001fz��).��GSFKF\u0011^��ң�\f\u000e���\u0015��\u001a���4�Wʷ��(�\u000e����\u001c|\b�qm��\u0013\u001eq*�\f!9\t\u001e#x9��\u001e�X�Yr�5Ro&J�4��<1�\u001c�>������]?Лxn1��N�U�%-�\np�\u000fA���rE�?%\u0016�.�\u000f�z�+%D��\u0012:c�H�H��Υ�q}e�\u0005\u0017\\8\u0007'<'�֖�o/\u0007ˑQ\u0001\u001e:v\u00042\u001aJӿ�y�$��Tר��2�\"$�r��C�>���q�1�V^��\u000b�ܒ�(=�\u0012K%8V\u000e9�:��\u00144GqAk���\u0015��\u000bN?P?����\u0015f��l8��Am<�zV��fL���d{Z̄�s�@$��p\u000e�IϦkIp�%���\"��}�HSj�J�z\u0003؁�k9�����\u0004m�\u0003IJ\u0014\u0007��8r>��u��6Li��c6�\u0019���\u0004'%D���D�^L��>��$�:�\u0014�)Iؐ\u0006·��\u0015K+G�I~T����d6���p��Z���i.�Բ�Wʹpt�����R\n8\u001b@��z��?�f���i��ᡥ��y��\u0015+9��K��\u001b�Am\u0016�~���K�\u0005>�+���)��\u0003�ў���51�CXh-/8��\u001d6�\u001e!Y�ֈq^(�r�\t�؅s���=�ɭ\u001c���\u001e\u001f���-)`�ܢ\u000e?L֑�a.�ή����\u0014�K�\u001c\u0016\u001cZ|\u0016�\u0014��6}M]�\u0015*^����H[l5�4��2R;t�\u0012�5�+����������9H)�z�;v��w���̨\"3\f�i\u0004�IQ�\tO\u001d���e\u0016�n�暊�֊\u001dE`���\u0012]�\nKk�\u001box\f�\tQ\u0019>�����W$��[\n\u0004�a�_���������\n�ݺ\u001c�\u0005�Eiae\u0001D-O\u0004\u0013��\t�\u001b���$���T\u0014��o��\u001c\u0001�8��Sz�*\no���Z�\f��Rܒ�\u0017�,$$�pG�<\u0013^\u0017T�~��Ϻ�\u0018k\n�x\n�q֪l�lܧ��\tB��$���瞼�U��;�exl6��^`\u0006x�޶M�z9ާ�v\u001c��\u00046�R[!�\u0001$�\u0003���\u001c�\"Ki\u0004)<\u0015c��\u0007�+�\f)\u001f��yKm)%#���J�J\u0003r$���;��P?�W�3+1\u0013Ql�^u�\u001b�w7a%'\u001b\u000eq�r�[����f\u001a�\n����i\u0001Yڏ�]Nl��Zf��Х*3�'<��\\�LH~Ϣ�i��:��%.�8�A\u0019\u001f��%���q��\u0017��Z%Y�q�s\u001e�\u001c�\u0012Ғ��% ��$����kZ,mHG�~ikJ�^Ų�NS�2;T�ej�qҰ\u0018�\u0001�n&\u0012S�[�R|�\u000f�?�R[,/�(*e�Ĭx�*u�<��\u000e}:����i�\u000be}�L=9o9\u0016�iXqD��A*?b\u0005T]�U�W�\u0012[�*C(��)Ɩ�\u0006F}\u000eqQ�\u0010�cwˡƒT@\t�q�'�\u0015\u001e���̳��\u0012�\u001b\nB�\u0014��Os��n<4�^E.{{4�r��\u001f�v1�.��)�Ih�r���5�ҚVl;eٷ�vL��P��@�F\u000e{�u��J�\u0017_�X3�:\u0017!�)+Y۴4�8��٨�%hא���`��)Q@'\u001bpG%_�k)SK�嫶H�iDY�qr�\u0012\f�I\u0005�V1�c:���Kw�}�-�\u000bzSea{ҝ�\u0018�c���BV���o��Q#���\n3��\u0015�\u0004��\u001e�`ޘSz��uTր�����9QV;����nf\u001bͻt\u001e\u0019t:����\u0003�ϵr?��w�\u001a+����{\u0002S�lP仍����3Ӛ���]PIIV:f�)����\u0006\u001aW�\u001d\u000b�����;�ϽL�\u0003{�C\u0001�d��\u0001�\n���\u0015�9���r_B\u001fZVN�! �\u0019�ҥ��\u0016�\t\u0003Ђ\nV8]U�r\u0010R��U�\u001ct��U�\nR�\u0005E$���q�إ��!�o���G}�bV�+v\\۴\u000es��N��w]L�R���nq���B�Op0H\u0003�?�z|Q\u0019a����=�I��Z�#6�B�]\\\u0011�����Y�\tN�c/�\"[\u001f�~m��ul��sk��Ms�L��+�+\\;��\\�\u0010����\t�䄓�WX\u00037\u001e:�/��\\��e�E��{��\u001c\u0011��\u0011D���@u�Ե\u0015\u001d���GI��%@�Q[�1�o�x�u�n>n@ϵJ�-IL$\u0007\u0014�\\��,�[IN\u0015�~>��c�M��P�����\u0006*EŤ��e@\u001f\nԬ\u00022\t\u0019�Z�;��9���+\"&\u0007��\nu���S��w$y\u0013ӟ\\խ�f�(g\u0019ec�)�͸��\u0019g�N*s�+��\u0014\u0001J�A\u001e�RŤ�'h���w\u0004=\u0005q���m���9W)\u001b��\n�VٌϷ�)�\u00154�JI�ɬ�,��lR`3�)\u0012����Z\b!\f�m\tJP��$\f\u0001Q��N�2�\u0015EU�es\u0007�\u0015�Mr=$�3`���\u0016����%X܂TH#�)Mu���S��\u0014��T1���7��\u0016�\u0015�<��7\u0018���FH0{\u0002\nv��F\u001e�v�[ﺁmIR�\u000eHZ\u001bpp\u0014\u001c8�\nm�:����rc8�a���YHܐz\u001e�}k5�4��<���Z�)��u6�\u0013�\u0010�dt�\u0014�uN��\u0010��or⤤�9\u001bFx��_&��%�\u001b�z�Mjx��� ��\u001eS\u001eE�ӏj��Z\u0011���$Y�̥Q��:\u0018�\nJ���{q��Z�\n����SI$%i<`�\u0014�֣��\u0012���B���4�j���nIQ�$\u001e�kJi\u0019*�\u0016��L]-�q�=\u0001ŖT򔶆�Y�I\u001d\u0006Gz���\u001b�8�Q��������ox�X�I.�+�\u000e�\u0002\u000eݻR�\u0004�瞾���s�q���,,H!���F<�ej\u0003ߌ�T���ݨ���=��P?�?�:��YA锎>��*@��t��\u0002\u0001\u0003��\u0007��\u0010\tQ\u000e��V�ԅ|�EŁ��v$���ӛd�8�\u0014�_d�\u000f��Z�\u001d����fKi89�c���\u0015+$������P\u0002QE\u0014QE\u0014QE\u0014\u0001�\b\t[�q�\u0014��H�Oz�\u0011�\u0006:�7T;)�8���*Z�\f��M�(��9�W<�͂�>N'��B\u0012TZKk)�w\u0004�����[m7v�l�E���B�\u0006z�\u0016�'\b9�_\t�A\u001c�n���q�>��J�:�\u0016TU%L���R\b\u0018�����\"7\u000b�ha\u001e6@�N\u0006\u0007\u001c�.��Ғ�X .�6�=\u0007�qM�\u001d��\u0014�\u0006\u000e��s�q�q�V��-7\u000f\u001eDw��.�v\u0010x\u0003�z~UI��h����3V@:p�� py5��w��C�2�\u000e\u00140�7v��\u001b��/\u0013��k=0�\u0019伴����\tP�px��\"�L皭)M��:�3���|!�\n㞣����\u0006z\u0012�*G�6�v��%'��k%�\u0014�r|0�\u0011��)2JA\u0007x�W�?J���鸶�4ۭ��D-$nJ�sӜzv�'�Ƽ\u0012���m�\u0011�\u000e�#5��<�oG9'�\u0015\u000e\u0003�.�r�{9�3��\u0016��<��*ٖ���n\u0013)`G@/\u0016��w'#q�\u0018�@O�'%����A��ᶙ\u0003#�P��q���О��X\\�{T����fBϜ\u0014�\u0011�Ԟ�]a��.A����qR[R|7˥ /�\u000e8\u00198\u0015�v�oU�K�r·���T��x��Zi6\u0006�$D�*Ne6��׆\u0012��`�©��_C4��P+{����\b�\tZ����ܓ�\u001a�\u001ci�����Hs$'i�ǭi �a+Kn2���X\n \u0010?x���#YmA�H��\u000b�2��\u000e�J[!E89���\u0015�5ٓ�O��.CJRV�B\u0014@\u0004�.\u001eGn��hn\u0013dř~\\p��0�[gfr�;��j�|4�Y��\u0006�ml�`'���\u0015���֚}�L)���ڜ�\t�\u0010v\u0012T����ۥKTW���?R���&(���-p����{���ӷ��\u001f+%ir\u001biQy�)^�U�<\u001f�z�u\u0015���<�\u0012T�\u0001(e9\u0003ɑ���gѨ%�\u001b�n���M(�������\u001c}+��l�j\u000b�E\u0007K�i�)�B\u0015��(g\u001e\u001e���֖TV\u001db\u001a\u001dso˸�#'\u0019PI\u0003���B=�k�7*3�U��\u001f�>�󰤼�g���'v7\u000e\u0013�zW+��_���Kz�~Q�\u0005�j�q\n�\u0019\u0004�c�]R|�{�*d���-�q�7�\u0015e=p=�{��3M9*-R�\u0016��\u0012V�.\u0011�Q\u001b�׻Ej�;r��*ڐOxi?̚g��H�\u0013����i;\u000eq����S��rlƑ�흪V8\u0007bO�\"���\u0004x3�\u0014���\u001d��#:A�2\u000e��s-#��4TuN��\u0014g�x���\u0010\u000e~��&5rE�aS�8�\u001d��� ���u�]mu��2\u001b���-�s�\b�G;\u001b�L���6��z~�^)��v�>\u001c��[pҥ%\u0019\u001e!Q@϶3U�I��d��̄4��\u0012��ܖ�\u000eOl�~�q�/1�Ym-δ�|I1A$-I\tH�Fy\u0004d��T;e���\u00047�\u001fo`uҴ�QH�y��t\u001d*wof�дQN�:�\u001b�is�)YP\u0005�\u000e>ޕ\u000e窮_7njU���}����:xQ�q�v�sn:e��dú��<�ĞH�j%��*��r�.�ˌ�Im\nm�T�q�A�\u001e�C�\u001d��>\u001c��\n1=�����P�qR\u001cJVҎ�ڹ�}+Ifղ��.�[�G��g\u0019JB�\u0002U�\u0013ڳZ]�<�{gv\u001c���!j\n�>7\u0012چ3�J�ؘ�6�5��J��\u000b�\u0017�\u0002B�\u0019��\\WC9Y�h�W�Ž Mm���\u0019^B���:SM��u�\u0016�8\u0018�mjp�`\u0015����{Z&i(PQ\"\"g<�'\u00122\u0014�⑞�OJ���K/X4������U�)�0�z�\u001c\u0001�a?�l�\u001fL�b�jK�:}�*��[���i\t�G\u0013����b!kF��\n�\u001dx'֧��+K��\u0019�Л@\u0003��m��ߘ���\u0015��1�V\\۵�G������w�T�ʸ���\u0019N�\u001e��\"��I����IR�S�߼\u001dj�\u0017�;u��\u0016�k��/8�V�B\u0003@u�9�S׮&&�>P���\u0019��i/\u0002\u001c�\f�o\u001d}��\u001aē~W����ܭ/�������\u0010�HX��AN0@\u001d�R��\u0006��fJi���Z�q��J�p�0�$�L_�1�P\u000b �+IP\u001d\t\u0018�}����\u0012g^eȏ!H`�cel�DF6�1�WF|�%\u001a9WNλu�\u0016h�\\Ȯ�\u0018�27\u001e�*\u000e��*uoxD�hh���\t\u001c�Ϸ\u0005�\u001a;�*{�t��zY\nϱVI\t�}ꑻ�R\u001f��\u0017#�\u0001��\u0014N:����Q�yd����rUGҚ��j�#I�!,��j�⴬�獹\u001fz�b�6{��\"�e��\u0005��\t\n�)�{�+��������s��T��\u0012�v�\u0004��\u0015�>\u00149\u0019\u0011�dG�_,:\u0001IS�@*pu5�����;�v6�c=p\t�/b�\\[�[V�sie�(���\u000f>��]�jJ��JFIi`\u000f_)��i��j�zu�ii\u000bSL�\bF|E�R\u0014\u000e\t�����.��䶭�����Fx�k�#L_\u001fBB����%��|���P�5մ�w���q䶆�m%*J\u0015�98��b�\u0012�\u0017���n�5�\u0012�\u0010\u0002�J��\u0013\\�JߜU��e��s.�csx\u0001$m�G�WN���;��W�5���.�\u0003M)�T��R�I8�\f��WG2&9�&�\u0002�vaI}\n�q�I\n\nJVG\u0003�~����m�n�Dv,wd/�9[$,)@\u0011�\u000f��r��a\u0017mLĹ#�9��3!�uzR��8��9NN\n\u0007�Q\u001eNM\u001a�EA3y\b�\u000b�I�a�#\u0007ү\u0014Ft+��g�������zv޸\u0017ƚ1b*2Q!\u001c�c�x�b�1Xj�{yL\f\u0006������'�-�T�t�\u0018�!��9m[�\u0012�FO<���6d��^�\u001d�Zu���nj�[�>\u0002�B�ь�Յ�\u0014���\b�қVȈ!]B�\u001dР~���M�7\u000b=��\"\u0014���/x�q\u0005>d�\u0014�+Sl��>�h��_q\f\u0012�F尵gױ��k�[⽎������U�4na#�x��}7\n�m@6�\n���5�0�s�\u0016����Cd�E&j����V\u0004 �x�k %���s��==�\u001f�=?)�ۓ�R׈��0�rAH'\u0019=:Qh\nm&k\u0016��\u001d6�)o�,\u000f\u0010�\u0001I9#���U�=w��2�ݘJ\u001a8Qu^\u001f�g\u0019\u0014�\nѣ�\u0019���\u0011q�%\u0012ZS\n��\u0002�I�N~���K\u0004ǒӠ\u0012\u000e�\u0003�(\u0019+4f��3L\u0007�M�\u0014����nfu�,S 2۫��+���v������~\u0017\\�n\u0015��A\u001a;͸�V\u0016�J�8\u0005)�7F\u0007鎕�`<Ӱ\fe<�8���*��`��h��U���/�\u001b%$)�@_�\"���\u0015\u001a>��n��ȓ��-l���\u001c\u000b�\u0015�\u0007c\u001d*e�\n���!\tm*��\u001c\f\u0002�\u0006OԚ�z.���1~/�\u0016ڷ4\u00062��?cޫ�ܞm���ʟ/\u001e|R2s��y8�}�W��\f��A#Y�cH[\n���\u0007\n،��\u0018��I#Q�f\u0010d�$\u0010�\u0007�@'\u001c��)=�\u0014�;�0y\u0003\u001e���\"O�CXד�J��aJT�bC�\u0004,\u0004����u\u0005��ny�N5\u001f+�\u000e\u0011�9�#=+�ɜ�\u0001\n�4��\u0001(\u0003��!���֕����!G�#�#\u000e(�+K�@�9�{W,rI![�W��\n�젘�xj(`�\u0019�U�?ʳx֋��:\u0002�&LK�U����GvR�h�s�\u0007ַ�B�d�\u0012DȖϔG��pɑ����\u001cpI?j�����AHʊ�I�I�\u0015)���@u�_Xa�mBs߷��8��#�M3�|@��\n�rtw\u0014\u001cp�\u0012�?�O\u0019�\u0012�ۤ�n:j�6\u0015ŹQ�\u0007I\u0001\u0003\u0004`�Nr+�o�u-�����pj�O��\u0007aۋ�nX\tp\u0016�!@����i\u0004�'������!���I)u�\u0010��0ۊ�����Z����s5\u0014�\u001bh�\u001a\u000bN'rs���P1��\fF���Bo�f�J\\HZ�K!IJpFё��kkaղ\u001f.�2�ٕ!!.\u0011�aĤ\u001d�\u001f�I��\u0019g��x+��ZV_^u��\u0013AH��R�BFֱ���?��^\u000b���,$�qy;��?�%$��g=�l\n�����F�$=1Ƃ�\u001c6ӡ*=�H�W�mI!6�^�]�2\u001be��a�2\u0003�X��x�@�R���6��0�q�j�mvL�����3e-X�B�\u0006|\u001c�\u0003��K=�&\u0015��*\u0018}�?�\u001c��j�8��+����Y!�ߵ��2��\u0017v\u0006\u001bV\u0010Jv��Gv0:��Җɫ��Ӆw�Fb]dG[�#\u0004 `pU�\u0001*��+X|3�n�Yg����>�q���a�u\u000eBY!HR��)'�z���#j\u00193�\tm'�P\u000e\u0014\u000f�\u000f�j�ZoT\\�j���j�\f6�Q)}�ʔ�\u0010Rr��ԕ\f�\u0015��A��m�dLuM~�ߎ��\u001c��|\u0013�e&ֿ�Տ��Ӫ_����\f^\u001b�\u0014I+qד�9�\u001cFIg�\u0007�`�\u000317>ڷ��\u0014q��I�w�9HL�#nv�IV�ޡ-\bu\u001e\u001f�4\\l��vp����\u000e��\u001e8�\u001c�\\��\u001c�Ҁ��N0+�h�Ue]�ݧٞ�\b\u0005�P�\u0013�%$��0\ns�\u0006�~�\u0001�?�,�ҍ�nL��j)�;z�s�>�q�mp-�����(P'z2�q��=�t�$�H��\u001f���\u0011&㤏�\u001fi-\u001bY}�2XmIPR��;{��sψz�V��v�5'�\u000f-�,�i\bJv�¿\u000f5�v�;�\u0015�K��\nC{[C��\u0019?�\u000f9�}&C�\u001eBߒ\u0014��'s�������\u001c���f�\u001d���X�):�i\u001d׷�\u001d\n�����AH�`�\u0011��\u001a�\u0012�\u0016>��\u0019��\u001db[��xJ�B;�qX�'�Ԗ���˝�۽$�\u0001\bBT��J�*9ܪ]�1�p[��̝Ip�[؂�\u001a\\f�،�\u000e�.\u0001#ФW�um�+�n\u0013�\u0005�J)�3��<��7)���J\\\n$���ק�),�Gu�і�*��p)��W\t$\u0010U��TC\u0014���2��˩י\u0013�\"seŗH.\u00029P\u001c�:�52�\u0019���\u001cƣ��Fa\u001e7\u0003ʁ�7^�5W�#�i��FQ�R������\u0001�c�U�\\�m���W����~\\��(��r�vk$^\u001d�r�.�!��\"\\l�\f�E$gۊ�Қ�\n\u0004�\u0013\u001d̉����4y\u000eѷ�nՃ`���[)J[i;���q�V�I��[\nn\u0003N8��%�g$ps����'���V�ɦ4��*�B[i?�IR\nR�Iٌ\u0003�j=��w�jUj\u001f\u000e.�\u0016�Ao\f�(�}+�ľJ���%��ٴ=��\u0011��\b>�\\���SڲBSӌ�\u0011*(B�������ps�*3�n+T�`�N�=.r\u001b��x祝��\u0005��*�;�����=�>�өPll\u0007'p�q�Q���]�T�)��rT�~\u0013����I\u0010d���K*Le�r\\Y�X��皜X��Mݑ)9\u0013tƦ�a�5q����(;�Vx#=���4ݦ�t��_r,wd��\u0004�zF\u0014\u000fn�:W��BYZ�)#'�\u0019\u001fNհ��J���y\u0010d�\u001b\f�E�-hJ��1�ֹa\u0019-���v�6�ö���q��\u0010�\u0001m���3�N�őd��\u0004!����?֤ȇ1A��a\u0005(�R�I�\u0007�^��\u000b��.Z\u001d��6�F��Z��%J)\u0004)����XY`�\u000bPٛuI*mqZVӑ�2�I\u0007�5�\u0002�0HS�I^|�\u0001'��z���H�Q6R\u0013�@\u0012�\u001fZ9+���UN7�e͝>b�\u0016�a��T\n\u0001�p�\u0012\u0006;��U#\u001a��3T\\���1\"#�,��A��jZ\u0006?\u000f\u0018�d�����&E�9\u001a:�mo4��y+V�\u0012\tQ\u0007�9$�\u0015\u0003I�[���\u0005!\n�K;S���q\\���MV�\b7��\u001eaٿ-r���\te���9\u0007\u001c�\u000fJ��>\u001bΩ��\u0006\u0010Tv (�o$�f�\f��v��/r�^���t�]�(�`p:b���Zl�nZ\nAQ��#4�% 睧���\tL8���l�=ӏ��-�%-��r\u000esW�q/�����FbC����(�r@\u001f��u�\u0002�s�-��Ns�+\n\n�vd��R>���lc\u0005�c�#Mfj\u000eB�\u0007֝\u0012���n���o�r�������\n��\nr\u0001P�=�r3]`\u001c���OD�z.�e�_��\u0019P�L\u0015,���\u0003�Gn���~�z�\u0010�\u001c}�R��g���S�\"��ɤSj�~E\u0015��#�����\u0015v�����hB����Oִ\u0016�O2�\u0011!�� -hW�I\u001fʼ��ۡAe\n�#H�ہ�)M��\u000e6��\u0016\b럵z���s%4�:�e)��Q\u0005\u001e\u001f�q���0G�E!\u001b\u001b,�\u000f*0\b J\u000exL�0\\��\u000f^��+�8��\u0016��\u0017���g9NI��\u0002�-z�^��7o�[\n椥Q�q\u001f�uʐNION\u0001�*���\u0005��i��J\\պԦQ��ǅa\\��g\u0007ޣ��w٬_�F`�C�!�\u0015\u001d(*P\u001d��,�8�ɬ͏5HKjS����d��v��ޱ\u000e4�4�\u001d���5'�R%�\u0019J�Zs�Z=��\u001c%��)L-%�%�?�$\b ��J>Un��l��F�*F��Hs��ڢ�0��\u0010��%x\u001c(g9�\n&��v�\u001d�v��\u0010��a�\u0014�$/r��\u0018�#\u001d�y5>zt����1�(J\u0012\\i�8�\u0015�rN��<���֡��:K�\u000bŭ�r�w�JJ=|�d��MZ�U*�.7L�^t��ݥ�����)m\u0010��z�ďp���Gb3�\u0007W#\u0003$ \fw��W4�/I�\t�n��V�b{��|��ƛ\nx�(\u0003*\u0001Y\u0019�=��IW���\u000f���u��ҀP\t�¹��\u001e���K�q�\u0019��\fJa\u0013\u0019T��n�\u0004�G�\u001c\u000fR+���Kk%�����P�;���Ǎ�*��q�\u0007R��\u0013�*��xÂ2NA�\b��T{l�zR�\"�v��Mϊ#��(\u0007iB�$��)�^-\n�vJkjV� ���\u0007��kV����\b��W��\u0012����sS����VB\t�pI� ����\u0015�O���\u000b��+KhShVݪmAC'p���uӵ\u001d�\nT5YnO0�}[��R�\u0010����j�D1v�Û1�MJY�T�U�\u0007\u0014�\u000e;��N=����\u0019�|���{M����n�\u001bl�\u0002[jam�;Ф/#h�I�3��k�if�����}�HjK�\u0010\u0012�䒢\n��F\u0006rjCW����?le2�F\n\u0014G�(\u0014�ӎ\u000fOJ����F�m�ϊ��G����Ԭ4�\u0011��=;W�,٧�¾�~�Z�������Oi�\n�܏*z��X\nG~{W\u0015��\u000e�[H���[D���9�mR���5\u001a�\u001d�5\"\u001aply+[e ��)P���\\\u000f�m�q���)��˪��-�����\u0007'��i#�\\\u0005F�\u0019���\\�v\t\u001dFq�O��.�!r�ʃ\u0011�i�-`aG�z�q]GK�kMحl\\���aǔW��\u000b@ s\\�\u001d�\n�M��Y���4��J��r�n%��>��\u001a�ݹ���H?l��6e�4T�\u001bA\u0007v\u00063�O�֟�\u0004�\u0006�\u0012b0ڒ\u001al�M�r|���J�>��KxIB�Pm*X������aBӢ�m���\u0003m��\nX\u0001i�>ܨ\u000f�,��(˶\u000b\u0014��˩!�W�ʈ�A�z�i�D�\u0012\u001a��\nˆ��aL��\u0013�^�d���\u0013�d�nA[\n%�8\u0014�\u001eH\u001c\n��+\u0005�S��6cO\u0013%�$�O��R�=3�s�U�q�[�\fX���QO�\u000e�{.Ʒ2�_^��J\u0014\u0010��\f\u0011�n޵��\u001d@�ۭ�ż�f\u0014F�\u00046\u0010��6;�X��'�j�M�\u001d;{ӱ�Xo�\"-Ġ��lV���5���\u0018\u0001�\u0014�8\t\u0005�d�L����g�nI'�u�䃃�d> Ŷ�\u0015OJ��!JJ�z��dguY�\u0015��R\u001e}�ϝ*J�\u0018\t\t�\n�\u000f�=��ݚ1�\u0018��+ϔ�\t\u001c��W\f�\u0002B-N�1\u001e1���U���@\u000e1�\u0015��e��9�[諀ȑ�>�\u0014����\u001c�A\u0003o\u001d:��ǔ����\t�����\u0016�c�\nRT�P���� �zȢ3������lP��X�m��wD9iB��%Е\u0010��<�8��v�}H�(\b�iiMA}!H\bO)?�Y\u001d\b秭c\u001e|-��C�R�\n����W�WT\"��%�\u0013�>���Z��wgug\b\u001b���'ڮ��qܭ�-C)�\u0007�3�}�Uŷ�ޛr\u0014\u0017�]\u0016\u001d~;n�\u0005�х\u00176�\u0001ׄ�T\u001a�MZ-�G��)�\u0016�l��(�\u0005)k\n�\u0018�����\\U�BIY\u0016�tɶ�:���~T\u0005\u0011�\n�\u0007�sߥI�#F�\u0003Ȉ��I\n�Ҕ�A^9\u0007�3�+\\���\u0011#!\n��I(NR|bw\u0014\u0002�\u001dO�P�tղ6��#A��jda�\\l���\u0014���v�qP��ʶ5���e~ƻ+?8,;RR��W�\b=H\u0003�T�����z�\u0011\u001f-)d0!�\tH\u001cq���[ۥ���g�Ƙ-��{\u0016�\u0004�Î��}���in\n��ڡ�q2\tR�pd\u000f\f��\u000f��D2�[��6��j\u0007�ʣ\u0004�\u0018��|A��P9N\u000f\u0003\u001e���cw\n\u000e�4�h��#�\t^�@\u001b�ʆ\u000fL�������7��x�%\u0016�\u001cK!;�6�\u0007���w��\u001a\u0016��@��/)�\u0010��/\u0003'�n�t��+l�Z���m�'X�w�Uʀ�d\u000fj��-�\\.�K8*]�S@\u0011�\tF\u0001��X�{ޢE�FY,�0�\u0011XW��y;zվ�}�4��\u0015oRB�-�\u0011y�R[\u0007\u0019�~�J�\u0015\u0015���{3,�<�-��v2R�KR\n7��uW�qW\u0016�5\u0012ۯ\"��fL�\tu�XB�R��ڢ�\u0011�N<���#�\\F�����\u0017\u0013n�\u0016�\u001eQ �e$\u001eq�S������jDi�\n\nETݥk\u000b\u0007$+v�@���0���\u0013�*c�M����P�W0:\u000f��y����\\��\\ˤ���\\�.$�m\u0003$�]���*\u0005�Nܡ\u0018/4��n0�\u001c\u0005;�C��\u0015�җ�E�\\����b!��%C\u0005$� ���\u0015S\f��^\nq�9���.\u0003�G�u\b�J�NM>ե�w��~�k}��\u001ee��\u000f����\u0002�g��ϊ�D�s\u0010á�~\u0016BF\u0015�0<իکP%��l�%p҄\u0014Gk\u0019RA\u0016�s�s\u0017fz+��Ӗ��gۿ�k-:�����H�\u0005�Npq�@��\t�Z�u[j�l|oH<�\u0002z�s�\u0011������t=wB\u001a�\u0014\\��\u001bT���\u0001�\u001e�Ҟ\b�k�E֊'n�����r�y?���\u001a���Z���Q\u0012��R�c��J*�S�\u001f���NA\t\u0019�8�\u0017.r�MD�-\f��\u0012���\u001b�<\u000e\u0006\u0006�W\":��\u0010J\\�y���\u0016��ȉ%h���y�P\u0013��\u000fÞ\u0015��(�1����v���VH\u0004�<��\u0006�\u0006\u00063�Һ��ҍ=6y�ƒ��#�.���O\u0004\u0002���0sT�Goڍ��\u0007,�SIH,�d!i>��_^=k�-�TZ^��6�\u001dtHP��v�\tp\u0013��AӚ���c�t��dR®\u0011!�C����#qR�l\u0005+�ҢKf{o��W\u000b\u0003�){�[�T����PF+�Xuo��i\u001f���R���\u0012����08\u0003<�]=�V�a�\"���\t\n�r����5���M:�\u0006d:��\u001d����\u0018;�a#��� ��C�ؐ�m�[[j�\nG5�՚��n�\u001e&�nco%�֩O;���\bF:�\u0019�o�O�|F�@��!��O˄\u0005�L�E�CZ[&H�6W\u0010Aa�PN����\f��\u001cg��l�t�\u000e7i[�.�\u0017\u0012�7�\u000e��S�ָӗ�\u0019�q�xO�炴62\t�\b#\u0018㚚���� �lN:s�-���\\���I�e>WQ4�\u0018�\u0014 ��g��\t$\u001e\u000f\n\u0019�Q]wT�}\u0006X��e)(t8WZӹ�\u001eҤ\u0010�8����W�k�k�J~:<\u0003�,�݁�O嶶��{3'/\\_S\u001d��4�l�\u001d�rH\u0001D����[�>��� ��q����B��+\u0019Ǩ&�\u001c-���%\u000bI�C�k�\u0011�2�\u001bm�!\u000b�` \u0010����K����:�����S3uL�Zu�\u0010�QR����H$�q�ӓ�V˶5p��\u0007�U�?\u001f��jZJ�Vr��#\u001d�\u0019���di�xkqi@PP\b%8P�j�n�2\b\"�<`m�3�p*\u0016&�h|�Q��G�\u001e#�G�]�c���M�\u0001�v\t�9<\u001f�S\"\\.3���\"��\f�\u0016�\u001c���WpCa q�ڹd}(��Jr\u0004�_\u0018(T��$�\u0004�\u0007S�>���L�P�5-��Z�o�x�\u001c�-��TJ\u0012�E&���.��ZZ�r�\u001c(�E\u001e\"����&��4ι�KS�\u0014��+\n(K�\u0015\u0013�[�\u000ezUk��^H9[\u0011\u0012�8Ps9��5\"4�ژ\u0006j�z��\n$��}�x��߰Ӵz&��-2>a�7\u00148��\u0001�-�(w�\u0004��\u001e�>F�����-2\u0002�v���G\u001e�\u0015\\��ÇB��/\u0015U��NŸ:��\"4f�r\n�N=����T�^l�ݓ�8��mJʊ�@ g���T��hL�)\u0010�G[m����T�z\u0005\u0002\u0001\u001dA�\u000fz�#@i�4���\u0002��\f��\u001d\u000e�L�l�-�4�V�\u001c�\u0001{�z�\b��Bj�@q��\u0012Ɣi(^䋂�x\u001f�1�VzbC�÷��Q�\u0019.]Jv������s]*\u0016�C\n��&�\u0015�\t+u�H`�ĸT�HV{��a\\~b�E���M��D�p%��\t�7c�J��H7\u0016�g[r�m�]�L��Έ�a��p%'a8ہ��]{T\u001dn�$�Y�*,�S�TV�m�/6S������=F:�=--�n�1n\f|��(�#�\u001f)\u000bR����c���{���\u000f��-�&�ty\u0012�\u0016��\u0013�ڐ\n\u0001\u0004�\u0007p>�ny\u001b�E��?����N����-\u001d�t��m+~yZ��ӥ������u\u0018#8$�J�Ä�7�J��Ip)m�$)\u000598���I�2���%��!8^����g����ד�\fn��S\u0015\u001e�\u0015�\u0012�\u0010\u0017#��D\f���s��)|��ב�wֆK�7q�����\u0019���\u001aS9R�6�pA�5��)WYL���V��q\bB6�R����?�vH�I\n�b�6�D�P�V�[�u�\u0013ԑ�g$�:{L��M=:t\u0014=�\u0017\u001e:�p8\u0010HQ'\u0019��\u0019Ϸ�\u0011R�H�&�Q�M��㔇e\u0014\u0005�)\u0007�\u0001=G�\"�!��\u000b�BՍ�@��\u0018��[�w��])\n�I\n�V\u0016T�\u0019\u0003�1�ռ��7�\u000bIjd#�w���O\u001c��b��O,�(��5d��r*/N��.RZ;Tv\u000eH\n<����o�\u001e#��5\u000bY�C��\u0012\u000f�V\b\u0007ڵ�|1�\u0001n8幔�����B@v>٪��V�\u001a��s�.\u0011p?%��\u0002����\u0012)(���a�F���H����ދݤ�\u001c\u0005J)=1ФSU��aȲ����̴+��I�X\\�oyij\u001b,GPʜZ�*R�A���{�f��8�\u001f��\u001cJd*;M������G�d�q�NU�ĥ\n�h���}�4V\u0017.2�aG\t��T\u000f�\u0004�&�#:�\u000e;+ !JHPPP)\u00188�����5�IYm[�\tI�pGQ��E�����\n_��}{��k\u0019���7$��%I��H�^a%�\u0005iF�RW��x��*����P���*)\t��$v�Ҧ�dҰ��+jFѝ�\u001d��J�u��3en���Օ\u0015`\u0013�y?zjqOL|�\u001e�T=h��\u0005\u000e�)^�6�Y<�}+����ey���pe�:��\u0010�+r8��{\u000eج\u001d�U��-.V�\\�3��n��1���\u000fi5<ԓ��h�@�ӈZT\u0006z���T���k�h�Ul��\u0019�{\u0012\u0012��?v\nF\u0013ל\fS��k�c!�W�\u0016�8B\bR0?#Y�[��\"��-\u0011d6nv�GLua�\u0001Nm$��w��#;�\u0001�#��k\u001b�L$��jkI*J��M$\u001d�:\u001fz��������~�$�\u000f$�����B�I\u001d{S\u0013{�kyQ��'=!�o��YJr2\u0012\u0002�8\u001d����\n�l\u001c�\u000e����8\u001cQ*%�߹��e���-�>A2�hnK\u0001�adv�T��ΞX\tO\\\u0018RR\u0013��Mp?>j4��>;*bBLU�-���GC�A�?J�UL���+Ƴ�\u0004��P\u0007�Ҋ��ie�7����\u000f�w�9M�|tO�\"S\u0001ƚ\u0005>\u001a\u0014[��8$s޵���|���\u0016��R�\u0018~\u001b\u000e(��JB�Oa�q�\u0007���m�BR\u001c\u0001d\u0001�\u001d�DYH��\u001dk\u000b�\u0007i�=�\u00068�Ӣ��\u0007JX���\u001d�m���i$\u0011)\n*mX��x)�I�S-ZvLFg���-\u0013\u0014��6�0�w\u0019?�T�=����x*s�q�����\u0006\u0006\u000f_s[��n\n��t�\u0013�\u001f�|�\u000bG]��%�mSe�]�Z��Pm@}��S�[��ͧK��ڌ��\u0006�!9�I�����\u0015֬�t��7Yg�6��F�%J\u001fr+#�./���ཱ�|��I�6��q�ީ�\\\u0014i�9��z\u0013Jm�\u0002�4��A$����\u001e�\u001bUh��\"\\�)El��\u0007ZP88'���W\u001a��+��z:�ZS�\u0005iNw}Gz��`;��\u0013�2e%�ZP[`��\u0003ӯ�X��\u001aۢ}�KK~%�\u001d�#�\u0011���܇\u0010\u0014����\u0003��@�ެS��U-Xn\u0013(\u0018��?�5�aԮD�*\u0005��̶\n\n�#�,+�pz�֧���q�\u000ei�\u001f@\u0019�Ĝ��&��)V�g\u0014��g�N�Q��͏i\u0005_����\n���\u000e��\u0011��)ej����>3\\\u001bp��,���.c�\u0018\u0006���z��41m�ۍ(�ޘ��3�eDq��=~�t�]_\n�l�׏��#�\u001d��\b�1�TG�Z͉iWE�?|��iK��\u0002�zK��\u0001��)J6���ԫ5���g�B�jSr\u001aleCnՐ=\u0005guټi�/\u001b�Yq�LmK\bR\nЬ\u0010�L�׺-�[-�\u001b}Jya\u0015�eD�N:���[lQ-�-���^V\t�s�~�ɯy\u001a�\u0005�3���-��a88��V����4�\u001e-D���\u001c'��r)����ZJq����=�Xq֗���\u0003���R�{$׬�D�r%�!��H���\tu'�A�#����+\u0015\u001en;�-�}0hL��+h�me\\�Pʇ��\u0015\u0016[c%�\u0012=G#�-�'\u0019O�C\u0014_ �=�x-8��R�\u0001\u000e#�����֢\u001d�Ox'|\b\n/a\u00191�N}r\u0015�+\"Z*8�>��(JPpx�\u0004T�)��\u0004'�ZT۫ڣ�\u0002��>��'K��R��e%�V�\f�\u0002����sLR\u0006�\"�\u0007�4�6�S�\t�\u0007?�ip�\u0016���\u0007T_\u001d��%��S�-���6�IN9ܥs�QO�\u0019i�\u0018�\n�\bQH_��\u0005c�\u0015Џpj:Ҕ`$�@s�\"�#�~[>F����kPKi��+?�b�m����Л��+^\u0013�+N�$\u0012\u0007S�\u0015�\u0013_۟mN\bo�![\u0016��pJ�\u000e\u0007\u001f�e#�f!m�\u0017VZ�\u0002P�$q�\n�\u001eܸ\b*E���q�T�@;�ġڲP��lѸ6lc�;\u0013�e���\u00121S��Z$�$�\u000f��9�2J���/Ѧ $���\u0014G�\u0015�\u0010�J������?�5Q��d�>\u000e�\u0015\n��.��`�k�\u0002�m���{��\n*\n�V�S��z}���hq����u8�F*\u0015�D�\u0011Le�,��'�m\u0007��\n\n#<�~���\u0015kL�\u0002\u0015�Oj��T7L��V�@Skm]pA�\u0014�Xc��\u0017\u001e�s���n��\u0001���5���_H�ڒs��iDI-�\u001cB�Rӹ���j���\u000b��Ж|@��ЮU��R�Tq��[p��6t�\u00114������6\u001c6�\u0019�\u001b\t\nP�r�\u0014}󚲉���>\u001br-ڊyFxQB\u0015��\u001c}?Z⋻��4$�\u001cm(BT\u0012��+\u001d�޺��}[\u0012\n��ie\f%O\u0017\u0012���\u0010;��s�\u000fɚ�$\u001b|Q9\n�ͧ�7�\u001e�9\u000f0��N泚�HjK~��;%�/�C%nx\u000e\u0014��\u000eq����Mݼd���=��F�r�̆\u0010���\u0016�OA�\u0011�>�\u001f�E5$����Znɩ\u001aӬ�\u0016����P�-\u0004�������ľ4�����\u0001����ׯ�WYӶUY��.�JK�pl'\t�2��'�M]\u0006�9\u0001 ��e��c995�JJ��\u000eKv1W�m��\t\u001b�\u00122s�+�_��ny\u0005X��\u0014?�W�ŵ���MxH�̄��M8��W���|��ĭ�\boL@D�\u0011ԥg\u000bW\u0004����^\u0011\u0017k�Z��('h�*\u0004�玵\u000b�\u0010�-k5��2�1�6\u0002�v\u0015U��y�q`�*q�\n�'q\u0019����\n8�滣I\u000e;o��\u001a\u0003�Z�KhnNTr=z}j��^�$�~V\u0014�olSJS�\u001d�+qIJ:�)?� �\u0015t��\u000b�\u0017[Ks�\u00140������N�I\u0019�\u0018�@s�z\u001bqKb|��s�-\u0001y��E^<<%���|�����˔d�\u0012$6�G���qxI<�rx\u00150�.p�.G��d�ߜ!j\u0004�#\u0007v{����׸�\u0011�2HH�*m@~��d�\u0016�iŲ��|����՟�ڗ�%'Œ��jQ�u<=�M��R\u000e\tZ����ȫ��dB�\u0006�>sirI�Y���%\u0004'��'�#?�\u0003\u0019湺�ژ(-�>�\u001c\u0005�-(\u001cq�q�^��\u0017�\u0016ɱ�/(���B�TI�}O���|4��Lp�ٺ��|)N�e�izڂ\u0003dG�B��\u0019�H�y�V�Alx�n��Da~\u001a�\u0001W^yǽs\u000b}�Q%E\u0010����9JP�\u000f~�Z�E�Y���I��YW�R��%&��\u0011�e\u001d2�M�@ב.����m\u0004�;r\u0015�\u0015a@\u0005\u001f`x\u0015�%�`[�B�a�!j���-��\u0002��\u0013���2t��[[\n%u��k�J?ٍ^F\n%��O��O�i�3�p�+3O��-\n����\u0016%�x��y\u000f>�\u0011-:��\u0006\u0007�[Ź�7ij=��Qri�\u0015���B\u001d#��u�8�zVk᥾᧮�.\u0017�*��@G� l\t\u0019��>�\u0007�i��#ڮD�ؒD�>e*+�B�v�F��ڮ8rp|��b�c�$�[v�_�Z\u0002BE��\u0005�\u0015���0G\u001d�QU}��8��!��r���\u000e�pI�~���ށ�_\u001a\u001c�n׷\\��\u001f\u0011�>���rN\u0001W\n \u001fӯ5՟�5h��z$��m���\bB[QKm��Ү��b�_5\u001bV�#�$�����,66��\u0001�d���?\u0007\u001a�2=�1�5R\u0013\u0005j-�#��\u000e��\u0012F;ն���n\n���!V��x�\n'\n���\u001dzb�U�5\u0005�FṬ\u0011�)M���A\bW�$g�8��\u0006��}t��r@�$\u00150��۳\u0001C\u0006��Ze�[H��5\n�!{�f��wr���\u0002���;O�r*lH�����X�YuԆ�����3ׁ�\u000flWN�i\u0015@��\u001d�\u0016�R?�P$��E��\u0010\\|\u00046��)J�H��^�{�=�b����y\u0005%���#�\u0014���\u0015�(K�*u�\u001ai��8��JG'�U4�㓙p�\u000bMCA���H���luZ�O�a��.�ާ�]�5������?�\u001fsK��R��in��\u000b��n\u0012\\���)\\h�eM��\u001d�\u000f��𧧮x���=#\u001d�5s��jO�2�[�1�k��`[��\\RA�?:�4��G�n\u000e�{dZ�E�f�ME���N�z+�C�2�\u000b�#(9�+\u00139��\u001b`\\\u0005�\u0001'�S�FQ��6��Y#�.���7�U�?Υ���ͩ?6�\u0016�\u0007�<��\u001d(I��'�6\u0002\u001c��D)\u0004\u0011����EP�.\u0005D����qEil�F)\f����=�����(\u0004�AݐAO�^jJB\u0019\t#\n\u0007qI$�܎���n�\u0012\u0014��\u0011\u0001�aD�G ��r&��Jh���׆�\u000e���y6�\u0010;���i�*\u0002�\nw��*�t�@�\u0003L�n��8��\fn.��=��}�J\u001c\f�\u0016��{�\u0014�|�\u001d��j�6�tZ��9~�om_�P\u0011VH�*&�L�4�\u0015��\u0013\u001dpzU�_�vְV��˺��JH�Ӛ�e��j�>\u0014y�c�\u0005�����;�������/ ����\u001e�\u001cV:ݥ`�u*i��\u0007���b�\n�-�0=8�E\u0014����\u0017�\u0018m�\u000b�!��\u0007\u0014T7%K���I�t\u001a#�$*��]\n!�\u001b���.��7\u0002OQ��=�RmE1��]wl�R眂��z�Tje�\u0013�8U�|�)=�H���\n7�6�G��.\u0016\u000f�̗\tG�����U������Z�&,�%�\t�>\b[��*�3%Ď��*�\u0014��\u0003��8&R�G)�G�C�\u0017l���n$ԧ��Ci\u001b�ܧn>Ê��\nr\u0011�E�D�2�2T�%�0}PH��\n��1h��\u001d����a��*R\u0001_��p��\u001d���<�\n\tǸ�\u0018��}Hm���w�/�\u0007\\�ڴ2�[]�Am*Lt�\t�t\u0012\u0015����X�K�n��8A��FT�}\u000f\u0015�\"�\u0005c���\u001e���@��Iǵ\u0001�c8\u0018����2��'l*\u000bBR���+�\u000f�W]4�n\u0012|y\u0012�q��QP�J�)�r?Zj^ڼ����H#�4q\u0016�1�эg�\u001e?\\R\n#��\u001f\b푓[\u001f\u001d�~&\u001b����\u001cW��F�\"H\u001e��@�2�K�\u001c���u\u001c~�5\u0016����\u0004�s�:��;�s�Fԓ�q���\u0011aɹ�9h4��J՟�WQ�m��2�\u000e���1��W�\u001b\u000f!@{�-��\u000e��#\u0007ޢ��Q\u001b�\f����\u0010�|����\n�\u001dW>\u001e>~��r8)B��<�_����\n\f��B��\u0017}�=\n1\\���\u0018�#${���C�|ֹ����\n(�����V�\n�Ҽ5\u0011�H���Mq�\u000e\u0014����\u0018�f\u001c��)�\u0014�Q�\u0006��C���S67}\u0019���ݝ*C��\b*s�\u000by��y[>\u0019�\u0013��\nl��J�!m�\n#�\u000b�r%�����'˼�_z����\\̉�q��n?l�Q�Z%���Qe\t�f�Ǣ�R�o�\u000f�V=�rTߧ��\u0011$m\u0018�BKy����F���J*x�S�B�*秘+�Ji��8\u001d(�T�\u0014�T=骄�x���\u0005�s4�\u00156���\u0002��\u001f�m���o\u001c�XI�rZ)�J?ʞ���k�\u0010\u0014\u00148J�F\bQ��wlp]B\u0012��\u0014�����\u0011ЊϷ���\u0003��\u000f������=Z�*Q�ⳏ_�k��i��\u000e,�3e���&:R�\u001c�\u000f&��\u0001���\u0012=3Y���\u0006(R�\u0010�,�IY�\n�f\\;U\u0002X\u0003�~U�?@j��i�!\u001d)�?3J\u001bH\u001d�Q���Brc���\u0001���hV���9R�\u0007t(�Ӷ*\nUm7\n5qe�ҧ��\t�qӞ�K��\t�٥F��L�$��$v�\np{��\nN��l�\u001a��\t�RAJ�\u0001��UMj[Xy�uCo<�x�J2��c>��T�*�\u0005(ǿ&�Sk'�ޞ��HyR\u001d[1�>l4\u0012<���0>�����^ \tq/��%e@F�%(^�g�>ج�����ꫜ;�i�\f\u001d�#'�z�T2�ޒ��\u0017`H��J\u0004�֡_et��������E����S\n��(��<����ֵN_,�jacE���\u0014��u�%``��<�]��\u0005���\u001a���\u000b� R��V܃�l� �H��J[m�`R�eXǮ3]\u0011��s�\u0016�u�[\u0013��sn���>��\\x^�K(�;�k_����7�N:6�|�$�n+)`�J��Rq���/'R��\u00186�F7J��\u0013\u0015��d����Y\u001b���~�}/�����\boм��ڲ�]�BiLڢ&\u000e񅾕\u0015�������\u0006T�)a\u0001Ku��'��&��ܻ�\u0005�ۢ�+J�8�\n�\u001be\u0003\n�=\u0012;:j\u0016�H�ų��&���\u000e��cr���J>��k3x�\u0002<�\u0006��8��'\u001cPگ�F3��$5++֤\u0001���^C*<�V�K\f���0ڂ\u001bO.9����9��BS�����\u000bAO��r�хm�-iJ[*$�95\"R�M�*Y��\u001c����G�mI�\u001d�\\�\u0019K�S��\u001e#J�>Ǌ�q�^Yq̭d䨜�M�Ɩ�X?��~TT���\u0001����}���l��4꼇���={W�t��-�)m�$���Ǡ��O\u0014Q\\�>\t��\u00144˅)[JZ��eE;��z�q�\u000f�N��\u000fƋ�'j��$��\u0001�GC��_\\�E\u0011�m�O8�I3X[�q�y�6�\u000e2���t \u000fz�@�>\u0015� �\"�Z%y_l�n\u0017�����S���E6�HF~�o�&�hum�J\n\t#$ �N0G�ҵ��X���8m!cy9��\u0014QSɤ�{4��\b��6\u0013�.$\u0010���!\\d�*�EA^�\u0001�� t��턛�\ne��P��{Ӛ�\u0002�J\u0010���\u001f���ДHi�,�8J�$�ֽ2��\u0003��QE\u0003<\u0014�R�p>���\u0001\u001ca9�\u0014Q@2B\u001a��\u0003^�AN:\u000f�4QR\u0003yJ�JL\u0004�nH9��xF�\u0015����$pO�E\u0014�Њ?�R\u000f����栦TV]\u0007�H\u0007��E\f\u0011��|:�KIu���y��\u001cg�s��޾\u0016MK��b���$�{e?�4QY��;F\u000eu�]���Ϫs�����B�I\n�\u0014RD��yѐ-M>�\u0012\u0010\u00021ܜd\u001a�jL� \u0006�Z@�RO\u001f��E\u0015h$M�܊%���\u0012���)e\t�|�ڭ,�8ć�\u0005�+9�\u0001�\u000f�\u0014R�5٣D�+�v�^�4O`QEj��\u001f0H�ȧ��y��h���ܝ���\u0010B�U���\\QEKE\"|h�8�u��\u0013�\u000e#��׋��m**(!#9\u001d�\u0014W:o�\u001a���ECvq�z\u001a7\u0003�����F#��U�b�\u0010�pG#�4QLh�\u000e���\u0018����ے�\b<��QE*\u001f��%\u0005 l\u000e�\n                                Nhà Ở Xã Hội Phước An Gateway – Cơ Hội An Cư Cho Gia Đình Trẻ Tại Nhơn Trạch, TP. Đồng Nai."
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/iphone-18-pro-va-hang-tram-phan-qua-tu-batdongsan.com.vn-da-tim-duoc-chu-nhan-858294",
+          "text": "RIFF�WEBPVP8 t\u0010o\u0001�\u0001*b\u0002V\u0001>I\"�E\"�%*���YP\t\tbnû��q�\\~��,�,�\u001eĽ��.�\u0007Z��;k�ר�\t�k��߃�{��W�]q����������Û��{���7�?�_���\u001e����������\t���\u000f�o�\u0007�?�^�q���|\u0005�����\u000f������P���h��r�9�����\u000f�\u000f�����Z�����Q���'�op_�?�?���f��G����я�?�?�_�����\f���\u0007�������_@\u001f����������\u0003��ܿ���>&�����������7�����ܺ?���OQ�����\u0007���O��\u001f5���\n�C�����������\u0011�������j�����G}�q�������#�\u000f�����_���/J��?2�����'���/�`_�?��������\u000b��ӿ��m��O�\u001f��?0>��[�G�#�w�\u001f�I\u001f���\u000f����ڟ�������I�s�\u0007���o������������\u0017��_ڿ���>\u0013?f��~�\u0016xMʋ\u0005�R\f���\u001c\\v�`@XQ��y��4���\u001a*�@ur@��u걽\u0010�Fc��#\u0016��E\u000b�#\u0004�V\u0011v��\"I$�#���/���&�l��ܝܟd�\u0014f'&�Y�w�f�\u000bɧ��\u0015���B��hHy��Ζ�$x�9.��t�`NR��(j8��+�VL��)�f�\u000e�R_�QH�(��\u0006V\u000e�\u00196.Ւ�`@�m����\"\u0014;\u0004�U�g�z�,S�ط��L��\u001d�������3\b�\u0017\"�9H{�|j�@0��\u0012��\b:�˓\u0010����E�D�ŉb\u0012U�Q�\u000b�EM\n\u0011��U\u0002�'\f��\u0001\u0007�^��>��Ye��;\u0007�CB���{���;H�rokymӡ7*�\u0003T�\u0014\u001a�DW$����P΂\u0011�@w��뉰k\u0006\u00105�.g\u0003�\u001c_���N����W�\u001a0B*���\u0014���!��8@�@�#�]�\u0019>�\u001c�f\u0019Ԩ��\u00040ۚ��\u0003o�Ƈ!�A�>\n�]�S+T�\u000e2K\u0015��U(/a�N\f\u0015�n\nxQFu��QJ4\u001e���u'p� ���=L��g���+EA��K\u0006d0G��ƤEl����dN(\u0016���RDí��<�~��i��C$�LI�CN���H���\\=Ŕ>?�g�P����\u001b[4\u000e4]!�EDNw\u001b\u0005T�Jt7 �e0�DUU/u�H��Z���\tư��I����\u001d�3\u0019�B�?\n�\u0007���6u�\t�%ŀ!oEf+�r�W�\u000bn/��Z��X!*Ou9\u0002�Z�\t:������\u001e�5\u001b�g�a\u0010��dMI�\u0014�]�\\F�ݼ�\u0002t9���쑗E�k9�zY9\u0018~��W�\u0003�S�~��e�;��Wl�\u001a����\u0011$��;�1�o\\�o�Gx�\u001ah\u0018���\u0014�0\u000e�Q�V\f��i�\u000f�w\u0013(���H��q<���\u001c�7ۡ\u0018�`��\u0019?�2�(��s(�⻡\n1�6LmT\nM\u0003�.��@�Yh\u0002%�x�׆\u0017�F^�EJ�\u000e1�4#�\u0011�e�\u0011�=\f�d����$B��)��n�\u0015�ǝv̐�;II-vB��!�0s�\u0004�-B��+tȔRQ\u001d$\b\u000e�\u0017\u000e,}+q��ȯCBQ�|\n\u0005q`����T|s��d�%�֛\fz�\u0012N�O|�\u001f\u0004[Q�\u0013Q��\u0014U\"��}�i^�\b��\u0010��a1���L�\u0003�\u001a\b��l_�[r�,���10�(\u0013�\t2'��\b�GOT��ʑ�v���aˋ�|�^�j�▒j*4�WRD\u0019���Dryj�`F6�a7��\u0011b�Q/�!��3B8L7�i>�5=��#\nȚu&#]}v��s1�\u000b:f�x\u000b�K�\u001f��m\u0002�-ro\u0015�J�`H\u001bW[\u001d=��On�\n\u001d���^H���\n!��~*��\u000f$���*<��1�\"\u001b�c��SO�2�y-54���:g��K\f�� /�2c\u0017,��Qo�@�Kl�;\u001a�u�`V\u0003N\u0005eȻ\n�پ\u001c�\u0002�\u0014;%�\u0004\u001d�Y�,,��)��6\u0007AH�\b*�\u0007�C\buJ�*�>���3\u0011P��H)&�\u0007���X��\u00038_>X�ۆu�:+[a��\u0006�7\u001e\u001e�}�?d\u000fWW�d�3�E����£H\u0005����[�P�P���}��`I{�~���\u0012l0�抾(����Uۛ�-��X\u001f3��_U\u001f�w�\u0013�.w����\u000f�\f����\u0016�\u0004y�E\b2��\nlƔ��f8�a�(ʡi>�\u0013\u0003V��\u0006��h�K�Y�NB��\u0018�L\u0018pV5\n�3f����܂\u0003/\u0013�\u001a�Z-0�S��\u0007�4��N�{s�o\t�RX\u0018e�5v�=��p�\u0001'�>c��������r���6;{�8ҏ�FY��虀4�TBL�\u001a9�)���E�K#��\nWD< ��󐀭D+�_�c|�C�\u0016ZnO߯�}\u001db��\u001b�\u001d�h9��\u0010G]\\��̈\\����j��/��(C��\u001aV5����ўhX��g�B�=\u0002�~R���\u0016Ĩ�\u001b����9Z켯�:Mɱ\n�U\u000e|�C���#\u0017�\"\u001a�1W¶��p�5r�0ꃺɵ�:6�r�����t�@;#\u0006e����\u000e�?y�\u0001�Q��!�\n��@J�fB��Q��4Vd�3��Fv\u0014�\u001f��׽�\u000ei��L��Ǐ�j��bQ�\f4B�5<�js=a{\n�Ra�%�Ϊ\u0004�m��9�\n�i~���Z\u0006�s�W��c'�\u0012$�b�!:c�\n�\u0004�\u001f�1g3��K}.��p\u001a1���+>�y%8��]�������\u0001�n�@��`_���\u000b�^Y[dl \u001a�9QƝ�{iF�i�.����k�e���S��C�hC%�Fޖ���郪�\u001c��W|(��U���r�Q\b\u001dG\u000b\u001c�`jK�!�v���}+_��LA��YBD|��K#\f*\u000b�X�}\u0003nHp6\u0005��Ng��&\u0019,a����z�\\�K��/�7_\u0012�\u0015��\u0007��1�D��\u00159#/��c�<�sw��:3o�@��¾���V���FI0\u0010\u0012���\"�\u0015�H\u000e�P��Es~~�j!���C�v \u0012�P\u0004�յ��T��\u0019�(�9>p��W��ן�G=�L�\f��x�kS��\nl�u\u0002�\u0002�V(L&��M/ll\u001a^��LW�´\u0005G����u�e\u000e�׳���m\n�J�v��~]�w��\u0011E�b��\u0003p;�Edʏ�Dj\u0015��U�K�����R\u0006�V/\u0006\u001b��\u000f�� �\b�k��k˪���=�V�fщ\u001a~�'L�n�E�р=]\u0007�)P�A������r�$�2�~�i���bt��w�\u0002�Eeki�=��y��;�����8�MO��瑏Gˍ�RFi���&�\u0018k�^<\u001b.X���:#���F��UlBi2�eҋD�\b'rlfl�c�:�˷F�\u0014qxI?��w�\n�����c���[��ѡ��LR\u0010�#ݸ\t���5��\u0015&�*z���\u0019!q+�O�Gɢq�º\u000f�b�����5�����`\u001fU_��\u0005��G�\u0007��_��:�T\u0002j�`P^rۄ�X\u0013���6\n`�\u001e�>�8\u0012�-�����k�-��\u0013�~ɡS��u���\u001e���\u0018k\u0006\u0015<\u0007�uԕ} r�R\u0006!��\u001efLˉ\\B\n}�\u00030\u001f�\u000f3�A-�g�\u0002E��G\u000boW����O\u0001z\u0014\u001b�1啭Dh����\u001eT܆l!\u0019\fqh[�\nN\u0002��eFkH|Z,�E�V�\u0005�c&�d��\u001d�)x���CmP�&����>]?���=\u001d��\t~U:�\u0018����\u001f\fX�7ˌ�\\�Fu\u0016�~8[\u0004�i�FE�q2\\������\u000b\u0019U�g\bl���\u0001�bI\u001bSBbj`�n��+�+�{�#���x��(����㡍G:\u0014r�/\u0002/�%Y���<�E���b\u001e�ti�Ƌ\u001a�5��~�\u000f�uZK��E�Y�'\f�yh|�W�(�aa�:z\u0011�T�cLɢ�&����\u001b�ט{�ԩ��Y�~7�܏_r64�Uy�w\u0011�5@�#O��qɹ�9��a��f`h�z�Y�\fׇ��c���\n=R1$��\u0004�\u0012ĵ��~!D�acM��e�\u0004�RG�T���AM���g�w\u001b�[�̼IfӛZ��q�t��\u0012�򷖮��e�\nb?e�~r�D��&��dC0�2fw\u0003��\u001a��\u0015�_4\u0018��\"�6͎]�cY����I�0�8�8�\u0005�\u001a�=]��i\u0019�\u0019��@��xo�4d�|�8����껂�\"� O\u0004�h���Iw\u000e�\b���0�\u0010z�J(L��F�\b!�v����b���{g�\f\u001f���L�-\u0014W��V�9ׄHM��z���2�\"g`B��%v�\u001cI}~�`K��\b4�|�^��\u0010�3{�ڇ��3Źi!��;�<�<�\u000f�X;�9\u0005�f\b�jp2'$��a؅\u0007T\u0013�-��0�p��t��w|�]n��<^�-�\u0011: L\u000e\u0005�ޢX~{���\u0002/��\u0014�Y�a�}��75b�f��\f��nqWF�H�\u0004ԧ_\u001b\u0016Y&6{�S9�\u0002ha�fpa�˷\u001d﾿�^A���\u001dܺ\u0017�\u000b�=u�b.\u0018�\u0017����\\�ؿ.�2�+1���\u0003�]RlX�\u0018w�0�\u001d\u0007]lD�aY�0\b�/L��\u0014�K�Ǝܴ庎3�'�%OS\u0002�&��?�]T�-\u000eI�i���c\u000bҊ\\��\u001a�v$��4��֨&���2�i{ T_�Jx�\u001e\\a\u0003B9\u001c�TK��\u000f�4��\u0005�Ƕ\u0010���!���@�}\\V��$Wz�:�禩��.���B�j��\u0005z��\u0012�2\u0005l�uO�&O�SBs��3�$B��D^\n^���le�mH�����;7K�ei.g&g\u001f-�\u0015��Ab\u0013�G\u001e)�D�\u000b����t��\\j�Iɨ�W�ʛ��H��м,��%�z���:��3[�ٓYw�6�\u001b-m�e c�\u0006P�Є�\u0015}*��mL�\u0017$�Kg,t�\u001f��썖SŞ\u0007)�D�\u000e���!8��\u0004��pW1�h�m�\u0001\u0015g���Hy�I�����\u000b+Y�M�)N#\u0001X�\u001bК�:������t�a*���\u0014\u0007,\\w\nD�����4'`C-af�\u0017\u000e+�\u0015\u0014�\u0007�e��TL���9��\u0005��[)��7,��(j�\\*\u0019y�/\u0019H����r��:ϗ�sρ��[\u000bQ#��VH�y(��P\u0017D]�\u0017\\v��M���ʈ��镖�p��\u0015ˀ\u0017~^ͨ'P\b��Ʊ�#�(�Y�7`\u001a�a\u0019\u0013=��6���\u0010��'P\b�\"<�WaV�FB�EXhFq4ڝ���L��*\u0002.?@J�Ԫ\u001b8�\u0013��Go\u0016��\u001cJK�g\u000e�*�7[����\u000b4<\u0012\u001b�`���KO7$(�H\u000f���U���yH+r�Ag�{�\u0016��<�^u��s�\u001be�yE[սZw;eP`n+�������8�;lBT��9����\nn����i,�4V�n2,))��\u001br\u001f^�b؊���5 ��\u001e5%�W�\u001e��B��v\u0012-��������J�l��٢�\u0018�\f;���w���Ai�yLQ��ﱴ���d}���f�h�gR�\u0005�.�+\n��h�4�:�E���\u0007�ź�\u0005���qv�Ɵ\u0016\n$��jw�?*Sz�b�Q��y�$��y�XA�\b�\u0019�\u0012�\u001a{�7���pi��ԾE\f*F��4S���/Q�\u000f��~J��!�.�I\u0003\u0005� ��g_q���#oo��\u0018�/ڵ�X�X�\nn�f䙒�\u000f��}O=[��Z��&����P^*d\u0014i���(\"\u0007\u0012���b߰���}[\u0005�\u0016K����:c������v�A�6�s�\u0002�:û^`Q*�\u0002��\u0015L\b\u0012\u0019�\u000f�\nv\tk),\nTi8��5漏��C\u0018f\u001c\u0003��N4d���?a�\u001b`��IX�2���\u0002\n���b\u0007�Aڇ��fX\u0015\u001f�h�YV�\u0017\u0011�>��v�\u000b�5\nX\"2} �N�e륺�`K��'�\u001f$Û*j\u0005\u0019d\u001c�7:Z�^�q2U�\u0016}$�\u0015ĹY�\\�\"F|��n\u0012NA�(yɑK��[@�\u0004\u0014�\t���}��\u001fIڷ�\u0007�Յ��Y�pYK��4�%�\u001d\u001b*&�����M@�\u0003���ǙC5{6\u000f-F\u000f��+�����a�:a�2\u0003^Q�n9\u0014��p�L%\u0019� �I��V�5M O\u0019#�3���&���\u0002^fiX�9\u0006�B,ܔ��\u0014i\u0017�}�\u0006k�RQ[��K�\u0019\u0013\u0017/'P������\u0011��P���\u0015��)�R6/<ଳ+\u0004���h\u0011b\u0001F���]*;\f���\u0019�\u0013]�2���\u0011?\u0003\n�̹\u001f�\b<�s��R�f��-u0�2\u000e���\u001c��q+�g\u001f\t��gz��3�9�\u0016M`�m6\ne{�\u00077,9')�\u0014D�3�v,@T+\u001eB\u0017�w�+\u0007�Hh�\u001c8��#�~#�\fgd.\u001e0�ժ��\u001f��ڼ�ީZ��Z���Q4��SMO�:k�\\72�#g�\u000e*�'y]C��D�;�U�PN\u000f@bq\u0019Ǥ�/\\Bh��d�_5\u0007\u001f5���edU\u0010G���mc��\n=/cu�F�dc��󤅤��_�x#Y\"Ծ�\u001e\fG[�\u0012\u0003�\u0013��2�\u0003!��r#�s�j�f5�!�؍�D_�O\bAw@:�������\u0003��A�Ǩ|��p\"'D10U���f3�\u000b����zI'��c\u001b\u0007`c��\u001cf\b͂�?^�:܍,�\f�˫a�M�Э��W���h\u000f�\b��7斓�\u000bo�\u0016\t4�͑�\u000b��Tcd�X�\n��_b�>=i��3�/��b��=�l8�\u001b_Q\u0012�(m��]���$�֠L˻Y\u0017�~ȯh\u000b\u0003���f�ǜ\u0001�m��C�\u0006eS�h�\u00171�Ђ\u0001Q��o�P4�=�\u001f�A`�j�R�\u0007�n��2�z\n�=��\t�L\u0013����`�6<�$��P����\b�&����z��ں\u0006{ \u0012Ԭ�\u0006��c\n��\u001f�\u001f&H]Y�\u0018A�DT\\�\u0018\u001a9[�$���67.M�i*l s�+\u0010�M\u000b�=���^�\u0011�d��pYT�mMz=aAT�@  \u0013\u0007*=���3���\u0015�\u0011�F``��u=���x��YE���k\u000e�g�\bU�-�\u0015܏u�~!7\u001a1y\u0011@�\u0003��R��>�m�Nx�?jh�X��^�\u0010��J�x��\u0013�J��EF����{�qK�a���\b\u0001QN�L�&ғ�\\R\u0001c5�>Z+c\\fffߦ{\u0003ˣ�2Alѩ0+꾀\"�\u001e?�8\u0012x�^\u0002�d)��R\u0010�L]=F���\u0006�\u0004�Q�3��yO���\u0010~IZ\u0002pLiM\u0004�H)_�\u0011�_�p\u0012\u0006,dk�i�\u0018:Y3�%�e�9J��\n�a��sC\n\u0019���\u000b\u0003UD��NQ�Z���(\u0001\u0012\u000e����+\u0002\u0013Ƞ Rob�/�Hl��8�O��%����Ч��#�\u001dA!�j�b)���&�2R�*a\u0003Z��ƇkN���Ov�\u00149j:}H�g�F��\u000ev�}��\u0001\u0007�\u0005\u001c��\u0002SU�A�\u0004c�\u0010\u0014�rK�v��w*�\u0002�.E[\u0017\u001a�>�B��}U�\u0004S�j\u0003�\u0014��\u001d�`3+�}��.��6����\u0011\u0013�P�\u001eE�;#�����H��߮7\u0011��\fᬼ����J&\u0006\u00157��D�KE�qN�\u001c�?����\b�aD\u0018�'W���ݟiQ��\\M�)r��0�{p�9�\n����V׆'C��T��fq�t\u0012ʢe�M˝\u000e��iʄ{�B�\u0012�%�8gǒ�,���x2� ѕh3U��+�T@+���\u001cM;����<-xQ\u0004�bZ��j秓�!����*�@�}ީ\u000b��{/��r|��x�R\u000b\u0011�T\u0002pX��J�+n��\\�a�\u000fm�h��:%��%�ΖŠ\u0011�^a\u0011�N�!T���?�ױ����=n'�\u0013����\u001b�,\u0017����ߕX�\\p?%+ \u0002���Mr������\n0$�%����7�\u0010��\u0010����0�\u0019'�?�4,nNܝ:0&\"꺒A�\u001f�:����\"�Z���J\u001c�;�j$&�(���a$���\n���\\��g;;�|���/�bZ�^�\u001a�\u000fx���\u000f�\u0010��@g\u0010\u0001\u0013\u0010�A;g�ZO\u0002M��=V���\u0017ݪG\u0013�;���}2�h\u001a�K{��u|O]q��\u0011if\f�>e`4�J�����\u0018=b�iMa������Dg��-\u0015\fe�M�H��\u0007\u0007={����J�8�2mw,���\u0006���\u001dj\u000fSu\u0010�8f.�Sd-xd�z:!���Y�;Qb�n�\u0005#\u001e���N\u0001ϟ^Ƿʇ��&�t\b\u001c�㺿c-c\u001c���'P#�\u001d[_e\b�6���A܄T8͇dfN.$�~�G�$��h�P\u0016�\u0012��\u0001\nǴR�i���S�����\u0006������Ϩ�DazV)�qŠ�{���\u0013�9�x�&\u0019j�\u0010���3�[�+�y�_v&�\f�Ż^�/�1;����G�WV�'����\u001d��\u0017���ן��\\�?ar���N�8\u0004�[�˝��Y�P�-AH��s%��ԜL��8��uu�\u000b\u0010��\u000b�$HD��$N�7��cO$�h�]@��\u0003ީ`\u0011��\u0002w��A\u001c�ɹ�TNEN\u0005=\u0019\u001c$���O��^ob�N�US��K�Cw�Е�\u0005}_�TA2�\u000f`\u00143����\u000e�\nF�f\u0012�Ւ�ʖ�\t��\u0013��&\u0001�|r+\\g�\\\u001ce���G�k\u001c0��\u0005��$���J8\u0015?'T��P�F��J�����p_�\"@�(�d�G\u0010H�j�,��\f\u001a?]Y�\u0007��IM��\t��\u0003fI\u0006�d8N�\u001e���a��a�:�\u0006�/�\u0001�\u0014&\u001a\u0014��y\u001bܶ\u0004\u0016��\f��G��{��\tsk�W��A�\u000f\u000e}\u0010=�\u0001��߱�Cx�!h\u0011T\u0006\n�r�B����f�K�(u���\u0018��5��%�\u0004Y~Fa�w�\"�S�|���\n��_>�:5b��29�����F�;�rT��)\u0007��k�j��\u0003���\u0013iy���kͩ\u001f�m�\u001b���99s:ίt�a\n\u0007r\u0014�ʕ�����V{�g\u0005I?��`S�%�@�e�tGtT%�\u0012��\u000113�GbŸ�\"�h��?S�-D��'\u001f;��2\u001bd\u0005\u001bZ�u*��1޹\u0019�}�5�X\u001c7�\u0004M�{C�6{�����������8�2�,4L;�\u001f�o�Z��\u001ay����i�����b�%��!_�\n�V�Sڐ�%\fKk\u0010���5�\u0017�u��7�{%��ʹQ�o�� \u000e9��� \u0016H�\u0016k�m��5��\u0011����l���9�Ȗ�z���K\u0004�\u0018�aD�\u0007�&\u0014�\u001a�f�\u001f��}\t�)sw?N��E��J�l��z-���we��o\u001ebb���_��풘�n�����::/�\u0005f��L!\u001dz\nD��>}\u000bc�T���(\\f{da\\d�c#��VO_�U���\u0005�=tM\u0003a�\u0006�`�[y|��K'���ɔ혴r#���ր�3\u0003�?���\u0004�yfC\t\b\u0012�x�P�j\u000f�U�����R1��q\u0002��<5B2�B��\u000e������L���`5�O3o�Z{2?���5��F�:\u001b�\u001d��b\u00139�\n*\u0001\u0006m*J�ay�����gz\"�\u0002�\u0001�2a1\u0002Z~ڒ�\u001c\u0001�\u000e�Q�-̢\u0011�vd/n~(\n҉��Ù�O|���\b]��\u0015�p������c\u0011;K��\u0017ao$\\���@�s�G~��\u001eu�X�����z�dGciq��7���=s�\u0003%)\n���\u0016�m��MI鑃\u00160\tük���\u0012��\u0013\\���T����Ś���\u0016\u001f �N��s��\tv�\u0013���-��p}�oN��N����|\\����\u0001���\u0005(�g\u0010���\n��\u0015�E�C���I\u0012�Mc�\u0011/��<@'Q��x���K!�k�w?��\u0015�7lP\u001azIQ�%��K-J�C�=\u0005\u001c��K�w-�N=<�\u0004\u0006{Z\u0007\u000bXy\u0015;q\bo^\"�Lm+�W\u001f\u001f�\nb��\u001cMny�m�/��Ck�*�0�G�HAl�=?F�c\u0013���\t�}�Niꨎ9�����I�\u001a�L�!\"���@��������ٯ��Q#��w�$�\u0007_��I]�i��,�W�I�\nw�щ�t\n$�y(�I�\n�.��N!�L\u00075��N~�x\u0019��/�J3���\u001a�u�zM\u001d��F���+n�K\u0017�/(\u0018���fRUl�LJY�.\u0007�4���(@[���\u0006�d�S��+uStg�|gkBC0\u0012�[�p�?��M�|��ґ\bİH4;��\f\u0016�w���m�5���t�:.��~-r�+O\u0003\nAo�FM�D���C\t�b�\u001e�Qh\u0013�(:�\u001c\u0006@����\u0017V\u0013�����\u001d�i`\u001f�\u0006�,���J��\nϱ�d���#�\u0004��1���=���^M��\u0004��T$e��#�\u0005�3W�p0�᳜_E%�E!V`\u0002��\n��o���޽qV\u000f�T����N�\t\u001f\u0013O[듳���٦=�\u0014e�E\u0004>��vc�Dǁ�p%p�?�#,[�^�rgH`�\u0005L2ALǤ��\u000b�M\u0015�Z��`\f��\u0014 ���\u001cj�/T��\b�g�ҽ6%������ʛ�F\u00195�\u001b��*�y\u001dv��,�Bf��i\u0001�o\u0003���8�|�Z�bD�0��3J\u001e�M\u0007\u0010��D�6^\u001d�VZ��j���\u0013Q_/\u0015�!�_������e3\n�+\u001a\f7)w@�i�����lR\u000f s`܋\n)?�S�e\u001e��>|I\u001dq��\u0005Y\u001c��u:�b���&�����|��V�_\u0002��\fW�1�מ[(k�BQ�\"�*M��2�QBM\u001fӑ�35��\u0005\t��L��1\u000e�t\u0007��O�m\u0010���\u0004�U.��j�\u0007k�\u001a���l�����\u0013q��Jx5G�\u0016�ݿ��\u001b]-܀yA\\9\u001f\u001b\u0006\u000e���2�<�^�����\u0019��\f�\u000f�3��?�c\u0017�c��X��,+�\n�X�\u0013�\u0005\u001e;�Z�\u0004�\u0012�� z\u0015\u0002��U����\u0006o�/��+<��*sx�Ĺ5�#Pv����\u0016��h���'�,�Ub��|-̙1j)���\f\u0013���{�I5�v��\u001a��b�\u001diʑ�����:\u0017\u001f��Ӻ�g\u000f8p�F/Z��7g���0?\u001a\u0018�xv�\u000f�/@���\"���LbK�\u000f�\n�t�[o'ޖ{|�~ܡ\u001eA��\\*SB%g�j2S�p��\u0005�;��!�x�k$��n�Y���}��'�Ls���}[T\u001d��̔�\u001d\f\u0019��?�-8�F\u001e��i��Rmd�Fk&\n�Xá\\(m吧g�;\u0015�D\b'�1a��8L�1P7c\tH�%U��\u000e\\\u0018�*0%]a�G�\u0001�`�լ���}cY0͡����Ĵ\u001do�\u0015u�쥞�gX�R#�����4�܁�UY��PL��?�\"m\tD6�j�vs�4Wr�,Y�۪�Z����~��-�[I�!z��R�w���%:�K\n ��?h��\f�H3AX\u0016��'�|�܊�\u001eE�2\"��^� \u0001�\b�E��_��겜#ƶ�P��X/\u0010\n|s�\u0016e���\u001f����\t����\u0016\u000b%zye����ht��*�q�5��n\u0014\u0006\bwe)���\u0015f\u0019�2gX��pI\u0019c�\"��\u001b�\u0019�\bo���\fS\u0015�����\u001d�jX�L\u0001�t�E�\u00126��#]/�+�.E6���R�ޡ���\u000eů��M︔�\u0001�2q��*�\u001b�������\u0013\b'��o��4��UKRX�v�����{��\n�Z��\u0004�\f\n��FUwx\u0006.ԬI��9h&��\b:���Y�{�~�Q|Q�K��ѯ&\u0012��\u0012An�bHѴ �}\u0004���?��7b��BW��\u0007&UZ���F�\u001b�r`V��\"��t߭T�y�-2�\u0018绳s\u0004���\n�\"-&�\u0004}����ڜ�+\n\u000293AK�@q9n\u001f(�\fp\u0017c�q�d�4%�\u001ca�I;�xwc%��M\u000f�\u0004݂7��z��+?��p�\u0001m`�\u0015��<��D�R�Q����l6\u001d�ҩx\"G[�˄�-�ep���hu˭�\u001c�ާ�/\u001e�la���~#v\t\u001e��5�\b���Z-y\u001f\u001a߲\u0012�,�Q7\u000b�+z���,5\u0017�DXK�\n\"g\u001d��i�\b�T���$\u0012\u0004\u001eL[�?��\u0003�$LLƌ�\u0019\u0010o#<؀����.$\u001b?��2���e.���)�\n11�\u001f�\u0004\u0004?�U&\u000bk\n#�\u0015��R6|\u001bZ���A������:r��/\u0005\u000e�܆�\u001ep�+�$�\u000bgY��!�W�x����\b\u0016����\u0019ޞ!\u001f�1\u000b�o�\u0013�5̉�8��\u000fbEhfI~e\u0015���z9�Y\u001d!�\u0004�\u0005CӬ�n$V4F\u0005����5Yr\u001c��u��jA6�@W����8�\bN�0k�(�\u0019.'\\5�\nؚٖ6��Yg&Ar�\u0017\u0013.�qJT�)�\u0019�\t�ܤ\u0017|�d�Q���\u001a�:A��.#�\u0015�@�\u001a\u0015\u001b�����K�{�\u000b���m�\u000et�u�(�\u0012��d�%%��N(K�\u000f-c\tk��̩@o�Pј�BH���=���T3Jߒ�\u001eR��R���G\u001a�\f�\u001eE�g�a\u0016�v�}��5��t��+VRu藫�;۔�\u0016\f\n\fHz���3�_�ĵũۄ�K�zqU�3]q\t�3[�\u0015X�^�mCsA��ھ\f�r\u0013r9��\u0006��\u001e܀�5�Ȱ�כkw\u0018�Q��)w�lB\u0006\\��m�\u0004��,���|#1��m(�\u0013���?�\u001a?\n�F��!C\u0007�Y� �����\u000f���\u0006�.ʿ���3����]q7K�'�щI�\u0017��\u0014w���\u0003���qKn�x��i[�X�n\u0017�`tL_��\u0001\u0002��5���I\u0004H�v�̩2��6�)���\u0011;Ͱ$�p�z\u0006Ǵ�\u001d�t\t�~\u001a7�,��B��\u0019`�h��\u0018\u001a-����+�\u0002a]�X\u00185I\n7㌽��3�Թ��!���W?iJ\u0007��!\ns{n�\u001cD?�[M���S��d�\u0005A���)�\n�)>��5�\u0002c%��.~n��I`z�X�\u0007�\u0001\u0013��`\bј\u000eKK?:2�c��&.�ډ�3�\u0016��~��b�d��n�L��\b\u0010�\n]�@�*#.�#*Yx\u001e�����]\u000eE���X=��ԯ�D���\u001b\u001enkJ\u000f�\"\u0018'�����=��C8�D9=��\n�\u0018�1���m�|J��\n�[Gj��~�j�o��y�˱�Ļ�v�vd\u001c\u001c\u001f�'xC\u0019�;w��&6Y�\u000eBN9\u0002�#%cw�$��\"2��\u0003\u0001ұE�\u000f�\u0006�R��\u0007�1ha��T;\u0004\n��A��Ku�jQo�\fk�yi\u0018\u001b�O\u001f\u0012E�IqYY���}>�Dx:�*$\"U;'^�!�w+T����c������\u0018�*٪A2\bh\"]\u0004�&�%�m�=wr��u�B\u001c�PlN%B�0M��Iۈ\u0015�lG\u0017�X��-�\u00168\u001d�0O�|-��}�U���>\u0018��l�m��D�\f/��\u0006�\u0001���\u0018[��M \u0003�{�\u0017�\u001e\u0010ȭ�{�\u001f3�\u0017]�1�\u0011�c\f\"``�)\u0011Bg\n�d\u0018\\ZM\u001a\u0006�Z��$��*\u0015�\u0004\n��+��e#\"�=�\nS1�2)螕ذ�m�5\u000fށ�3�i�;��\u0011�\u0011}\u0005q\u0011�aRb�L��H}Ŧ�o�\u0015���o?\u001fO�d�\u0016{UL\n��j��.Ez-�R��=B�\u0006\n�.h�Rb���p��m���\u00138r�*ހ�_�rr���8n:��޵���v��\u0011\u0016����'Y�8�n���Q�~U\u001b�\u0011(�R�\u0003^jz����K��v���[\u0002�R�-\u0017��ƿ\u001b�S+T��TO��n����_i2�\u0006\u0017&��KŐ��?q��v�\u0003��Q�H��N�\u0001\u001dM\u0015\u000fS�\u0017��5I�\"�d=��\u0001��a�\u000eQJt�\u000fSk�n�:�c)�!r\\�*�����������)rό�<[��f�jn�\u0004gA���>8|�+)FT�7��.�q=6\u0013���2�\u0015Z��=�׾s+�m�N�w�}c���(E$�����r\u000e\f�����5M���/��X\u001fN�=��蔹�ؕ�4o�t�JT�\u0018�CH�3x�\u0015�\nA�YR\u000b���\f�\u0007�\u0012۶\n�\t���\t\u001d3�\u000e�\u0012\"յ;\u0003�L�:>�@x��ѥ�Ppt��\u0001\u000e�\u0004���\n&om�%G;��\f�D�\u001etլh�F\u000b{o!\nʋ,�'�D||��5��\u0012\u001a��X^zˡ\u0005�/��\u0011\u0015Fk�c�\u0011��\u0011�\u0013���;����Ԩ�i�\u001e �k\u000f\u0003o��w�<�����L�,���H[�D\u00110��3Ma5T[�~�8t\"n5�\\I�[�l�!�;M��\u000f��\u0016/���Nc^\nf��<���S��\u0014K�]a�\u001d\u001a�� ��u�@�Z�#$x�A��T�b�Ӧ;_#^���JA\u000bX\u0013; \u0018c��\u000e�\\\f\u0018SB�4�m�\u0004��}D!�j��S���ˎ�+��ǋc&\u000e�I�\n`�ҏ��7�\\�~c�V�캹�iTEZ�7�oƟ���z_k�\u0014��h�\t\u000fU_�ݤ��5���b�ir㪧�\u0005s��KN�\n�Fdi���pI4K�.�R\n�'Z\u0001\n���d�\u001aX\u0007�[�M8s^\"e%#\n�Y���lX����l�����4\u0003HbZw�w�\f\u0013��I\u001e &�5��g�9�\u0016�6�h\u001e�S\u00011���'�]�}ښ\u0019�?Ym\u0001��2\u0019�\n?�|b|2\u0011�\u0018m.���U\u0016\u0002�\u0003\u0015\u0011_\nϧ�lӧ/ Ԧ�b�e\b��w'ӽ ٣\u0004\u001f�\u001490�rz��B\u001e҄7�E�>�U��^�ey�>n�@d��OO��{1�7`-��+�Ͻf�t����J0�\u000f\u0014\u0015\b�I�\u0013�Y��\u001a�oV�4߅\u0011ڈ\u0013�\u0006z�Vm�'��h�FK!M|�8��#��-�<��Ɯ\u000e�-\u000f�J���9SP��L�7������;?\u0016��Dۮ���D�V���C�F��.FQ�}1��m�\u0015��%�d\u0006ݭB|G.����\u0010�>���\u00170=���B�>���/Iul���=k�%��q�,�\u000fX�5p�\u0010GJ\u00043����\u0004\u001c���P�o���z�\n>_H��5l\u000fS]0��C즛��u-'U��!����C�{��Ĕ��x���\u000f4&(\u001b�q\n\u0003̿��1��F�P��9%Ž\u0014\u001d}A\b��Y鐦�'�g�\f:�7�\\�\u001fZ�<�\u001e���.���7�b�N^��\u0007N�\u0001tE9���4ۂlp\b�C&Z\u001f,\u0012�Z\u0018u`�X`\u0012\u001c�nl�}dJ��\"\u0007��\u0001B�s}0\u001f�C�\u0013w\"6���7�[Ӕ,\u0015\u0013ߘ)\u001d�$r�\u001f�0\u0015���<��\u0001�\u0017\u000bK��G�]��7U�4,��\u0011�\u0005\u0013\"{�\u0007[^�I�ͳ�\u0013\u001d�S\b\u0015��3s�����f;\u0015;;�\u001bTc)��\u0005eLu��pU\u0004]˫\u001a[�\u0004Ŧ��&g\u0019g�z�@z\u0012�:�'�x��^\n\u0011�o��k�5�\u0011��U�R]�ǣG��}�\u0011?\u000b�\u001d3�&��\u0011���r�@x��\u0018ܲ�gw�U�m>I\u0001�/\u0019�BAt\u0001�/=��{��6l*��5�0L���QE��=�:5�C�EK\u000f�t,�:w�\t��f���͞F�\u0007�`S_�=G3C|2\u0010/[����\u000bks����S\u0010����PeE(���e�\u0010x������~�\b�\u0011��c��ם�%���\u001d�\u001eq\u001f���y|�\u0002L* �.R���wt��]�ϋ=}����6Ϩ�\u001e��\u0011�\u0013LD�\u001d���h�K�s:!P,50�\u000b�P�$��+ٓ2\u0013�LY,D�T��%���\u0015�&\u0001�bM�L\u0010,��L���f����w������=w\u001eFz6`�DW�h�\t�BE�[_\twn�\u0007�$������Ӌ3&��o�_\u00026�O@3߽E\u000eu��|�R\u001d�&g�0�\u0015K\u001a��y\u0010�\\ZE�F\\g��P:�1\u0001C<\u0017X\t���Oh\u001c��?�Nk�<6�9e�m,�Iq�&1\u001dGR3�g5�\u0015�13��/�f'B��j\u0014S5F-\u0010q��r�vTA��=?�du�ꆙ��(\u00072%#6f��CJO{���#�\u0003i�Ee�@�[`������X\nK9e�E\u001fc�r���{%�j�;5=4L)@j6�)�4\f�\u0012\u0018r�9�G\n}\u0015aŜ�:����+7;��o�k65��$�\\D���.\u000b\u001a7?L|G%z�_\u0019������9}}s�;\u0017���'8q�N��mPv�\n ��9S�\u0006��\u0017\u001f�͉*\u001c��v�͟�L�Ȯ��:Ǿ�\u0014p���\u001d\u0018ܖ�b\u0002PI\"\u0006�@mr����wf�\u0015A��p8P�oe\u0010aN\u0014\u001a-)N�Ju�����\"\u001f_pI\n\u0003M\u001a\f\u001fk�|��a��Z�X�K#�\\\u0014�}��\u001f��$��ʉ~�Y��|�\u0006b�'˴�s�\u0001n)�g�*P���M�s�����\b������\u001f.X~B\u0005 ���\u0017\u0013�u�\u0015�rZ�\u000e��\t�,�\u0015��S��,�5K\u001b_�`��\u0007Ɂ?d:�\bEԶ\u0010��!{5���Ɵ�ysՅ|�>zx�^���B�\u001bB�!�5qG\u00022�vhѦ�Y\b��e���&\f�\u0017�˴��@�\u001c-w��Ξ~E@���X�u?5b��\u0016���\u001c�\u001d��c�'}\u001d�h�5�oj`c�\u0002�g��D\u001b:\u0006\t#�R�\u0018�v+GG��\\^�7ԵO7p���8�m;8R\u0011�|�q\u001eϡ�=m�x\u0014$��\u000bv�zF\u0018Ю��~���\u001b\u0003�>~=���ȿ\u0016���4��\f��;~�v�i�%T��ܞ6Rq���Z�YU�B�\u0001I�^\u001c�/\u0006�@��\f0\\\u0017�'Pc��2��R�\\��w�1/�\u001c����jpJNitܒ�������x+�:��{�U��M\u0017U$\u0015����[���\u0014�?t{(�\u0010\u0015h�ґ\u0013�y}�Z�O��c�k��{\u0015���2�-��g_�j��\u0007&eY��N�7��к���\bUK&���xM���\u0015�TTڮo��u<�^M!I�f��\u0002~�-cC�\u00075G��\u0007�e���/3iA:\n+�z\u0005b�\u0007XX\u0016\u0006�:�j\u001d�\u0012>y�9e��p)��y#��S{6ސ4�f��f\f��b���7]oRi�%.������8{û�a�z������\u001e\u0014I��!�m�a���tNq�R��C;�*��G�>��>����%�7+\u0016�7D6���L\u0006�\u001fK1\u0003>H��^�\u0010���{�JTzA~,\u0007�\u0014�'�\u0018u�<�����ր�'�\u001e��Π\u0013ww\u0002�Um��\u0019�37�9��~�P��\">}}}\t�ï\u0004\u000fC�C��=�\u0004��:��p�\u001bX0V$��\u0005�-5$�\u001awF��\u0007}NMC��q�U�p�J���h\u0003վ�\b���ϫΙ\u0011�쨽�������\u0012K����\n��)\u0002{��su�-�\u001f�\u0017���\u0012Y�����������4d�\u0018�w=���\u0019�iW�\u0003�Q&�\n�Q�\u0003)\u0019�I\u0019i��_M�\u0018��\u000e\u0001[cZ��Cv)�i�s\u0010b��Vs9F�CZw��D\u0005ModU�P4.2�u|خ� �1b���\u0007���h\u001a\"\nG.\n<\u001dJ�]�\u0011\".���3�xt@lYG\t\u001c\u0001���}Zۖ\u0017Q�g�2�]����k`��\u0010�\f�4�\u0018���n��E�� X��\u0005�`�)���F��G���\u0010,�=}\u0016,:��\u0014\u0013\u0013ڮ�[z��)ۓ�D�\f��Ό�g����N������hc���\\{�\u0004�Wy���^t�hت\u0018���l\u0014�EO�U\u000bL\u0013\u0001��*M��[�%$\u001b\u0007*:V>7#�\u0003W��b��=\u0006��\u0006�.++\u000b�ج��+���\u0011\u001fd��7,�\u0001@8\u0016嚦�P)��t�#x��k�\u0001\b�|8�gE5ʷe�g�\u0014�p\u0003�A�ȥ�F�����Ƽo%���\u0011\u0003\u001a�c]I��ah�w��JJ��\u0016D�8J�ď.R\n\u001f\\\u0011��T9\u0003\u0006�ׄ\n�W�\u0013��e\u001e�B������C�צ1�/5S��/l��U/�A�E����WC1z\u0003�\u001fѽD����l:�\u0013\u001b\u0019�\u000f9br\t��2��H��\u000e\"�^\u0015��\u001e���ڃ˔�#���+�oS�\u001eΔ��x���Wt�\u0013$8į����\n��Pu֩����W��H�D>��\u0016YH��d�S�'s\u0007\u0017S�����R��J\u001d\u0015�P�\u0019˄�;ď\n��'\bJ\u001a�u�\u001f=O��\u001e���઄�t(�`�h*\b\u0001@a��\u001c�c��#�B��a���V�c\b�$~\f[�!\u001a��֝'�ׁ�\n�c�J\u0016�Ԃ\u0010N\u0017�s�|F|\u0010�(�g>e6F�e���W��MI��'\n����$@z\u0005M{�\u001e�\fi\u0018\u001c1��\u001e\n�͛�7=�NN�\u001c��\n�\u0017\u0003��?��[ݧ��D�X�Gg�`\u0019{�\u001c\u001a��7�u���\n�k\u000bT�r5��L��סЛl\"�\u001d�\\\u001a��E��~S\u0006\u001d�PvJ�\u0012�\u001exw7��Op:�q\t���O\u0017洔�U<�f6��&��\u0013%61,\u0019�?v\\�\u001cȵ�����2K�{ֲ��\u0010%9�=��[�!\u0003MɆ1\u0016��Cs��j�\u0019\u001c���\u0013���\u0003\f;�=\u000f�\u0014��\u001dw\u0017�5�Û�kO�_�ؐ�/���ܔ\u000b��GY�\\y�ʐ�^T���(j-3����ȭ������c\u000f�&��y&�\u001d\u0001��\u0005�o.�\u0012���\bәR'a\"�@�Ա�K��D�j�m��\u0007�0�s�>:��\u0017uQ��Co\u0016�\u001a-��L��\u0003\u001dڭ/\u0013��#\u0015T�*OA�\u000b\u001e�\u0013�V�\u0013w>Ts�޶^\u0016�ʘ�y���\u0003�����@�cx$Ia\u000b��Qdi=��3ߑ�\\.RR�\u0013��,lX.�\u0006���~��9Zr�.k_�0\u001c��F��m�*��\u0018��O���#����0��tX�O5\"\u0011��i�ǧ�gO\u0017L�Bća�z�p���͓�z\u001dld�\u0014�ψBٸ@��m�Z���\u0003m�CZ��\u0001j+.[�\f|��t��W>�\"Y�!\u0004�\u001fwԇ\u000b��tgK_VRk©>�@+�@�3�����\u001e\u0007���I�Z��k�K^��3E��\u0019Y�\nVD~�GJ�����l�r�t�Wj��\u000e>[xM�\u000e�[;ߎU+�p)���L�\u0004��(�E��<*�{�7[�YS���.�-��h�/(��=�\u000bguR�2a�Љ�����\u001a%񒆧\u0017d)��m�&a�vT_f(��9�\u0014�1����G��N�:\u0015V\nj�f\u0010��o��@\u001b��!��k\u0003.�6��H\u0010�]k�[����\u001d���1\u001c���\u0015�\u001cM�!\t�\u0017���m�mk�Q�\f��+SѷFE��%�����%�\u000e�\u0014��m�pE=�c�c;g`7ٝ\u0018�m�$�\\66I�yᕯ\u0001/������y8\nB��\u0014����>+Vn:���\u0006����C�HT�L�nf\u0018D��g7����T����I�FY�8lHs5�\\�;�\n����#\u0015�\u0014k�r�Ѓ�I�ߌ�\u0006�J\u001a��M���\u0001\u0013�\u0002�\u0017�$����=%\u000b�����M+i\n��\u0016^��J$�FD���.�\u0014)�\u001b�a��\tx�*�\u001et\\>\u0006�:�w���k@��(\u001ag]U\u000eA���;I�\u0005U�C\u001dw�0\u001a@�\u0005��M�8�ѫ^�U�\u0012�L~��}\nCF־ӫ\u0013�\u0007\"\u000e=x�\u0010�\u0006���.#f%�Q\u0016�N��@2���SX\t樱�T\"_�H��W7�O\u000b\u0005�\u0018���@\b��9���\u0010h�>��v�Z��j߀�n\u0015rm��=Y���z����w�Ro�\n�M�'[έ�\b�V�|��&t%�\u0015�R�T@��\u0013�7�S�g:�{�C\b�����w��p�.���\\��v���s\u0013�e\u0014�Q�\u001f>�v6c�=���\u0003�y%C�l䝂����%W�\u001fA�K��?\u0017`����#:\u0017w_α\u001f\f�{Ȝxh<\u0015��رF�+Ή�Y1��\b\u0012�y\u0014�\u0006��܉�^�߬�\u000e�\u0010xQX�>R��\u0019ޒ���[��vf;h�~Զ-\u0011�l�!�i���;\u0002e<Զ�t�R��h��H\u0002)�\u0004��a�v��{\u0016�M��,_$(�p\u000f\u0018\f慩�E�6v��$yQ��t�\u000e�>�\u0015>Զf`ʰ2\u0013?E�Q��U\u0001?�֡�U\u0014s�(G��\"��e��\u0005\u0006��'�a}�4����y�+�\u0012��ya�\u0003��0��\u0015�р\u001a\u00104Ma~Ҭ���Ϲ\u0013�w���`��$�V(\u000f��\u000f��\u0015�\u0013�<��\"pU�.�`�\u000bJ�i!�E7s�����kKV*�o�\u0012�\u0005i)\u0014l\u0013�Ї*���\u0001�a�\t��pD�|\u0004�C{�םi\u0001\u000b*���|lD7\b���\u0019\"���6Q����c��\u0011NV\u001dNp}��T��}��:\u0010�\u0003�g2�h��K�\u0005�\u0004�\f�7\u0013!�E�\u0015��~����\u0001���H�L;\u001b����+�p\u001b���\u0010���\u0014\u0005��H\u0005U\u001b)�Ɏ\u0007��\\�#]L���� �T\u0012Y\u0018y<�\u000b �R�����\u000eQ��,�1��^�+��\u0016��p��=\u0003mf�JS�ܠ��?`�$�c���d��(�*�!x� �\\\u0012�R�o��S\u0002��Te�B�k�fs��\u0015\u0004\u001b�Cx\b��<\n�\u0017��.��D�\u0019�^��T�:y�(�'�E\u000b� Q�a\\2�lM\u0006�1ѰI�7->���[���^s\u0006��ש۩ �l�\u001aC�\u0010L�\u0015�cNx1\u001e��3凭5\u000b6���/�]Q�Xw�P�rn:�Z��A���A�\u0012�c� ������E\u0014F>\u0014�g*����\u0004CI��H󯹴�\buڀ�m�5��֒��*�1kq�L�L/�\"Jq\u001eD�)�\u001fk*\u0016��\u0011�'{�>{H��������띦�4�\n;�͉U��h���1-f$��\u0018�\u0013�/�������S�O~8ӥ\"��\u0019��;, �B+o�1\u0002\u0010=P�}]\u0019����bRF>�*\u0002�([���\u000f�\u0004\u001cÍ�ѤN\f��\u001e��\n�\"���\u0011u\u0011Ǉ|��ٯb�|y����;�\u001f�VkC��q>�q�k��I \u00024\u000e�)L��\u0019Yx�E�7\u000fd\u0017�]��|sG�X�\u001d�c�Hw\f����8�q�0:+�(�\"O��b���)\\GmS=}���g^\u001c�Lb�\u0016�܏ϕ�,��q\bB��Ի�\u000f�\u0010& ='ҩpr-h�9\u000bP��s&�m���1\u0012kL�\u0001\\�\u0003\u001dŬ�{-ֶ�\u001b�'�\u0004K%�$�\u000e�\t��l�Rj\u001b�S���U����\u000bGKS.�M�EM+�:+�L�r�\u0012�ÖO?ng��{\u000f\u0010���A�~80�Q�\n��U�.v[\u0015_��[ч\u0010�h\\\u001e��h�:쁢\u001b5�zx��z2H���Tq!�\u0004;l�\u0016ׅ\u0006����I\u0016$R��Gw��V��W�l�ѓ�*�uC�/e�����Րj�˧�XN���\t\u0010|7u=�\u001cE\">�B$5�mj\u0005\u0004�7x!����x����\u0004�Q�㖃\u0007|�p���bڎB�|e�%d��A\u0003\u001c%\u0002�<&-�7����ǣ\u0015o�i��p�\b��J���\"�\u000f|25\n�I\\G�\u0006�\u0015��S�g\u001ek�\u001f\u0002\"72|=n�����E7�j��(��w��M�Ss\u0004�J�r����*�]\u0004e����\u0014\u0016d�|��c\u0007XXEI�륥�I\u0004C�=^���`F�9�JP4{M�~{�rY�ۼ�E*x��\u0006��\u0002]O���,6a[��ؐ�^��\u001c\u001d&�fB.jw�<�Ω�RT_1]�a�5��/\u0007H�Ĭ^=�D]K�B�߹�\u000fS\u001c�,�!�q��{\nq��T�\u001a'�\u000b�\u001cն�Ȝ�\u001b\u001fKa�\u0004t��~�\u001b�ͣ�p�~iː���\u000fk�\u000b�)�P�}��Gm\u0018Iԅ�N\u0002h���b�#n#�]�^�����0tD?>�R���\u0003�\n0�)����o�!��v\u001fa�bY􄧹\b\u0002e�=�8F���o\u001ceY4>c��\f���WR�|\u001b9z�\u000f^�Udn�X��\n\u000f�O,����Ϛ�k��_D��\n�\u000f��[�O��7a|�9\t�����:F+=$�~���4䵎}MZZ�S�So��_Öx\u0019��\u0004\"�\u000f�_Ք>5�<�µ�\u001dN�2\u0011D�k�\u001c�\u0015�~'a\u0013c�\u000b\u0013�\u0004�Nｇ�W�_�I+�m\u0003\u0014��/\u0005��m.Ι��l�`V:�k�ăR\f\u00061������E�r\u000e%,��4���ې赘�E2�o�wP`]�j�5�w/�?=d���t��q0���$�����r�%�p~!�e�8H6i�Y�F�\u0003���O�*�&e\\�t\u0014��x�&\u001fsU�M�C0�\u0019B�$DE��mLR\u0017G�\u0018Ʋ�9��o~|��`vsMhY\u0006����\fb�f\u000b<\u0001\u0002\u0005g���#�fW�\u0001-��\nO�'�\u001d1��`�\t�ߚ��=E��pE�0�j\u0014��s7�o؃�\u0014!��O\\J�A�_v��+�Z�k�QÈ=(V�@h��f\u0019�>�\u0002\u0002�[n:�渾Vylʘ�1��c\b�#]�7\n����\u0017���� /Ц9x����d���P\u0014���.�u�mFx���9�]\u0015\u000b����zɯ�+�*Pd{\u001ee��z�5�K&��\u0005S*�Ǥa�Jl4�V�y��j��\u0011s��bF|[\ts�\n�8ؙ\u000fh��n�\u001a�7�v�y����dIR)��屼�]�\u001f FRIN)n�U��#b\u0016�'B1K^�ϴ�7\u0005�8q�\u000b\u0016�\u0014�ۙ-�P0s�*���I\f�&pK��h9�r銓��!����TD޳��ҿ:U�F���h�c�p̄T�n$8e7*���s\u0015���\u0010}\u000f���ǔ1t�[��N���Ȝ\fn7\u000e���/��i۷��@� \"�%\u0013E\u001b��\n �~Jk{����2�D\u00168�XG���\"�VZ9�> TA8sO�rs�R].�ߊ��Ȼ�*�\u0016�E�\u001c�6\u0015��'\u0013�K6�M)\u0019��w\u0015�x�A�\u001fC%�\u0006�.�L\u001fU�cx�a>��߿듮�T�%�j��:�$|��U\f�F��e�R�\u0007�zݚ\f;�?b�l�GPr7^�F�9�X�j\u0017\u0004\u0001�,8�0���^l\u0005;k�\u0011Cv�?�¦����\u0005R%�+�p�&@\u0017��vӗ��s�\u0016\u0007*�\u0016�%�{�����D֠�T��0]�*�w\u001d�lU\u0001�\u000f`է�r�l\f=�\\\b:V�W���\u00014\b�!ܑ!7�G�&�?\u001e�,Q�M�P�cH�����\u0018}Ds)P\u0014\u0004��\u001f{�\u0005\u000e����q���%\u0012)�����Vf��\u000e~\u00012]�\u0013�6��y�\u0016�e-�����/�\u0019�6���\u0002~a�7�o\u001eͭ\u001be9\u0011��+v\u001c��_�)�^vS�\u0012xyZ5}A\u0010�%��9��aU)\u0018.B��'�\u001d̵Vl).���I�J.�@�<�*��Υ��\u0016����=:�Y&�4F�k��e���&a��A�|^\n9��v��\\+���T<�(U_�I����\u0016O�)\n+{�[N3-\u0016�Lm�E���\u001a�\u0007u+\u0018�<\f��\u0005~'\u0005�2@��m��\\��}�QW\u000e�(%�\u001b��\u0002Q�\u0002t݂��Ѧ���\u0019\u0011��óҼ�\u001a���\u001b%�����\u0004\u0019Sܞ�\u0010���\nZ�\u001bKi\u0011��\n����C�X9PV���*\u0013�h~J\u001b�z\u0010�\u0011�6���XLt�b�,H��G�uՇ����NXsm�\u0019�\u0015�\u0004\u0007��Д9@f\u001c��6��H\u0017hȚ$>\u001b\u000fs�\u001et�m��]��~���f\u0005\u00060\u0011�b���R,@�?�V���\t樭~� e�\u0013�z\n�\u001b���D\u0016�ޒ\u001d\u0013\u001cw�`$\u001bq9������U!�\u0004�;���YƫXw����X�\tb��-<���?��(�\u0006!��U\b%\u000b(_\u0013??\b�2���\u0016��df�C΅~wP��Oȋ\u0012�9~Ҧ���1�\u000fۤ���|>��=mF\u000b$jJ:�=����e�l[�7�\n\n�\u0004uLʞ��oo�g\u000e4���?B�r�\u0018\u0001L\u001d��\u0015A\\W�yG�O��\u0010/��Ҍ\u001a#�*��`�Z��!\b�\u0018r��L�\u0012��\u0019zM0�{&��c���%�Ԅ.�(����\u0001�\fS+\u0012\u0013w��ڼ�Kha�i��HZ�\u0018\t\n�Q����\u001c��j�\u0007���Em�CvP�J�\u001c\u0003�!\u001bJ�%5���x[�n;d~��P\u0003t\u000f����F,��\f��~N%��\u0015��\u0013c󱤌\u0014��g�\u0017��f��}ղ��ݭ�L��\u0010~?�\u0001�\n6�`ݣ��Wy�DU\u0002&S6�\n��\u00165\u0015��FT�T�IGfH�c�\u0003iX������hѳT�n\tQ@\u0012�\\\u0010��\u0018BR��1�\u001e\u0002�\u001e��\u001a ޚ\n\u0004�\b�W��\u001d�o@�4�Ber;}�\u001epy�\u000bx�\u000b�ŘO��\u0019�©�\u001f.S\u001d엺Q�����#\u001b\"�(���\u0015\u0004��t.�Y\u0002���e�,Yi#�#z�����{8�~]���og|/R2|q��[S\u0004�ƀ5\u0018�N�D��<\u00071T��t|`�+%������/q\t���XcN�\u000bfh8}t\u001b�=\u000f���?�3 E\u0005P;\u0015\u001d�~CZ\u001b�55�~�+�>��\u001f�{*�ܗ�zT�L�]�B`?ꊮ�\\\"�����j��\u0003�^F~?��ɗ��ܩ���F\u001e�V�2� 5HOF?.���VT�X7ܮ�KwϽ�b�w�p�\u001e�=5V�\u0013��.~��\u000f8(\u0019��5���\u0016֤�*m��`R�\u0006��\u000b\u0007\b�>\u0001K\u0001r�:0|N�3���}�˚-h���cA�q@�FJ>��Ui��'�\u0006�R��C_6�t�&�\u0015���N��ۃ|9\u001eM\u0014�=��Ͻ\u0018>\u0016�~\u001a0�:8(�=G��ޯ�U�\u001f�\u0010]����6\u0007�\u001dʿ�B�-�\u0011�\"$�\u000e���.\u0018HԿ��HZ;�y�\t�\u0013o�λ\u001a��\f�@r�d\u0018�\u0018-l\u001e=��\u0016���]0�Z��j\u001d^�sh]��\u0006|cW\u0015��\n*�)�u�\u001b���ԄN�o�\u001d3\u0006`�s��\u0013֪\u0004�\u0014�n����c��ĳk�����g7�Q\"��Ox\n6t��v�\u0013H���4\u0018���\u0001�\u0003�V�N��\u0011��4ox�ڂә�K{���\t\u0018ș�\\&�\u001fPF}^�%G&��\u001d\u001f7�9�$|5�SC\u0016J��\u0019����[{�)��B�t7̌\u0010Ƒ1y��v\u0006J� :7������\"��*X����\u0001Pn:�;�0�97�9D\u0002rX��2��Z���Rq�\u0016\u0017��\u001d��(�k����[x\u0011\u0016&��f�+�0�����n��P\u0003�3>�>�2%�\u0017\u00162]�\\f\u001bR�m)�V�u�\u0010%.uv��Ue�F������'��hmX�w���\u0006��>C\u0005>�aLvTm;�ې��\u0004�qJF=8^\u0015m�k{J\n��\\���\u000e`\b�ۥJ��bv�\u0013o~\u0005�V���b\u0019$\u0003\n���\b�\u001f�(2\u0001ؼ�2!(a\u0013��E���\b�\f(���s�\u001f�ϙ�d�R�\u0019�\u0002�7���\u0016R�\u001e�\u001aS\u0016�S�\u0001�r��l'��i���zU^2\u0006Ty_�����\u0014��T�\u0007!=Z}�Ц�s\u001c�0Ey�C��`�!��H����^ʹ�@N�^'�\u0018ځ\nžÈ���\tLW3��?���A\u0010\u000e�\u0005�\fV)�Y�t\b^$\u0003jm�Kȁ�@��\u0001m��@\u000f��\u001d��G�>D��\b���c&�]�T�P�L��r�)���=ҋ�a[\u0003)U)):��\"�\u000b�\u001cG4��\"��Ѣ���0�g��0`���\u0006\u0004[��\b�\u0007�\u0018\\�<[g\u0010'�嗁m\u0011�w��\u001e帺(\u0017\u001ax\u0013)U���S_�\u001b7Q��\u0012��\u0005c\u0017ǚr&��\u001ej�u\"\u0014\u001bL�\u000bSP\u001cv�8�;��Z����؛Ȉ�\u0003�� �a\u0003@��g\u0015�QI�^�\b�.ۘ�F�\\\u0015�\u0004\u0015�\\h!�3`�\u0007D�&\u0001\u0012G3\u001d�\u0005\u00165���\u0003d��A\u0016��\u0012*��Xt�d�<\u0005\u0015򳆲�V\u0006\u0003?07vv�O��د���-sHK\"`P\u0006�2up��JC:�b*?Y�gDKq��Oy4\u001a���#�\u0016��I�;8]?�����\u0017\u001c5�_�\u0016�)\u0007�DU�40𦲗��\b&9�Ӟ��c���\n&��\"�tϗ2e\"��\u001b�\u001d|OE���t\u000b�����\u000b�W�5�eRe�,$9�\u0012gb�S�\u001c��q��d�TԷA���@��Au/,3\u0017\u0016\tY\nBBIN:P>p�\"\f�;�a�U\u00077\u001fL\u0004n�3�\u001a&�laܑ���X^Q\u001e�]x�\f�e��\u0017��\u0001�\u0001\fP�\u000fd��\n�p,]H�5�Ľ>�u�gD����\\�\u0014��\u0016!\u0010��E�$Q�\u0007<(���Wl��p�Z]~\u0016���?�\u0012\u001bu��GD{o4�m�Ӵ�%6d�]�\u0016�`��1�\u001f�\u0010��4�.�9��R\b�|\u000f��,�Dl�� �1\u0003_:d��W�֣���\u001aw$��P�+QR�1\u0005>��?�}[S��-WA\u00139��զɋD�쁪�\u0006�;�\u0013?��ӯ�o��\u0006�p���,�-h7�\n��\u001c�3�\u0012ػ���c�L�T��\u0018���\u001f����h�9RK����\\��s=������D\u0001�� ��Z�7�A4\nP�F��O��\u001d��\u0002�Lw9s��I�\n���'�𙇽h��0Z���\u0012��V��\u000bG�'��TKSW�N��+�\"�T�/(쀳)�3�Hs3w�>8��n(�q�����\u0019+)�%\b�7]��^�����\u0005�/�\u0010v\u0013*,�3#\n#��\u001b�#\u0004&�^M\u0007JZ��\u0010\n,\u0002\u000b��YV�\u000f�OM�T\\ĹtCxn���\u001c@�\"����F˚�A*\u0014S�?\n�Y��a��Q�H\u0018�\u0016��8V(p�u^fzb�<\u00027���\t_��QÇ\u0007�w�\u0001+\u0014\u001e3��'�l�\u0016\u000f����q\u001c�.R���ə�\u0005\u0013Q��jbd��H�7�V�{G���|W�\u0010�~?\u0015\u0018�Q��\u0016�1��j�d��j�!�Ï�\bC3�ҷ��4$[��(�2�-$�&\u0019���4I\u0005��\u0019���\u0006����k�˧]\u001c�~�\u0003��\u0016��$\u000eo��%?��\u0019R\u001e�$�s��C�\u0016H���Ag]<\u0010\u0016Q\u0006!�\u000e|B�\u000fݬ�:�I靋�Y'�ĵ�3��7�#�\u0018�����H��8T\u0019H�\u001b�U�O��&`\u000bԑ��\u0012:x8\u000e5�\u0006^����q\u0016�0\u0007gr��\u001d\u001a#��.W>l��G`\u0004u1.��\\@���F3��Q���W�h�jz�ߒ�@d�\u001cm��ڔ�Wn\u0014!�ckQ�I�G\u0019+�)*o2���\u0003�>�@�m\u000eya��0�;�q\u0002Y{�ߊԔ��\u0012\u0017W �-G~���\u001c�E\u001b��#����\u0012��1\u0015@<���VZ��F_/�\u0013�\u0005$�d�X�P�N�\bb%��m�|�76�L��\u000f��1u Gǧ�\u0012V�1;Ŏ��Y6�41��!��\t6N��,)�܏�V\u0005�N�v�UV�҄7��]���\u0002��k\u0018la\u0012\u0019��W/k�x�\u000f\u0015�3�r�dg��<�{%\u0019I̴���q�Sd�U�mј\u0005�Sr��VZ��\u0019�MB��4�B���/\b�M\u001bl{�7en}\\�4�I�\u0012|\u001f��%���\u0003\n���a��S�\u0011�j\u0005q׊��\u001a����B;�H��9G\u000b�r\"\u0013��Y-8t��ܕ����B]�{��%q\u000e��OG���\u000fW�s��^�\u0011?=��f~axϯ}��|g\u0016\u0010P������'0�fCd�\u0019���\u001e�ʝ(C�V\\��q�zZ�KW'�jC\u0007��\u001fv��\u0010���w�M\u0005ܖ\u001e;����UHO\u001d��h'&�#e\f-�XM\u000b���\u0007��\\q��ނ�\u000fF��ɭx]�\u0012.�_9-��\n�\u0012�qlJ1_\u000f\u0003�\u0012\u0016q�<1�C#\u001b�R�ֳ��t&�p���C��\u0011+�}9]�\u0007\u0011��\n�R�\"��/:���3��E����h\u0017}Bo^���6¡`t[���S\u0005��*���\u001b�,�k\\�\u0005d\u001e�<�����\u0004\u001c��I\u0004�V��&��\u000f\u0011\"G�\u000f^��N�y��#�,\t��,�lX\u0014����\u001dZ�\\�lL�N���A�\u001f��*өk�����32X�\n��f���U�ӧ�Y�=d�\u000e����4�{\u0014\u0013\u001b��)\u0005\u0010�L!Q \u001aj�\u0014\u0016S�%�g���gW>!�9\u0007��\u001d�5\u0016`]\u001c��;���{/��3\u0005��\u0004��\n����\\x\u001b��l�\u0016\u0014\u000b�/��\u001a�L�F*���\u0004%�����\u0019qf�צa���A�\u0006�\f��P�\u0004J�K�\u000f��\u0002ɢ��1#��\b���T=y\"uG\u001d�؃�N�\t̼��\n�g,K��\u0005qK$?\u0007�P.��c�z/3\u001d��#���\nE7�\u000b�#2�~�$�*��S�\n��\n��؟�N%{Z��\n�����`�v-l���\u0016Kx��Pӫ�\u001e��*7�x/|��u���\u0011�/;$�����\u0012z�,+����7��j��m�]�5�0�ͤ��\u0017��4Z�m���\u000e���#�-�\u000ew$D���Z\"`����0>\u000e �mn!f��n�\u0006��M�O\u001e�r���JEu'NV�\u0018fq��}b�֡;�D��l\u0018\u001c�T�@U�IS�pdk`ǚ\u00068�>N|���\f�kɉ߆Tq���j��\u0018B\u0015e�H�\u0012�j\u0015�6�؋f��\u0012�Vr{���Ɋ$}���u���\f�t(\u001bi�:�ȭ�Қ[@ľ�\u001a��\u0017�L'av���湥��4��y�\u0016Gc\u0018���]�{��o�����LZ�)�5�2H��G?�Q�z'�\u000bL�\u0012*��c`��؃�D�ݘ_���G�a�Q���k��H��\u0013���\u0019d�\u001bDū�\u001e���ڥ�<�R�<�0�\n\u0012�U;E�\u0001���h���J=7+\u000b_i`j�C \u0006z�*m,\n:���g�+B�_�-5�AMLk�\u001d��?\u0001\u001a2H��Ĺx�Z���2��\u0006��Z>+\u0003x�%Sd-���m0��^+�|̹m�ݞ�,�ԛ@Kg��B(ާT閽�okz�����\u0019���vě��d�2�dݽ��̦�`Țj��㫌5��\u000b�8�V���@(��b��U\f\u0019G��k�~Z�\u0004�+�c����\u000e'�.a�.g��(w\tJ��\u0019+���@\u000euH���.uİ��\bdJ1N׊���\b+�'���9|Mq�\u0017\u0011c�f�teC\u0007\u0011>\\c&}\u0019�[�j�>�+��7�%��n]_��}.A��\n6򑬿]�^;@5�7D��9(�c��E�/\u0018\u0007ۮ�>��\u000f4̪�K������E\t�2�\u001bk�WJh�[�J���o�\u0002Ԃ\u000bO��^\n�s:�qwޓ��R�B`�\u001at{4�\u0001�\u0015e{�@r��R2�>a�\u0016�\u0017�S\f��:nQg�E0��A�\u000f���\u0017�.��\u0002���\u0015\t\u0003H���P\u0016OC�\u0013�$��s�p0j��\u0014m�\\WD|W���������\t�_�K�8풂�g\u001c���;\u0006��\u0001�k\u0018Z)�\u001cu�����&���+i\u001f��7�m��m���A\f�֚w:O\u001a\u000b!\u0013~�ts\u0017Wa��G�9`v�\u0006Q��W\n���\\g������Z���9�X�Kzx�0\fM\u001f\u0019j\b�7�]([�b��\u0014`!G��\u0007\u0003�_Oz�h�Z�(\fհ��}G��ͯĘ\u0002j\n4�,2Q\\i�\t�\u000b�V�\t�\fR`.\u001a��a��ۧ�zrQY`8B�2-������T���������\f�X�E?\u0006&\u0005�'�J��\u0006�,���\u0017�|�5eq\u0018d�$�DEuЌ\u000bs�R�\u0018�\u0010\u0014�����A�*���Y����{ZP�ƀ>J\u0019\u0003e�Ȃ\u0016�+�%�5�+�\u0005�\n\u001a\u0012�\u0011h\u001b��G�\b\u0012�������_��\u000b\u0002z��7D\u0004�t��}n´vʊ\u000e%\b�\u001c\u001b�GV�p��Hk\u000e���Qӽ_ة\u0018D`\u001d=h0%\u0014\u00159S/�7�\\\u0013�L\u0005�\u0003g����(�a\n\u0018tV�^E��5��\"�TƘ˺>���z\u0006�\u001b\u0011pHU\u001fd�̚�\u001fc���0�\u0018 ���6�\n���V�a5�\u0004��\\k�\u0019cn=��\u001eZlz��U��\u0014�\u0010�:���<��\u001f\u0012�Y�\u001b��\u0006\u001b=b��ƕ�t@\u001eB�d1\u0003#����,.���Aג��d�\u001c�e,�E\u001d�\u0013t�rÎVWP\u000f��4��.66e�R\u001dw\u0015\u0012�\u001a\f���g�\\b�\n���c�Y�\u001c;`�D?�zt\u000bH�ʡ�1�6A��8�����x1\u0001#$\u0003�u\u001e��ק\u001f�����{X�=o�x?(�%��a\u0016\u0004�ȭ�1\u0003GL���b\u000f\n��0\t)\u0017��Ǣ/�w\u0005>8v\u0006\u0006<�Y:�ȶ_�Ӌ~\u001a�\u0005v�i뇻�aC\u0015\u001a�;oޙ�`\u0005^�+�:L��NQk��(�U��64\n)�Q86t ��/��\u0002yVG\u0015w3�*_�z=�Ec��ą�\u001a���M����OK�b�n�&h�ܼz|���/c9��(\u0001Wx�P\u001a[�h�\u000bb�L`q�~\u001f-�طPtO\u0003W��w!�3���v�����\n]i�#!!��FN�A��\u0012Zߵصb�2����FGL���5�B�A�D3�q�ߨ�h�\n��rt�pq2��\u0002��ZW\u0006���N�d`'꺹���m�-6�5�h���\u0018\u000e\u0007�]�\n�\u0017�B\u0016���)/�;�5M�\u0011��~��\tj>�OS\u0005୴�ל�C\\���A��� 3�W��M\u0006��\u0002c\"x}��+Ƚ�U�\u001b8\u0003�Wռ\u000b^\u0007�\u000b�Y���\u001d5�p��S%j��W��A:p`�\u0012�>MʣP9�w�:hs���B������p�\u0011\u0007{\u0012�\u0016�w�C�i�\u000b�.:O��'6��\u0001Ɣ5��G!\n(�P\n���J.\u001eLм[���$�\u001cg��={��2{��O�\u001a[so�x�\u001b\f�\n\u001ez !��2b��6�3�j����0�sH�?W����XO�0�ȅ��\u0016�\u0015\u0016\u0005Ȣq���*4,�\u0003\u0006\u0019&���KxY30�D����*��\u0017�������t��Z��k-}�#g�z�pX��}�4 �!�@\u001f��(�&�͙�<�>�78�\u0007�\u001bM'�e�����>�W��uKM��\u0003\\ȂŮ�?\u0006\u0005\nA��\u00025����to��^2�E�H�j\\9\u001dX��\u0007\u0010Iwui���M@A8z��\u001bm��\u0005�\u001e6�\"�ƫ\u000e��po��\"�7Yg�FX�Z��jD�R�N���2�:Dh<������h\u0006�;��)>P���ڿ�a�1\u0018/h�\n2��Qe�d\u00020��\u0015�~��\u0016$̭�瓩�%Uv�����W�vP �\u001d��\u000elM�Ժ�Mx�\u000e\b�r�9(\u0016{z���\u00150%R�x�϶�`H��n*\u000f�K��(�n/C��\u0013�\u00164��P\u0012lƠ���\u001d�Tоe��v�b��\"�\u0019,/��*��e�\u0003����a\b\u0010G��J<�\u0017�LPq�]���T�[=C�Tk��捥ܳ�`ߞ��v\u00126\u0012�^��@\u0003M��n6\u001f㶽N�g�mru\u0016[�\u0014r��悹��K^O���̔�6�c?<}&ZL���\u0002�<�\u0019�L\u0014,��^0��\u0003}��=��I��K�V�Հ�>��\u0013y��9�\u0003|[%��Y_\u0003�Z\n>5\n\u0007�Cy\u0017���ݿ\u0018\u0002�\u001c�Q\u0002Cى\u001f\u0007�\u000f�3B�\u000e�jyVx�\n�h��n\u0007���C:��N��.Sc\u0006\u001d�̈�?^�4j���b21Ob��\"\u0001��\u00025�\naZ\u0007ե�\u0011���]��\u0011�m�E5�K�y��%\\��I�=\u0015g��\u0007��4��K�T2�ynǂ�gV�iK�a\u0014��\u0010����k\u001d4�U��Đ_H�LОΏ=����b\u001aS]V�X�ꂪ�CMSf��\fհ�\u0006�\u0011��\u0018�~l�!7���G,F���r�J\u0014����6T;3ƃ\u000e�~cm\\WOޢVƦ��u�~Q�\u0016n��\u001c�R�}֦&5�\u000f~��8$`�q���M$��n^������Q;�G�\u0013g��\u0013(�Rv.+:�\\��n�\u001e��\\�#9\u0005<�y���u��՞�?v�\u0001���غD!�z�5��E\u001b�6\u0004\u001a2\u0001nMQ\u001cC:,a[�1ӱ$t<\u000eu\u000eјP��\u0016��,>1���A�\u0013�\u0005֕�!\u0001��I�Ą���ɹ̀�U��y��ןsϯ1{�w�\u000f\u000b/�Q�\u0004Ǌ\u000b.�we\t1�{�P�~\f������gӾ�\t'\u000fR{���D�?h�\u0006�s�;�\u001f�\u001f�J~���1����\tȄ\u0011x�wA�Z�r+)c\u0015��G.ƍ�\\p�\u001a���}�y\u0005G.g3⥨��Gy'�\u001dV>\u001a�'Ĝ\u0019m�����dn����^xixikNo�HJ\u0012���p�_�K��\t\u0012��'�1�騄�R����8�J����f�K%r�_�m�2i�mH'\u000b�6s\u0004W�ƌZTf\u0003�c�������Z�ԡ���ᖩ�@|���\u0010[���r����9c�!!̀0}�5\u0001@\u0012{��g�r-��߼1�Cv�R��\u001bXި��|��I��\u001b�\u00022�q�WVO�-\u0010μ�J��ݫw��\u0019vK��f��\u001b^�W�~%�PGu��]\u0017]�\u0012�j\bi\u0015:\n\u000f�\u0004��\u0011�<���(Q��ͱ�6|_>����hЗs�s\u000e\u0014\u001dJ,���5��\ns��m���\t�R�����#\n�X��\u0010?]u�<�\u0002�\u0015ɽYv\u0003`\u0013�#���\u000eRw.\u001cn\"�C�\u0011��Â�`,��\u0011�cM���جq�7c\u0002VR�\u001f8�����0;��y\u001f۹\u001a��XQ��U�\u0004�q+�V;O��v{��\n�NL\n�3v*�V�\\\u0007l�P�[�\u0018�>�|�E�]��������v'��\u0010TE\u0010��R�:�3�\u0011\u000e\u001fL4�j1b��܄\u0005�o([�\u000f2\u001bC\u0013\u0001@U�c\u0011���\u001b,�Í\b:SN\u001b7y�y\u0006�I��\u001b\u0005\u000f��U�pz�8�6\u0013������\"��I�<\u0004�\u0013\nMy\u0010w�\u001e*!A\u0011�a�\u0010a��7��̙��}�D�E��T^�\u0019@���������\u0004��\u001c�:^�\u001d*�V17���\u001f�\u0014W��p(@��`o����x6�5�,T\u001c�\u0006}\u0012&P$�I2���H=�\t\f���E��c�3m\u0004��\u0005\u000fˣ��\f�\u0005�\u0005\u0004�M}�\u001b�O[��;\u001b\t�1���*W��������9���v�2�uDb�}��\u000e�-\u0012�:�]\t���\u000e5دL�_�3)���U�ǿ���eҘ\u0011G�U�G��A���\ng�����i_��(�O���X���B���eb�ˏ\\��=�\u0005\u000b�\u0003b\u0001)`Z\u001c��yE%��\u0015Cu�iᚕ�\u0004�긌��E�\u001f\n�V6\u001f)�\u000b��V��O�F�\bfN2Q����D^\\�40��d���a��\u001cE�\u0011��e\u0015W��M\nS\u001e����\u00120�Y�3\u001d�\u000bii�ꭺ���i�H)92&+ix��\n�Y� ×>֍t�\u0005��+�\u0018�i��P�\u0011\u001d\u0016�5`l�G\u0011$KI2K�9ҷx\u0007�&g�b\u0004F]7��%\u0017\t����*qb����\u001b��\u0016Jg�Où@\\\u0015ʶ[�\u001c�r�Jr�\t�u����ld`\n\u0011�A\n�sR\u001a\nӉm|]\u0001+em��\u0013�C\"�\f�\n\u000f{\u001c\u0014��\n�9A�[s!\u0016�h~e�\u001fx]yq,��d�Z\b��I8��KiN�Tk\u0018VŰ�\u0003�n��\u0012�\b�\n���.�F���4\u0012��z+3kQ�̊�5�\u0001��r\\�M\u0017�XO~����C��\u0013\u0013A�9��J�H6o�tCO��+�&gN\nJmp� �W��҈\u001a�s�\u0015��\u00113���Ͳ��&�*�\u001e�{���ZBe��\u0006\u000e�IW���ShU��͛3\u001fkJS@�Ɔ2+�����-�!ͥ�]�\u0018ˬ\u0013\"�T\u0004n�?��\u001a�8�39E\u0002~&|m����I+\u0018�4\u0018�ױ|I�\\`K�\u0002�rc3�\u0019v��\u000e��La��ZoO:T=�!է������4\b֟\u0003\u0017x\n\u0002��H���J/�\u0004�W)\u0002\u001c�X�\u001a,G�V��4��\u0016�����o\u000e�_[����\b\u0002w\u001d��\u000f��O*���O�\u001b'ԅ\u000e�¦%�{o�\u0011>��\u0012�F�\u0015\u0014��/78g:\nC�=�H�$�BD�?ǟJ\u000f�l`�m*p��b�U�ΦE��\"�\u0019N�i\u00103��/��h0\u0001Zʺ�\u001fV6�՛�M��^��\u0004�'/�AS\u0018�$��95�\u001f^��`U�\u0005\u0014�\u001e��\u0007\u0003��b\u001d\b3 ߬�Pj\u001aHF�\n���ze#���!�\b\u0019�lk�\u0003�~:\b��M�@o�A�\\H���c��MM�\u001d\u0012L���;9�-\u000b=��t��\u0003�ҳ��\u0012�h�W��|�e�.\fa!���D��\u001d�5\u001aվ!�%��P�=s�\u0018\n)A�߫:}�\u0006��Ҥ\u0007P�7\u001e֎DYa\u00131�V\u001f�x��\u0018�薡�.\u001d���d�o3��Z�2�}\u0007��~\u0002��qE��J�\t%l���EȞE����)�{��uPY��V�XR����E0ܹdp'�\u0001��?S��\u0016z�0Ԕo;\u001b@�#\u000f�\u000f\t01R2\u0016n�\f��\u001cc�N��l�\"˙\u001c\u0018��̔���$^��sm��#���뢗�|\u00133�\n��YMi�|�����{\u0007\n�7�y�\u0012p�%��$Rj<��\t�!���M�\u0006�l8\u001c����*�����%���%ħ6��CBe:d;S1�\u0005�\u0013\u0018��W�\u000b?�\"\u0007\n�_\u0016�?(�� �D\u001a�f\t�x���8��\t_U�@\u0006��X� �KV�`7&�������O\u0014?j\u000e:ε\"\u0007�/H�$^JUܾ�!�8u�\u0001#^�p�.\u0018&�H�3������̹B|P�\n\u001bGL:9�._�_g�ì�t\u001bx;K}(�n�\\\b�\n\u0013�\u0019,W�QD\u001d}+*,��\u0007\u001f�[8��\u0014���\u000eFspuy�{�UG���l'�}�|��KwS\f���\u000b�W��W�s|�\fmH��!/��>VH�e�,�>����\u001c1R\u001f���#�o�~�9���f)�r}\u000f�B��&J�\u0014�zI�$\u0011\u0005d[q��\u0004)���:%��!J1�,\u000fJZU��H\u0015.��5��]$��\u0016�\u001c\\�%�35���:,5�_�D���fE1�0\u0007O��O�SӒ����+��DL�����\nZ�WQv'K�T�W=\u0013\u0013�bj(��<�\u0018J�\ffv\u000fbŪ\b��%ޝ��ŝ��4N�q�{�L�4�?p��\u000eOY.\u001a\fY�\u0018?\u001e?�\n\fR\n훰 4\u001cer�C��Rj�\u0004�����\u000b��3�C�y\"�ֶm�QmqOW�\n<��\u0016e�]��U�ҍ��\u0010�d\u000e���\u0012*��`q\u0014g���L�U\u001b\u001b\b~\u000b\u0012Er��r����\u0012�Z�-�w�z`��?)��G�3`����V:�\u0001f��իI�\u001bh.�\n��=�smD�\nf'!��[f.�7�\f��\u0012\u0019�\b���|\u000ehI�\u0006�Oj$�t����ǘ�~\u0017�_���\u001f1�x�\u001ei��v��۩�\u0019��W�-��Պ�W�\u0019��K'i�͆L�β~��\\�mmk�C$��a���\u001d�yD�i\u0014&\u0013xql\u001e��\b�-��1�\u0018m�B�\u0004\u000f\u0011\u000e�q9�\u0006.%Ⱦ���\u001b�N2\u0013\u0006\u0011�IA�2\b�����G�\u0014�\u000f#���%���&ͱ�\u0005�{�4I4+Lq��y\u001d���%�z9���T�\u0013>k�\u0006��g�C�D[�;\u0011�\u0013\n                                Iphone 18 Pro Và Hàng Trăm Phần Quà Từ Batdongsan.Com.Vn Đã Tìm Được Chủ Nhân"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/ak-tower-co-hoi-an-cu-voi-giai-phap-tai-chinh-thiet-thuc-va-huu-ich-858248",
+          "text": "A&K Tower: Cơ Hội An Cư Với Giải Pháp Tài Chính Thiết Thực Và Hữu Ích"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/devco-x-propertyguru-diem-den-khong-phai-chieu-cao-tao-nen-gia-tri-toa-thap-858232",
+          "text": "Devco X Propertyguru: Điểm Đến, Không Phải Chiều Cao, Tạo Nên Giá Trị Tòa Tháp"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/bat-dong-san-wellness-len-ngoi-an-phuoc-riverside-phat-trien-do-thi-song-khoe-ben-song-858206",
+          "text": "Bất Động Sản Wellness Lên Ngôi: An Phước Riverside Phát Triển Đô Thị Sống Khỏe Bên Sông"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/m-riverside-danang--dau-an-song-khac-biet-tai-loi-trung-tam-ben-song-han-858278",
+          "text": "M Riverside Danang : Dấu Ấn Sống Khác Biệt Tại Lõi Trung Tâm Bên Sông Hàn"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/nha-o-xa-hoi-phuoc-an-gateway-%E2%80%93-co-hoi-an-cu-cho-gia-dinh-tre-tai-nhon-trach-tp.-dong-nai.-858271",
+          "text": "Nhà Ở Xã Hội Phước An Gateway – Cơ Hội An Cư Cho Gia Đình Trẻ Tại Nhơn Trạch, TP. Đồng Nai."
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/iphone-18-pro-va-hang-tram-phan-qua-tu-batdongsan.com.vn-da-tim-duoc-chu-nhan-858294",
+          "text": "Iphone 18 Pro Và Hàng Trăm Phần Quà Từ Batdongsan.Com.Vn Đã Tìm Được Chủ Nhân"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/ak-tower-co-hoi-an-cu-voi-giai-phap-tai-chinh-thiet-thuc-va-huu-ich-858248",
+          "text": "A&K Tower: Cơ Hội An Cư Với Giải Pháp Tài Chính Thiết Thực Và Hữu Ích"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/devco-x-propertyguru-diem-den-khong-phai-chieu-cao-tao-nen-gia-tri-toa-thap-858232",
+          "text": "Devco X Propertyguru: Điểm Đến, Không Phải Chiều Cao, Tạo Nên Giá Trị Tòa Tháp"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/bat-dong-san-wellness-len-ngoi-an-phuoc-riverside-phat-trien-do-thi-song-khoe-ben-song-858206",
+          "text": "Bất Động Sản Wellness Lên Ngôi: An Phước Riverside Phát Triển Đô Thị Sống Khỏe Bên Sông"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-ban",
+          "text": "Tin nhà đất bán mới nhất"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-cho-thue",
+          "text": "Tin nhà đất cho thuê mới nhất"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-van-phong-duong-le-trong-tan-the-artemis/ban-quan-ly-cho-toa-nha-thanh-xuan-dt-50-1000m2-lh-0938-613-888-gia-240k-m2-pr17844556",
+          "text": "Ban quản lý cho thuê sàn văn phòng tòa nhà Artemis, 1000m2. LH: 0938 613 ***, 240 nghìn/m2/th\n240 nghìn/m²\n·1.000 m²\nThanh Xuân, Hà Nội\nĐăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-dat-duong-binh-trung-71/ban-at-hbg-70m2-5x14m-so-hong-3-1-ty-p-ong-quan-2-0764994867-pr46558730",
+          "text": "Bán đất HBG Đ Bình Trưng 70m2 5x14m sổ hồng 3,1 tỷ P Bình Trưng Đông Quận 2, 0764 994 ***\n3,1 tỷ\n·70 m²\nThủ Đức, Hồ Chí Minh\nĐăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-mat-pho-duong-le-thai-to-1/co-vat-co-mp-gan-nga-ba-luong-van-can-80m-5t-kd-inh-gia-60-ty-lh-pr46383361",
+          "text": "Cổ vật phố cổ! Nhà MP gần ngã ba Lê Thái Tổ & Lương Văn Can 80m 5T KD đỉnh giá 60 tỷ, LH 0936 168 ***\n60 tỷ\n·80 m²\nHoàn Kiếm, Hà Nội\nĐăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-xa-long-hung-vinhomes-ocean-park-2/chu-can-tien-ban-gap-can-sao-bien-58-5m2-ht-5-tang-ep-co-thang-may-tai-ocp2-yen-pr46543599",
+          "text": "Chủ nhà cần tiền bán gấp căn Sao Biển 58,5m2 ht 5 tầng đẹp có thang máy tại OCP2 Hưng Yên\n9,2 tỷ\n·58,5 m²\nVăn Giang, Hưng Yên\nĐăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-mat-pho-duong-dao-cong-soan-47/3-tang-2-tien-uong-ao-soan-pr46559049",
+          "text": "Nhà 3 tầng 2 mặt tiền đường Đào Công Soạn\n7,85 tỷ\n·79 m²\nLiên Chiểu, Đà Nẵng\nĐăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-nguyen-huu-tho-sunrise-city-view/studio-officetel-9-trieu-vnd-39-m2-gia-tot-uy-tin-pr46521476",
+          "text": "Căn hộ Studio Officetel - 9 triệu VND/tháng, 39m2 giá tốt, uy tín\n9 triệu/tháng\n·39 m²\nQuận 7, Hồ Chí Minh\nĐăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-nguyen-huu-tho-essensia-sky/cho-view-ep-lung-linh-lau-trung-ban-giao-noi-that-co-ban-74m-15-trieu-thang-pr46559048",
+          "text": "Cho thuê Essensia Sky view đẹp lung linh lầu trung bàn giao nội thất cơ bản 74m², 15 triệu/tháng\n15 triệu/tháng\n·74,86 m²\nNhà Bè, Hồ Chí Minh\nĐăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-xa-long-hoa-vinhomes-green-paradise/kiet-tac-on-lap-chi-danh-cho-khach-viip-hat-song-xanh-pr46509393",
+          "text": "BIỆT THỰ ĐỘC BẢN SỞ HỮU VỊ TRÍ KẾ CẬN NHÀ HÁT SÓNG XANH DÀNH CHO KHÁCH THƯỢNG LƯU\n93 tỷ\n·312 m²\nCần Giờ, Hồ Chí Minh\nĐăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-mat-pho-duong-tien-lan-15-75/2-lau-5x20m-uong-15-xa-ba-iem-cu-gan-kcn-vinh-loc-pr46559047",
+          "text": "Nhà Phố 2 Lầu 5x20m, Mặt Đường Tiền Lân 15, xã Bà Điểm cũ, gần KCN Vĩnh Lộc\n                    \n                \n                \n                    6,5 tỷ\n                        ·99 m²\n                    \n                \n                    \n                        \n                        Hóc Môn, Hồ Chí Minh\n                    \n                \n                \n                                            \n                                \n            Đăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-nguyen-huu-tho-sunrise-city-view/cho-cc-tai-18-trieu-vnd-80-m2-2pn-2wc-pr46398158",
+          "text": "Cho thuê CC tại Sunrise City View, 18 triệu/th, 80 m2, 2PN, 2WC\n                    \n                \n                \n                    18 triệu/tháng\n                        ·80 m²\n                    \n                \n                    \n                        \n                        Quận 7, Hồ Chí Minh\n                    \n                \n                \n                                            \n                                \n            Đăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-dat-phuong-thao-dien/giam-ve-106-ty-ban-khuon-at-485m2-19x25-5-2mt-nguyen-van-huong-khu-vip-ctxd-ham-4-tang-pr46559046",
+          "text": "Giảm về 106 tỷ - Bán Khuôn Đất 485m2 (19x25,5) 2MT Nguyễn Văn Hưởng khu Vip CTXD hầm 4 tầng\n                    \n                \n                \n                    106 tỷ\n                        ·485 m²\n                    \n                \n                    \n                        \n                        Quận 2, Hồ Chí Minh\n                    \n                \n                \n                                            \n                                \n            Đăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-pham-hung-khu-do-thi-nam-trung-yen/giam-sau-ban-b6a-tam-k-t-nha-ep-gia-5-3-ty-lien-he-pr46480086",
+          "text": "Giảm sâu bán căn hộ B6A trung tâm KĐT Nam Trung Yên nhà đẹp giá 5 tỷ liên hệ 0984 847 ***\n                    \n                \n                \n                    5 tỷ\n                        ·71 m²\n                    \n                \n                    \n                        \n                        Cầu Giấy, Hà Nội\n                    \n                \n                \n                                            \n                                \n            Đăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-ben-van-don-saigon-royal-residence/cho-gap-ch-sai-gon-full-noi-that-2pn-view-song-gia-27-trieu-lh-0906-378-770-pr23480395",
+          "text": "Cho thuê gấp CH Saigon Royal, full nội thất, 2PN, view sông, giá 26 tr/th, LH: 0906 378 ***\n                    \n                \n                \n                    26 triệu/tháng\n                        ·88 m²\n                    \n                \n                    \n                        \n                        Quận 4, Hồ Chí Minh\n                    \n                \n                \n                                            \n                                \n            Đăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-dat-duong-quoc-lo-32-21/at-g-lai-xa-kim-chung-75m2-mt5m-via-he-kd-o-to-tranh-gia-11-68ty-pr46193390",
+          "text": "Gấp - Chỉ 10.48 tỷ - Đất ĐG Lai Xá 75m2 - MT 5m, vỉa hè KD, ô tô tránh\n                    \n                \n                \n                    10,48 tỷ\n                        ·75 m²\n                    \n                \n                    \n                        \n                        Hoài Đức, Hà Nội\n                    \n                \n                \n                                            \n                                \n            Đăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-shophouse-nha-pho-thuong-mai-pho-chua-lang-langs-village/mat-121m-10-tang-2-mat-view-thoang-gan-ho-kinh-doanh-dinh-pr45026403",
+          "text": "Nhà mặt phố Chùa Láng 121m² 10 tầng 2 mặt phố view thoáng, gần hồ, kinh doanh đỉnh\n                    \n                \n                \n                    95 tỷ\n                        ·121 m²\n                    \n                \n                    \n                        \n                        Đống Đa, Hà Nội\n                    \n                \n                \n                                            \n                                \n            Đăng hôm nay"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-rieng-duong-pham-the-hien-60/ban-hxh-hem-xe-hoi-quan-8-94m2-2-tang-shr-pr46473982",
+          "text": "Bán nhà HXH hẻm xe hơi Phạm Thế Hiển Quận 8, 94m2, 2 tầng, SHR\n                    \n                \n                \n                    6,2 tỷ\n                        ·94 m²\n                    \n                \n                    \n                        \n                        Quận 8, Hồ Chí Minh\n                    \n                \n                \n                                            \n                                \n            Đăng hôm nay"
+        },
+        {
+          "href": "javascript:void(0)",
+          "text": "Mở rộng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-rieng-duong-pham-the-hien-phuong-7-6",
+          "text": "Xem tiếp"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-bat-dong-san",
+          "text": "Xem thêm"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-khu-do-thi-moi-bac-ninh-bn/vinhomes-king-park-pj6873",
+          "text": "3\nĐang cập nhật\nKhởi công ngày 16/9/2026\nVinhomes King Park\n268,81 ha\nBắc Ninh, Bắc Ninh"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-khu-do-thi-moi-phu-giao-bd/khu-do-thi-bac-sai-gon-pj5690",
+          "text": "10\nĐang mở bán\nKhu đô thị Bắc Sài Gòn\n41,9 ha\nPhú Giáo, Bình Dương"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-can-ho-chung-cu-thuan-an-bd/a-k-tower-pj6399",
+          "text": "6\nĐang mở bán\nA&K Tower\n1,01 ha\nThuận An, Bình Dương"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-nha-o-xa-hoi-viet-tri-pt/famia-viet-tri-pj6931",
+          "text": "3\nĐang mở bán\nThời gian nhận hồ sơ (đợt 2): Từ ngày 13/11/2026 đến 13/12/2026\nFamia Việt Trì\n1,06 ha\nViệt Trì, Phú Thọ"
+        },
+        {
+          "href": "https://batdongsan.com.vn/du-an-nha-o-xa-hoi-nhon-trach-dna/khu-nha-o-xa-hoi-phuoc-an-gateway-pj6930",
+          "text": "10\nSắp mở bán\nThời gian tiếp nhận hồ sơ đăng ký mua đợt 1 (228 căn hộ): Từ ngày 11/12/2026 đến hết ngày 09/01/2027\nKhu nhà ở xã hội Phước An Gateway\n2,12 ha\nNhơn Trạch, Đồng Nai"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-ban-tp-hcm",
+          "text": "TP. Hồ Chí Minh\n42.370 tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-cho-thue-tp-hcm",
+          "text": "TP. Hồ Chí Minh\n                32.682 tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-ban-ha-noi",
+          "text": "Hà Nội\n43.778 tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-cho-thue-ha-noi",
+          "text": "Hà Nội\n                    15.990 tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-ban-da-nang",
+          "text": "Đà Nẵng\n5.767 tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-cho-thue-da-nang",
+          "text": "Đà Nẵng\n                    838 tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-ban-binh-duong",
+          "text": "Bình Dương\n4.901 tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-cho-thue-binh-duong",
+          "text": "Bình Dương\n                        1.507 tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-ban-dong-nai",
+          "text": "Đồng Nai\n2.243 tin đăng"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-cho-thue-dong-nai",
+          "text": "Đồng Nai\n                    430 tin đăng"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/vip-coffee-talk-khi-du-lieu-thi-truong-gap-goc-nhin-thuc-chien-tu-nhung-nguoi-trong-nghe-858170",
+          "text": ""
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/vip-coffee-talk-khi-du-lieu-thi-truong-gap-goc-nhin-thuc-chien-tu-nhung-nguoi-trong-nghe-858170",
+          "text": "VIP Coffee Talk: Khi Dữ Liệu Thị Trường Gặp Góc Nhìn Thực Chiến Từ Những Người Trong Nghề"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/ta-tro-thanh-dai-ly-phan-phoi-du-an-happy-one-elite-cua-van-xuan-group-858142",
+          "text": ""
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/ta-tro-thanh-dai-ly-phan-phoi-du-an-happy-one-elite-cua-van-xuan-group-858142",
+          "text": "T&A Trở Thành Đại Lý Phân Phối Dự Án Happy One Elite Của Vạn Xuân Group"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/nhan-dien-co-hoi-trong-thi-truong-bat-dong-san-phan-hoa-858117",
+          "text": ""
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/nhan-dien-co-hoi-trong-thi-truong-bat-dong-san-phan-hoa-858117",
+          "text": "Nhận Diện Cơ Hội Trong Thị Trường Bất Động Sản Phân Hóa"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/thi-truong-bat-dong-san-cuoi-2026-giao-dich-cham-lai-nhung-khong-phai-o-moi-phan-khuc-857993",
+          "text": ""
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/thi-truong-bat-dong-san-cuoi-2026-giao-dich-cham-lai-nhung-khong-phai-o-moi-phan-khuc-857993",
+          "text": "Thị Trường Bất Động Sản Cuối 2026: Giao Dịch Chậm Lại, Nhưng Không Phải Ở Mọi Phân Khúc"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/vlasta-premier-phu-thuan-loi-giai-kep-cho-bai-toan-an-cu-va-dong-tien-ben-vung-857979",
+          "text": ""
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/vlasta-premier-phu-thuan-loi-giai-kep-cho-bai-toan-an-cu-va-dong-tien-ben-vung-857979",
+          "text": "Vlasta Premier - Phú Thuận: Lời Giải Kép Cho Bài Toán An Cư Và Dòng Tiền Bền Vững"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/tp.-dong-nai-hon-1.500-can-nha-o-xa-hoi-phuoc-an-gateway-chuan-bi-mo-ban-gia-chi-tu-568-trieu-dongcan-857916",
+          "text": ""
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/tin-tuc/tp.-dong-nai-hon-1.500-can-nha-o-xa-hoi-phuoc-an-gateway-chuan-bi-mo-ban-gia-chi-tu-568-trieu-dongcan-857916",
+          "text": "TP. Đồng Nai: Hơn 1.500 căn nhà ở xã hội Phước An Gateway chuẩn bị mở bán, giá chỉ từ 568 triệu đồng/căn"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ho-tro-tien-ich/ht-xem-tuoi-xay-nha",
+          "text": "Xem tuổi xây nhà"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ho-tro-tien-ich/ht-xem-huong-nha",
+          "text": "Tư vấn phong thủy"
+        },
+        {
+          "href": "https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san/cong-ty-tnhh-bat-dong-san-thien-minh-capital-ep2898",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san/cong-ty-tnhh-dau-tu-xay-dung-dich-vu-hoang-tho-group-ep2813",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san/cong-ty-cp-tu-van-dau-tu-va-quan-ly-bat-dong-san-saigon-center-real-ep2776",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.com.vn/dau-tu-du-an/cong-ty-co-phan-dia-oc-phu-dong-ep3072",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.com.vn/",
+          "text": "Triệu lựa chọn nhà, một kênh tìm kiếm"
+        },
+        {
+          "href": "https://nhadat.tuoitre.vn/mua-ban-nha-dat-o-tinh-4-luu-y-quan-trong-20220517165819653.htm",
+          "text": ""
+        },
+        {
+          "href": "https://nhadat.tuoitre.vn/mua-ban-nha-dat-o-tinh-4-luu-y-quan-trong-20220517165819653.htm",
+          "text": "Mua bán nhà đất ở tỉnh: 4 lưu ý quan trọng"
+        },
+        {
+          "href": "https://thanhnien.vn/bat-chap-nhu-cau-sut-giam-gia-nha-dat-van-tang-post1475161.html",
+          "text": ""
+        },
+        {
+          "href": "https://thanhnien.vn/bat-chap-nhu-cau-sut-giam-gia-nha-dat-van-tang-post1475161.html",
+          "text": "Bất chấp nhu cầu sụt giảm, giá nhà đất vẫn tăng"
+        },
+        {
+          "href": "https://dantri.com.vn/bat-dong-san/loi-giai-cho-bai-toan-mua-bat-dong-san-o-tinh-20220516092851963.htm",
+          "text": ""
+        },
+        {
+          "href": "https://dantri.com.vn/bat-dong-san/loi-giai-cho-bai-toan-mua-bat-dong-san-o-tinh-20220516092851963.htm",
+          "text": "Lời giải cho bài toán mua bất động sản ở tỉnh"
+        },
+        {
+          "href": "https://cafebiz.vn/cong-ty-me-batdongsancomvn-doanh-thu-tang-42-dat-gan-206-trieu-usd-cong-bo-thi-phan-ap-dao-tai-viet-nam-singapore-malaysia-20220531175528799.chn",
+          "text": ""
+        },
+        {
+          "href": "https://cafebiz.vn/cong-ty-me-batdongsancomvn-doanh-thu-tang-42-dat-gan-206-trieu-usd-cong-bo-thi-phan-ap-dao-tai-viet-nam-singapore-malaysia-20220531175528799.chn",
+          "text": "Công ty mẹ Batdongsan.com.vn doanh thu tăng 42%, đạt gần 20,6 triệu USD..."
+        },
+        {
+          "href": "https://zingnews.vn/kinh-nghiem-tranh-rui-ro-khi-giao-dich-nha-dat-o-tinh-post1318243.html",
+          "text": ""
+        },
+        {
+          "href": "https://zingnews.vn/kinh-nghiem-tranh-rui-ro-khi-giao-dich-nha-dat-o-tinh-post1318243.html",
+          "text": "Kinh nghiệm tránh rủi ro khi giao dịch nhà đất ở tỉnh"
+        },
+        {
+          "href": "https://plo.vn/bat-dong-san-cho-thue-thoat-thoi-e-am-post689882.html",
+          "text": ""
+        },
+        {
+          "href": "https://plo.vn/bat-dong-san-cho-thue-thoat-thoi-e-am-post689882.html",
+          "text": "Bất động sản cho thuê thoát thời ế ẩm"
+        },
+        {
+          "href": "https://dantri.com.vn/bat-dong-san/nhu-cau-giam-sau-ma-gia-dat-nen-van-tang-nguoi-trong-nghe-boc-tach-ly-do-20220708153149315.htm",
+          "text": ""
+        },
+        {
+          "href": "https://dantri.com.vn/bat-dong-san/nhu-cau-giam-sau-ma-gia-dat-nen-van-tang-nguoi-trong-nghe-boc-tach-ly-do-20220708153149315.htm",
+          "text": "Nhu cầu giảm sâu mà giá đất nền vẫn tăng, người trong nghề bóc tách lý do"
+        },
+        {
+          "href": "https://tuoitre.vn/batdongsan-com-vn-thay-doi-nhan-dien-thuong-hieu-va-ra-mat-chuyen-trang-du-an-20211102110334939.htm",
+          "text": ""
+        },
+        {
+          "href": "https://tuoitre.vn/batdongsan-com-vn-thay-doi-nhan-dien-thuong-hieu-va-ra-mat-chuyen-trang-du-an-20211102110334939.htm",
+          "text": "Batdongsan.com.vn thay đổi nhận diện thương hiệu và ra mắt Chuyên trang Dự án"
+        },
+        {
+          "href": "https://cafef.vn/ceo-batdongsancomvn-nang-cao-trai-nghiem-nguoi-dung-la-dieu-quan-trong-nhat-20211103094706213.chn",
+          "text": ""
+        },
+        {
+          "href": "https://cafef.vn/ceo-batdongsancomvn-nang-cao-trai-nghiem-nguoi-dung-la-dieu-quan-trong-nhat-20211103094706213.chn",
+          "text": "CEO Batdongsan.com.vn: \"Tập trung vào trải nghiệm người dùng là yếu tố sống còn của các nền tảng công nghệ\""
+        },
+        {
+          "href": "https://vnexpress.net/vres-2021-di-tim-vaccine-cho-thi-truong-bat-dong-san-4372309.html",
+          "text": ""
+        },
+        {
+          "href": "https://vnexpress.net/vres-2021-di-tim-vaccine-cho-thi-truong-bat-dong-san-4372309.html",
+          "text": "VRES 2021 đi tìm \"vaccine\" cho thị trường bất động sản"
+        },
+        {
+          "href": "https://tienphong.vn/batdongsan-com-vn-website-bds-so-1-viet-nam-thay-doi-nhan-dien-thuong-hieu-post1389762.tpo",
+          "text": ""
+        },
+        {
+          "href": "https://tienphong.vn/batdongsan-com-vn-website-bds-so-1-viet-nam-thay-doi-nhan-dien-thuong-hieu-post1389762.tpo",
+          "text": "Chuyên trang Dự án: nơi có \"tất cả trong 1\" dành cho người tìm kiếm BĐS"
+        },
+        {
+          "href": "https://soha.vn/thay-doi-nhan-dien-thuong-hieu-buoc-tien-moi-cua-batdongsancomvn-20211101120422588.htm",
+          "text": ""
+        },
+        {
+          "href": "https://soha.vn/thay-doi-nhan-dien-thuong-hieu-buoc-tien-moi-cua-batdongsancomvn-20211101120422588.htm",
+          "text": "Thay đổi nhận diện thương hiệu, bước tiến mới của Batdongsan.com.vn"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-ban",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-ban",
+          "text": "bất động sản bán"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-nha-mat-pho",
+          "text": "bán nhà mặt tiền"
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-shophouse-nha-pho-thuong-mai",
+          "text": "bán shophouse"
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-cho-thue",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.com.vn/nha-dat-cho-thue",
+          "text": "bất động sản cho thuê"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-nha-biet-thu-lien-ke",
+          "text": "thuê biệt thự"
+        },
+        {
+          "href": "https://batdongsan.com.vn/cho-thue-sang-nhuong-cua-hang-ki-ot",
+          "text": "thuê mặt bằng"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia/video-danh-gia",
+          "text": ""
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/phan-tich-danh-gia/video-danh-gia",
+          "text": "video đánh giá"
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki",
+          "text": ""
+        },
+        {
+          "href": "https://wiki.batdongsan.com.vn/wiki/phong-tuc",
+          "text": "phong tục"
+        },
+        {
+          "href": "https://www.asiapropertyawards.com/en/",
+          "text": ""
+        },
+        {
+          "href": "https://www.propertyguruforbusiness.com/",
+          "text": ""
+        },
+        {
+          "href": "https://www.asiapropertyawards.com/en/newsroom/",
+          "text": ""
+        },
+        {
+          "href": "https://www.asiarealestatesummit.com/",
+          "text": ""
+        },
+        {
+          "href": "https://batdongsan.com.vn/ban-can-ho-chung-cu",
+          "text": "bán căn hộ chung cư"
+        }
+      ],
+      "forms": [
+        {
+          "action": "https://batdongsan.com.vn/microservice-architecture-router/Systems/Home/Search",
+          "method": "post",
+          "fields": [
+            "ProductType",
+            "TypeOfLayout",
+            "TypeOfSearch",
+            "KeywordSearch",
+            "CategoryIdsAsString",
+            "PriceAsString",
+            "AreaAsString",
+            "VerificationsAsString",
+            "AgentVerificationsAsString",
+            "RoomNumersAsString",
+            "DirectionsAsString",
+            "BalconDirectionAsString",
+            "FrontageAsString",
+            "RoadAsString",
+            "MediasAsString",
+            "PolygonString",
+            "AvailableTimeAsString",
+            "ElectricityPriceAsString",
+            "WaterPriceAsString",
+            "InternetPriceAsString",
+            "UtilityAsString",
+            "FloorNumbersAsString",
+            "LegalityNumbersAsString",
+            "InteriorNumbersAsString",
+            "StagesAsString",
+            "ToiletNumbersAsString",
+            "IsDisplayNewAddress",
+            "CityCode",
+            "search",
+            "hidden",
+            "submit"
+          ]
+        }
+      ],
+      "request_start": 36,
+      "request_end": 43,
+      "text_sample": "Tải ứng dụng\t\n\t\nĐăng nhập\nĐăng ký\n\tĐăng tin\nNhà đất bán\nNhà đất cho thuê\nDự án\nTin tức\nWiki BĐS\nPhân tích đánh giá\nDanh bạ\n \nMua bán\nCho thuê\nDự án\nTìm kiếm\nTin tức bất động sản\nXem thêm\nM Riverside Danang : Dấu Ấn Sống Khác Biệt Tại Lõi Trung Tâm Bên Sông Hàn\n1 ngày trước\nM Riverside Danang : Dấu Ấn Sống Khác Biệt Tại Lõi Trung Tâm Bên Sông Hàn\nNhà Ở Xã Hội Phước An Gateway – Cơ Hội An Cư Cho Gia Đình Trẻ Tại Nhơn Trạch, TP. Đồng Nai.\nIphone 18 Pro Và Hàng Trăm Phần Quà Từ Batdongsan.Com.Vn Đã Tìm Được Chủ Nhân\nA&K Tower: Cơ Hội An Cư Với Giải Pháp Tài Chính Thiết Thực Và Hữu Ích\nDevco X Propertyguru: Điểm Đến, Không Phải Chiều Cao, Tạo Nên Giá Trị Tòa Tháp\nBất Động Sản Wellness Lên Ngôi: An Phước Riverside Phát Triển Đô Thị Sống Khỏe Bên Sông\nBất động sản dành cho bạn\nTin nhà đất bán mới nhất   |   Tin nhà đất cho thuê mới nhất\nBan quản lý cho thuê sàn văn phòng tòa nhà Artemis, 1000m2. LH: 0938 613 ***, 240 nghìn/m2/th\n240 nghìn/m²\n·1.000 m²\nThanh Xuân, Hà Nội\nĐăng hôm nay\nBán đất HBG Đ Bình Trưng 70m2 5x14m sổ hồng 3,1 tỷ P Bình Trưng Đông Quận 2, 0764 994 ***\n3,1 tỷ\n·70 m²\nThủ Đức, Hồ Chí Minh\nĐăng hôm nay\nCổ vật phố cổ! Nhà MP gần ngã ba Lê Thái Tổ & Lương Văn Can 80m 5T KD đỉnh giá 60 tỷ, LH 0936 168 ***\n60 tỷ\n·80 m²\nHoàn Kiếm, Hà Nội\nĐăng hôm nay\nChủ nhà cần tiền bán gấp căn Sao Biển 58,5m2 ht 5 tầng đẹp có thang máy tại OCP2 Hưng Yên\n9,2 tỷ\n·58,5 m²\nVăn Giang, Hưng Yên\nĐăng hôm nay\nNhà 3 tầng 2 mặt tiền đường Đào Công Soạn\n7,85 tỷ\n·79 m²\nLiên Chiểu, Đà Nẵng\nĐăng hôm nay\n Căn hộ Studio Officetel - 9 triệu VND/tháng, 39m2 giá tốt, uy tín\n9 triệu/tháng\n·39 m²\nQuận 7, Hồ Chí Minh\nĐăng hôm nay\nCho thuê Essensia Sky view đẹp lung linh lầu trung bàn giao nội thất cơ bản 74m², 15 triệu/tháng\n15 triệu/tháng\n·74,86 m²\nNhà Bè, Hồ Chí Minh\nĐăng hôm nay\nBIỆT THỰ ĐỘC BẢN SỞ HỮU VỊ TRÍ KẾ CẬN NHÀ HÁT SÓNG XANH DÀNH CHO KHÁCH THƯỢNG LƯU\n93 tỷ\n·312 m²\nCần Giờ, Hồ Chí Minh\nĐăng hôm nay\nMở rộng\nDự án bất động sản nổi bật\nXem thêm\n3\nĐang cập nhật\nKhởi công ngày 16/9/2026\nVinhomes King Park\n268,81 ha\nBắc Ninh, Bắc Ninh\n10\nĐang mở bán\nKhu đô thị Bắc Sài Gòn\n41,9 ha\nPhú Giáo, Bình Dương\n6\nĐang mở bán\nA&K Tower\n1,01 ha\nThuận An, Bình Dương\n3\nĐang mở bán\nThời gian nhận hồ sơ (đợt 2): Từ ngày 13/11/2026 đến 13/12/2026\nFamia Việt Trì\n1,06 ha\nViệt Trì, Phú Thọ\n10\nSắp mở bán\nThời gian tiếp nhận hồ sơ đăng ký mua đợt 1 (228 căn hộ): Từ ngày 11/12/2026 đến hết ngày 09/01/2027\nKhu nhà ở xã hội Phước An Gateway\n2,12 ha\nNhơn Trạch, Đồng Nai\nBất động sản theo địa điểm\n  \nTP. Hồ Chí Minh\n42.370 tin đăng\n  \nHà Nội\n43.778 tin đăng\n  \nĐà Nẵng\n5.767 tin đăng\n \nBình Dương\n4.901 tin đăng\n  \nĐồng Nai\n2.243 tin đăng\nTiêu điểm\n01\nVIP Coffee Talk: Khi Dữ Liệu Thị Trường Gặp Góc Nhìn Thực Chiến Từ Những Người Trong Nghề\n02\nT&A Trở Thành Đại Lý Phân Phối Dự Án Happy One Elite Của Vạn Xuân Group\n03\nNhận Diện Cơ Hội Trong Thị Trường Bất Động Sản Phân Hóa\n04\nThị Trường Bất Động Sản Cuối 2026: Giao Dịch Chậm Lại, Nhưng Không Phải Ở Mọi Phân Khúc\n05\nVlasta Premier - Phú Thuận: Lời Giải Kép Cho Bài Toán An Cư Và Dòng Tiền Bền Vững\n06\nTP. Đồng Nai: Hơn 1.500 căn nhà ở xã hội Phước An Gateway chuẩn bị mở bán, giá chỉ từ 568 triệu đồng/căn\nHỗ trợ tiện ích\nXem tuổi xây nhà\nTư vấn phong thủy\nDoanh nghiệp tiêu biểu\nBáo chí nói về Batdongsan.com.vn\nTriệu lựa chọn nhà, một kênh tìm kiếm\nMua bán nhà đất ở tỉnh: 4 lưu ý quan trọng\nBất chấp nhu cầu sụt giảm, giá nhà đất vẫn tăng\nLời giải cho bài toán mua bất động sản ở tỉnh\nCông ty mẹ Batdongsan.com.vn doanh thu tăng 42%, đạt gần 20,6 triệu USD...\nKinh nghiệm tránh rủi ro khi giao dịch nhà đất ở tỉnh\nBất động sản cho thuê thoát thời ế ẩm\nNhu cầu giảm sâu mà giá đất nền vẫn tăng, người trong nghề bóc tách lý do\nBatdongsan.com.vn thay đổi nhận diện thương hiệu và ra mắt Chuyên trang Dự án\nCEO Batdongsan.com.vn: \"Tập trung vào trải nghiệm người dùng là yếu tố sống còn của các nền tảng công nghệ\"\nVRES 2021 đi tìm \"vaccine\" cho thị trường bất động sản\nChuyên trang Dự án: nơi có \"tất cả trong 1\" dành cho người tìm kiếm BĐS\nThay đổi nhận diện thương hiệu, bước tiến mới của Batdongsan.com.vn\nBất động sản bán\nBạn có thể tìm thấy ngôi nhà mơ ước hoặc cơ hội đầu tư hấp dẫn thông qua lượng tin rao lớn, uy tín về các loại hình bất động sản bán tại Việt Nam, bao gồm bán nhà riêng, bán nhà mặt tiền, bán căn hộ chung cư, bán biệt thự, bán đất, bán shophouse và các loại hình BĐS khác.\nBất động sản cho thuê\nCập nhật thường xuyên và đầy đủ các loại hình bất động sản cho thuê như: thuê phòng trọ, nhà riêng, thuê biệt thự, văn phòng, kho xưởng hay thuê mặt bằng kinh doanh giúp bạn nhanh chóng tìm được bất động sản ưng ý.\nĐánh giá dự án\nCác video đánh giá tổng quan dự án cung cấp góc nhìn khách quan của các chuyên gia về những dự án nổi bật tại Việt Nam, giúp bạn đưa ra quyết định đúng đắn cho nơi an cư lý tưởng hoặc cơ hội đầu tư sinh lời.\nWiki BĐS\nNgoài cập nhật những biến động thị trường, chúng tôi còn cung cấp kiến ​​thức, kinh nghiệm về mua bán, cho thuê, đầu tư, vay mua nhà, phong tục, thiết kế nhà, mọi thông tin cần thiết để dẫn lối người tìm nhà tìm thấy căn nhà mơ ước.\n   \n\nBatdongsan.com.vn là nền tảng bất động sản uy tín tại Việt Nam dành cho những người đang tìm kiếm bất động sản để ở hoặc đầu tư. Chúng tôi cung cấp dữ liệu tin rao lớn với đa dạng loại hình bất động sản giúp bạn có những lựa chọn phù hợp với nhu cầu của mình.\n\nỞ phân khúc nhà đất bán, các loại hình nổi bật gồm bán căn hộ chung cư, bán nhà riêng, nhà mặt tiền, biệt thự và liền kề, bán đất, đất nền dự án và một số loại hình đang được nhà đầu tư quan tâm như bán condotel, shophouse và khu nghỉ dưỡng. Ngoài ra, người dùng quan tâm đến bất động sản cho thuê có nhiều cơ hội để tìm thấy nhà đất ưng ý với danh sách tin rao được cập nhật liên tục tại các danh mục cho thuê nhà nguyên căn, thuê phòng trọ giá rẻ, thuê văn phòng, mặt bằng kinh doanh... Xem thêm\n\nChủ đề nổi bật\nTin Tức Bất Động Sản\nThuê Bất Động Sản\nQuy Hoạch - Pháp Lý\nTài Chính\nVideo Đánh Giá\nXem thêm\nBất động sản bán\nBán căn hộ chung cư\nBán chung cư mini, căn hộ dịch vụ\nBán nhà riêng\nBán biệt thự, liền kề\nBán nhà mặt phố, mặt tiền\nXem thêm\nBất động sản thuê\nThuê căn hộ chung cư\nThuê chung cư mini, căn hộ dịch vụ\nThuê nhà riêng\nThuê biệt thự, liền kề\nThuê nhà mặt phố, mặt tiền\nXem thêm\nBất động sản toàn quốc\nMua bán bất động sản Hà Nội\nCho thuê bất động sản Hà Nội\nMua bán bất động sản Hồ Chí Minh\nCho thuê bất động sản Hồ Chí Minh\nDự án nổi bật\nCăn hộ chung cư\nBiệt thự liền kề\nKhu đô thị mới\nKhu phức hợp\nDự án khác\nChủ đầu tư nổi bật\nBất động sản Vinhomes\nBất động sản Sunshine\nBất động sản Phú Mỹ Hưng\nBất động sản Masterise Homes\nBất động sản Hưng Thịnh\nXem thêm\nBất động sản Quận/Huyện\nNhà riêng Hồ Chí Minh\nNhà riêng Hà Nội\nCăn hộ chung cư Hà Nội\nCăn hộ chung cư Hồ Chí Minh\nNhà mặt tiền Hồ Chí Minh\nXem thêm\nGiá bất động sản toàn quốc\nGiá căn hộ chung cư\nGiá nhà đất\nGiá biệt thự, liền kề\nGiá nhà mặt phố, mặt tiền\nGiá shophouse, nhà phố\nXem thêm\nCÔNG TY CỔ PHẦN PROPERTYGURU VIỆT NAM\nTầng 31, Keangnam Hanoi Landmark Tower, Phường Yên Hòa, Thành phố Hà Nội, Việt Nam\n(024) 3562 5939 - (024) 3562 5940\n  \nHotline 1900 1881\nHỗ trợ khách hàng trogiup.batdongsan.com.vn\nChăm sóc khách hàng hotro@batdongsan.com.vn\nHƯỚNG DẪN\nVề chúng tôi\nBáo giá và hỗ trợ\nCâu hỏi thường gặp\nGóp ý báo lỗi\nSitemap\nQUY ĐỊNH\nQuy định đăng tin\nQuy chế hoạt động\nĐiều khoản thỏa thuận\nChính sách bảo mật\nGiải quyết khiếu nại\nQUỐC GIA & NGÔN NGỮ\nViệt Nam\n Xem chi nhánh của Batdongsan.com.vn\nChi nhánh TP. Hồ Chí Minh\nTầng 2, 3, Tháp B Tòa nhà Viettel, 285 Cách Mạng Tháng Tám, Phường Hòa Hưng, Thành phố Hồ Chí Minh, Việt Nam\nHotline: 1900 1881\nChi nhánh Đà Nẵng\nTầng 9 Vĩnh Trung Plaza, 255-257 Hùng Vương, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam\nHotline: 1900 1881\nChi nhánh Hải Phòng\nPhòng 502, tầng số 5 tòa nhà TD Business Center, Lô 20A, đường Lê Hồng Phong, Phường Gia Viên, Thành phố Hải Phòng, Việt Nam\nHotline: 1900 1881\nChi nhánh Vũng Tàu\nSố P.F4-01 lầu 4 tòa nhà ACB chi nhánh Vũng Tàu, số 111 Hoàng Hoa Thám, Phường Vũng Tàu, Thành phố Hồ Chí Minh, Việt Nam\nHotline: 1900 1881\nChi nhánh Bình Dương\nTầng 05, Tòa nhà Biconsi Tower, số 01 đường Phú Lợi, Phường Phú Lợi, Thành phố Hồ Chí Minh, Việt Nam\nHotline: 1900 1881\nChi nhánh Nha Trang\n11 Lý Thánh Tôn, Phường Nha Trang, Tỉnh Khánh Hòa, Việt Nam\nHotline: 1900 1881\nCopyright © 2007 - 2026 Batdongsan.com.vn\nGiấy ĐKKD số 0104630479 do Sở KHĐT TP Hà Nội cấp lần đầu ngày 02/06/2010\nNgười đại diện theo pháp luật: Ông Bạch Dương\nChịu trách nhiệm sàn GDTMĐT: Ông Bạch Dương\nQuy chế, quy định giao dịch có hiệu lực từ 08/08/2023\nGhi rõ nguồn \"Batdongsan.com.vn\" khi phát hành lại thông tin từ website này.\n  \n\nChúng tôi đã cập nhật Chính sách bảo mật theo Luật bảo vệ dữ liệu cá nhân Việt Nam, bao gồm việc thu thập, sử dụng cookies của bạn để vận hành và cải thiện trải nghiệm dịch vụ.\n\nVui lòng điều chỉnh cài đặt trên trình duyệt của bạn để từ chối cookies hoặc gọi điện đến số Hotline 1900 1881 để được hỗ trợ.\n\nTừ chối\nĐồng ý\nBatdongsan.com.vn\nChào mừng bạn đến với Batdongsan.com.vn! Hãy chat với chúng tôi để được hỗ trợ."
+    },
+    {
+      "input_url": "https://batdongsan.com.vn/nguoi-ban/dang-tin",
+      "final_url": "https://batdongsan.com.vn/nguoi-ban/trang-dang-nhap?returnurl=%2Fnguoi-ban%2Fdang-tin%3F",
       "title": "Just a moment...",
       "links": [
         {
@@ -19,71 +869,769 @@
         }
       ],
       "forms": [],
-      "buttons": [],
-      "request_start": 0,
-      "request_end": 3,
-      "text_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5a6cf6d2e3f7d31\nPerformance and Security by Cloudflare\nPrivacy"
+      "request_start": 43,
+      "request_end": 52,
+      "text_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5bbe6181e789840\nPerformance and Security by Cloudflare\nPrivacy"
+    },
+    {
+      "input_url": "https://batdongsan.com.vn/tin-da-luu",
+      "final_url": "https://batdongsan.com.vn/tin-da-luu",
+      "title": "Just a moment...",
+      "links": [
+        {
+          "href": "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m",
+          "text": "Cloudflare"
+        },
+        {
+          "href": "https://www.cloudflare.com/privacypolicy/",
+          "text": "Privacy"
+        }
+      ],
+      "forms": [],
+      "request_start": 52,
+      "request_end": 54,
+      "text_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5bbe6252e669840\nPerformance and Security by Cloudflare\nPrivacy"
+    },
+    {
+      "input_url": "https://batdongsan.com.vn/nha-dat-ban",
+      "final_url": "https://batdongsan.com.vn/nha-dat-ban",
+      "title": "Just a moment...",
+      "links": [
+        {
+          "href": "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m",
+          "text": "Cloudflare"
+        },
+        {
+          "href": "https://www.cloudflare.com/privacypolicy/",
+          "text": "Privacy"
+        }
+      ],
+      "forms": [],
+      "request_start": 54,
+      "request_end": 56,
+      "text_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5bbe635eeb29840\nPerformance and Security by Cloudflare\nPrivacy"
+    },
+    {
+      "input_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu",
+      "final_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu",
+      "title": "Just a moment...",
+      "links": [
+        {
+          "href": "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m",
+          "text": "Cloudflare"
+        },
+        {
+          "href": "https://www.cloudflare.com/privacypolicy/",
+          "text": "Privacy"
+        }
+      ],
+      "forms": [],
+      "request_start": 56,
+      "request_end": 58,
+      "text_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5bbe646982e9840\nPerformance and Security by Cloudflare\nPrivacy"
+    },
+    {
+      "input_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-mini",
+      "final_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-mini",
+      "title": "Just a moment...",
+      "links": [
+        {
+          "href": "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m",
+          "text": "Cloudflare"
+        },
+        {
+          "href": "https://www.cloudflare.com/privacypolicy/",
+          "text": "Privacy"
+        }
+      ],
+      "forms": [],
+      "request_start": 58,
+      "request_end": 60,
+      "text_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5bbe657583b9840\nPerformance and Security by Cloudflare\nPrivacy"
+    },
+    {
+      "input_url": "https://batdongsan.com.vn/ban-nha-rieng",
+      "final_url": "https://batdongsan.com.vn/ban-nha-rieng",
+      "title": "Just a moment...",
+      "links": [
+        {
+          "href": "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m",
+          "text": "Cloudflare"
+        },
+        {
+          "href": "https://www.cloudflare.com/privacypolicy/",
+          "text": "Privacy"
+        }
+      ],
+      "forms": [],
+      "request_start": 60,
+      "request_end": 62,
+      "text_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5bbe667ff449840\nPerformance and Security by Cloudflare\nPrivacy"
+    },
+    {
+      "input_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke",
+      "final_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke",
+      "title": "Just a moment...",
+      "links": [
+        {
+          "href": "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m",
+          "text": "Cloudflare"
+        },
+        {
+          "href": "https://www.cloudflare.com/privacypolicy/",
+          "text": "Privacy"
+        }
+      ],
+      "forms": [],
+      "request_start": 62,
+      "request_end": 64,
+      "text_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5bbe678af759840\nPerformance and Security by Cloudflare\nPrivacy"
     }
   ],
-  "interactions": [],
   "routes": {
-    "search": [],
+    "search": [
+      {
+        "href": "https://research.batdongsan.com.vn/",
+        "text": "Báo cáo thị trường"
+      },
+      {
+        "href": "https://research.batdongsan.com.vn/",
+        "text": "Báo cáo thị trường"
+      },
+      {
+        "href": "https://batdongsan.com.vn/",
+        "text": "Triệu lựa chọn nhà, một kênh tìm kiếm"
+      },
+      {
+        "href": "https://tienphong.vn/batdongsan-com-vn-website-bds-so-1-viet-nam-thay-doi-nhan-dien-thuong-hieu-post1389762.tpo",
+        "text": "Chuyên trang Dự án: nơi có \"tất cả trong 1\" dành cho người tìm kiếm BĐS"
+      },
+      {
+        "action": "https://batdongsan.com.vn/microservice-architecture-router/Systems/Home/Search",
+        "method": "post",
+        "fields": [
+          "ProductType",
+          "TypeOfLayout",
+          "TypeOfSearch",
+          "KeywordSearch",
+          "CategoryIdsAsString",
+          "PriceAsString",
+          "AreaAsString",
+          "VerificationsAsString",
+          "AgentVerificationsAsString",
+          "RoomNumersAsString",
+          "DirectionsAsString",
+          "BalconDirectionAsString",
+          "FrontageAsString",
+          "RoadAsString",
+          "MediasAsString",
+          "PolygonString",
+          "AvailableTimeAsString",
+          "ElectricityPriceAsString",
+          "WaterPriceAsString",
+          "InternetPriceAsString",
+          "UtilityAsString",
+          "FloorNumbersAsString",
+          "LegalityNumbersAsString",
+          "InteriorNumbersAsString",
+          "StagesAsString",
+          "ToiletNumbersAsString",
+          "IsDisplayNewAddress",
+          "CityCode",
+          "search",
+          "hidden",
+          "submit"
+        ]
+      }
+    ],
     "listing": [],
     "detail": [],
     "filter": [],
-    "pagination": []
+    "pagination": [
+      {
+        "href": "https://batdongsan.com.vn/ban-trang-trai-khu-nghi-duong",
+        "text": "Bán trang trại, khu nghỉ dưỡng"
+      },
+      {
+        "href": "https://batdongsan.com.vn/nguoi-ban/trang-chu",
+        "text": "Tổng quan"
+      },
+      {
+        "href": "https://batdongsan.com.vn/nguoi-ban/trang-ca-nhan?tab=professional-agent",
+        "text": "Môi giới chuyên nghiệp"
+      },
+      {
+        "href": "https://batdongsan.com.vn/nguoi-ban/trang-ca-nhan",
+        "text": "Cài đặt tài khoản"
+      },
+      {
+        "href": "https://batdongsan.com.vn/nguoi-ban/trang-ca-nhan?tab=account-settings",
+        "text": "Đổi mật khẩu"
+      },
+      {
+        "href": "https://batdongsan.com.vn/ban-nha-rieng-duong-pham-the-hien-phuong-7-6",
+        "text": "Xem tiếp"
+      },
+      {
+        "href": "https://batdongsan.com.vn/du-an-nha-o-xa-hoi-nhon-trach-dna/khu-nha-o-xa-hoi-phuoc-an-gateway-pj6930",
+        "text": "10\nSắp mở bán\nThời gian tiếp nhận hồ sơ đăng ký mua đợt 1 (228 căn hộ): Từ ngày 11/12/2026 đến hết ngày 09/01/2027\nKhu nhà ở xã hội Phước An Gateway\n2,12 ha\nNhơn Trạch, Đồng Nai"
+      },
+      {
+        "href": "https://tuoitre.vn/batdongsan-com-vn-thay-doi-nhan-dien-thuong-hieu-va-ra-mat-chuyen-trang-du-an-20211102110334939.htm",
+        "text": ""
+      },
+      {
+        "href": "https://tuoitre.vn/batdongsan-com-vn-thay-doi-nhan-dien-thuong-hieu-va-ra-mat-chuyen-trang-du-an-20211102110334939.htm",
+        "text": "Batdongsan.com.vn thay đổi nhận diện thương hiệu và ra mắt Chuyên trang Dự án"
+      },
+      {
+        "href": "https://tienphong.vn/batdongsan-com-vn-website-bds-so-1-viet-nam-thay-doi-nhan-dien-thuong-hieu-post1389762.tpo",
+        "text": "Chuyên trang Dự án: nơi có \"tất cả trong 1\" dành cho người tìm kiếm BĐS"
+      }
+    ]
   },
   "requests": [
     {
       "url": "https://batdongsan.com.vn/",
       "method": "GET",
-      "type": "document",
-      "post_data": null
+      "type": "document"
     },
     {
-      "url": "https://batdongsan.com.vn/",
+      "url": "https://batdongsan.com.vn/microservice-architecture-router/Systems/Account/GetCurrentUserInfo",
       "method": "GET",
-      "type": "document",
-      "post_data": null
+      "type": "xhr"
     },
     {
-      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf6d2e3f7d31/nL6.niOJDJFuGG_iLW8PlxCFd86.sSeFNBWb5XBeLEs-1794667634-1.2.1.1-SvBFLGYZigCpQIPDACw9JoBwz.YVHNoPuD3djIoWG0aGyzMQu1lYkc..f8l3HQ.f",
+      "url": "https://staticfile.batdongsan.com.vn/images/app/app-store.png",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/app/g-play.png",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/logo/standard/red/logo.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/app/header_qr_code.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/app/app-store.png",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/app/g-play.png",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/empty-state.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/logo/standard/red/logo.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/outlined/heart.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/outlined/all.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/outlined/complex.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/outlined/apartment.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/outlined/pie-chart.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/outlined/litsting.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/outlined/notebook.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/HCM-web-1.jpg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/HN-web-1.jpg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/DDN-web-1.jpg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/BD-web-1.jpg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/DNA-web-1.jpg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/box-link-footer/ForSale.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/box-link-footer/ForRent.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/box-link-footer/Projects.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/box-link-footer/Wiki.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/box-link-footer/apagf-horizontal.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/box-link-footer/PG-Business.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/box-link-footer/property-report.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/box-link-footer/ares-horizontal.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/logo/standard/black/logo_gray-5.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/app/footer_qr_code.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/mobile/footer/google-play.png",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/mobile/footer/app_store.png",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/newhome/da-dang-ki-bct.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://staticfile.batdongsan.com.vn/images/loading/loading-buffering_v2.svg",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/precursor/f8df4d4a0cd6/0.7484161286201844:1794885327:umimehlYXA7tEsO8lVNFeq7kEtcS0bleHI9jr1Wi6as/a5bbe5f6cb839840",
       "method": "POST",
-      "type": "xhr",
-      "post_data": "+j4rz-DM9Y7mVQ9fxLHkpaFuzJjcYn6yko3q4uQ+qmAyxBUIJ03X$ZaA5T$rS5xUHLdrAIEsUhw7ujJzdw2n31oyrbbiLey95y4J$18NGd8IJdyNk+n2PurziQ-FLHZDOjr8f5GTIOr$Ov2u21hX2Il+$qwOi139OTUgKGA0dtGKzl8H-8TudQ13nojswSgEip7J+vfvop5U+PkweKuSLTEDF3xvJLjyrdKArUU9AN2P6QuTOF3UEVJQyF5E3HRVzBcB8HBo0lctwyhfsaD9aSa3ZcXJvuyjq9uiYtvMzgDdjnqmmdA$x3tIIItRZ5Fo2DvSM9n-ho+enlnGvDt-Wr6+DtlrKsbwztsfm7ZcwvAUSLmDgT5QSfPdiNy717nLZ9RmzwW$e04cOo7ixo$t$qXeQGAiUi+gSAFZZsMk-u-JSS1jhf9aKlWGn0TN1jeF$iY77PQvwuy8WExzVOaQ+wLf79TFU8t9manYytG09koUKwavXS5GqR7lf6jU9T4fJdvXW4suQeiUI$uWnE2+JWeauDI771Ip+NVEkwtTUfMKroJyMlh6wxwxtmRNHGpeXOxtcP1tkBu7btd-HYlXeuBMHFTyAiQzp0Nj7F$Bntym+5q+lV3dRS0AXd044KB1E$bl7M-0K6iySf2jnD5rDW4jNW9seZhruct0vj26EJUrNQGjS2mOckH5QXHNdxaZNxcxyYM9L-j4xFDyNvb-vY2S8$i8v2P-UEY+3-pL5Qa+WqcGG-ybHhUFHAn33dlpvdcfkBN0o33WIuQX48Nri0ZhTAVO3WAJINr-NA5+cQ+lhXA02drkENW54NPW++OxYSIiotfyp$6lJ+4j-lQj6sJusmTD3$fYy-hNV-y4pqbVGnZBQYAtNFI2-xttXPKo2tGDG0$OFJNYkHw9NmfQg4OarpSbVGmDTHElhZNuM8J0bZGzud$No0E8oWE973IlYeMeiuVpzVG0Aj-BkxxWfmlWMLkf3RZKWPgAQ4fIYi43KcSvw8Xix3YVlNWgWbk1IM1BHHThQ3NDaz3p765X3V65p0cqb2Gb163ZMjJtVvie2coHAigVQvMaMiE5F$DXw7csKp$nKPdXKRjtPJi1B2-UlRFWh1PjIwVdV1fWzqRI8394sD$dTra3QPq024dN7pLMR7YNgjM4ljKz+bQYoBNpRT7IePgsq$+418RziZ6$jO2jO6QX-Kmzhjj$y-BJlI-3YZMb90fBFdQklh6IWB9gBbcKGmUvtmDh5d16J0vvHsvSmehwZFnIFg0DMbEeA0PgeAtLQWo5BmzHXOI1xT4wJKwxQMV-ODmkYFtojjJ9oHiQjvE2IR24l18x6$ayXxsrgV7qWLaRuSnyOQ3fMGnnWAiVAKT4UzawUz2vVhnrlSImvX0KPfy0OdUqzZ3I8RZAVaJo-1LFJptQUUZks+3$bwpQ7E79hP+DTyvZL$ml8UePRLoxYpYazcGEW6Ulr4skMWxGVxSMUyP9cZgjzRPHBJwtBa4F6Vv$pBgvQcUJ+8gksgwUyfY6mTpNP5w-BtzGEAwL+7kR8RuX6xxOU91-H0kv-DPdyTb7wvA$$Z-hY5l7E3MJPU86IUGHPem+jaBQ1+7ezePw1iz1AWhptZPo4Lfu2+MFf2Np1pIyngqHVDv$jI-waWU9DEOs7Gq34jmBXddzvzIm7vvaxoNhIGbtqE5hlBqZZWabQYL+xzuB--cRv9v7YNwXzLHW6zBVaPrMyuK1RVL6RkIFTFcvsVwerq38hxK7nw6qF6sMWAYIt4Zh-xYjqE9dugyESWt-vjEXq4pkBUlhQQeB82kXi1neimrU6V6yHaNMI3zEOa+ew-8OrvmuWddvUDN3rgITgKplDeDezGEBaybV7aR9vwZcttl7tSfa8szL35oc34T3aXgHzT4p$Xoq5Fzh8pZ3zVBBZgT9P3FeTVmnHwI0qfLODqMjqlthwqDaxGgWv+av95Wd3H364--uXwrm7TdZO$MKz5TkaPi+FlI02cqhbqi60Xpn8f8WHON1PV2ni--ZogGMTUVfl-3Q$7i23pQcthHjIuSO-GHxbDL5N81FKsE5Yd+nG1LZ2jSaBdhqbi+UkFgvZBnYnokhFVUPrWFmGFDSY+yythBVqLuYHgPPW6N8RHOdHUIE9oIxlHBPG3iu1OJLQm9LRNUtk3RuAJbkDv5vrcKnA$QHxkcpDfFT4PIBt023x-dyrcy4Tp2KFtXNaSBGpFt-0eU7YQ9Br8bqJPDhUi2FusgA5P3BN-mRMeuj18NLWReA-265GIkZ6k5xNWJURyZOfNgY-L+zUxLijrcPp60W6rpEfQAIXd+grdp25ivOb2Oi+b1fvLGiwVB5M4EmoA8rRO1pluNHBQ49BFL+$V$NSOFNx$AWlesJWOhifPTLDfvsVzqQkyhTYR1ebeENYlM+yBmJseLMexwNbFgvvElAjInF9ln8MGrR0qeMj-73GBmvU4wO+h0iAZWDFPDwEa9vfoThsHb83dFPnZp$Qn5u35dpwGnb7NKAxcWK$4aM+bIGv0bVwA5w526vtaSeDgBIiGIWMAO3oMcJ97pKQBDx5x8s2eKjwlb5E$Lv2aJaTqpudH5z6NBepZ+ybFq5AfDi6mtBhm8YW4-xqUUHlbppf52+5as+ct3LdBHXnErpseE2Gx1xABZzw6frVQ4DeSIEV8h6WuYs5VHxjDE4DQeMytfutTpRf6dg0BmH4+ZOKx3FcaX52NwG1qZTugxcIrJujsgIx10$hBTId+lG74r-hlrZXIYfVvt4O5tzzv6b+tZXIFGXNliuUJndwZsf7KbOB4pFrTEr-W9nVZObtuP4BRjmwKc2LcRG2uE4F95IKIto+XFWoxHWRWu8DOVr2LIcoqis0tfuIaIPUSHe$52H4x5ENTtV69ecur8IqQy95bRt5i5qehcLzHdZpN-jKt2LdtQdD6YhFUutrWd3XTmMajoDHyKtOriyRS9XRTMgbVmAn-WLlnBXoZbatAknhf8y62gyN6RW07gWNGZQL3v-66jwfe2WvihS0tmBRGKOrz5r+8+-y3R1fN86g0+trEAxtDlqLSvi-qQxDQdaUmQr5vjjQlqbY1o7FVuJsNKoXWOVlEpSFAahn2a9mrnKlHKkw-3+$ABVznQsBr+4KIq56JgFvO5BwtpJZnlQV6FF5i9E1VN0Bjk4RMjBSk-szwQzuz5hhTxqYBJUP-g5FnmZt36AgkdXGle-JwyKKKiXV+pc4LSu+pj3r-X57rEW1qsF9F5"
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/microservice-architecture-router/Systems/Home/GetInterestedProductsBinnova",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/api/surveys/?token=phc_Twg4bLVDz7InVj8BSvMQBW4gX1KtsbnaOKWSdn0SupU&_=1794888760205",
+      "method": "GET",
+      "type": "fetch"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/flags/?v=2",
+      "method": "POST",
+      "type": "fetch"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/api/surveys/?token=phc_Twg4bLVDz7InVj8BSvMQBW4gX1KtsbnaOKWSdn0SupU&_=1794888760488",
+      "method": "GET",
+      "type": "fetch"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/api/surveys/?token=phc_Twg4bLVDz7InVj8BSvMQBW4gX1KtsbnaOKWSdn0SupU&_=1794888761181",
+      "method": "GET",
+      "type": "fetch"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/rum?",
+      "method": "POST",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/nguoi-ban/dang-tin",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/precursor/f8df4d4a0cd6/0.7484161286201844:1794885327:umimehlYXA7tEsO8lVNFeq7kEtcS0bleHI9jr1Wi6as/a5bbe60facbc9840",
+      "method": "POST",
+      "type": "xhr"
+    },
+    {
+      "url": "https://features.batdongsan.com.vn/proxy?sessionId=38039818&appName=sellernet&environment=production",
+      "method": "GET",
+      "type": "fetch"
+    },
+    {
+      "url": "https://api.batdongsan.com.vn/bff-seller/users/main-info",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/user-management-service/api/v1/User/RefreshToken",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/nguoi-ban/trang-dang-nhap?returnurl=%2Fnguoi-ban%2Fdang-tin%3F",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://api.batdongsan.com.vn/bff-seller/users/main-info",
+      "method": "GET",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/nguoi-ban/trang-dang-nhap?returnurl=%2Fnguoi-ban%2Fdang-tin%3F",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe6181e789840/ZZcC43.lqabITMPUhkAVDxsniGZgXnIuG.DMvpP_a3w-1794888764-1.2.1.1-KfBFgxywuCiRaL8Ac_HyUsyhF8lSWcUVeAkNs8wYJ7Jz.yMgF8Jes4Xxz2rhb7_J",
+      "method": "POST",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/tin-da-luu",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe6252e669840/MpV2yrdhZ_Z5E0xQ4S5d385_8Zos7UERPhM4v9j5SdY-1794888766-1.2.1.1-q7RgulRCzrmxV5zZXjndLVwYge58F1I_InkJT5Bd.hs.dGaJCbDDMDwKdZgajuX9",
+      "method": "POST",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/nha-dat-ban",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe635eeb29840/FbErw0ixQA7.KNMn1dbKx8FqGo_6kBy8et1OsTr44EY-1794888768-1.2.1.1-XoZiM4EPrK0Drv2NCghJCm_9itiJ.alnuPsVe_0PKDHIdCrebcTuBnDZW.ddil2G",
+      "method": "POST",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/ban-can-ho-chung-cu",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe646982e9840/0heAfCxeh1BbHu287zah6oRYiOg7NgPUYqjlny6cvIc-1794888771-1.2.1.1-6gYp3f5fctdxzWdBcRZgfokIGj0ISR.AxzOvhSuRGRqXwPoAn4Bwtsm.yD6.mCm7",
+      "method": "POST",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-mini",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe657583b9840/zVa9UgpgscSDiojWKrb9ArinjetzlUqUY.KqF708s4Q-1794888774-1.2.1.1-qrL.fBkOB4DFcjpFCCkXcdbJ039N.BKDcF_FHoiyISyWpINjg4.W.E4qnhYO.DRe",
+      "method": "POST",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/ban-nha-rieng",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe667ff449840/zC_1Gicmj4a4t8vrwIJqdZq4pQamN2bbZcNUmxxTIiw-1794888776-1.2.1.1-JfLb5bxRtbj5GyBOj38bZdETf_XRzK_EEjQ5ZfZD8qzeSxvHmRPzlMSI_UU_yLj2",
+      "method": "POST",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe678af759840/pqDFGIJyORUCumydJQL10HVPVZ64o6qwFX.2qjI0.ow-1794888779-1.2.1.1-El4i8lkK7di_kaGPNUKcI6H9j98FDW2dZVkzZnzxk_vxdqFo3GDFn2jOQazC9lxE",
+      "method": "POST",
+      "type": "xhr"
     }
   ],
   "responses": [
     {
-      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf6d2e3f7d31/nL6.niOJDJFuGG_iLW8PlxCFd86.sSeFNBWb5XBeLEs-1794667634-1.2.1.1-SvBFLGYZigCpQIPDACw9JoBwz.YVHNoPuD3djIoWG0aGyzMQu1lYkc..f8l3HQ.f",
+      "url": "https://batdongsan.com.vn/microservice-architecture-router/Systems/Account/GetCurrentUserInfo",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/HCM-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/HN-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/DDN-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/BD-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/DNA-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/precursor/f8df4d4a0cd6/0.7484161286201844:1794885327:umimehlYXA7tEsO8lVNFeq7kEtcS0bleHI9jr1Wi6as/a5bbe5f6cb839840",
+      "status": 200,
+      "content_type": "application/json; charset=UTF-8"
+    },
+    {
+      "url": "https://batdongsan.com.vn/microservice-architecture-router/Systems/Home/GetInterestedProductsBinnova",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/api/surveys/?token=phc_Twg4bLVDz7InVj8BSvMQBW4gX1KtsbnaOKWSdn0SupU&_=1794888760205",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/flags/?v=2",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/api/surveys/?token=phc_Twg4bLVDz7InVj8BSvMQBW4gX1KtsbnaOKWSdn0SupU&_=1794888760488",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/rum?",
+      "status": 204,
+      "content_type": "text/plain"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/api/surveys/?token=phc_Twg4bLVDz7InVj8BSvMQBW4gX1KtsbnaOKWSdn0SupU&_=1794888761181",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/precursor/f8df4d4a0cd6/0.7484161286201844:1794885327:umimehlYXA7tEsO8lVNFeq7kEtcS0bleHI9jr1Wi6as/a5bbe60facbc9840",
+      "status": 200,
+      "content_type": "application/json; charset=UTF-8"
+    },
+    {
+      "url": "https://api.batdongsan.com.vn/bff-seller/users/main-info",
+      "status": 401,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://features.batdongsan.com.vn/proxy?sessionId=38039818&appName=sellernet&environment=production",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://batdongsan.com.vn/user-management-service/api/v1/User/RefreshToken",
+      "status": 401,
+      "content_type": ""
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe6181e789840/ZZcC43.lqabITMPUhkAVDxsniGZgXnIuG.DMvpP_a3w-1794888764-1.2.1.1-KfBFgxywuCiRaL8Ac_HyUsyhF8lSWcUVeAkNs8wYJ7Jz.yMgF8Jes4Xxz2rhb7_J",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe6252e669840/MpV2yrdhZ_Z5E0xQ4S5d385_8Zos7UERPhM4v9j5SdY-1794888766-1.2.1.1-q7RgulRCzrmxV5zZXjndLVwYge58F1I_InkJT5Bd.hs.dGaJCbDDMDwKdZgajuX9",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe635eeb29840/FbErw0ixQA7.KNMn1dbKx8FqGo_6kBy8et1OsTr44EY-1794888768-1.2.1.1-XoZiM4EPrK0Drv2NCghJCm_9itiJ.alnuPsVe_0PKDHIdCrebcTuBnDZW.ddil2G",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe646982e9840/0heAfCxeh1BbHu287zah6oRYiOg7NgPUYqjlny6cvIc-1794888771-1.2.1.1-6gYp3f5fctdxzWdBcRZgfokIGj0ISR.AxzOvhSuRGRqXwPoAn4Bwtsm.yD6.mCm7",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe657583b9840/zVa9UgpgscSDiojWKrb9ArinjetzlUqUY.KqF708s4Q-1794888774-1.2.1.1-qrL.fBkOB4DFcjpFCCkXcdbJ039N.BKDcF_FHoiyISyWpINjg4.W.E4qnhYO.DRe",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe667ff449840/zC_1Gicmj4a4t8vrwIJqdZq4pQamN2bbZcNUmxxTIiw-1794888776-1.2.1.1-JfLb5bxRtbj5GyBOj38bZdETf_XRzK_EEjQ5ZfZD8qzeSxvHmRPzlMSI_UU_yLj2",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbe678af759840/pqDFGIJyORUCumydJQL10HVPVZ64o6qwFX.2qjI0.ow-1794888779-1.2.1.1-El4i8lkK7di_kaGPNUKcI6H9j98FDW2dZVkzZnzxk_vxdqFo3GDFn2jOQazC9lxE",
       "status": 200,
       "content_type": "text/plain; charset=UTF-8"
     }
   ],
-  "api_candidates": [],
+  "api_candidates": [
+    {
+      "url": "https://batdongsan.com.vn/microservice-architecture-router/Systems/Account/GetCurrentUserInfo",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/HCM-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/HN-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/DDN-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/BD-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://file4.batdongsan.com.vn/images/newhome/cities1/DNA-web-1.jpg",
+      "status": 200,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://batdongsan.com.vn/microservice-architecture-router/Systems/Home/GetInterestedProductsBinnova",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/api/surveys/?token=phc_Twg4bLVDz7InVj8BSvMQBW4gX1KtsbnaOKWSdn0SupU&_=1794888760205",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/flags/?v=2",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/api/surveys/?token=phc_Twg4bLVDz7InVj8BSvMQBW4gX1KtsbnaOKWSdn0SupU&_=1794888760488",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://t.batdongsan.com.vn/api/surveys/?token=phc_Twg4bLVDz7InVj8BSvMQBW4gX1KtsbnaOKWSdn0SupU&_=1794888761181",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://api.batdongsan.com.vn/bff-seller/users/main-info",
+      "status": 401,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://features.batdongsan.com.vn/proxy?sessionId=38039818&appName=sellernet&environment=production",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://batdongsan.com.vn/user-management-service/api/v1/User/RefreshToken",
+      "status": 401,
+      "content_type": ""
+    }
+  ],
   "errors": [],
   "checks": {
     "homepage": true,
-    "internal_routes": false,
-    "search_route": false,
-    "listing_collection": false,
+    "internal_routes": true,
+    "search_route": true,
+    "listing_collection": true,
     "listing_detail": false,
-    "pagination": false,
+    "pagination": true,
     "filter_interaction": false,
-    "network_catalog": false,
-    "replay_ready": true
+    "network_catalog": true,
+    "replay_ready": true,
+    "human_challenge_solved": true
   },
   "required_checks": [
     "homepage",
+    "internal_routes",
     "search_route",
     "listing_collection",
     "listing_detail",
     "network_catalog",
-    "replay_ready"
+    "replay_ready",
+    "human_challenge_solved"
   ],
   "complete": false,
   "notes": [
-    "Automation does not bypass CAPTCHA/Cloudflare; human session may be required.",
-    "API candidates exclude known analytics/tracking/challenge traffic."
+    "Cloudflare challenge was solved by the human in a headed browser; no bypass tooling used.",
+    "This artifact is candidate status until replay-tested."
   ]
 }

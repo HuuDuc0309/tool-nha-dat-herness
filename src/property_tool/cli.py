@@ -20,9 +20,18 @@ def load_fields(path: Path) -> list[dict]:
     return json.loads(path.read_text(encoding="utf-8"))["fields"]
 
 
+def ssl_context():
+    """Use certifi's CA bundle; the Windows store is not always visible to Python."""
+    import ssl
+    try:
+        import certifi
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
+
 def fetch_html(url: str, timeout: int = 25) -> tuple[str, str]:
-    req = Request(url, headers={"User-Agent": "PropertyResearchBot/0.1 (+local research)"})
-    with urlopen(req, timeout=timeout) as response:
+    req = Request(url, headers={"User-Agent": "PropertyResearchBot/0.1 (+local research)", "Accept-Language": "vi,en;q=0.9"})
+    with urlopen(req, timeout=timeout, context=ssl_context()) as response:
         charset = response.headers.get_content_charset() or "utf-8"
         return response.read().decode(charset, errors="replace"), response.geturl()
 

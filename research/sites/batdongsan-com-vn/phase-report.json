@@ -4,69 +4,9 @@
   "phases": [
     {
       "site_id": "batdongsan-com-vn",
-      "phase": "search-filter",
-      "url": "https://batdongsan.com.vn/",
-      "started_at": "2026-11-14T14:47:11.868905+00:00",
-      "status": "passed",
-      "observations": [
-        {
-          "buttons": []
-        }
-      ],
-      "requests": [
-        {
-          "url": "https://batdongsan.com.vn/",
-          "method": "GET",
-          "type": "document"
-        },
-        {
-          "url": "https://batdongsan.com.vn/",
-          "method": "GET",
-          "type": "document"
-        },
-        {
-          "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf550b90a6d9/2EyCKg0bFK1muyH8ocV6c3T6Y8IStbxlHx42uWVdioI-1794667630-1.2.1.1-yUX114CqIliysTqePAznbxb9E6BKp4rH7kRho_yyFoQBsRVDeT._hstrLDR2V1Na",
-          "method": "POST",
-          "type": "xhr"
-        }
-      ],
-      "errors": [],
-      "finished_at": "2026-11-14T14:47:15.488648+00:00"
-    },
-    {
-      "site_id": "batdongsan-com-vn",
-      "phase": "network",
-      "url": "https://batdongsan.com.vn/",
-      "started_at": "2026-11-14T14:47:11.868905+00:00",
-      "status": "passed",
-      "observations": {
-        "content_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5a6cf550f8006f0\nPerformance and Security by Cloudflare\nPrivacy"
-      },
-      "requests": [
-        {
-          "url": "https://batdongsan.com.vn/",
-          "method": "GET",
-          "type": "document"
-        },
-        {
-          "url": "https://batdongsan.com.vn/",
-          "method": "GET",
-          "type": "document"
-        },
-        {
-          "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf550f8006f0/Qwb_7.etvMttLYvtAafaicjF63j4GJIPk5v1i8mHCT0-1794667630-1.2.1.1-ePpNvW92uf1K.69rwZ21rIUW4ztIpB5nWpV4FRchrsxP9NGEddyA1pho5vjJCylD",
-          "method": "POST",
-          "type": "xhr"
-        }
-      ],
-      "errors": [],
-      "finished_at": "2026-11-14T14:47:15.632476+00:00"
-    },
-    {
-      "site_id": "batdongsan-com-vn",
       "phase": "detail-pagination",
       "url": "https://batdongsan.com.vn/",
-      "started_at": "2026-11-14T14:47:11.871905+00:00",
+      "started_at": "2026-11-17T04:02:26.270695+00:00",
       "status": "passed",
       "observations": {
         "candidate_links": []
@@ -83,19 +23,19 @@
           "type": "document"
         },
         {
-          "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf552cd32104/ffqGmwbfC27ybObkwIMbcC7DseRAdOTEPdA0wQ2es_g-1794667630-1.2.1.1-zznAKurpqEtwJQk.yi0Q4w7UXJzLS3B29l94_P5Jcn5ua6ihNnpVnoJNRsIIJV7c",
+          "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbd707597d7d2e/hF4OQp1UF0pVkVc4Yb8vvzgn5_mQB25zcFcRm2B7I2Y-1794888147-1.2.1.1-2MykE8qF5mfwOVX3lFAy..ilowwjxJjEQhFYFNKpwt5KIWmNId.nCf9dJxffAW06",
           "method": "POST",
           "type": "xhr"
         }
       ],
       "errors": [],
-      "finished_at": "2026-11-14T14:47:15.720160+00:00"
+      "finished_at": "2026-11-17T04:02:30.119484+00:00"
     },
     {
       "site_id": "batdongsan-com-vn",
       "phase": "surface",
       "url": "https://batdongsan.com.vn/",
-      "started_at": "2026-11-14T14:47:11.868905+00:00",
+      "started_at": "2026-11-17T04:02:26.250656+00:00",
       "status": "passed",
       "observations": {
         "title": "Just a moment...",
@@ -116,13 +56,73 @@
           "type": "document"
         },
         {
-          "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf550d7006a5/KA1Ip9Ow0ZhKGsS0rQ3e4pmStQukP867_c4AfD4M3YA-1794667630-1.2.1.1-96AKm8Sd3nDAJd2EBWX4c02BW2Ql71p2JNdxG506m5lRuzcERQ1Ncosy3vaJbiKn",
+          "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbd7075ce9ef7b/C03qKXH7HkoJ1AK8VY3oc_fcLgJUllhM0sOgiFHTvjM-1794888147-1.2.1.1-2dt0UA3wAvKTqx8V9d3_aZqbfcg.NyUCB_IPQOBKWmc9aZdzdQMMmbNVGvLqLKC2",
           "method": "POST",
           "type": "xhr"
         }
       ],
       "errors": [],
-      "finished_at": "2026-11-14T14:47:15.922555+00:00"
+      "finished_at": "2026-11-17T04:02:30.122486+00:00"
+    },
+    {
+      "site_id": "batdongsan-com-vn",
+      "phase": "search-filter",
+      "url": "https://batdongsan.com.vn/",
+      "started_at": "2026-11-17T04:02:26.255161+00:00",
+      "status": "passed",
+      "observations": [
+        {
+          "buttons": []
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://batdongsan.com.vn/",
+          "method": "GET",
+          "type": "document"
+        },
+        {
+          "url": "https://batdongsan.com.vn/",
+          "method": "GET",
+          "type": "document"
+        },
+        {
+          "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbd7073deadda1/gUbkACSEVPKOVmEALNJUg7BnfctymFORYyY8_CAHnMM-1794888147-1.2.1.1-YD.txXg6bp8KLvgquXnNsRP06dqH0GMslto48B0rZ40C_2W0_DkNbuEcK0CchZfc",
+          "method": "POST",
+          "type": "xhr"
+        }
+      ],
+      "errors": [],
+      "finished_at": "2026-11-17T04:02:30.249808+00:00"
+    },
+    {
+      "site_id": "batdongsan-com-vn",
+      "phase": "network",
+      "url": "https://batdongsan.com.vn/",
+      "started_at": "2026-11-17T04:02:26.261696+00:00",
+      "status": "passed",
+      "observations": {
+        "content_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5bbd7073a36d4b4\nPerformance and Security by Cloudflare\nPrivacy"
+      },
+      "requests": [
+        {
+          "url": "https://batdongsan.com.vn/",
+          "method": "GET",
+          "type": "document"
+        },
+        {
+          "url": "https://batdongsan.com.vn/",
+          "method": "GET",
+          "type": "document"
+        },
+        {
+          "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/1501953176:1794885320:3BrPL4Gwbq2J3is_vMe5h5NBB5eEihQQnxRJ71nQN6Y/a5bbd7073a36d4b4/P6xcWDUKA3eJMYvYetRXW9w_cXf4XbKXsqfzVlbadM0-1794888147-1.2.1.1-0Cqvlm9kwUXQKRQXLqeV5O0_dR4bDccxMafZWBBvSWWQGdPbOVSW4yCYU4NoIE.C",
+          "method": "POST",
+          "type": "xhr"
+        }
+      ],
+      "errors": [],
+      "finished_at": "2026-11-17T04:02:30.844205+00:00"
     }
   ],
   "complete": false
