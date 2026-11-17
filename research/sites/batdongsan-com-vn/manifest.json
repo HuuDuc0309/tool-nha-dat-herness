@@ -1,0 +1,16 @@
+{
+  "site_id": "batdongsan-com-vn",
+  "status": "candidate",
+  "last_discovery": "2026-11-14T14:47:19.277649+00:00",
+  "completeness": {
+    "homepage": true,
+    "internal_routes": false,
+    "search_route": false,
+    "listing_collection": false,
+    "listing_detail": false,
+    "pagination": false,
+    "filter_interaction": false,
+    "network_catalog": false,
+    "replay_ready": true
+  }
+}

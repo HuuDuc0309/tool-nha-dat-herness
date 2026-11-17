@@ -1,0 +1,96 @@
+{
+  "site_id": "batdongsan365-vn",
+  "phase": "search-filter",
+  "url": "https://batdongsan365.vn/",
+  "started_at": "2026-11-14T14:43:15.931360+00:00",
+  "status": "passed",
+  "observations": [
+    {
+      "action": "search",
+      "url": "https://batdongsan365.vn/ban-can-ho-chung-cu/"
+    },
+    {
+      "buttons": [
+        "Tìm kiếm",
+        "\n                                                        Đặt lại\n                                                    ",
+        "\n                                                        Áp dụng\n                                                    ",
+        "\n                                                        Đặt lại\n                                                    ",
+        "\n                                                        Áp dụng\n                                                    ",
+        "\n                                                        Đặt lại\n                                                    ",
+        "\n                                                        Áp dụng\n                                                    ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "\n                                            Tìm mua\n                                        ",
+        "\n                                            Tìm thuê\n                                        ",
+        "\n                                                    \n                                                        \n                                                        \n                                                    \n                                                    Thêm\n                                                ",
+        "Đặt lại\n                                                        ",
+        "Áp dụng\n                                                        ",
+        "\n                                                    \n                                                        \n                                                        \n                                                    \n                                                    Thêm\n                                                    \n                                                        Cho phép chọn tối đa 3 khu vực/dự án\n                                                    \n                                                ",
+        "Đặt lại\n                                                        ",
+        "Áp dụng\n                                                        ",
+        "\n                                                    \n                                                        \n                                                            \n                                                            \n                                                            \n                                                        \n\n                                                        Tất cả\n\n                                                    \n                                                    \n                                                        \n                                                    \n                                                ",
+        "Đặt\n                                                                lại\n                                                            ",
+        "Áp\n                                                                dụng\n                                                            ",
+        "\n                                                    \n                                                        \n                                                            \n                                                            \n                                                            \n                                                            \n                                                        \n\n                                                        Tất cả\n\n                                                    \n                                                    \n                                                        \n                                                    \n                                                ",
+        "Đặt\n                                                                lại\n                                                            ",
+        "Áp\n                                                                dụng\n                                                            ",
+        "\n                                                    \n                                                        \n                                                        Tất cả\n                                                    \n                                                    \n                                                        \n                                                    \n                                                ",
+        "Đặt\n                                                                lại\n                                                            ",
+        "Áp\n                                                                dụng\n                                                            ",
+        "\n                                                    \n                                                        \n                                                        Tất cả\n                                                    \n                                                    \n                                                        \n                                                    \n                                                ",
+        "Đặt\n                                                                lại\n                                                            ",
+        "Áp\n                                                                dụng\n                                                            ",
+        "\n                                                    \n                                                        \n                                                        Tất cả\n                                                    \n                                                    \n                                                        \n                                                    \n                                                ",
+        "Đặt\n                                                                lại\n                                                            ",
+        "Áp\n                                                                dụng\n                                                            "
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://batdongsan365.vn/",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan365.vn/cdn-cgi/rum?",
+      "method": "POST",
+      "type": "xhr"
+    },
+    {
+      "url": "https://batdongsan365.vn/search/",
+      "method": "POST",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan365.vn/ban-can-ho-chung-cu/",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan365.vn/api/address-search/?q=nh%C3%A0%20x%C6%B0%E1%BB%9Fng",
+      "method": "GET",
+      "type": "xhr"
+    }
+  ],
+  "errors": [],
+  "finished_at": "2026-11-14T14:43:28.741951+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "site_id": "batdongsan-com-vn",
+  "phase": "network",
+  "url": "https://batdongsan.com.vn/",
+  "started_at": "2026-11-14T14:47:11.868905+00:00",
+  "status": "passed",
+  "observations": {
+    "content_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5a6cf550f8006f0\nPerformance and Security by Cloudflare\nPrivacy"
+  },
+  "requests": [
+    {
+      "url": "https://batdongsan.com.vn/",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf550f8006f0/Qwb_7.etvMttLYvtAafaicjF63j4GJIPk5v1i8mHCT0-1794667630-1.2.1.1-ePpNvW92uf1K.69rwZ21rIUW4ztIpB5nWpV4FRchrsxP9NGEddyA1pho5vjJCylD",
+      "method": "POST",
+      "type": "xhr"
+    }
+  ],
+  "errors": [],
+  "finished_at": "2026-11-14T14:47:15.632476+00:00"
+}

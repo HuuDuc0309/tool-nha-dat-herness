@@ -1,0 +1,94 @@
+{
+  "fields": [
+    {
+      "key": "title",
+      "label": "Tiêu đề",
+      "type": "text"
+    },
+    {
+      "key": "source_url",
+      "label": "Đường dẫn gốc",
+      "type": "url"
+    },
+    {
+      "key": "source_site",
+      "label": "Website nguồn",
+      "type": "text"
+    },
+    {
+      "key": "address",
+      "label": "Địa chỉ",
+      "type": "text"
+    },
+    {
+      "key": "province",
+      "label": "Tỉnh/thành",
+      "type": "text"
+    },
+    {
+      "key": "district",
+      "label": "Quận/huyện",
+      "type": "text"
+    },
+    {
+      "key": "ward",
+      "label": "Phường/xã",
+      "type": "text"
+    },
+    {
+      "key": "rent_amount",
+      "label": "Giá thuê",
+      "type": "number"
+    },
+    {
+      "key": "rent_period",
+      "label": "Chu kỳ giá",
+      "type": "text"
+    },
+    {
+      "key": "deposit",
+      "label": "Tiền đặt cọc",
+      "type": "text"
+    },
+    {
+      "key": "land_area_m2",
+      "label": "Diện tích đất (m²)",
+      "type": "number"
+    },
+    {
+      "key": "factory_area_m2",
+      "label": "Diện tích xưởng (m²)",
+      "type": "number"
+    },
+    {
+      "key": "usable_area_m2",
+      "label": "Diện tích sử dụng (m²)",
+      "type": "number"
+    },
+    {
+      "key": "frontage_m",
+      "label": "Mặt tiền (m)",
+      "type": "number"
+    },
+    {
+      "key": "contact",
+      "label": "Liên hệ",
+      "type": "text"
+    },
+    {
+      "key": "extraction_status",
+      "label": "Trạng thái dữ liệu",
+      "type": "text"
+    },
+    {
+      "key": "confidence",
+      "label": "Độ tin cậy",
+      "type": "number"
+    },
+    {
+      "key": "warnings",
+      "label": "Cảnh báo",
+      "type": "text"
+    }
+  ]
+}

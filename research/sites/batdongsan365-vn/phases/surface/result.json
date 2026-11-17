@@ -1,0 +1,28 @@
+{
+  "site_id": "batdongsan365-vn",
+  "phase": "surface",
+  "url": "https://batdongsan365.vn/",
+  "started_at": "2026-11-14T14:43:15.930846+00:00",
+  "status": "passed",
+  "observations": {
+    "title": "Bất động sản 365",
+    "links": 185,
+    "forms": 1,
+    "inputs": 71,
+    "buttons": 25
+  },
+  "requests": [
+    {
+      "url": "https://batdongsan365.vn/",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan365.vn/cdn-cgi/rum?",
+      "method": "POST",
+      "type": "xhr"
+    }
+  ],
+  "errors": [],
+  "finished_at": "2026-11-14T14:43:24.564249+00:00"
+}

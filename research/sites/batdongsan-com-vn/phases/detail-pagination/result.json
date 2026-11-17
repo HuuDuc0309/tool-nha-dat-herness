@@ -1,0 +1,29 @@
+{
+  "site_id": "batdongsan-com-vn",
+  "phase": "detail-pagination",
+  "url": "https://batdongsan.com.vn/",
+  "started_at": "2026-11-14T14:47:11.871905+00:00",
+  "status": "passed",
+  "observations": {
+    "candidate_links": []
+  },
+  "requests": [
+    {
+      "url": "https://batdongsan.com.vn/",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/",
+      "method": "GET",
+      "type": "document"
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf552cd32104/ffqGmwbfC27ybObkwIMbcC7DseRAdOTEPdA0wQ2es_g-1794667630-1.2.1.1-zznAKurpqEtwJQk.yi0Q4w7UXJzLS3B29l94_P5Jcn5ua6ihNnpVnoJNRsIIJV7c",
+      "method": "POST",
+      "type": "xhr"
+    }
+  ],
+  "errors": [],
+  "finished_at": "2026-11-14T14:47:15.720160+00:00"
+}

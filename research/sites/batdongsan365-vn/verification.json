@@ -1,0 +1,33 @@
+{
+  "artifact": "research\\sites\\batdongsan365-vn",
+  "files": {
+    "discovery.json": true,
+    "manifest.json": true,
+    "phase-report.json": true
+  },
+  "checks": {
+    "homepage": true,
+    "internal_routes": true,
+    "search_route": true,
+    "listing_collection": true,
+    "listing_detail": false,
+    "pagination": true,
+    "filter_interaction": true,
+    "network_catalog": true,
+    "replay_ready": true
+  },
+  "required_checks": [
+    "homepage",
+    "search_route",
+    "listing_collection",
+    "listing_detail",
+    "network_catalog",
+    "replay_ready"
+  ],
+  "required_passed": false,
+  "status": "incomplete",
+  "issues": [
+    "listing_detail",
+    "discovery_errors_present"
+  ]
+}

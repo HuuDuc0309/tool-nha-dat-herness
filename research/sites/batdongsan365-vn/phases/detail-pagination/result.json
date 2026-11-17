@@ -1,0 +1,26 @@
+{
+  "site_id": "batdongsan365-vn",
+  "phase": "detail-pagination",
+  "url": "https://batdongsan365.vn/",
+  "started_at": "2026-11-14T14:43:15.950380+00:00",
+  "status": "passed",
+  "observations": {
+    "candidate_links": [
+      "https://batdongsan365.vn/ban-loai-bat-dong-san-khac/",
+      "https://batdongsan365.vn/cho-thue-loai-bat-dong-san-khac/",
+      "https://batdongsan365.vn/dashboard/property-add",
+      "https://batdongsan365.vn/ban-loai-bat-dong-san-khac/",
+      "https://batdongsan365.vn/cho-thue-loai-bat-dong-san-khac/",
+      "https://batdongsan365.vn/dashboard/property-add"
+    ]
+  },
+  "requests": [
+    {
+      "url": "https://batdongsan365.vn/",
+      "method": "GET",
+      "type": "document"
+    }
+  ],
+  "errors": [],
+  "finished_at": "2026-11-14T14:43:22.274025+00:00"
+}

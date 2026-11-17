@@ -1,0 +1,89 @@
+{
+  "site_id": "batdongsan-com-vn",
+  "start_url": "https://batdongsan.com.vn/",
+  "discovered_at": "2026-11-14T14:47:19.277649+00:00",
+  "pages_explored": 1,
+  "pages": [
+    {
+      "input_url": "https://batdongsan.com.vn/",
+      "final_url": "https://batdongsan.com.vn/",
+      "title": "Just a moment...",
+      "links": [
+        {
+          "href": "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m",
+          "text": "Cloudflare"
+        },
+        {
+          "href": "https://www.cloudflare.com/privacypolicy/",
+          "text": "Privacy"
+        }
+      ],
+      "forms": [],
+      "buttons": [],
+      "request_start": 0,
+      "request_end": 3,
+      "text_sample": "batdongsan.com.vn\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a5a6cf6d2e3f7d31\nPerformance and Security by Cloudflare\nPrivacy"
+    }
+  ],
+  "interactions": [],
+  "routes": {
+    "search": [],
+    "listing": [],
+    "detail": [],
+    "filter": [],
+    "pagination": []
+  },
+  "requests": [
+    {
+      "url": "https://batdongsan.com.vn/",
+      "method": "GET",
+      "type": "document",
+      "post_data": null
+    },
+    {
+      "url": "https://batdongsan.com.vn/",
+      "method": "GET",
+      "type": "document",
+      "post_data": null
+    },
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf6d2e3f7d31/nL6.niOJDJFuGG_iLW8PlxCFd86.sSeFNBWb5XBeLEs-1794667634-1.2.1.1-SvBFLGYZigCpQIPDACw9JoBwz.YVHNoPuD3djIoWG0aGyzMQu1lYkc..f8l3HQ.f",
+      "method": "POST",
+      "type": "xhr",
+      "post_data": "+j4rz-DM9Y7mVQ9fxLHkpaFuzJjcYn6yko3q4uQ+qmAyxBUIJ03X$ZaA5T$rS5xUHLdrAIEsUhw7ujJzdw2n31oyrbbiLey95y4J$18NGd8IJdyNk+n2PurziQ-FLHZDOjr8f5GTIOr$Ov2u21hX2Il+$qwOi139OTUgKGA0dtGKzl8H-8TudQ13nojswSgEip7J+vfvop5U+PkweKuSLTEDF3xvJLjyrdKArUU9AN2P6QuTOF3UEVJQyF5E3HRVzBcB8HBo0lctwyhfsaD9aSa3ZcXJvuyjq9uiYtvMzgDdjnqmmdA$x3tIIItRZ5Fo2DvSM9n-ho+enlnGvDt-Wr6+DtlrKsbwztsfm7ZcwvAUSLmDgT5QSfPdiNy717nLZ9RmzwW$e04cOo7ixo$t$qXeQGAiUi+gSAFZZsMk-u-JSS1jhf9aKlWGn0TN1jeF$iY77PQvwuy8WExzVOaQ+wLf79TFU8t9manYytG09koUKwavXS5GqR7lf6jU9T4fJdvXW4suQeiUI$uWnE2+JWeauDI771Ip+NVEkwtTUfMKroJyMlh6wxwxtmRNHGpeXOxtcP1tkBu7btd-HYlXeuBMHFTyAiQzp0Nj7F$Bntym+5q+lV3dRS0AXd044KB1E$bl7M-0K6iySf2jnD5rDW4jNW9seZhruct0vj26EJUrNQGjS2mOckH5QXHNdxaZNxcxyYM9L-j4xFDyNvb-vY2S8$i8v2P-UEY+3-pL5Qa+WqcGG-ybHhUFHAn33dlpvdcfkBN0o33WIuQX48Nri0ZhTAVO3WAJINr-NA5+cQ+lhXA02drkENW54NPW++OxYSIiotfyp$6lJ+4j-lQj6sJusmTD3$fYy-hNV-y4pqbVGnZBQYAtNFI2-xttXPKo2tGDG0$OFJNYkHw9NmfQg4OarpSbVGmDTHElhZNuM8J0bZGzud$No0E8oWE973IlYeMeiuVpzVG0Aj-BkxxWfmlWMLkf3RZKWPgAQ4fIYi43KcSvw8Xix3YVlNWgWbk1IM1BHHThQ3NDaz3p765X3V65p0cqb2Gb163ZMjJtVvie2coHAigVQvMaMiE5F$DXw7csKp$nKPdXKRjtPJi1B2-UlRFWh1PjIwVdV1fWzqRI8394sD$dTra3QPq024dN7pLMR7YNgjM4ljKz+bQYoBNpRT7IePgsq$+418RziZ6$jO2jO6QX-Kmzhjj$y-BJlI-3YZMb90fBFdQklh6IWB9gBbcKGmUvtmDh5d16J0vvHsvSmehwZFnIFg0DMbEeA0PgeAtLQWo5BmzHXOI1xT4wJKwxQMV-ODmkYFtojjJ9oHiQjvE2IR24l18x6$ayXxsrgV7qWLaRuSnyOQ3fMGnnWAiVAKT4UzawUz2vVhnrlSImvX0KPfy0OdUqzZ3I8RZAVaJo-1LFJptQUUZks+3$bwpQ7E79hP+DTyvZL$ml8UePRLoxYpYazcGEW6Ulr4skMWxGVxSMUyP9cZgjzRPHBJwtBa4F6Vv$pBgvQcUJ+8gksgwUyfY6mTpNP5w-BtzGEAwL+7kR8RuX6xxOU91-H0kv-DPdyTb7wvA$$Z-hY5l7E3MJPU86IUGHPem+jaBQ1+7ezePw1iz1AWhptZPo4Lfu2+MFf2Np1pIyngqHVDv$jI-waWU9DEOs7Gq34jmBXddzvzIm7vvaxoNhIGbtqE5hlBqZZWabQYL+xzuB--cRv9v7YNwXzLHW6zBVaPrMyuK1RVL6RkIFTFcvsVwerq38hxK7nw6qF6sMWAYIt4Zh-xYjqE9dugyESWt-vjEXq4pkBUlhQQeB82kXi1neimrU6V6yHaNMI3zEOa+ew-8OrvmuWddvUDN3rgITgKplDeDezGEBaybV7aR9vwZcttl7tSfa8szL35oc34T3aXgHzT4p$Xoq5Fzh8pZ3zVBBZgT9P3FeTVmnHwI0qfLODqMjqlthwqDaxGgWv+av95Wd3H364--uXwrm7TdZO$MKz5TkaPi+FlI02cqhbqi60Xpn8f8WHON1PV2ni--ZogGMTUVfl-3Q$7i23pQcthHjIuSO-GHxbDL5N81FKsE5Yd+nG1LZ2jSaBdhqbi+UkFgvZBnYnokhFVUPrWFmGFDSY+yythBVqLuYHgPPW6N8RHOdHUIE9oIxlHBPG3iu1OJLQm9LRNUtk3RuAJbkDv5vrcKnA$QHxkcpDfFT4PIBt023x-dyrcy4Tp2KFtXNaSBGpFt-0eU7YQ9Br8bqJPDhUi2FusgA5P3BN-mRMeuj18NLWReA-265GIkZ6k5xNWJURyZOfNgY-L+zUxLijrcPp60W6rpEfQAIXd+grdp25ivOb2Oi+b1fvLGiwVB5M4EmoA8rRO1pluNHBQ49BFL+$V$NSOFNx$AWlesJWOhifPTLDfvsVzqQkyhTYR1ebeENYlM+yBmJseLMexwNbFgvvElAjInF9ln8MGrR0qeMj-73GBmvU4wO+h0iAZWDFPDwEa9vfoThsHb83dFPnZp$Qn5u35dpwGnb7NKAxcWK$4aM+bIGv0bVwA5w526vtaSeDgBIiGIWMAO3oMcJ97pKQBDx5x8s2eKjwlb5E$Lv2aJaTqpudH5z6NBepZ+ybFq5AfDi6mtBhm8YW4-xqUUHlbppf52+5as+ct3LdBHXnErpseE2Gx1xABZzw6frVQ4DeSIEV8h6WuYs5VHxjDE4DQeMytfutTpRf6dg0BmH4+ZOKx3FcaX52NwG1qZTugxcIrJujsgIx10$hBTId+lG74r-hlrZXIYfVvt4O5tzzv6b+tZXIFGXNliuUJndwZsf7KbOB4pFrTEr-W9nVZObtuP4BRjmwKc2LcRG2uE4F95IKIto+XFWoxHWRWu8DOVr2LIcoqis0tfuIaIPUSHe$52H4x5ENTtV69ecur8IqQy95bRt5i5qehcLzHdZpN-jKt2LdtQdD6YhFUutrWd3XTmMajoDHyKtOriyRS9XRTMgbVmAn-WLlnBXoZbatAknhf8y62gyN6RW07gWNGZQL3v-66jwfe2WvihS0tmBRGKOrz5r+8+-y3R1fN86g0+trEAxtDlqLSvi-qQxDQdaUmQr5vjjQlqbY1o7FVuJsNKoXWOVlEpSFAahn2a9mrnKlHKkw-3+$ABVznQsBr+4KIq56JgFvO5BwtpJZnlQV6FF5i9E1VN0Bjk4RMjBSk-szwQzuz5hhTxqYBJUP-g5FnmZt36AgkdXGle-JwyKKKiXV+pc4LSu+pj3r-X57rEW1qsF9F5"
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://batdongsan.com.vn/cdn-cgi/challenge-platform/h/b/fo/445480189:1794665417:m8x4bB3QWFfslohsu38bTrPsyDZOaqnA4iIi-jFIMng/a5a6cf6d2e3f7d31/nL6.niOJDJFuGG_iLW8PlxCFd86.sSeFNBWb5XBeLEs-1794667634-1.2.1.1-SvBFLGYZigCpQIPDACw9JoBwz.YVHNoPuD3djIoWG0aGyzMQu1lYkc..f8l3HQ.f",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    }
+  ],
+  "api_candidates": [],
+  "errors": [],
+  "checks": {
+    "homepage": true,
+    "internal_routes": false,
+    "search_route": false,
+    "listing_collection": false,
+    "listing_detail": false,
+    "pagination": false,
+    "filter_interaction": false,
+    "network_catalog": false,
+    "replay_ready": true
+  },
+  "required_checks": [
+    "homepage",
+    "search_route",
+    "listing_collection",
+    "listing_detail",
+    "network_catalog",
+    "replay_ready"
+  ],
+  "complete": false,
+  "notes": [
+    "Automation does not bypass CAPTCHA/Cloudflare; human session may be required.",
+    "API candidates exclude known analytics/tracking/challenge traffic."
+  ]
+}

@@ -1,0 +1,9 @@
+research/jobs/*
+Temp/*
+research/sites/*/credentials*
+research/sites/*/browser-profile/
+research/sites/*/snapshots/
+*.xlsx
+__pycache__/
+*.pyc
+.venv
