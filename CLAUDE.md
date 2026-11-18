@@ -158,9 +158,21 @@ research/sites/       integration artifacts
 research/jobs/        job/output
 research/templates/   template dùng chung
 Temp/                 browser profile, trace và file tạm
+trash/                file rác tạm (tự xoá khi kết thúc phiên)
 ```
 
-`research/jobs/`, `Temp/`, browser profile, snapshot và credential không được commit. Kiểm tra `.gitignore` trước khi tạo file lớn hoặc nhạy cảm.
+`research/jobs/`, `Temp/`, `trash/`, browser profile, snapshot và credential không được commit. Kiểm tra `.gitignore` trước khi tạo file lớn hoặc nhạy cảm.
+
+## File rác trong lúc chạy
+
+Mọi file sinh ra chỉ để debug trong lúc làm việc (script kiểm tra tạm, log trung gian, bản nháp, output thử nghiệm) phải đặt trong `trash/`, không đặt ở gốc project, `src/` hay `config/`.
+
+Quy tắc:
+
+- Tạo `trash/` nếu chưa có; đặt tên file mô tả mục đích (ví dụ `trash/export-check.txt`).
+- `trash/` đã nằm trong `.gitignore` nên không bị commit.
+- Không chuyển vào `trash/` các file là sản phẩm thật: `research/jobs/**`, `research/sites/**`, `config/**`, artifact, Excel.
+- Không xoá thủ công cả thư mục `trash/` giữa lúc đang debug; hook `SessionEnd` trong `.claude/settings.json` tự dọn nội dung khi phiên kết thúc.
 
 ## Cài đặt và chạy
 
@@ -210,6 +222,6 @@ MCP Playwright hiện được dùng cho browser discovery và tương tác webs
 - Sau mỗi thay đổi quan trọng, chạy smoke test hoặc test liên quan.
 - Không commit secret, cookie, OAuth token, refresh token, browser profile hoặc raw data nhạy cảm.
 
-## Trạng thái MVP
 
-Hiện đã có URL → record cơ bản → Excel nhiều sheet, bootstrap scripts, field schema, skills và Playwright MCP. Phần cần tiếp tục triển khai là fetch HTML/API thật, discovery bằng Playwright, site registry, artifact reuse, mapping dữ liệu thật, evidence và verification.
+## Nguyên tắc trả lời 
+- Luôn luôn giải thích đơn giản, dễ hiểu, hạn chế dùng các khái niệm quá lạ, nếu phải dùng thì mô tả qua nó là gì đã rồi mới sử dụng khái niệm đó

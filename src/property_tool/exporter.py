@@ -68,8 +68,32 @@ SUPPLEMENT_FIELDS = [
 ]
 
 
+# Fast-screening column set for the kho/nhà xưởng use case: enough to filter
+# by location, price and size in Excel without a supplement sheet. Deliberately
+# excludes confidence/quality columns and free text.
+CORE_FIELDS = [
+    "title",
+    "source_url",
+    "address",
+    "province",
+    "district",
+    "rent_amount",
+    "rent_period",
+    "factory_area_m2",
+    "usable_area_m2",
+    "contact",
+    "extraction_status",
+]
+
+
 def _write_sheet(wb, title, headers, rows, widths=None, table_name=None):
-    ws = wb.create_sheet(title) if wb.sheetnames else wb.active
+    # `wb.active` is None once the default sheet was removed, so an empty
+    # workbook needs an explicit first sheet.
+    if wb.sheetnames:
+        ws = wb.create_sheet(title)
+    else:
+        ws = wb.active if wb.active is not None else wb.create_sheet(title)
+        ws.title = title
     if ws.title != title:
         ws.title = title
     ws.append(headers)
@@ -175,14 +199,30 @@ def unknown_fields(records: list[dict], unknown_rows: list[dict]) -> list[dict]:
 
 def export(records: list[dict], evidence: list[dict], unknown_rows: list[dict],
            warnings: list[dict], sites: list[dict], queue: list[dict],
-           output: Path, field_config: Path | None = None):
-    wb = Workbook()
+           output: Path, field_config: Path | None = None,
+           extra_sheets: bool = False,
+           exclude_fields: list[str] | tuple[str, ...] = ("confidence",),
+           core_only: bool = False):
+    """Write the workbook. Only "Danh sách tin đăng" unless extra_sheets=True.
 
-    # 1. main list
-    headers = [label for _, label, _ in MAIN_FIELDS]
-    rows = [[rec.get(key, "") for key, _, _ in MAIN_FIELDS] for rec in records]
+    Extra sheets exist for audit, but an AI reading the workbook pays tokens for
+    every one of them, so they are opt-in via `config/settings.json`.
+    `exclude_fields` drops columns such as `confidence` that invite AI re-checking.
+    `core_only` narrows the main sheet to CORE_FIELDS (fast screening view).
+    """
+    wb = Workbook()
+    # `_write_sheet` always creates a new sheet, so the workbook's default empty
+    # "Sheet" would otherwise be saved alongside the real ones.
+    wb.remove(wb.active)
+
+    # 1. main list — the only sheet written by default
+    main_fields = [f for f in MAIN_FIELDS if f[0] not in set(exclude_fields)]
+    if core_only:
+        main_fields = [f for f in main_fields if f[0] in CORE_FIELDS]
+    headers = [label for _, label, _ in main_fields]
+    rows = [[rec.get(key, "") for key, _, _ in main_fields] for rec in records]
     ws = _write_sheet(wb, "Danh sách tin đăng", headers, rows, table_name="TableMain")
-    for idx, (key, _, fmt) in enumerate(MAIN_FIELDS, start=1):
+    for idx, (key, _, fmt) in enumerate(main_fields, start=1):
         if not fmt:
             continue
         letter = get_column_letter(idx)
@@ -191,8 +231,16 @@ def export(records: list[dict], evidence: list[dict], unknown_rows: list[dict],
     for row_cells in ws.iter_rows(min_row=2):
         if row_cells[-1].value:
             for cell in row_cells:
-                if cell.column <= len(MAIN_FIELDS):
+                if cell.column <= len(main_fields):
                     cell.alignment = Alignment(vertical="top", wrap_text=False)
+
+    summary = {"output": str(output), "records": len(records),
+               "sheets": ["Danh sách tin đăng"],
+               "excluded_columns": sorted(set(exclude_fields))}
+    if not extra_sheets:
+        output.parent.mkdir(parents=True, exist_ok=True)
+        wb.save(output)
+        return summary
 
     # 2. unknown
     unk = unknown_fields(records, unknown_rows)
@@ -273,10 +321,16 @@ def export(records: list[dict], evidence: list[dict], unknown_rows: list[dict],
     output.parent.mkdir(parents=True, exist_ok=True)
     wb.save(output)
     return {"output": str(output), "records": len(records), "unknown": len(unk),
-            "evidence": len(evidence), "warnings": len(warn_rows), "duplicates": len(dups)}
+            "evidence": len(evidence), "warnings": len(warn_rows), "duplicates": len(dups),
+            "sheets": wb.sheetnames,
+            "excluded_columns": sorted(set(exclude_fields))}
 
 
-def export_from_job(job_dir: Path, output: Path, field_config: Path | None = None) -> dict:
+def export_from_job(job_dir: Path, output: Path, field_config: Path | None = None,
+                    settings_path: Path = Path("config/settings.json")) -> dict:
+    from .settings import load_settings
+    settings = load_settings(settings_path)
+    export_cfg = settings.get("export") or {}
     result = json.loads((job_dir / "crawl-result.json").read_text(encoding="utf-8"))
     return export(
         result.get("records", []),
@@ -287,6 +341,8 @@ def export_from_job(job_dir: Path, output: Path, field_config: Path | None = Non
         result.get("queue", []),
         output,
         field_config,
+        extra_sheets=bool(export_cfg.get("extra_sheets", False)),
+        exclude_fields=export_cfg.get("main_sheet_exclude_fields", ["confidence"]) or [],
     )
 
 
@@ -297,9 +353,35 @@ def main():
     ap = argparse.ArgumentParser(description="Xuất crawl-result.json ra Excel nhiều sheet")
     ap.add_argument("job_dir", type=Path)
     ap.add_argument("--output", type=Path)
+    ap.add_argument("--extra-sheets", action="store_true",
+                    help="bật các sheet phụ (mặc định chỉ xuất Danh sách tin đăng)")
+    ap.add_argument("--max-records", type=int, default=None,
+                    help="giới hạn số bản ghi xuất ra; mặc định đọc config/settings.json")
+    ap.add_argument("--core-only", action="store_true",
+                    help="chỉ xuất field cốt lõi tìm mặt bằng (CORE_FIELDS)")
     args = ap.parse_args()
     out = args.output or (args.job_dir / f"property-data-{datetime.now():%Y%m%d-%H%M%S}.xlsx")
-    summary = export_from_job(args.job_dir, out)
+
+    from .settings import load_settings, max_records as cap_from_settings
+    settings = load_settings()
+    cap = args.max_records if args.max_records is not None else cap_from_settings(settings)
+    export_cfg = settings.get("export") or {}
+    result = json.loads((args.job_dir / "crawl-result.json").read_text(encoding="utf-8"))
+    records = result.get("records", [])
+    if cap and len(records) > cap:
+        records = records[:cap]
+    summary = export(
+        records,
+        result.get("evidence", []),
+        result.get("unknown", []),
+        result.get("warnings", []),
+        result.get("sites", []),
+        result.get("queue", []),
+        out,
+        extra_sheets=args.extra_sheets or bool(export_cfg.get("extra_sheets", False)),
+        exclude_fields=export_cfg.get("main_sheet_exclude_fields", ["confidence"]) or [],
+        core_only=args.core_only,
+    )
     print(json.dumps({"status": "success", **summary}, ensure_ascii=False, indent=2))
 
 

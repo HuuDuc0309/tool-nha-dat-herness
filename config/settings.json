@@ -1,0 +1,9 @@
+{
+  "max_records": 500,
+  "export": {
+    "extra_sheets": false,
+    "main_sheet_exclude_fields": [
+      "confidence"
+    ]
+  }
+}

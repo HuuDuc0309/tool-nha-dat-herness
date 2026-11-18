@@ -66,10 +66,20 @@ def smoke_crawl(site_id: str, out_dir: Path, runtime, headed: bool,
     details = summary.get("details_fetched", 0)
     cards = summary.get("listings_fetched", 0)
     blocked = bool(summary.get("blocked"))
+    throttled = int(summary.get("blocked_listings") or 0)
 
     if blocked:
         return {"ok": False, "blocked": True, "records": records,
                 "reason": "Cloudflare challenge chưa được giải",
+                "summary": summary}
+    # An edge 403 is throttling, not a broken artifact: re-running discovery
+    # would hammer the site and answer the wrong question. Report it as blocked
+    # so the caller slows down / retries instead of re-exploring.
+    if not cards and throttled:
+        return {"ok": False, "blocked": True, "records": records,
+                "throttled": throttled,
+                "reason": f"{throttled} trang listing bị 403 — hạ nhịp rồi thử lại, "
+                          "không phải layout đổi",
                 "summary": summary}
     # A card-only record means the listing markup still parses but the detail
     # page does not: that is exactly the case discovery is meant to catch, so
@@ -172,7 +182,8 @@ def main():
     ap.add_argument("urls", nargs="+")
     ap.add_argument("--max-pages", type=int, default=20)
     ap.add_argument("--headed", action="store_true")
-    ap.add_argument("--wait-human", type=int, default=300)
+    ap.add_argument("--wait-human", type=int, default=0,
+                    help="giây chờ giải challenge (0 = chờ không giới hạn)")
     ap.add_argument("--skip-smoke", action="store_true",
                     help="bỏ smoke crawl, luôn chạy discovery")
     args = ap.parse_args()

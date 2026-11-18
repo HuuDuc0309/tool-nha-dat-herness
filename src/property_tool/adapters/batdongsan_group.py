@@ -14,6 +14,7 @@ from __future__ import annotations
 import re
 from html import unescape
 from typing import Iterable
+from urllib.parse import urljoin
 
 # --------------------------------------------------------------------------
 # text helpers
@@ -260,8 +261,9 @@ def next_page_urls(html: str, base: str) -> list[str]:
         r'href="([^"]*(?:[?&]page=\d+|/trang-\d+|/p\d+)/?(?:[?#][^"]*)?)"', html, re.I)
     out = []
     for href in found:
-        if href.startswith("/"):
-            href = base.rstrip("/") + href
+        # `?page=1` is relative: resolving it here keeps every returned URL
+        # absolute, which the caller needs to key pages/dedup on.
+        href = urljoin(base, unescape(href))
         if href not in out:
             out.append(href)
     return out

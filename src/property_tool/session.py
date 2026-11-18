@@ -135,8 +135,9 @@ class SessionRuntime:
         """
         if not self.sessions:
             return
-        print(">> Browser đang mở để kiểm tra. Nhấn Enter để đóng và kết thúc.",
-              flush=True)
+        names = ", ".join(sorted(self.sessions))
+        print(f">> Giữ browser mở cho {names}. Nhấn Enter trong cửa sổ terminal này "
+              "khi muốn đóng và kết thúc.", flush=True)
         try:
             input()
         except (EOFError, OSError):
@@ -154,8 +155,14 @@ class SessionRuntime:
 
     # ------------------------------------------------------------------ sites
     def site(self, site_id: str, profile_dir: str | None = None,
-             viewport: dict | None = None, locale: str = "vi-VN") -> SiteSession:
-        """Return the site's session, creating it once and reusing it after."""
+             viewport: dict | None = None, locale: str = "vi-VN",
+             headed: bool | None = None) -> SiteSession:
+        """Return the site's session, creating it once and reusing it after.
+
+        `headed` overrides the runtime default for this one site. Challenge
+        sites are always opened headed, so the human solves once in a visible
+        window and the same context serves the rest of the run.
+        """
         if self._closed or self._pw is None:
             raise RuntimeError(
                 "SessionRuntime chưa được mở hoặc đã đóng — dùng `with SessionRuntime(...)`")
@@ -165,6 +172,7 @@ class SessionRuntime:
             existing.ensure_page()
             return existing
 
+        show_window = self.headed if headed is None else headed
         viewport = viewport or {"width": 1440, "height": 1000}
         if profile_dir:
             profile = Path(profile_dir)
@@ -172,14 +180,14 @@ class SessionRuntime:
             # launch_persistent_context returns a context, not a browser.
             context = self._pw.chromium.launch_persistent_context(
                 str(profile),
-                headless=not self.headed,
+                headless=not show_window,
                 viewport=viewport,
                 locale=locale,
             )
             browser = None
             persistent = True
         else:
-            browser = self._pw.chromium.launch(headless=not self.headed)
+            browser = self._pw.chromium.launch(headless=not show_window)
             context = browser.new_context(viewport=viewport, locale=locale)
             persistent = False
 
@@ -192,7 +200,8 @@ class SessionRuntime:
         session.page = session.ensure_page()
         self.sessions[site_id] = session
         print(f"   [session] mở context cho {site_id} "
-              f"({'persistent' if persistent else 'ephemeral'})", flush=True)
+              f"({'persistent' if persistent else 'ephemeral'}, "
+              f"{'headed' if show_window else 'headless'})", flush=True)
         return session
 
     # -------------------------------------------------------------- challenge

@@ -44,6 +44,16 @@ FETCH_TIMEOUT_MS = 60000
 FETCH_RETRY_STATUSES = (403, 429, 503)
 FETCH_RETRIES = 2
 FETCH_RETRY_WAIT = 5.0
+# A 403 from the edge on this platform is throttling, not a challenge. Measured
+# 2026-11-18: 4 consecutive 403s, then 16/16 detail pages parsed in the same
+# session — and at delay=3.0s the same site returned 0 warnings. After a block
+# the crawl therefore backs off instead of stopping.
+BLOCK_COOLDOWN_SECONDS = 8.0
+# Detail budget is per site, not per run: a single global cap let the small
+# site (75 records) consume the budget and left the primary site with 20.
+DEFAULT_SITE_DELAY = {"batdongsan-com-vn": 3.0}
+# Pace for sites with no measured per-site value.
+DEFAULT_DELAY = 1.5
 
 
 def is_closed_error(exc: Exception) -> bool:
@@ -55,6 +65,25 @@ def is_closed_error(exc: Exception) -> bool:
 def html_is_challenge(html: str) -> bool:
     head = html[:16000].lower()
     return any(marker in head for marker in CHALLENGE_MARKERS)
+
+
+def canonical_page_url(url: str) -> str:
+    """One page, one key.
+
+    Sites link page 1 both as `/cho-thue-kho-nha-xuong/` and as
+    `?page=1`; treating them as different pages fetches the same listing
+    twice and queues every detail URL a second time (duplicate records).
+    Drop a trailing slash and query params that do not paginate, and map
+    `page=1` onto the bare path.
+    """
+    parsed = urlparse(url)
+    query = [(k, v) for k, v in parse_qs(parsed.query).items()
+             if not (k == "page" and v in (["1"], []))]
+    path = parsed.path.rstrip("/") or "/"
+    rebuilt = f"{parsed.scheme}://{parsed.netloc}{path}"
+    if query:
+        rebuilt += "?" + "&".join(f"{k}={v[0]}" for k, v in query)
+    return rebuilt
 
 
 def same_origin(left: str, right: str) -> bool:
@@ -180,6 +209,13 @@ class SiteState:
     parse_detail: object = None
     needs_human: bool = False
     challenge_solved_at: str | None = None
+    # Whether this site's window is visible. Challenge sites are always headed,
+    # even in a headless run, so `self.headed` alone is not the right question.
+    headed: bool = False
+    # True once the single permitted seed navigation for this site has happened.
+    seeded: bool = False
+    # (html, final_url) captured by the seed navigation, consumed once.
+    seed_html: tuple[str, str] | None = None
     visited_listing: set = field(default_factory=set)
     visited_detail: set = field(default_factory=set)
 
@@ -191,15 +227,26 @@ def load_registry(path: Path) -> dict:
 class Crawler:
     def __init__(self, registry: dict, out_root: Path, max_listing_pages: int,
                  max_details: int, delay: float, headed: bool, wait_human: int,
-                 runtime: SessionRuntime | None = None):
+                 runtime: SessionRuntime | None = None, max_records: int = 0,
+                 allow_goto_fallback: bool = False, delay_explicit: bool = False):
         self.runtime = runtime
         self.registry = registry
         self.out_root = out_root
         self.max_listing_pages = max_listing_pages
         self.max_details = max_details
         self.delay = delay
+        # True when --delay was passed on the command line: an explicit value
+        # overrides the per-site default, which exists so a slow site is not
+        # crawled at the same pace as a tolerant one.
+        self.delay_explicit = delay_explicit
         self.headed = headed
         self.wait_human = wait_human
+        # Hard cap on records for the whole run (0 = unlimited). Detail URLs are
+        # requested in order, so the cap is applied as a budget at fetch time.
+        self.max_records = max(0, int(max_records or 0))
+        # Fetch-first is the only transport. page.goto is used once per site to
+        # seed the origin (fetch() inherits the page origin), never as a retry.
+        self.allow_goto_fallback = allow_goto_fallback
         self.records: list[dict] = []
         self.evidence: list[dict] = []
         self.unknown: list[dict] = []
@@ -239,8 +286,15 @@ class Crawler:
 
     # ------------------------------------------------------------------ browser
     def _session(self, runtime: SessionRuntime, state: SiteState):
-        """One reusable context per site, with a work page keeping it alive."""
-        session = runtime.site(state.site_id, profile_dir=state.profile_dir)
+        """One reusable context per site, with a work page keeping it alive.
+
+        A site flagged `cloudflare` (or captcha) is ALWAYS opened headed, even
+        when the run itself is headless: the human solves the check once in that
+        window and the very same context serves the rest of the crawl, so no
+        relaunch and no second challenge.
+        """
+        session = runtime.site(state.site_id, profile_dir=state.profile_dir,
+                               headed=True if state.cloudflare else None)
         return session.context, session.ensure_page()
 
     @staticmethod
@@ -267,18 +321,29 @@ class Crawler:
         return page
 
     def _clear_challenge(self, page, state: SiteState, url: str) -> bool:
-        """Wait for a human to solve a challenge. Never bypasses it."""
+        """Wait for a human to solve a challenge. Never bypasses it.
+
+        A site marked cloudflare always gets a headed window (set in
+        crawl_site), so the prompt is always shown for challenge sites —
+        even when the global `--headed` flag is off.
+
+        `wait_human <= 0` waits without a deadline: the user solves it when
+        they get to it, and the same context is then used for the rest of the
+        crawl, so the challenge only has to be solved once.
+        """
         if not self._is_challenge(page):
             return True
-        if not self.headed:
+        if not state.headed:
             return False
+        untimed = self.wait_human <= 0
+        limit = "không giới hạn" if untimed else f"tối đa {self.wait_human}s"
         print("=" * 78, flush=True)
         print(f"[{state.site_id}] Cloudflare challenge tại {url}", flush=True)
-        print(f">> Mời bạn giải thủ công trong cửa sổ browser "
-              f"(tối đa {self.wait_human}s).", flush=True)
+        print(f">> Mời bạn giải thủ công trong cửa sổ browser ({limit}).", flush=True)
+        print(">> Giải xong là crawl tự tiếp tục — không cần đóng cửa sổ.", flush=True)
         print("=" * 78, flush=True)
-        deadline = time.time() + self.wait_human
-        while time.time() < deadline:
+        deadline = None if untimed else time.time() + self.wait_human
+        while deadline is None or time.time() < deadline:
             try:
                 page.wait_for_timeout(2000)
             except Exception as exc:
@@ -298,6 +363,10 @@ class Crawler:
           2. retry 403/429/503 up to FETCH_RETRIES, waiting FETCH_RETRY_WAIT.
           3. fall back to page.goto with the original content-marker wait, which
              still works but is ~23x slower per page and blocks more often.
+
+        The goto fallback is DISABLED by default (`allow_goto_fallback=False`):
+        a fetch failure returns a `blocked` outcome so a human decides, instead
+        of silently navigating again and risking a new Cloudflare challenge.
 
         Returns (html, final_url). Raises PageContextLost only when the browser
         cannot be recovered at all.
@@ -319,23 +388,40 @@ class Crawler:
             return sess.ensure_page() if sess else page
 
         def ensure_same_origin(p):
-            """fetch() inherits the page's origin, so it must be on this host.
+            """Seed the origin that fetch() inherits — at most once per site.
 
-            A closed window/crashed context raises a plain Playwright error here;
-            without translating it to PageContextLost the caller never relaunches
-            and every remaining queue item fails one by one (the 2026-11-17 run
-            lost 160 details this way).
+            fetch() runs in the page, so the work page must already be on this
+            host. The seed deliberately navigates to the URL being read (not the
+            bare base): Cloudflare issues its clearance for the document path,
+            so solving the challenge on the base page left the first listing
+            still challenged.
+
+            `allow_goto_fallback` (default off) only controls the *retry* path;
+            this single seed is the one navigation permitted in fetch-only mode.
+            Once seeded, the flag on SiteState keeps every later call from
+            navigating again.
             """
             try:
                 if same_origin(p.url, state.base):
                     return p
             except Exception:
                 pass
+            if state.seeded:
+                # Origin was seeded already but the page moved/closed; recovering
+                # would need another navigation, which fetch-only mode forbids.
+                raise PageContextLost(f"page rời origin sau khi seed: {p.url}")
             try:
-                p.goto(state.base, wait_until="domcontentloaded", timeout=60000)
+                p.goto(url, wait_until="domcontentloaded", timeout=60000)
+                state.seeded = True
                 p.wait_for_timeout(800)
-                if self._is_challenge(p) and not self._clear_challenge(p, state, state.base):
+                if self._is_challenge(p) and not self._clear_challenge(p, state, url):
                     raise ChallengeTimeout(state.site_id)
+                # The seed already downloaded this exact page: keep it so the
+                # caller does not fetch the same URL a second time.
+                try:
+                    state.seed_html = (p.content(), p.url)
+                except Exception:
+                    state.seed_html = None
             except (ChallengeRequired, ChallengeTimeout):
                 raise
             except Exception as exc:
@@ -348,6 +434,14 @@ class Crawler:
             page = ensure_same_origin(page)
         except PageContextLost:
             page = ensure_same_origin(self._relaunch(state, url))
+
+        # Reuse the seed navigation's own download for this exact URL (at most
+        # one per site, and only for the URL that was seeded).
+        if state.seed_html:
+            html, final = state.seed_html
+            state.seed_html = None
+            if final == url and not html_is_challenge(html):
+                return html, final
 
         last = {"status": None, "challenge": False, "error": ""}
         for attempt in range(FETCH_RETRIES + 1):
@@ -387,7 +481,9 @@ class Crawler:
             if self._is_challenge(page) and not self._clear_challenge(page, state, url):
                 raise ChallengeTimeout(state.site_id)
 
-        # ---- fallback: navigation, same behaviour as the original crawler
+        # ---- fallback: navigation (opt-in only, see allow_goto_fallback)
+        if not self.allow_goto_fallback:
+            raise FetchBlocked(url, last.get("status"), last.get("error") or "")
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=60000)
             page.wait_for_timeout(1200)
@@ -461,11 +557,16 @@ class Crawler:
     def crawl_site(self, site: dict) -> dict:
         site_id = site["site_id"]
         base = site["base"]
+        # A slower site needs a slower crawl; an explicit --delay still wins.
+        site_delay = self.delay if self.delay_explicit else \
+            DEFAULT_SITE_DELAY.get(site_id, self.delay)
         state = SiteState(
             site_id=site_id,
             base=base,
             profile_dir=site.get("profile_dir"),
             cloudflare=site.get("cloudflare", False),
+            # Site-level heading: challenge sites are always visible.
+            headed=site.get("cloudflare", False) or self.headed,
             detail_re=re.compile(site["detail_path_re"]),
             platform=site.get("platform", "batdongsan_group"),
             parse_detail=detail_parser_for(site.get("platform", "batdongsan_group")),
@@ -475,17 +576,23 @@ class Crawler:
         summary = {
             "site_id": site_id, "status": "success", "categories": [],
             "listings_fetched": 0, "details_fetched": 0, "records": 0,
-            "blocked": False, "challenge_solved_at": None, "notes": [],
+            "blocked": False, "blocked_listings": 0, "challenge_solved_at": None,
+            "notes": [],
         }
+        # Partial throttling is reported, not silently treated as a clean run,
+        # but it no longer stops the site.
+        blocked_listings = 0
         records_start = len(self.records)
 
         # Build the queue: category first pages first.
         queue: list[QueueItem] = []
         for cat in site["categories"]:
-            queue.append(QueueItem(base.rstrip("/") + cat["path"], "listing", site_id, cat["key"]))
+            first = canonical_page_url(base.rstrip("/") + cat["path"])
+            queue.append(QueueItem(first, "listing", site_id, cat["key"]))
 
         listing_pages_done = 0
         detail_urls: list[tuple[str, dict]] = []  # (url, listing card data)
+        detail_url_seen: set[str] = set()  # guards the second-page-1 duplicate
         pages_per_cat: dict[str, int] = defaultdict(int)  # cap is per-category
 
         # The runtime is owned by the caller so every site in the run shares one
@@ -534,10 +641,16 @@ class Crawler:
                                     "detail": f"snapshot: {snap}",
                                 })
                             for c in cards:
-                                if c["url"] and c["url"] not in state.visited_detail:
+                                key = canonical_page_url(c["url"]) if c["url"] else ""
+                                if key and key not in detail_url_seen \
+                                        and key not in state.visited_detail:
+                                    detail_url_seen.add(key)
                                     detail_urls.append((c["url"], c))
-                            # pagination (bounded)
-                            for nxt in next_page_urls(html, base):
+                            # pagination (bounded). Resolve relative hrefs against the *listing* page,
+                            # not the site base: `?page=1` must stay on this category,
+                            # otherwise it collapses to the homepage (0 cards).
+                            for nxt in next_page_urls(html, item.url):
+                                nxt = canonical_page_url(nxt)
                                 if nxt not in state.visited_listing:
                                     queue.append(QueueItem(nxt, "listing", site_id, item.category))
                             item.notes.append(f"{len(cards)} cards")
@@ -582,6 +695,25 @@ class Crawler:
                                 "issue": "context_lost",
                                 "detail": str(exc)[:300],
                             })
+                        except FetchBlocked as exc:
+                            # fetch() was refused at the edge. That is a
+                            # transient rate limit far more often than a real
+                            # challenge: measured on 2026-11-18, 4 consecutive
+                            # 403s were followed by 16 successful detail parses
+                            # in the same session at the same delay.
+                            # So record the block, cool down, and keep the queue
+                            # moving — breaking here abandons every remaining
+                            # category for one throttled page.
+                            item.status = "blocked"
+                            item.notes.append(f"fetch_blocked: {str(exc)[:200]}")
+                            blocked_listings += 1
+                            self.warnings.append({
+                                "site": site_id, "url": item.url,
+                                "issue": "fetch_blocked",
+                                "detail": f"{str(exc)[:200]} — fetch bị chặn ở edge; "
+                                          "đã hạ nhịp và tiếp tục queue",
+                            })
+                            time.sleep(max(site_delay, BLOCK_COOLDOWN_SECONDS))
                         except FetchFailed as exc:
                             item.status = "failed"
                             item.notes.append(f"fetch_failed: {str(exc)[:200]}")
@@ -594,11 +726,30 @@ class Crawler:
                             self.warnings.append({"site": site_id, "url": item.url,
                                                   "issue": "listing_error", "detail": str(exc)[:300]})
                         self._record_item(item)
-                        time.sleep(self.delay)
+                        time.sleep(site_delay)
                         continue
 
                 # Details
+                site_records_start = len(self.records)
                 for url, card in detail_urls[: self.max_details]:
+                    # Record cap is PER SITE. A single global cap let one small
+                    # site consume the whole budget: on 2026-11-18 the 75-record
+                    # 365 site exhausted max_records=500's headroom in the plan,
+                    # and the primary site was left crawling 20 of its thousands.
+                    if self.max_records and \
+                            len(self.records) - site_records_start >= self.max_records:
+                        self.warnings.append({
+                            "site": site_id, "url": url, "issue": "record_cap_reached",
+                            "detail": f"Site đã đạt max_records={self.max_records}; "
+                                      "các detail còn lại không được lấy trong lượt này",
+                        })
+                        self.queue_items.append({
+                            "site": site_id, "url": url, "kind": "detail",
+                            "category": "", "status": "skipped",
+                            "attempts": 0,
+                            "notes": [f"vượt max_records={self.max_records} (giới hạn theo site)"],
+                        })
+                        break
                     state.visited_detail.add(url)
                     item = QueueItem(url, "detail", site_id)
                     item.attempts += 1
@@ -637,6 +788,17 @@ class Crawler:
                                               "detail": str(exc)[:300]})
                         self.records.append(
                             self._card_only_record(card, site_id, url, str(exc)[:200]))
+                    except FetchBlocked as exc:
+                        # Same policy for detail pages: one blocked detail must
+                        # not abort the rest, and the card record is kept.
+                        item.status = "blocked"
+                        item.notes.append(f"fetch_blocked: {str(exc)[:200]}")
+                        self.warnings.append({
+                            "site": site_id, "url": url, "issue": "fetch_blocked",
+                            "detail": f"{str(exc)[:200]} — fetch lỗi và fallback goto đã tắt",
+                        })
+                        self.records.append(
+                            self._card_only_record(card, site_id, url, str(exc)[:200]))
                     except FetchFailed as exc:
                         item.status = "failed"
                         item.notes.append(f"fetch_failed: {str(exc)[:200]}")
@@ -654,11 +816,18 @@ class Crawler:
                         self.records.append(self._card_only_record(card, site_id, url, str(exc)[:200]))
                     self._record_item(item)
                     self._checkpoint()
-                    time.sleep(self.delay)
+                    time.sleep(site_delay)
 
                 summary["challenge_solved_at"] = state.challenge_solved_at
                 summary["records"] = len(self.records) - records_start
                 summary["detail_urls_discovered"] = len(detail_urls)
+                summary["blocked_listings"] = blocked_listings
+                if blocked_listings:
+                    # Visible in the report instead of a silent partial run.
+                    summary["status"] = "warning" if summary["records"] else "blocked"
+                    summary["notes"].append(
+                        f"{blocked_listings} trang listing bị edge chặn tạm thời (403); "
+                        "queue vẫn chạy tiếp, xem sheet Cảnh báo")
                 if state.needs_human:
                     summary["notes"].append("Cloudflare đã được human giải; session lưu trong persistent profile.")
                 if not summary["records"] and summary["status"] == "success":
@@ -948,15 +1117,32 @@ class FetchFailed(Exception):
         super().__init__(f"{url} (status={status}) {detail}"[:300])
 
 
+class FetchBlocked(FetchFailed):
+    """fetch() failed and the goto fallback is disabled.
+
+    Treated like a block by the caller: the item is recorded, the site keeps its
+    other queue items, and nothing is silently re-navigated.
+    """
+
+
 def crawl(registry_path: Path, out_root: Path, site_filter: list[str] | None = None,
-          max_listing_pages: int = 5, max_details: int = 200, delay: float = 1.5,
-          headed: bool = False, wait_human: int = 300,
-          keep_open: bool = False) -> dict:
+          max_listing_pages: int = 5, max_details: int = 200,
+          delay: float | None = None,
+          headed: bool = False, wait_human: int = 0,
+          keep_open: bool = False, max_records: int = 0,
+          allow_goto_fallback: bool = False) -> dict:
     reg = load_registry(registry_path)
     site_summaries = []
+    # delay=None means "not chosen by the caller", so each site uses its own
+    # per-site pace. A concrete number (including 1.5 typed on the CLI) wins.
+    delay_explicit = delay is not None
     with SessionRuntime(headed=headed) as runtime:
-        crawler = Crawler(reg, out_root, max_listing_pages, max_details, delay,
-                          headed, wait_human, runtime=runtime)
+        crawler = Crawler(reg, out_root, max_listing_pages, max_details,
+                          delay if delay_explicit else DEFAULT_DELAY,
+                          headed, wait_human, runtime=runtime,
+                          max_records=max_records,
+                          allow_goto_fallback=allow_goto_fallback,
+                          delay_explicit=delay_explicit)
         for site in reg["sites"]:
             if site_filter and site["site_id"] not in site_filter:
                 continue
@@ -990,16 +1176,30 @@ def main():
     ap.add_argument("--out", type=Path, required=True, help="job directory for raw JSON")
     ap.add_argument("--max-listing-pages", type=int, default=5)
     ap.add_argument("--max-details", type=int, default=200)
-    ap.add_argument("--delay", type=float, default=1.5, help="seconds between requests (rate limit)")
-    ap.add_argument("--headed", action="store_true", help="visible browser so a human can solve challenges")
-    ap.add_argument("--wait-human", type=int, default=300)
+    ap.add_argument("--max-records", type=int, default=None,
+                    help="trần số bản ghi (0 = không giới hạn); mặc định đọc config/settings.json")
+    ap.add_argument("--allow-goto-fallback", action="store_true",
+                    help="bật lại fallback page.goto khi fetch lỗi (mặc định TẮT)")
+    ap.add_argument("--delay", type=float, default=None,
+                    help="giây giữa các request; mặc định: per-site (bds.com.vn=3.0, "
+                         "các site khác=1.5) vì site có Cloudflare bị 403 rate-limit ở 1.5s")
+    ap.add_argument("--headed", action="store_true",
+                    help="visible browser cho mọi site; site có Cloudflare/CAPTCHA "
+                         "luôn mở headed dù không bật cờ này")
+    ap.add_argument("--wait-human", type=int, default=0,
+                    help="giây chờ giải challenge (0 = chờ không giới hạn)")
     ap.add_argument("--keep-open", action="store_true",
-                    help="giữ browser mở sau khi crawl xong để kiểm tra thủ công")
+                    help="giữ browser mở sau khi crawl xong cho tới khi nhấn Enter")
     args = ap.parse_args()
+
+    if args.max_records is None:
+        from .settings import load_settings, max_records as cap_from_settings
+        args.max_records = cap_from_settings(load_settings())
 
     result = crawl(args.registry, args.out, args.sites, args.max_listing_pages,
                    args.max_details, args.delay, args.headed, args.wait_human,
-                   keep_open=args.keep_open)
+                   keep_open=args.keep_open, max_records=args.max_records,
+                   allow_goto_fallback=args.allow_goto_fallback)
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "crawl-result.json").write_text(
         json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
