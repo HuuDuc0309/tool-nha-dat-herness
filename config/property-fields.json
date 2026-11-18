@@ -11,11 +11,6 @@
       "type": "url"
     },
     {
-      "key": "source_site",
-      "label": "Website nguồn",
-      "type": "text"
-    },
-    {
       "key": "address",
       "label": "Địa chỉ",
       "type": "text"
@@ -94,22 +89,6 @@
       "key": "extraction_status",
       "label": "Trạng thái dữ liệu",
       "type": "text"
-    },
-    {
-      "key": "confidence",
-      "label": "Độ tin cậy",
-      "type": "number"
-    },
-    {
-      "key": "warnings",
-      "label": "Cảnh báo",
-      "type": "text"
-    },
-    {
-      "key": "listing_code",
-      "label": "Mã tin",
-      "type": "text",
-      "group": "supplement"
     },
     {
       "key": "posted_at",

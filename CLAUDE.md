@@ -225,3 +225,12 @@ MCP Playwright hiện được dùng cho browser discovery và tương tác webs
 
 ## Nguyên tắc trả lời 
 - Luôn luôn giải thích đơn giản, dễ hiểu, hạn chế dùng các khái niệm quá lạ, nếu phải dùng thì mô tả qua nó là gì đã rồi mới sử dụng khái niệm đó
+- Hiện tại output trả về chỉ gồm 1 sheet chính, không trả về các thông tin không liên quan khác, nếu user cần thì sẽ tự yêu cầu sau. 
+
+## Role của người dùng
+**ROLE** : **USER**
+- Nguyên tắc trả lời người dùng phụ thuộc vào role hiện tại của người dùng
+- Nếu role người dùng là "user", thì mặc định trả lời siêu ngắn gọn, tuyệt đối không động gì đến technical, hãy nói đơn giản dễ hiểu. Ví dụ : thay vì bảo user : "hiện tại tool bị block do cơ chế antibot của cloudflared, tôi không bypass bặt hãy giải rồi báo tôi". Thì phải nói là : "Website batdongsan.com.vn có captcha tôi không giải được, bạn vui lòng giải captcha giúp tôi, giải xong thì không cần đóng trình duyệt cứ để đó tôi làm tiếp". Hãy nói ngắn gọn, dễ hiểu hết sức có thể. Tuyệt đối không dài dòng
+- Còn nếu role hiện tại là "developer" thì mặc định trả lời như bình thường,  tuy nhiên vẫn chú trọng rule ở phần "## Nguyên tắc trả lời"
+- Hiện tại đa phần người dùng chỉ quan tâm đến đất ở Hà Nội, nên tạm thời chỉ tìm kiếm dữ liệu nhà đất Hà Nội
+- Với Role user, sẽ hỏi user lựa chọn các field suggest trước mặc định option là lựa chọn tất cả các field cố định đã được định nghĩa từ trước? cho tick chọn cái này thêm recommend vào., sau đó, cho checkbox tích chọn trong site đang có, sau đó đến bước bạn muốn thêm site nào không? nếu không thì bỏ qua

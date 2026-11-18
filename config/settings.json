@@ -1,5 +1,5 @@
 {
-  "max_records": 500,
+  "max_records": 5000,
   "export": {
     "extra_sheets": false,
     "main_sheet_exclude_fields": [

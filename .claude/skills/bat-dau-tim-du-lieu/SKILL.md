@@ -36,6 +36,20 @@ Thứ tự bắt buộc:
   screenshot); mọi request đọc thêm dùng `fetch()`.
 - Không bao giờ bypass Cloudflare: không solver, không giả fingerprint.
 
+## Xem tiến độ khi crawl chạy nền
+
+`src/property_tool/crawler.py` **luôn** tự mở cửa sổ tiến độ (Windows) khi bắt
+đầu crawl — không truyền cờ gì thêm, không được tắt bằng tham số. Cửa sổ chỉ
+đọc file crawler đã ghi, không ảnh hưởng job. Khi xong nó tự dừng và hiện
+"Tiến độ đã xong, vui lòng đợi AI xử lý kết quả".
+
+Chỉ khi chạy test/automation mới đặt biến môi trường `CRAWL_NO_PROGRESS=1`.
+Nếu cần xem lại từ terminal khác:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.property_tool.progress --watch
+```
+
 ## Artifact
 
 Lưu tại `research/sites/<site-id>/` gồm `manifest.json`, `discovery.json`, `template.md`, `discovery/`, routes, interactions, API candidates, response catalog, HTML và screenshot. Artifact là website knowledge base, không phải một curl response.

@@ -202,13 +202,16 @@ def export(records: list[dict], evidence: list[dict], unknown_rows: list[dict],
            output: Path, field_config: Path | None = None,
            extra_sheets: bool = False,
            exclude_fields: list[str] | tuple[str, ...] = ("confidence",),
-           core_only: bool = False):
+           core_only: bool = False,
+           field_keys: list[str] | tuple[str, ...] | None = None):
     """Write the workbook. Only "Danh sách tin đăng" unless extra_sheets=True.
 
     Extra sheets exist for audit, but an AI reading the workbook pays tokens for
     every one of them, so they are opt-in via `config/settings.json`.
     `exclude_fields` drops columns such as `confidence` that invite AI re-checking.
     `core_only` narrows the main sheet to CORE_FIELDS (fast screening view).
+    `field_keys` narrows the main sheet to exactly the columns the user asked
+    for; it wins over `core_only`.
     """
     wb = Workbook()
     # `_write_sheet` always creates a new sheet, so the workbook's default empty
@@ -217,7 +220,13 @@ def export(records: list[dict], evidence: list[dict], unknown_rows: list[dict],
 
     # 1. main list — the only sheet written by default
     main_fields = [f for f in MAIN_FIELDS if f[0] not in set(exclude_fields)]
-    if core_only:
+    if field_keys:
+        wanted = list(field_keys)
+        main_fields = [f for f in MAIN_FIELDS if f[0] in wanted]
+        # any requested key that has no label yet still gets a column
+        known = {f[0] for f in MAIN_FIELDS}
+        main_fields += [(k, k, None) for k in wanted if k not in known]
+    elif core_only:
         main_fields = [f for f in main_fields if f[0] in CORE_FIELDS]
     headers = [label for _, label, _ in main_fields]
     rows = [[rec.get(key, "") for key, _, _ in main_fields] for rec in records]
@@ -359,6 +368,9 @@ def main():
                     help="giới hạn số bản ghi xuất ra; mặc định đọc config/settings.json")
     ap.add_argument("--core-only", action="store_true",
                     help="chỉ xuất field cốt lõi tìm mặt bằng (CORE_FIELDS)")
+    ap.add_argument("--fields", nargs="*", default=None,
+                    help="chỉ xuất đúng các key này, theo thứ tự đã cho "
+                         "(ví dụ: title source_url address district rent_amount)")
     args = ap.parse_args()
     out = args.output or (args.job_dir / f"property-data-{datetime.now():%Y%m%d-%H%M%S}.xlsx")
 
@@ -381,6 +393,7 @@ def main():
         extra_sheets=args.extra_sheets or bool(export_cfg.get("extra_sheets", False)),
         exclude_fields=export_cfg.get("main_sheet_exclude_fields", ["confidence"]) or [],
         core_only=args.core_only,
+        field_keys=args.fields,
     )
     print(json.dumps({"status": "success", **summary}, ensure_ascii=False, indent=2))
 

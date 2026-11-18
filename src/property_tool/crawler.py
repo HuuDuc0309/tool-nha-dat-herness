@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import time
@@ -49,11 +50,30 @@ FETCH_RETRY_WAIT = 5.0
 # session — and at delay=3.0s the same site returned 0 warnings. After a block
 # the crawl therefore backs off instead of stopping.
 BLOCK_COOLDOWN_SECONDS = 8.0
-# Detail budget is per site, not per run: a single global cap let the small
-# site (75 records) consume the budget and left the primary site with 20.
-DEFAULT_SITE_DELAY = {"batdongsan-com-vn": 3.0}
-# Pace for sites with no measured per-site value.
+# Pace now lives in config/sites.json (`delay_seconds` per site) so it can be
+# tuned without editing code. `delay_seconds: 0` means "unset" — it falls back
+# to DEFAULT_DELAY instead of removing the pause entirely.
+# Pace for sites with no per-site value in the config.
 DEFAULT_DELAY = 1.5
+
+
+def site_delay_for(site: dict, override: float | None = None,
+                   default: float = DEFAULT_DELAY) -> float:
+    """Per-site pause between requests.
+
+    Precedence: an explicit CLI/API `override` wins, then the site's
+    `delay_seconds` in config/sites.json, then `default`. A value of 0 or a
+    missing key is treated as "not configured" — a zero pause is a load test,
+    not a crawl, and must be requested explicitly via `override`.
+    """
+    if override is not None and override > 0:
+        return float(override)
+    configured = site.get("delay_seconds")
+    try:
+        value = float(configured)
+    except (TypeError, ValueError):
+        return float(default)
+    return value if value > 0 else float(default)
 
 
 def is_closed_error(exc: Exception) -> bool:
@@ -132,6 +152,16 @@ def detect_period(price_text: str, price_vnd: str = "") -> str:
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def safe_filename(text: str, limit: int = 70) -> str:
+    """A category key becomes part of a snapshot filename.
+
+    Keys may carry query params (`cho-thue-kho-nha-xuong-dat/?province=01`).
+    `?` and `/` are not legal in a Windows filename, so writing the snapshot
+    raised FileNotFoundError and the whole listing page was recorded as failed.
+    """
+    return re.sub(r"[^a-zA-Z0-9_-]+", "_", str(text or "")).strip("_")[:limit] or "page"
 
 
 class PageContextLost(Exception):
@@ -557,9 +587,10 @@ class Crawler:
     def crawl_site(self, site: dict) -> dict:
         site_id = site["site_id"]
         base = site["base"]
-        # A slower site needs a slower crawl; an explicit --delay still wins.
-        site_delay = self.delay if self.delay_explicit else \
-            DEFAULT_SITE_DELAY.get(site_id, self.delay)
+        # Pace comes from config/sites.json (`delay_seconds`); an explicit
+        # --delay on the command line still wins over the config.
+        site_delay = site_delay_for(
+            site, override=self.delay if self.delay_explicit else None)
         state = SiteState(
             site_id=site_id,
             base=base,
@@ -629,7 +660,8 @@ class Crawler:
                             listing_pages_done += 1
                             summary["listings_fetched"] += 1
                             snap = site_dir / (
-                                f"listing_{item.category}_{pages_per_cat[item.category]:03d}.html")
+                                f"listing_{safe_filename(item.category)}_"
+                                f"{pages_per_cat[item.category]:03d}.html")
                             snap.write_text(html, encoding="utf-8")
                             cards = parse_listing_cards(html, base)
                             item.status = "success" if cards else "needs_review"
@@ -1169,6 +1201,31 @@ def crawl(registry_path: Path, out_root: Path, site_filter: list[str] | None = N
     }
 
 
+def open_progress_window(out_dir: Path) -> None:
+    """Open a live progress view in its own console window (Windows).
+
+    The crawl runs in the background and only writes its log to a file, so
+    without this the user has no way to see how many detail fetches are left.
+    `src.property_tool.progress` only reads the files the crawler already
+    writes, so this is display-only and never touches the crawl.
+    """
+    import subprocess
+    cmd = [sys.executable, "-m", "src.property_tool.progress",
+           "--job", str(out_dir), "--watch", "--pause-on-exit"]
+    try:
+        if sys.platform == "win32":
+            # `start` takes the window *title* as its first quoted argument;
+            # Vietnamese in a cmd argument line can be mangled by the console
+            # codepage, so the title stays ASCII.
+            subprocess.Popen(["cmd", "/c", "start", "Crawl progress", *cmd],
+                             cwd=str(Path.cwd()))
+        else:
+            print(">> Xem tiến độ: " + " ".join(cmd), flush=True)
+    except Exception as exc:
+        print(f">> Không mở được cửa sổ tiến độ ({exc}). Chạy tay: "
+              + " ".join(cmd), flush=True)
+
+
 def main():
     ap = argparse.ArgumentParser(description="Crawl batdongsan group sites")
     ap.add_argument("--sites", nargs="*", help="site_id(s); default = all in registry")
@@ -1181,13 +1238,15 @@ def main():
     ap.add_argument("--allow-goto-fallback", action="store_true",
                     help="bật lại fallback page.goto khi fetch lỗi (mặc định TẮT)")
     ap.add_argument("--delay", type=float, default=None,
-                    help="giây giữa các request; mặc định: per-site (bds.com.vn=3.0, "
-                         "các site khác=1.5) vì site có Cloudflare bị 403 rate-limit ở 1.5s")
+                    help="ghi đè thời gian nghỉ (giây) cho MỌI site; mặc định đọc "
+                         "delay_seconds từng site trong config/sites.json")
     ap.add_argument("--headed", action="store_true",
                     help="visible browser cho mọi site; site có Cloudflare/CAPTCHA "
                          "luôn mở headed dù không bật cờ này")
     ap.add_argument("--wait-human", type=int, default=0,
                     help="giây chờ giải challenge (0 = chờ không giới hạn)")
+    ap.add_argument("--no-progress", action="store_true",
+                    help="(đã bỏ) cửa sổ tiến độ luôn mở; dùng CRAWL_NO_PROGRESS=1 nếu cần tắt")
     ap.add_argument("--keep-open", action="store_true",
                     help="giữ browser mở sau khi crawl xong cho tới khi nhấn Enter")
     args = ap.parse_args()
@@ -1195,6 +1254,13 @@ def main():
     if args.max_records is None:
         from .settings import load_settings, max_records as cap_from_settings
         args.max_records = cap_from_settings(load_settings())
+
+    # The progress window is part of every crawl: it is the only live view of
+    # how many detail fetches are left, so there is no opt-out flag. A run that
+    # deliberately suppresses it (tests, automation) sets CRAWL_NO_PROGRESS=1.
+    args.out.mkdir(parents=True, exist_ok=True)
+    if os.environ.get("CRAWL_NO_PROGRESS") != "1":
+        open_progress_window(args.out)
 
     result = crawl(args.registry, args.out, args.sites, args.max_listing_pages,
                    args.max_details, args.delay, args.headed, args.wait_human,
