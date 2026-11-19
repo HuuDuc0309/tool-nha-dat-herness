@@ -114,6 +114,30 @@ def test_normalisers():
     check("location street+ward", loc2["ward"] == "Phường Tân Thuận Đông", loc2)
     check("location district q7", loc2["district"] == "Quận 7", loc2)
 
+    # ceiling height: only a number with a metre unit counts, and it must be
+    # plausible for a warehouse (2–30 m). Multi-value text keeps every value.
+    from .adapters.batdongsan_group import parse_ceiling_height
+
+    ceiling_cases = {
+        "Chiều cao kho: 6,5m.": "6.5",
+        "trần cao 11m, nền bê tông": "11",
+        "trần cao 8, 10m": "8; 10",
+        "chiều cao lên đỉnh mái 10,5m, chiều cao vách 8m": "8; 10.5",
+        "kho xưởng cao 12m": "12",
+        "khung zamil cao 8 - 12m": "8; 12",
+        "chất lượng cao, thoáng mát": "",
+        "cao tốc Bắc Thang Long": "",
+        "tường cao 1 m": "",
+        "khung thép zamil cao 812m": "",
+        "trần cao, thoáng": "",
+        "cao 68m": "",
+    }
+    for text, want in ceiling_cases.items():
+        got, snippet = parse_ceiling_height(text)
+        check(f"parse_ceiling_height({text[:42]!r})", got == want, f"want {want!r} got {got!r}")
+        check(f"  snippet for {text[:24]!r} present when value", bool(snippet) == bool(want),
+              f"snippet={snippet[:50]!r}")
+
 
 # ---------------------------------------------------------------- snapshot tests
 def job_dirs() -> list[Path]:
@@ -252,6 +276,25 @@ def test_record_mapping():
     check("area conflict flagged", bool(r5["area_conflict"]), r5["area_conflict"][:80])
     check("area conflict lowers confidence", float(r5["confidence"]) <= 0.6, r5["confidence"])
     check("area conflict in warnings", "nhiều diện tích" in r5["warnings"], r5["warnings"][:100])
+
+    # ceiling height is recorded with its source phrase; several values are kept
+    r6 = c._to_record({"title": "Kho", "price_text": "30 triệu/tháng", "area_text": "500 m2",
+                       "description": "Kho xưởng cao 12m, trần cao 8, 10m."},
+                      {"price_basis": "total"}, "s", Path("x"))
+    check("ceiling height parsed", r6["ceiling_height_m"] == "8; 10; 12", repr(r6["ceiling_height_m"]))
+    check("ceiling note keeps source phrase", "cao" in r6["ceiling_height_note"].lower(),
+          r6["ceiling_height_note"][:80])
+    check("multi ceiling height warned", "Chiều cao trần có nhiều giá trị" in r6["warnings"],
+          r6["warnings"][:120])
+
+    # no height mentioned → empty, never a guessed default
+    r7 = c._to_record({"title": "Kho", "price_text": "30 triệu/tháng", "area_text": "500 m2",
+                       "description": "Kho sạch đẹp, chất lượng cao."},
+                      {"price_basis": "total"}, "s", Path("x"))
+    check("ceiling height stays empty when not stated", r7["ceiling_height_m"] == "",
+          repr(r7["ceiling_height_m"]))
+    check("ceiling note empty when not stated", r7["ceiling_height_note"] == "",
+          repr(r7["ceiling_height_note"]))
 
 
 def _is_challenge_snapshot(html: str) -> bool:

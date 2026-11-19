@@ -8,6 +8,8 @@
       "persistent_profile": false,
       "cloudflare": false,
       "detail_path_re": "^/(?:cho-thue|ban)-[a-z0-9-]+-[a-z0-9]*(?:-bs\\d+)?/?$",
+      "max_listing_pages": "full",
+      "max_details": "full",
       "categories": [
         {
           "key": "cho-thue-kho-nha-xuong-ha-noi",
@@ -25,6 +27,8 @@
       "cloudflare": true,
       "profile_dir": "Temp/bds-profile",
       "detail_path_re": "^/(?:cho-thue|ban)-[a-z0-9-]+-pr\\d+/?$",
+      "max_listing_pages": "full",
+      "max_details": "full",
       "categories": [
         {
           "key": "cho-thue-kho-nha-xuong-dat-ha-noi",

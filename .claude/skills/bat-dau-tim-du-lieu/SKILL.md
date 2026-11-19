@@ -36,19 +36,36 @@ Thứ tự bắt buộc:
   screenshot); mọi request đọc thêm dùng `fetch()`.
 - Không bao giờ bypass Cloudflare: không solver, không giả fingerprint.
 
-## Xem tiến độ khi crawl chạy nền
+## Chạy crawl nền: một lần chờ, không poll
 
-`src/property_tool/crawler.py` **luôn** tự mở cửa sổ tiến độ (Windows) khi bắt
-đầu crawl — không truyền cờ gì thêm, không được tắt bằng tham số. Cửa sổ chỉ
-đọc file crawler đã ghi, không ảnh hưởng job. Khi xong nó tự dừng và hiện
-"Tiến độ đã xong, vui lòng đợi AI xử lý kết quả".
+**Luật bắt buộc cho mọi session.** Crawl một website lớn mất 20–40 phút. Không
+được lập vòng theo dõi (Monitor, `while/sleep` lặp, đọc lại file tiến độ mỗi
+vài chục giây) — mỗi vòng như vậy đốt token mà không thêm thông tin gì.
 
-Chỉ khi chạy test/automation mới đặt biến môi trường `CRAWL_NO_PROGRESS=1`.
-Nếu cần xem lại từ terminal khác:
+Quy trình cố định:
+
+1. Chạy crawl bằng `run_in_background` (một lệnh, `CRAWL_NO_PROGRESS` **không**
+   đặt, để cửa sổ tiến độ tự mở cho user nhìn).
+2. Chờ **một lần duy nhất**: harness báo khi lệnh nền thoát. Không mở Monitor,
+   không poll, không spawn agent chỉ để canh tiến độ.
+3. Khi có thông báo, đọc phần kết quả cuối trong output rồi đi tiếp
+   (merge → verify → export).
+4. Trong lúc chờ, chỉ trả lời user/ làm việc khác nếu user hỏi; không tự bịa
+   số liệu tiến độ.
+
+Cửa sổ tiến độ (`src/property_tool/progress.py`) **đã** tự mở cùng crawl —
+đó là kênh xem tiến độ dành cho người, không phải để AI đọc liên tục. Khi xong
+cửa sổ tự dừng và hiện "Tiến độ đã xong, vui lòng đợi AI xử lý kết quả".
+
+Nếu cần xem lại từ terminal khác (chỉ khi user yêu cầu):
 
 ```powershell
 .\.venv\Scripts\python.exe -m src.property_tool.progress --watch
 ```
+
+Nhiều website độc lập: gom vào một lệnh crawl nền nếu registry đã có cả hai
+(`--sites a b`), hoặc chạy tuần tự trong cùng một lệnh; chỉ chạy song song khi
+thật cần. Một lệnh nền = một lần thông báo.
 
 ## Artifact
 

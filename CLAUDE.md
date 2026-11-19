@@ -202,6 +202,22 @@ Chạy CLI thủ công:
 .\.venv\Scripts\python.exe -m src.property_tool.cli --urls-file urls.txt --output research\jobs\property-data.xlsx
 ```
 
+## Chạy crawl: nền + chờ một lần (luật chung mọi session)
+
+Crawl một website lớn mất 20–40 phút. Flow cố định, không được biến tấu:
+
+1. Chạy crawl bằng `run_in_background` (một lệnh; nhiều site thì gom vào cùng
+   lệnh `--sites a b`). **Không** đặt `CRAWL_NO_PROGRESS=1` — cửa sổ tiến độ
+   phải tự mở cho user theo dõi.
+2. Chờ **một lần duy nhất**: harness báo khi lệnh nền thoát. Không mở Monitor,
+   không lặp `while/sleep` để đọc lại file tiến độ, không spawn agent chỉ để
+   canh tiến độ. Mỗi vòng polling như vậy tốn token mà không thêm thông tin.
+3. Khi có thông báo hoàn tất mới đọc kết quả cuối rồi merge → verify → export.
+4. Trong lúc chờ chỉ trả lời user nếu user hỏi; không tự bịa số liệu tiến độ.
+
+Cửa sổ tiến độ (`src/property_tool/progress.py`) là kênh xem dành cho người,
+do crawl tự mở; nó chỉ đọc file crawler ghi ra nên không ảnh hưởng job.
+
 Kiểm tra MCP:
 
 ```powershell

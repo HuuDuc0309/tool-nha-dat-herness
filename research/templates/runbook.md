@@ -49,11 +49,21 @@ Temp/                                 browser profile, log, script thử (gitign
 
 | Tham số | Ý nghĩa |
 |---|---|
-| `--max-listing-pages N` | **mỗi category** lấy tối đa N trang listing (không phải toàn site) |
-| `--max-details N` | tổng số trang detail tối đa **mỗi site** |
-| `--delay S` | nghỉ S giây giữa request (mặc định 1.5) |
+| `--max-listing-pages N\|full` | **mỗi category** lấy tối đa N trang listing; bỏ qua thì đọc `max_listing_pages` của site trong `config/sites.json` (`full` = lấy hết) |
+| `--max-details N\|full` | tổng số trang detail tối đa **mỗi site**; bỏ qua thì đọc `max_details` của site (`full` = lấy hết) |
+| `--delay S` | nghỉ S giây giữa request (mặc định đọc `delay_seconds` của site) |
 | `--headed` | mở browser có cửa sổ để human giải challenge |
 | `--wait-human N` | chờ tối đa N giây cho mỗi lần giải |
+
+CLI luôn thắng config. Trong `config/sites.json` mỗi site có thể đặt:
+
+```json
+"max_listing_pages": "full",   // hoặc số nguyên, ví dụ 25
+"max_details": "full"          // hoặc số nguyên, ví dụ 400
+```
+
+`full` (hoặc `all`, `0`) = không giới hạn. Giá trị thiếu/sai kiểu sẽ quay về
+mặc định (5 trang listing, 200 detail) chứ không âm thầm thành full crawl.
 
 ## Quy tắc dữ liệu (đã cài trong code)
 

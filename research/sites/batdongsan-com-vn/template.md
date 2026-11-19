@@ -106,6 +106,11 @@ session trình duyệt thật — giải thủ công một lần, profile giữ 
 - Số liên hệ broker bị mask; cần bấm "Hiện số" — tool không làm.
 - Đất/xưởng báo giá theo m² → không có tổng giá thuê tháng.
 - `deposit`, `frontage_m` không có trên template này.
+- `ceiling_height_m` (chiều cao trần) chỉ đọc từ **mô tả tự do**, không có field
+  riêng trên trang: ~27% tin nêu số mét. Nhiều mức cao trong cùng tin được giữ
+  hết dạng `8; 10` + warning "cần kiểm tra thủ công"; giá trị ngoài 2–30 m bị bỏ
+  (thường do người đăng mất dấu gạch, ví dụ "zamil cao 812m" = 8–12 m).
+  Câu gốc được lưu ở `ceiling_height_note`.
 - Discovery heuristic báo `listing_detail: false` (false negative — URL detail kết thúc `-pr<id>`).
 - Listing page ~1,3 MB HTML/trang (map payload + 20 card) → snapshot chiếm dung lượng, chỉ giữ để audit.
 

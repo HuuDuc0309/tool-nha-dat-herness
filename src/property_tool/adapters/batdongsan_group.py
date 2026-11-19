@@ -180,6 +180,77 @@ def parse_area_m2(raw: str) -> str:
     return f"{value:.2f}".rstrip("0").rstrip(".")
 
 
+_CEIL_NUM = r"\d+(?:[.,]\d+)?"
+# A list of heights written as '8, 10' / '8 - 12' / '9;12' / 'tu 6 den 8'.
+_CEIL_LIST = rf"{_CEIL_NUM}(?:\s*(?:[,;/]|-|den|toi)\s*{_CEIL_NUM})*"
+# Tier 1: the text names what is tall (ceiling, roof, warehouse height).
+_CEILING_STRONG = (
+    rf"chieu cao[^0-9\n]{{0,45}}?({_CEIL_LIST})\s*m\b",
+    rf"tran[^0-9\n]{{0,12}}?cao[^0-9\n]{{0,25}}?({_CEIL_LIST})\s*m\b",
+    rf"(?:kho|nha xuong|xuong|nha kho)\b[^0-9\n]{{0,30}}?cao\s*({_CEIL_LIST})\s*m\b",
+)
+# Tier 2: a bare '... cao 8 - 12m' — accepted only because the number range is
+# itself strong evidence; any other mention ('chất lượng cao', 'cao tốc') has no
+# metres after it and can never match.
+_CEILING_WEAK = (
+    rf"\bcao\s*(?:tu\s*)?({_CEIL_LIST})\s*m\b",
+)
+_CEILING_MIN_M = 2.0
+_CEILING_MAX_M = 30.0
+
+
+def _ceiling_numbers(token: str) -> list[float]:
+    """'6,5' → [6.5]; '8, 10' → [8, 10]; '8-12' → [8, 12]."""
+    parts = [p.strip() for p in re.split(
+        r"[;/]|,\s+|\s+-\s+|\s+den\s+|\s+toi\s+", token) if p.strip()]
+    out: list[float] = []
+    for part in parts:
+        if re.fullmatch(r"\d+,\d{2,}", part):
+            out += [float(x) for x in part.split(",") if x]
+            continue
+        try:
+            out.append(float(part.replace(",", ".")))
+        except ValueError:
+            continue
+    return out
+
+
+def _format_heights(values: list[float]) -> str:
+    def one(v: float) -> str:
+        return str(int(v)) if v == int(v) else f"{v:g}"
+
+    return "; ".join(one(v) for v in values)
+
+
+def parse_ceiling_height(description: str, title: str = "") -> tuple[str, str]:
+    """Ceiling/roof height in metres from free text: ('8; 10', 'tran cao 8, 10m').
+
+    Returns (value, source_snippet). The value is ';'-joined when the poster
+    lists several heights (e.g. 'trần cao 8, 10m' or 'cao đỉnh mái 10,5m, cao
+    vách 8m') — the caller keeps every figure rather than silently picking one.
+
+    Only a number followed by a metre unit counts, and it must land in
+    2–30 m: below that is a wall/lamp-post, above it the metre unit was almost
+    certainly lost by the poster ('zamil cao 812m' instead of 8–12 m), so it is
+    left empty rather than guessed.
+    """
+    text = strip_accents((description or "") + " \n " + (title or ""))
+    for patterns in (_CEILING_STRONG, _CEILING_WEAK):
+        values: set[float] = set()
+        snippets: list[str] = []
+        for pattern in patterns:
+            for m in re.finditer(pattern, text):
+                found = [v for v in _ceiling_numbers(m.group(1))
+                         if _CEILING_MIN_M <= v <= _CEILING_MAX_M]
+                if not found:
+                    continue
+                values.update(found)
+                snippets.append(m.group(0)[:70])
+        if values:
+            return _format_heights(sorted(values)), " || ".join(dict.fromkeys(snippets))
+    return "", ""
+
+
 def parse_listing_cards(html: str, base: str) -> list[dict]:
     """Extract one row per card. Never filters anything out."""
     rows: list[dict] = []

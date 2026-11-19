@@ -32,6 +32,7 @@ from .adapters.batdongsan_group import (
     next_page_urls,
     normalise_vnd,
     parse_area_m2,
+    parse_ceiling_height,
     parse_listing_cards,
     strip_accents,
 )
@@ -50,11 +51,19 @@ FETCH_RETRY_WAIT = 5.0
 # session — and at delay=3.0s the same site returned 0 warnings. After a block
 # the crawl therefore backs off instead of stopping.
 BLOCK_COOLDOWN_SECONDS = 8.0
+# How many times a blocked listing page is put back at the end of the queue.
+# One retry is enough: the block lifts within seconds, and every repeat costs
+# a fetch on a site that is already rate-limiting us.
+LISTING_BLOCK_RETRIES = 1
 # Pace now lives in config/sites.json (`delay_seconds` per site) so it can be
 # tuned without editing code. `delay_seconds: 0` means "unset" — it falls back
 # to DEFAULT_DELAY instead of removing the pause entirely.
 # Pace for sites with no per-site value in the config.
 DEFAULT_DELAY = 1.5
+# Listing-page cap for a site that does not set `max_listing_pages` itself.
+DEFAULT_LISTING_PAGES = 5
+# Detail-page cap for a site that does not set `max_details` itself.
+DEFAULT_DETAILS = 200
 
 
 def site_delay_for(site: dict, override: float | None = None,
@@ -75,6 +84,31 @@ def site_delay_for(site: dict, override: float | None = None,
         return float(default)
     return value if value > 0 else float(default)
 
+
+def page_limit_for(site: dict, override: int | None = None,
+                   default: int = 5, key: str = "max_listing_pages") -> int:
+    """Per-site listing-page cap, with `full` meaning "no cap".
+
+    Precedence: an explicit caller `override` wins, then the site's
+    `max_listing_pages` in config/sites.json, then `default`.
+
+    A site may set the string `full` (or `"all"`, case-insensitive) to crawl
+    every listing page it can reach; that is returned as 0 because the queue
+    loop compares `pages_done >= cap` and 0 is falsy. A plain integer is a
+    hard cap; a missing/blank/invalid value falls back to `default`, so a typo
+    can never silently turn a bounded run into a full crawl.
+    """
+    value = override if override is not None else site.get(key)
+    return _as_page_cap(value, default)
+
+def _as_page_cap(value, default: int) -> int:
+    if isinstance(value, str) and value.strip().lower() in ("full", "all"):
+        return 0
+    try:
+        n = int(value)
+    except (TypeError, ValueError):
+        return int(default)
+    return n if n >= 0 else int(default)
 
 def is_closed_error(exc: Exception) -> bool:
     return any(text in str(exc).lower() for text in (
@@ -154,6 +188,28 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+# Phrasings that give a HEIGHT in metres ('trần cao 8, 10m', 'chiều cao kho 6,5m').
+# Used only to blank those numbers before area extraction: a '8 m' inside them is
+# a height, and reading it as an 8 m² area invents a bogus floor-size conflict.
+_HEIGHT_PHRASE_RE = re.compile(
+    r"""(?ix)
+    (?:chieu\s*cao|chieu\s*cao\s*(?:tran|mai|kho|nha\s*xuong|dinh|vách|vach))
+    [^0-9\n]{0,45}?\d[\d.,]*(?:\s*(?:[,;/]|-|den|toi)\s*\d[\d.,]*)*\s*m\b
+    |
+    \btran\b[^0-9\n]{0,12}?cao[^0-9\n]{0,25}?\d[\d.,]*(?:\s*(?:[,;/]|-|den|toi)\s*\d[\d.,]*)*\s*m\b
+    """
+)
+
+
+def _strip_height_phrases(text: str) -> str:
+    """Return `text` (accent-stripped) with height phrases replaced by spaces.
+
+    Length is preserved, so offsets stay meaningful for any caller that cares.
+    """
+    flat = strip_accents(text or "")
+    return _HEIGHT_PHRASE_RE.sub(lambda m: " " * len(m.group(0)), flat)
+
+
 def safe_filename(text: str, limit: int = 70) -> str:
     """A category key becomes part of a snapshot filename.
 
@@ -226,6 +282,11 @@ class QueueItem:
     status: str = "pending"  # pending|success|warning|needs_review|failed|blocked
     notes: list = field(default_factory=list)
     attempts: int = 0
+    # Listing pages refused by the edge are re-queued once after a long cool
+    # down: measured on both 2026-11-19 runs, the same first three pages of a
+    # category were 403ed while every later page parsed, so the block is
+    # time-based rather than per-URL and a retry late in the queue succeeds.
+    retried: int = 0
 
 
 @dataclass
@@ -255,15 +316,20 @@ def load_registry(path: Path) -> dict:
 
 
 class Crawler:
-    def __init__(self, registry: dict, out_root: Path, max_listing_pages: int,
+    def __init__(self, registry: dict, out_root: Path, max_listing_pages: int | str | None,
                  max_details: int, delay: float, headed: bool, wait_human: int,
                  runtime: SessionRuntime | None = None, max_records: int = 0,
                  allow_goto_fallback: bool = False, delay_explicit: bool = False):
         self.runtime = runtime
         self.registry = registry
         self.out_root = out_root
-        self.max_listing_pages = max_listing_pages
-        self.max_details = max_details
+        # Instance default for a site that sets no `max_listing_pages` of its
+        # own. None = not chosen by the caller (use the site's config, else
+        # DEFAULT_LISTING_PAGES); an int is a hard cap; 0 = no cap.
+        self.max_listing_pages = (
+            None if max_listing_pages is None else _as_page_cap(max_listing_pages, DEFAULT_LISTING_PAGES))
+        # Same contract for the detail cap: None = use the site's config.
+        self.max_details = None if max_details is None else _as_page_cap(max_details, 200)
         self.delay = delay
         # True when --delay was passed on the command line: an explicit value
         # overrides the per-site default, which exists so a slow site is not
@@ -591,6 +657,15 @@ class Crawler:
         # --delay on the command line still wins over the config.
         site_delay = site_delay_for(
             site, override=self.delay if self.delay_explicit else None)
+        # Per-site page cap: config/sites.json may set `max_listing_pages`,
+        # including the string "full" for the whole listing. A caller-supplied
+        # integer still wins. 0 means "no cap" and is falsy on purpose.
+        page_cap = page_limit_for(site, override=self.max_listing_pages,
+                                  default=DEFAULT_LISTING_PAGES)
+        # Detail cap follows the same precedence: CLI/API override, then the
+        # site's `max_details`, then the instance default.
+        detail_cap = page_limit_for(site, key="max_details",
+                                    override=self.max_details, default=DEFAULT_DETAILS)
         state = SiteState(
             site_id=site_id,
             base=base,
@@ -641,16 +716,18 @@ class Crawler:
                     item = queue.pop(0)
                     item.attempts += 1
                     if item.kind == "listing":
-                        if item.url in state.visited_listing:
+                        # A re-queued page is already in visited_listing by
+                        # design; only the first pass is deduped here.
+                        if item.url in state.visited_listing and item.retried == 0:
                             item.status = "warning"
                             item.notes.append("duplicate listing url")
                             self._record_item(item)
                             continue
-                        if pages_per_cat[item.category] >= self.max_listing_pages:
+                        if page_cap and pages_per_cat[item.category] >= page_cap:
                             item.status = "warning"
                             item.notes.append(
                                 f"category {item.category} hit its cap "
-                                f"({self.max_listing_pages} pages)")
+                                f"({page_cap} pages)")
                             self._record_item(item)
                             continue
                         state.visited_listing.add(item.url)
@@ -745,6 +822,12 @@ class Crawler:
                                 "detail": f"{str(exc)[:200]} — fetch bị chặn ở edge; "
                                           "đã hạ nhịp và tiếp tục queue",
                             })
+                            if item.retried < LISTING_BLOCK_RETRIES:
+                                item.retried += 1
+                                item.notes.append("re-queued after block")
+                                queue.append(QueueItem(
+                                    item.url, "listing", site_id, item.category,
+                                    retried=item.retried))
                             time.sleep(max(site_delay, BLOCK_COOLDOWN_SECONDS))
                         except FetchFailed as exc:
                             item.status = "failed"
@@ -763,7 +846,10 @@ class Crawler:
 
                 # Details
                 site_records_start = len(self.records)
-                for url, card in detail_urls[: self.max_details]:
+                # `max_details` is a per-site cap too; 0 = no cap ("full").
+                if detail_cap:
+                    detail_urls = detail_urls[:detail_cap]
+                for url, card in detail_urls:
                     # Record cap is PER SITE. A single global cap let one small
                     # site consume the whole budget: on 2026-11-18 the 75-record
                     # 365 site exhausted max_records=500's headroom in the plan,
@@ -943,6 +1029,7 @@ class Crawler:
             "usable_area_m2": area_m2,
             "usable_area_text": area_text,
             "frontage_m": "",
+            "ceiling_height_m": "",
             "contact": detail.get("contact") or "",
             "contact_masked": detail.get("contact_masked") or "",
             "extraction_status": "",
@@ -969,7 +1056,6 @@ class Crawler:
         # regardless of how the poster typed them. Numbers are untouched.
         desc = unicodedata.normalize("NFC", detail.get("description") or card.get("description") or "")
         rec["description"] = desc[:4000]
-        flat = strip_accents(desc)
         area_patterns = [
             # 'dien tich xuong: 5.000m2' / 'dien tich nha xuong 5.000 m2'
             ("factory_area_m2", r"dien tich\s+(?:nha\s+)?xuong\s*[:\-–]?\s*(\d[\d.,]*\s*m?\s*(?:2|²)?)"),
@@ -984,8 +1070,12 @@ class Crawler:
             ("land_area_m2", r"tong\s+dien\s+tich\s*[:\-–]?\s*(\d[\d.,]*\s*m?\s*(?:2|²)?)"),
         ]
         found_areas: dict[str, set] = {"factory_area_m2": set(), "land_area_m2": set()}
+        # A description that talks about heights ('trần cao 8, 10m') also
+        # contains bare numbers+'m' that are NOT floor areas — strip those
+        # phrases first so they cannot be mistaken for a 8 m² / 10 m² area.
+        desc_for_area = _strip_height_phrases(desc)
         for key, pat in area_patterns:
-            for m in re.finditer(pat, flat, re.I):
+            for m in re.finditer(pat, desc_for_area, re.I):
                 value = parse_area_m2(m.group(1))
                 if value:
                     found_areas[key].add(value)
@@ -994,7 +1084,8 @@ class Crawler:
                 rec[key] = next(iter(values)) if len(values) == 1 else "; ".join(sorted(values, key=float))
 
         # every distinct area mentioned in the text, for conflict detection
-        all_areas = {parse_area_m2(m) for m in re.findall(r"(\d[\d.,]*\s*m\s*(?:2|²)?)", flat, re.I)}
+        all_areas = {parse_area_m2(m) for m in re.findall(
+            r"(\d[\d.,]*\s*m\s*(?:2|²)?)", _strip_height_phrases(desc), re.I)}
         all_areas = {a for a in all_areas if a}
         area_note = ""
         if len(all_areas) > 1:
@@ -1008,6 +1099,17 @@ class Crawler:
             area_note = (area_note + "; " if area_note else "") + \
                 f"Diện tích xưởng có nhiều giá trị: {rec['factory_area_m2']}"
         rec["area_conflict"] = area_note
+
+        # Ceiling height lives only in the free text (no spec field on either
+        # site), so it is read from the description and the exact phrase that
+        # produced the number is kept as its evidence.
+        height, height_snippet = parse_ceiling_height(desc, rec["title"])
+        rec["ceiling_height_m"] = height
+        rec["ceiling_height_note"] = height_snippet
+        if height and ";" in height:
+            rec["ceiling_height_note"] = (
+                f"{height_snippet} || Trang nêu nhiều chiều cao khác nhau ({height} m) "
+                "— cần kiểm tra thủ công")
 
         filled = sum(1 for k, v in rec.items() if v not in ("", None)
                      and k not in ("snapshot", "collected_at", "extraction_status", "confidence",
@@ -1047,6 +1149,9 @@ class Crawler:
             warns.append(rec["area_conflict"])
             rec["confidence"] = round(min(rec["confidence"], 0.6), 2)
         rec["warnings"] = "; ".join(warns)
+        if height and ";" in height:
+            warns.append(f"Chiều cao trần có nhiều giá trị ({height} m) — cần kiểm tra thủ công")
+            rec["warnings"] = "; ".join(warns)
         if rec["title"] and (rec["address"] or rec["usable_area_m2"]):
             base_status = "Đã parse HTML detail"
             rec["extraction_status"] = (
@@ -1086,6 +1191,8 @@ class Crawler:
             "usable_area_m2": card.get("area_m2", ""),
             "usable_area_text": card.get("area_text", ""),
             "frontage_m": "",
+            "ceiling_height_m": "",
+            "ceiling_height_note": "",
             "contact": "",
             "contact_masked": "",
             "listing_code": "",
@@ -1109,6 +1216,7 @@ class Crawler:
         src_text = (detail.get("description") or "")[:1200] or card.get("description", "")[:1200]
         for key in ("title", "address", "rent_amount", "rent_amount_text", "rent_period",
                     "price_per_m2_text", "usable_area_m2", "factory_area_m2", "land_area_m2",
+                    "ceiling_height_m",
                     "contact", "posted_at", "legal"):
             value = rec.get(key, "")
             if value not in ("", None):
@@ -1158,7 +1266,8 @@ class FetchBlocked(FetchFailed):
 
 
 def crawl(registry_path: Path, out_root: Path, site_filter: list[str] | None = None,
-          max_listing_pages: int = 5, max_details: int = 200,
+          max_listing_pages: int | str | None = None,
+          max_details: int | str | None = None,
           delay: float | None = None,
           headed: bool = False, wait_human: int = 0,
           keep_open: bool = False, max_records: int = 0,
@@ -1231,8 +1340,15 @@ def main():
     ap.add_argument("--sites", nargs="*", help="site_id(s); default = all in registry")
     ap.add_argument("--registry", type=Path, default=Path("config/sites.json"))
     ap.add_argument("--out", type=Path, required=True, help="job directory for raw JSON")
-    ap.add_argument("--max-listing-pages", type=int, default=5)
-    ap.add_argument("--max-details", type=int, default=200)
+    ap.add_argument("--max-listing-pages", default=None,
+                    help="trần số trang listing MỖI category; mặc định đọc "
+                         "max_listing_pages của từng site trong config/sites.json "
+                         "(site có thể đặt \"full\" để lấy toàn bộ). "
+                         "Truyền 'full' ở đây để bỏ trần cho mọi site.")
+    ap.add_argument("--max-details", default=None,
+                    help="trần số trang chi tiết MỖI site; mặc định đọc "
+                         "max_details của từng site trong config/sites.json. "
+                         "Truyền 'full' (hoặc 0) để lấy toàn bộ.")
     ap.add_argument("--max-records", type=int, default=None,
                     help="trần số bản ghi (0 = không giới hạn); mặc định đọc config/settings.json")
     ap.add_argument("--allow-goto-fallback", action="store_true",

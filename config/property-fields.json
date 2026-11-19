@@ -81,6 +81,11 @@
       "type": "number"
     },
     {
+      "key": "ceiling_height_m",
+      "label": "Chiều cao trần (m)",
+      "type": "number"
+    },
+    {
       "key": "contact",
       "label": "Liên hệ",
       "type": "text"

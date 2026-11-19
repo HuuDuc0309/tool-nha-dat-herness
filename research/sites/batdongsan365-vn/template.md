@@ -77,6 +77,8 @@ Không cần. Không có login wall cho nội dung công khai.
 - Số liên hệ bị mask (`******9528`); chỉ có trong mô tả nếu người đăng tự ghi.
 - Đất/xưởng cho thuê báo giá theo m² → không có tổng giá thuê tháng.
 - `deposit`, `frontage_m` site không cung cấp.
+- `ceiling_height_m` chỉ đọc từ mô tả tự do (không có field riêng); nhiều mức
+  cao được giữ hết dạng `8; 10`, câu gốc lưu ở `ceiling_height_note`.
 - Discovery heuristic báo `listing_detail: false` (false negative): nó tìm `chi-tiet`/`/p/` trong URL, còn URL thật là `/{category}-{slug}-bs{code}/`. Đã verify thủ công bằng cách fetch detail thật.
 - 34 discovery "errors" là timeout click vào button tab bị ẩn ("Tìm mua"/"Tìm thuê"), không ảnh hưởng extraction.
 

@@ -24,7 +24,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 REQUIRED_KEYS = [
     "title", "source_url", "source_site", "address", "province", "district", "ward",
     "rent_amount", "rent_amount_text", "rent_period", "deposit",
-    "land_area_m2", "factory_area_m2", "usable_area_m2", "frontage_m",
+    "land_area_m2", "factory_area_m2", "usable_area_m2", "frontage_m", "ceiling_height_m",
     "contact", "extraction_status", "confidence", "warnings",
 ]
 
@@ -91,6 +91,20 @@ def verify(record: dict, snapshot_text: str | None) -> list[dict]:
         if value and not DATE_RE.match(value):
             issues.append({"level": "warn", "kind": "bad_date_format", "detail": f"{key}={value}"})
 
+    # ceiling height: '8; 10' (several heights listed) is valid, so each part is
+    # checked on its own; a value outside 2–30 m is a parse defect, not a fact.
+    height_raw = str(record.get("ceiling_height_m") or "").strip()
+    if height_raw:
+        for part in height_raw.split(";"):
+            h = _to_float(part)
+            if h is None:
+                issues.append({"level": "error", "kind": "ceiling_height_not_numeric",
+                               "detail": height_raw})
+                break
+            if h < 2 or h > 30:
+                issues.append({"level": "warn", "kind": "ceiling_height_out_of_range",
+                               "detail": f"ceiling_height_m={height_raw}"})
+
     conf = _to_float(record.get("confidence"))
     if conf is None or not (0 <= conf <= 1):
         issues.append({"level": "error", "kind": "bad_confidence", "detail": str(record.get("confidence"))})
@@ -129,6 +143,18 @@ def verify(record: dict, snapshot_text: str | None) -> list[dict]:
         code = record.get("listing_code")
         if code and code not in snapshot_text:
             issues.append({"level": "warn", "kind": "code_not_in_snapshot", "detail": str(code)})
+
+    # evidence agreement for the ceiling height: the exact phrase the parser
+    # quoted must exist in the record's own description. A mismatch means the
+    # value was invented or the description was truncated after parsing.
+    height_note = str(record.get("ceiling_height_note") or "")
+    height_value = str(record.get("ceiling_height_m") or "").strip()
+    if height_value and height_note:
+        first_snippet = height_note.split("—")[0].split("||")[0].strip()
+        hay = _norm(record.get("description") or "")
+        if first_snippet and _norm(first_snippet) not in hay:
+            issues.append({"level": "warn", "kind": "ceiling_note_not_in_description",
+                           "detail": first_snippet[:70]})
 
     return issues
 
